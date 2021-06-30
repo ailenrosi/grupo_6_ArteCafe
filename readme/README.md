@@ -2,12 +2,12 @@ Arte Café
 
 Nuestra Página representa a una cafetería llamada Arte Café en la cual se podra encontrar elementos relacionados al mundo del café de especialidad y el barismo, venta de café en grano o molido y cursos de cafe espresso,filtrado y arte latte. Esta página esta enfocada a todas aquellas personas a la cual les gusta disfrutar de una rica taza de café de calidad de granos de selección, personas que requieran productos tanto para un un local, para el hogar o para profesionales del rubro, También está dirigido a quienes quieren incursionar en el mundo de la cafetería en profundidad brindando tres cursos básicos para realizar café de una forma profesional.
 
-Los integrantes del grupo numero 6 de la comision ocho son:
+Los integrantes del desarrollo de la página Arte Café son:
 
 Emilce Espinoza:
 
 
-Rocio Rosi:
+Rocio Rosi
 
 Elias Gonzalez:
 
@@ -24,6 +24,6 @@ https://www.cafemartinez.com/ La presentación de los producto y la distribució
 
 https://www.mercadolibre.com.ar/ Al ser la página de e-commer más visitada nos inspiramos en la descripcion del producto y el carrito. 
 
-https://cafedelirante.com.ar/ 
+https://cafedelirante.com.ar/ Footer y distribucion de datos de la página.
 
-https://ninina.com/
+https://ninina.com/ Galería de fotos.
