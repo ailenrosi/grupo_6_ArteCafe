@@ -12,7 +12,7 @@ Rocio Rosi
 Elias Gonzalez:
 
 
-Alejandro Romero:
+Alejandro Romero: algo
 
 Nos inspiramos en las siguientes páginas para hacer este trabajo:
 
