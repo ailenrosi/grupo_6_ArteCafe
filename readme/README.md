@@ -6,6 +6,7 @@ Los integrantes del grupo numero 6 de la comision ocho son:
 
 Emilce Espinoza:
 
+
 Rocio Rosi:
 
 Elias Gonzalez:
@@ -13,9 +14,16 @@ Elias Gonzalez:
 
 Alejandro Romero:
 
-https://www.starbucks.com.ar/
-https://www.modobarista.com/
-https://www.cafemartinez.com/
-https://www.mercadolibre.com.ar/
-https://cafedelirante.com.ar/
+Nos inspiramos en las siguientes páginas para hacer este trabajo:
+
+https://www.starbucks.com.ar/ De esta página nos gustó la paleta de colores, además la pagina en está orientada a un píblico más jóven, y precisamente es nuestro público objetivo. 
+
+https://www.modobarista.com/  En esta página nos gustó el carrusel de imágenes ya que nos pareció interesante pues es muy utilizado en las páginas de hoy además del header  que es simple pero funcional.  
+
+https://www.cafemartinez.com/ La presentación de los producto y la distribución de los mismos en la página.
+
+https://www.mercadolibre.com.ar/ Al ser la página de e-commer más visitada nos inspiramos en la descripcion del producto y el carrito. 
+
+https://cafedelirante.com.ar/ 
+
 https://ninina.com/
