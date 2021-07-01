@@ -13,9 +13,10 @@ Me gusta hacer diseños, el trabajo en equipo y aprender cosas nuevas.
 Rocio Rosi:
 
 Elias Gonzalez:
-
+Estudiante de programacion web
 
 Alejandro Romero:
+Estudiante de programacion web
 
 Nos inspiramos en las siguientes páginas para hacer este trabajo:
 
