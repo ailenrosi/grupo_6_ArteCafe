@@ -10,7 +10,8 @@ Mi nombre es Emilce Espinoza, tengo 30 años vivo en Zona Sur, Buenos Aires.
 Ésta es mi primer experiencia en el mundo IT, ya que los últimos años trabajé como asistente de ventas en retail. Debido a la crisis económica quedé sin empleo pero, de esa crisis surgió esta oportunidad.
 Me gusta hacer diseños, el trabajo en equipo y aprender cosas nuevas.
 
-Rocio Rosi:
+
+Mi nombre Rocio Rosi tengo 28 años, soy de San Miguel, Buenos Aires, llegue a ser parte del proyecto Arte Café al ingresar al curso de Digital House a través de una publicación de la municipalidad de mi localidad. a pesar de que mi profesión es de barista, hace un tiempo me interesé en el mundo de la programación estudiando de forma independiente lo cual puedo complementar con el curso. Dentro de éste proyecto mi aporte va a ser dinámico, tratando de poner en práctica todos los conocimientos adquiridos en las clases.
 
 Elias Gonzalez:
 Estudiante de programacion web
