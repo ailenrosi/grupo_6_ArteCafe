@@ -29,6 +29,6 @@ https://www.cafemartinez.com/ La presentación de los producto y la distribució
 
 https://www.mercadolibre.com.ar/ Al ser la página de e-commer más visitada nos inspiramos en la descripcion del producto y el carrito. 
 
-https://cafedelirante.com.ar/ 
+https://cafedelirante.com.ar/ Footer y distribucion de datos de la página.
 
-https://ninina.com/
+https://ninina.com/ Galería de fotos.
