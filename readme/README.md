@@ -13,8 +13,7 @@ Me gusta hacer diseños, el trabajo en equipo y aprender cosas nuevas.
 
 Mi nombre Rocio Rosi tengo 28 años, soy de San Miguel, Buenos Aires, llegue a ser parte del proyecto Arte Café al ingresar al curso de Digital House a través de una publicación de la municipalidad de mi localidad. a pesar de que mi profesión es de barista, hace un tiempo me interesé en el mundo de la programación estudiando de forma independiente lo cual puedo complementar con el curso. Dentro de éste proyecto mi aporte va a ser dinámico, tratando de poner en práctica todos los conocimientos adquiridos en las clases.
 
-Elias Gonzalez:
-Estudiante de programacion web
+Soy Elias Gonzalez estudiante de programacion web, soy de Lanús, vivo en Avellaneda tengo 32 años, me gustan los videos juegos y el animé.
 
 Alejandro Romero:
 Estudiante de programacion web
