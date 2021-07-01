@@ -7,7 +7,7 @@ Los integrantes del grupo numero 6 de la comision ocho son:
 ¡Hola!
 
 Mi nombre es Emilce Espinoza, tengo 30 años vivo en Zona Sur, Buenos Aires. 
-Ésta es mi primer experiencia en el mundo IT, ya que los últimos años trabajé como asistente de ventas en retail. Debido a la crisis económica quedé sin empleo pero, de esa crisis surgió esta oportunidad.
+Ésta es mi primer experiencia en el mundo IT, ya que los últimos años trabajé como asistente de ventas en retail. Debido a la crisis económica quedé sin empleo pero, de esa crisis surgió esta oportunidad de un cambio.
 Me gusta hacer diseños, el trabajo en equipo y aprender cosas nuevas.
 
 
