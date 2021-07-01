@@ -2,17 +2,15 @@ Arte Café
 
 Nuestra Página representa a una cafetería llamada Arte Café en la cual se podra encontrar elementos relacionados al mundo del café de especialidad y el barismo, venta de café en grano o molido y cursos de cafe espresso,filtrado y arte latte. Esta página esta enfocada a todas aquellas personas a la cual les gusta disfrutar de una rica taza de café de calidad de granos de selección, personas que requieran productos tanto para un un local, para el hogar o para profesionales del rubro, También está dirigido a quienes quieren incursionar en el mundo de la cafetería en profundidad brindando tres cursos básicos para realizar café de una forma profesional.
 
-Los integrantes del grupo numero 6 de la comision ocho son:
+Los integrantes del desarrollo de la página Arte Café somos:
 
 Emilce Espinoza:
 
 
-Rocio Rosi:
-
-Elias Gonzalez:
+Rocio Rosi tengo 28 años, soy de San Miguel, Buenos Aires, llegue a ser parte del proyecto Arte Café al ingresar al curso de Digital House a través de una publicación de la municipalidad de mi localidad. a pesar de que mi profesión es de barista, hace un tiempo me interesé en el mundo de la programación estudiando de forma independiente lo cual puedo complementar con el curso. Dentro de éste proyecto mi aporte va a ser dinámico, tratando de poner en práctica todos los conocimientos adquiridos en las clases.
 
 
-Alejandro Romero:
+Alejandro Romero: algo
 
 Nos inspiramos en las siguientes páginas para hacer este trabajo:
 
@@ -24,6 +22,6 @@ https://www.cafemartinez.com/ La presentación de los producto y la distribució
 
 https://www.mercadolibre.com.ar/ Al ser la página de e-commer más visitada nos inspiramos en la descripcion del producto y el carrito. 
 
-https://cafedelirante.com.ar/ 
+https://cafedelirante.com.ar/ Footer y distribucion de datos de la página.
 
-https://ninina.com/
+https://ninina.com/ Galería de fotos.
