@@ -15,8 +15,8 @@ Mi nombre Rocio Rosi tengo 28 años, soy de San Miguel, Buenos Aires, llegue a s
 
 Soy Elias Gonzalez estudiante de programacion web, soy de Lanús, vivo en Avellaneda tengo 32 años, me gustan los videos juegos y el animé.
 
-Alejandro Romero:
-Estudiante de programacion web
+Mi nombre es Alejandro Romero tengo 25 años, soy de Lanus, Buenos Aires, comence el proyecto de Arte Café a través del curso de programacion de Fundacion Formar. A traves de este proyecto y del curso mi meta es poder formarme como programador ya que me gusta todo lo relacionado a la informatica. 
+
 
 Nos inspiramos en las siguientes páginas para hacer este trabajo:
 

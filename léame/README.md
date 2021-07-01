@@ -10,7 +10,7 @@ Emilce Espinoza:
 Rocio Rosi tengo 28 años, soy de San Miguel, Buenos Aires, llegue a ser parte del proyecto Arte Café al ingresar al curso de Digital House a través de una publicación de la municipalidad de mi localidad. a pesar de que mi profesión es de barista, hace un tiempo me interesé en el mundo de la programación estudiando de forma independiente lo cual puedo complementar con el curso. Dentro de éste proyecto mi aporte va a ser dinámico, tratando de poner en práctica todos los conocimientos adquiridos en las clases.
 
 
-Alejandro Romero: algo
+Mi nombre es Alejandro Romero tengo 25 años, soy de Lanus, Buenos Aires, comence el proyecto de Arte Café a través del curso de programacion de Fundacion Formar. A traves de este proyecto y del curso mi meta es poder formarme como programador ya que me gusta todo lo relacionado a la informatica. 
 
 Nos inspiramos en las siguientes páginas para hacer este trabajo:
 
