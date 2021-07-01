@@ -1,5 +1,5 @@
 Arte Café    
-                                [logo](imagenes\z-imagenes\iconos\logo.png)
+                                ![logo](imagenes\z-imagenes\iconos\logo.png)
 
 Nuestra Página representa a una cafetería llamada Arte Café en la cual se podra encontrar elementos relacionados al mundo del café de especialidad y el barismo, venta de café en grano o molido y cursos de cafe espresso,filtrado y arte latte. Esta página esta enfocada a todas aquellas personas a la cual les gusta disfrutar de una rica taza de café de calidad de granos de selección, personas que requieran productos tanto para un un local, para el hogar o para profesionales del rubro, También está dirigido a quienes quieren incursionar en el mundo de la cafetería en profundidad brindando tres cursos básicos para realizar café de una forma profesional.
 
