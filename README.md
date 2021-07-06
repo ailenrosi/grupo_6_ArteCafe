@@ -1,0 +1,37 @@
+Proyecto integrador Grupo 6. 
+                                
+Somos un equipo de desarrolladores web que trabajamos para cumplir con las necesidades de nuestros clientes, nuestra meta siempre será conseguir el mejor resultado y por sobre todo demostrar todas habilidades adquiridas a lo largo de nuestra experiencia. 
+
+Consideramos que una página web no sólo debe ser bonita si no también funcional, es la primera vista que tienen los clientes de una empresa o negocio, por eso vamos paso a paso construyendo ese gran proyecto ya que, también es nuestra presentación, no podemos dejar ningún detalle al azar.
+
+En este caso nuestro objetivo es realizar una tienda e-commers para una cafetería que busca captar a un público más juvenil poniéndole un estilo urbano.
+
+Nuestro cliente nos pide que las secciones se vean a simple vista y que destaquemos los cursos que se realizan en la cafetería ya que busca despegarse de lo tradicional para así llegar a mayor cantidad de personas. 
+
+Uno de los objetivos más grandes de nuestro trabajo es llevar a cabo eso que es tan abstracto, lo que al principio sólo fue una idea en la cabeza de cómo le gustaría que quedase, interpretarla y hacer realidad en cada detalle. 
+
+Pasamos a presentarnos:
+¡Hola!
+Mi nombre es Emilce Espinoza, tengo 30 años vivo en Zona Sur, Buenos Aires. 
+Ésta es mi primera experiencia en el mundo IT, ya que los últimos años trabajé como asistente de ventas en retail. Debido a la crisis económica quedé sin empleo, pero de esa crisis surgió esta oportunidad de un cambio.
+Me gusta hacer diseños, el trabajo en equipo y aprender cosas nuevas, mi roll en este equipo es organizar y ponerle atención a los detalles.
+
+Mi nombre Rocio Rosi tengo 28 años, soy de San Miguel, Buenos Aires, soy barista de profesión, hace un tiempo me interesé en el mundo de la programación estudiando de forma independiente, luego lo complementé con Digital House.
+Dentro de éste proyecto mi aporte va a ser dinámico, mi roll es en poner metas y cumplir con ellas dentro de los tiempos, soy una persona dinámica y con paciencia.   
+
+Soy Elías González estudiante de programación web, soy de Lanús, vivo en Avellaneda tengo 32 años, me gustan los videos juegos y el animé.
+
+Mi nombre es Alejandro Romero tengo 25 años, soy de Lanús, Buenos Aires, comencé el proyecto de Arte Café a través del curso de programación de Fundación Formar. A través de este proyecto mi meta es poder demostrar mis habilidades como programador, siempre me gustó todo lo relacionado a la informática. Mi roll en este equipo es verificar y optimizar el código. 
+
+Nos inspiramos en las siguientes páginas para hacer este trabajo:
+
+https://www.starbucks.com.ar/ = De esta página nos gustó la paleta de colores, además, de tener un estilo más joven, el cual es nuestro público objetivo. 
+
+https://www.modobarista.com/ = Aquí nos gustó el carrusel de imágenes ya que nos pareció interesante pues es muy utilizado en las páginas de hoy, header también ya que es simple pero funcional.  
+
+https://www.cafemartinez.com/ = La presentación de los productos y la distribución de los mismos en la página.
+
+https://www.mercadolibre.com.ar/ = Al ser la página de e-commer más visitada nos inspiramos en la descripción del producto y el carrito. 
+
+https://cafedelirante.com.ar/ = Aquí vimos una idea para el footer y la distribución de datos de la página.
+   
