@@ -10,8 +10,11 @@ Nuestro cliente nos pide que las secciones se vean a simple vista y que destaque
 
 Uno de los objetivos más grandes de nuestro trabajo es llevar a cabo eso que es tan abstracto, lo que al principio sólo fue una idea en la cabeza de cómo le gustaría que quedase, interpretarla y hacer realidad en cada detalle. 
 
+
 Pasamos a presentarnos:
+
 ¡Hola!
+
 Mi nombre es Emilce Espinoza, tengo 30 años vivo en Zona Sur, Buenos Aires. 
 Ésta es mi primera experiencia en el mundo IT, ya que los últimos años trabajé como asistente de ventas en retail. Debido a la crisis económica quedé sin empleo, pero de esa crisis surgió esta oportunidad de un cambio.
 Me gusta hacer diseños, el trabajo en equipo y aprender cosas nuevas, mi roll en este equipo es organizar y ponerle atención a los detalles.
