@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
   },
   "name": "grupo_6_artecafe",
   "description": "Proyecto integrador Grupo 6.",
