@@ -1,0 +1,15 @@
+head{
+    background-color: rgb(255, 127, 133);
+}
+
+body{
+    background-color: blue;
+}
+
+.controls{
+    background-color: brown;
+}
+ 
+section{
+    background-color: burlywood;
+}
