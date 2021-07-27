@@ -1,3 +1,6 @@
+
+Comenzando 🚀
+
 Proyecto integrador Grupo 6. 
                                 
 Somos un equipo de desarrolladores web que trabajamos para cumplir con las necesidades de nuestros clientes, nuestra meta siempre será conseguir el mejor resultado y por sobre todo demostrar todas habilidades adquiridas a lo largo de nuestra experiencia. 
@@ -26,6 +29,7 @@ Soy Elías González estudiante de programación web, siempre me gusto y llamo l
 
 Mi nombre es Alejandro Romero tengo 25 años, soy de Lanús, Buenos Aires, comencé el proyecto de Arte Café a través del curso de programación de Fundación Formar. A través de este proyecto mi meta es poder demostrar mis habilidades como programador, siempre me gustó todo lo relacionado a la informática. Mi roll en este equipo es verificar y optimizar el código. 
 
+Versionando 📌
 Nos inspiramos en las siguientes páginas para hacer este trabajo:
 
 https://www.starbucks.com.ar/ = De esta página nos gustó la paleta de colores, además, de tener un estilo más joven, el cual es nuestro público objetivo. 
@@ -37,4 +41,6 @@ https://www.cafemartinez.com/ = La presentación de los productos y la distribuc
 https://www.mercadolibre.com.ar/ = Al ser la página de e-commer más visitada nos inspiramos en la descripción del producto y el carrito. 
 
 https://cafedelirante.com.ar/ = Aquí vimos una idea para el footer y la distribución de datos de la página.
+
+
    

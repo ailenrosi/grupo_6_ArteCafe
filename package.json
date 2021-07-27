@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "name": "grupo_6_artecafe",
+  "description": "Proyecto integrador Grupo 6.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ailenrosi/grupo_6_ArteCafe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ailenrosi/grupo_6_ArteCafe/issues"
+  },
+  "homepage": "https://github.com/ailenrosi/grupo_6_ArteCafe#readme",
+  "devDependencies": {}
+}
