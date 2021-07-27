@@ -9,7 +9,7 @@ app.get('/', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/footer.html'))
 })
 
-app.get('/', (req, res)=>{
+app.get('/registrarse', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/registrarse.html'))
 })
 
