@@ -13,6 +13,10 @@ app.get('/registrarse', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/registrarse.html'))
 })
 
+app.get('/iniciar-sesion', (req, res)=>{
+    res.sendFile(path.join(__dirname, '/views/footer.html'))
+})
+
 app.listen(port, () => {
     console.log(`Puerto corriendo en ${port}\n http://localhost:${port}`)
 });
