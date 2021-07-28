@@ -5,7 +5,7 @@ const path = require('path');
 
 app.use(express.static('public'));
 
-app.get('/registrarse', (req, res)=>{
+app.get('/home', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/home.html'))
 })
 app.get('/', (req, res)=>{
@@ -17,7 +17,7 @@ app.get('/registrarse', (req, res)=>{
 })
 
 app.get('/iniciar-sesion', (req, res)=>{
-    res.sendFile(path.join(__dirname, '/views/footer.html'))
+    res.sendFile(path.join(__dirname, '/views/iniciar-sesion.html'))
 })
 
 app.listen(port, () => {
