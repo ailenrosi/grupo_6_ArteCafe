@@ -4,3 +4,6 @@
     box-sizing: border-box;
     background-color: rgb(243, 244, 245); 
 }
+
+@import url(css/footer.css);
+@import url();
