@@ -5,10 +5,18 @@ const path = require('path');
 
 app.use(express.static('public'));
 
-app.get('/home', (req, res)=>{
+app.get('/', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/home.html'))
 })
-app.get('/', (req, res)=>{
+app.get('/error', (req, res)=>{
+    res.sendFile(path.join(__dirname, '/views/error_404.html'))
+})
+
+app.get('/header', (req, res)=>{
+    res.sendFile(path.join(__dirname, '/views/header.html'))
+})
+
+app.get('/footer', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/footer.html'))
 })
 
