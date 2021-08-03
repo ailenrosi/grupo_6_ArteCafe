@@ -18,13 +18,16 @@ app.get('/registrarse', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/registrarse.html'))
 })
 app.get('/iniciar-sesion', (req, res)=>{
-    res.sendFile(path.join(__dirname, '/views/iniciar-sesion'))
+    res.sendFile(path.join(__dirname, '/views/iniciar-sesion.html'))
 })
 app.get('/carrito', (req, res)=>{
-    res.sendFile(path.join(__dirname, '/views/carrito'))
+    res.sendFile(path.join(__dirname, '/views/carrito.html'))
 })
 app.get('/producto', (req, res)=>{
-    res.sendFile(path.join(__dirname, '/views/producto'))
+    res.sendFile(path.join(__dirname, '/views/producto.html'))
+})
+app.get('*', (req, res)=>{
+    res.sendFile(path.join(__dirname, '/views/error_404.html'))
 })
 app.listen(port, () => {
     console.log(`Puerto corriendo en ${port}\n http://localhost:${port}`)
