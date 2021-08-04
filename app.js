@@ -26,9 +26,16 @@ app.get('/carrito', (req, res)=>{
 app.get('/producto', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/producto.html'))
 })
+app.get('/detalleProducto', (req, res)=>{
+    res.sendFile(path.join(__dirname, '/views/detalleProducto.html'))
+})
 app.get('*', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/error_404.html'))
 })
+app.get('/carousel', (req, res)=>{
+    res.sendFile(path.join(__dirname, '/views/carousel.html'))
+})
+
 app.listen(port, () => {
     console.log(`Puerto corriendo en ${port}\n http://localhost:${port}`)
 });

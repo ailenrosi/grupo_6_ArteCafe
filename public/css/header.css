@@ -26,7 +26,7 @@ hr{
 }
 .logo{
   text-rendering: auto;
-  margin: -24px;
+  margin: -12px;
 text-shadow: darkcyan;
 }
 
@@ -63,19 +63,17 @@ text-shadow: darkcyan;
 }
 
 .main-header {
-  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 65px;
   width: 100vw;
-  padding: 0 10vw;
   background-color:  rgb(3 153 48 / 18%);
   color: rgba(0, 0, 0, 0.63);
   z-index: 1;
@@ -83,6 +81,9 @@ text-shadow: darkcyan;
   transition: .4s ease-out;
 }
 
+.main-header:hover{
+  position: fixed;
+}
 .main-header a {
   text-decoration: none;
   color: inherit;
@@ -509,12 +510,12 @@ text-shadow: darkcyan;
 
 /***************************BUSCAR...********************************************/
 .box_search{
-  position: absolute;
+ 
   padding-top: -10px;
 }
 
 .search{
-  width: 150px;
+  width: 50px;
   white-space: nowrap;
   position: relative;
 }

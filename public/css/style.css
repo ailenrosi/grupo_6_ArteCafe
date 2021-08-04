@@ -1,9 +1,16 @@
+@import url('header.css');
+/*@import url('carousel.css');*/
+/*@import url('detalleProducto.css');*/
+@import url('carrito.css');
+@import url('footer.css');
+@import url('carousel.css');
+@import url('error_404.css');
+@import url('iniciar-sesion.css');
+@import url('producto.css');
+@import url('tarjeta1.css');
+
 *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
-    background-color: rgb(243, 244, 245); 
 }
-
-@import url(css/footer.css);
-@import url();

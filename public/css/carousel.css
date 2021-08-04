@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Formato del titolo principal*/
+.titulo { 
+   
+    font-size: 60px; /*Tamaño del titulo*/
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 40px; /*Margen inferior*/
+    color: #fff;
+}
+/*formato del nombre de los productos*/
+
+.subtitulo {
+    margin: 0;
+    color: #000;
+    display: inline; /*si el elementento es en bloque o en línea*/
+    font-size: 50px;
+    font-weight: 500; /*Grosor de la letra*/
+    text-transform: uppercase; /*letras en mayúsculas*/
+}
+/*formato del subtitulo*/
+
+.sabor { 
+    color: #fff;
+    margin: 7px 0;
+    font-size: 50px;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.7);
+    font-family: 'Dancing Script', cursive;
+    margin-top: 0;
+}
+
+.linea-division {
+    width: 80%;
+    height: 2px;
+    background-color: #36221c;
+}
+
+/* estilos materialize*/
+.carousel {
+    min-height: 500px;
+}
+.carousel .carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    width: 500px;
+    height: 500px;
+}
+.carousel .carousel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /*enviamos la imagen al fondo*/
+    border-radius: 15px;
+}
+.carousel .indicator .indicator-item{
+    border-radius: 0;
+    transform: rotate(45deg);
+    margin: 0 15px;
+    background-color: #36221c;
+}
