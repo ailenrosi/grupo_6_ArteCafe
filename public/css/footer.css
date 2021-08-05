@@ -9,7 +9,6 @@
     text-decoration: none;
 }
 
-/*Aquí debajo va el FOOTER*/
 
 footer{
     width: 100%;
@@ -17,7 +16,7 @@ footer{
     background-size: cover;
     background-color: rgba(2, 66, 34, 0.829);
 }
-.wave{
+ .wave{
     background: hsla(140, 100%, 13%, 0.911);  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, rgb(2, 66, 34, 0.829), #063b18); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgb(2, 66, 34, 0.829), #063b18c2);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -32,10 +31,10 @@ footer{
  }
 
 .container_footer{
-    padding: 20px;
+    padding: 5px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     max-width: 1200px;
     margin: auto;
     margin-top: 10px;
@@ -52,7 +51,7 @@ footer{
     border-radius: 25px;
 }
 
-.box_footer .terms{
+.box_footer .terms {
     max-width: 350px;
     margin-top: 20px;
     font-weight: 500;
@@ -61,7 +60,7 @@ footer{
     justify-content: center;
 }
 
-.box_footer{
+.box_footer {
     margin-bottom: 10px;
     color: #e2dfdf;
     font-weight: 700;

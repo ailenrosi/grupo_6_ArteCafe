@@ -2,6 +2,11 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
   background-color: rgb(238, 235, 235);
   font-family: 'Montserrat', sans-serif;
@@ -10,6 +15,7 @@ body{
 .envio{
   color: antiquewhite;
   background: linear-gradient(to right, rgb(5, 73, 56), rgba(3, 153, 48, 0.671));
+  position: fixed;
 }
 
 /*comienza la nav_bar*/
@@ -21,18 +27,14 @@ hr{
 }
 .logo{
   text-rendering: auto;
-  margin: -12px;
-  text-shadow: darkcyan;
-  line-height: 12px;
-}
-.logo a{
-  font-size: 17px;
-  text-shadow:.5px 1px floralwhite;
-font-weight: bolder; 
-
+  margin: -24px;
+text-shadow: darkcyan;
 }
 
 .social-icons{
+  height: 11px;
+  padding: 21px;
+  top: 60px;
   display: flex;
   justify-content:space-evenly;
   text-align:justify;
@@ -64,29 +66,27 @@ font-weight: bolder;
   -o-transition: all 0.9s ease 0s;
 }
 
-
-.header-bottom {
+.main-header {
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-around;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 65px;
   width: 100vw;
+  padding: 0 10vw;
   background-color:  rgb(3 153 48 / 18%);
   color: rgba(0, 0, 0, 0.63);
   z-index: 1;
   -webkit-transition: .4s ease-out;
   transition: .4s ease-out;
 }
-.main-header{
-  display: flex;
-  flex-direction: column;
-}
+
 .main-header a {
   text-decoration: none;
   color: inherit;
@@ -513,24 +513,24 @@ font-weight: bolder;
 
 /***************************BUSCAR...********************************************/
 .box_search{
- 
+  position: absolute;
   padding-top: -10px;
 }
 
 .search{
-  width: 50px;
+  width: 150px;
   white-space: nowrap;
   position: relative;
 }
 .search input#search{
   width: 50px;
   height: 50px;
-  background: #70977070;
+  background: #7097703d;
   border: none;
   font-size: 10pt;
   float: left;
   color: #262626;
-  padding-left: 37px;
+  padding-left: 35px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
