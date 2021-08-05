@@ -14,7 +14,7 @@ footer{
     width: 100%;
     padding: 0.111px;
     background-size: cover;
-    background-color: rgba(2, 66, 34, 0.829);
+    background-color: rgba(2, 51, 26, 0.904);
 }
  .wave{
     background: hsla(140, 100%, 13%, 0.911);  /* fallback for old browsers */
@@ -92,9 +92,4 @@ footer{
     color: #a19f9f;
 }
 
-.box_copyright hr{
-    border: none;
-    height: 1px;
-    background-color: #d4c8c8;
-}
 
