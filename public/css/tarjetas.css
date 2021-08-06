@@ -1,0 +1,101 @@
+.promo{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 0;
+  }
+  .tit_promo{
+    align-content: center;
+    width: 100%;
+    color: #999;
+    font-family: monospace;
+    
+  }
+  .card{
+    width: 33.333333%;
+  }
+  .estilo-c{
+    font-family: sans-serif;
+    width: 30%;
+  }
+  .estilo-c .img-container{
+    overflow: hidden;
+    height: 250px;
+    position: relative;
+    border-radius: 15px;
+  }
+  .estilo-c .img-container img{
+    width: 105%;
+    position: absolute;
+    transition: all 0.5s;
+  }
+  .estilo-c:hover .img-container img{
+    transform: scale(1.2);
+  }
+  .estilo-c .img-container .promo{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 20px;
+    background: rgba(230, 230, 184, 0.856);
+    padding: 15px;
+    color: rgb(3, 117, 93);
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  .estilo-c .info-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+  .estilo-c .info-container h3{
+    margin: 0;
+  }
+  .estilo-c .info-container h3,
+  .estilo-c .info-container strong,
+  .estilo-c .info-container span{
+    padding: 5px 15px;
+    width: 100%;
+  }
+  .estilo-c .add-cart{
+    margin-top: 2px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(6, 110, 79);
+    padding: 10px;
+    border: 1px solid rgb(5, 117, 117);
+    border-radius: 25px;
+  }
+  .estilo-c .add-cart:hover{
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    box-shadow: lawngreen;
+  }
+
+  @media screen and(min-width: 500px){
+    .promo{
+        display: flex;
+    justify-content: center;
+    height: 38vh;
+    overflow: hidden;
+    }
+    .estilo-c .img-container img{
+        width: auto;
+        height: 100%;
+        transition: all 0.5s;
+  }
+  .estilo-c .img-container{
+  height: 131px;
+  }
+  .estilo-c .add-cart{
+      padding: 7px;
+      border-radius: 17px;
+  }
+  .estilo-c .img-container .promo{
+      top: 23px;
+      left: -6px;
+}
+  }

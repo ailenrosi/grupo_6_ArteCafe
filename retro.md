@@ -35,7 +35,7 @@ En el primer sprint el equipo tuvo el desafío de aprender nuevas técnicas y he
 * Postergar las tareas importantes.
 
 
-![](public\img\z-imagenes\estrella.png)
+![](img\z-imagenes\estrella.png)
 
 
 ### Notas

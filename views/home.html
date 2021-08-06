@@ -11,17 +11,14 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/wsp-chat.css">
   <link rel="stylesheet" href="css/carrusel.css">
-  <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/galeria.css">
+  <link rel="stylesheet" href="css/tarjetas.css">
 
 
   <link rel="shortcut icon" href="/img/z-imagenes/iconos/icocno_cora.png" type="image/x-icon">
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-
 
   <link href="https: //fonts.googleapis.com/css2? family = Gowun + Batang & display = swap " rel=" stylesheet ">
 
@@ -57,7 +54,7 @@
       </div>
       <div class="fa-fa">
         <a href="/registrarse"><i class="far fa-user-circle"></i></a>
-        <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+        <a href="/productos"><i class="fas fa-shopping-cart"></i></a>
       </div>
 
       <section class="box_search">
@@ -96,35 +93,95 @@
   </section>
 
 
-  <section class="portafolio">
-    <div class="contenedor">
-        <h2 class="titulo"></h2>
-        <div class="galeria-port">
-            <div class="imagen-port">
-                <img src="img/z-imagenes/imgVarios/chica_con_cafe.jpeg">
-                <div class="hover-galeria">
-                    <img src="img/z-imagenes/iconos/coffee-cup.png" alt="">
-                    <p>Nuestro trabajo</p>
-                </div>
-            </div>
-            <div class="imagen-port">
-                <img src="img/z-imagenes/imgVarios/tazasDeCafe.png">
-                <div class="hover-galeria">
-                    <img src="img/z-imagenes/iconos/coffee-cup.png" alt="">
-                    <p>Nuestro trabajo</p>
-                </div>
-            </div>
-            <div class="imagen-port">
-                <img src="img/z-imagenes/imgVarios/artelatte.jpg">
-                <div class="hover-galeria">
-                    <img src="img/z-imagenes/iconos/coffee-cup.png" alt="">
-                    <p>Nuestro trabajo</p>
-                </div>
-            </div>
-            <section>
-            </section>
+  <main class="home">
+    <!-- CAROUSEL -->
+    <section class="carousel-container">
+
+      <div class="slides fade">
+        <img src="img/z-imagenes/imgVarios/Los artesanos del café.png" alt="">
+      </div>
+
+      <div class="slides fade">
+        <img src="img/z-imagenes/imgVarios/img1.jpeg" alt="">
+      </div>
+
+      <div class="slides fade">
+        <img src="img/z-imagenes/bolsasCafe/bolsaCafe.jpg" alt="">
+      </div>
+
+      <div class="slides fade">
+        <img src="img/z-imagenes/imgVarios/img2.jpeg" alt="">
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- The dots/circles -->
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </section>
+    <!-- END CAROUSEL -->
+
+  </main>
 
 
+  <section class="bot">
+    <button class="raise"> Seccion</button>
+    <button class="raise"> Seccion</button>
+    <button class="raise"> Seccion</button>
+    <button class="raise"> Seccion</button>
+    <button class="raise"> Seccion</button>
+    <button class="raise"> Seccion</button>
+  </section>
+ 
+
+  <section class="promo">
+    <h2 class="tit_promo">Promociones Imperdibles</h2>
+    <div class="card estilo-c">
+      <a href="/productos">
+        <div class="img-container">
+          <img src="img/z-imagenes/imgProductos/cafeteraElegante.jpg" alt="producto 1">
+          <span class="promo">15% de descuento</span>
+        </div>
+       </a>
+      <div class="info-container">
+        <h3>cafetera Chemex</h3>
+        <strong>$6000</strong>
+        <a href="#" class="add-cart">Añadir al carrito</a>
+      </div>
+    </div>
+    <div class="card estilo-c">
+      <a href="#">
+        <div class="img-container">
+          <img src="img/z-imagenes/imgProductos/cafeteraFrancesa.jpg" alt="producto 1">
+          <span class="promo">15% de descuento</span>
+        </div>
+        </a>
+      <div class="info-container">
+        <h3>Cafetera Francesa</h3>
+        <strong>$3000</strong>
+        <a href="#" class="add-cart">Añadir al carrito</a>
+      </div>
+    </div>
+    <div class="card estilo-c">
+      <a href="#">
+        <div class="img-container">
+          <img src="img/z-imagenes/imgProductos/voulturno.jpg" alt="producto 1">
+          <span class="promo">15% de descuento</span>
+        </div>
+        </a>
+      <div class="info-container">
+        <h3>Cafetera italiana</h3>
+        <strong>$7000</strong>
+        <a href="#" class="add-cart">Añadir al carrito</a>
+      </div>
+    </div>
+</section>
 
 
 
@@ -133,6 +190,57 @@
 
 
 
+  <section class="portafolio">
+      <div class="galeria-port">
+        <div class="imagen-port">
+          <img src="img/z-imagenes/imgVarios/chica_con_cafe.jpeg">
+          <div class="hover-galeria">
+            <img src="img/z-imagenes/iconos/coffee-cup.png" alt="">
+            <p>Nuestros clientes</p>
+          </div>
+        </div>
+        <div class="imagen-port">
+          <img src="img/z-imagenes/imgVarios/hombre_moliendoi.jpeg">
+          <div class="hover-galeria">
+            <img src="img/z-imagenes/iconos/coffee-cup.png" alt="">
+            <p>Nuestro trabajo</p>
+          </div>
+        </div>
+        <div class="imagen-port">
+          <img src="img/z-imagenes/imgVarios/tazasDeCafe.png">
+          <div class="hover-galeria">
+            <img src="img/z-imagenes/iconos/coffee-cup.png" alt="">
+            <p>Cursos</p>
+          </div>
+        </div>
+  </section>
+
+<span class="pro_destacado">Los más buscados</span>
+
+  <div class="carrusel">
+    <div class="carrusel-items">
+      <div class="carrusel-item">
+        <img src="img/z-imagenes/imgProductos/cafetera2.jpg" alt="" />
+      </div>
+      <div class="carrusel-item">
+        <img src="img/z-imagenes/imgProductos/cafeteraElegante.jpg" alt="" />
+      </div>
+      <div class="carrusel-item">
+        <img src="img/z-imagenes/imgProductos/cafeteraFrancesa.jpg" alt="" />
+      </div>
+      <div class="carrusel-item">
+        <img src="img/z-imagenes/imgProductos/jarronBlanco.jpg" alt="" />
+      </div>
+      <div class="carrusel-item">
+        <img src="img/z-imagenes/imgProductos/tazaBlanca.jpg" alt="" />
+      </div>
+      <div class="carrusel-item">
+        <img src="img/z-imagenes/imgProductos/cafetera2.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+
+ 
 
 
 
@@ -182,11 +290,11 @@
 
       <div class="box_copyright">
         <hr>
-        <p>Todos los derechos reservados &copy; <b>Grupo 6 | C8 2021 <br> {Emilce| Rocio| Elias| Alejandro}</b></p>
+        <p>Todos los derechos reservados &copy; <b>Grupo 6 | C8 2021 {Emilce| Rocio| Elias| Alejandro}</b></p>
       </div>
   </footer>
 
-  
+
   <script src="/js/main.js"></script>
 </body>
 

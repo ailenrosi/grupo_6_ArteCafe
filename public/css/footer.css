@@ -1,34 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
-    text-decoration: none;
-}
-
-
 footer{
     width: 100%;
     padding: 0.111px;
     background-size: cover;
-    background-color: rgba(2, 51, 26, 0.904);
+    background-color: rgba(1, 46, 23, 0.904);
+    
 }
  .wave{
     background: hsla(140, 100%, 13%, 0.911);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, rgb(2, 66, 34, 0.829), #063b18); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgb(2, 66, 34, 0.829), #063b18c2);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, rgb(1, 46, 23, 0.904), #063b18); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(1, 46, 23, 0.904), #063b18c2);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: contain;
-    background-attachment: fixed;
-    position: relative;
     display: flex;
     width: 100%;
     height: auto;
     overflow: hidden;
     border:none;
  }
+
+
 
 .container_footer{
     padding: 5px;
@@ -37,13 +29,16 @@ footer{
     justify-content: space-evenly;
     max-width: 1200px;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 10px;   
 }
 
 .box_footer{
     display: flex;
     flex-direction: column;
     padding: 30px;
+    margin-bottom: 10px;
+    color: #e2dfdf;
+    font-weight: 700;
 }
 
 .box_footer .logo img{
@@ -60,16 +55,13 @@ footer{
     justify-content: center;
 }
 
-.box_footer {
-    margin-bottom: 10px;
-    color: #e2dfdf;
-    font-weight: 700;
-}
-
 .box_footer a{
     margin-top: 10px;
     color: #e2dfdf;
     font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    
 }
 
 .box_footer a:hover{
