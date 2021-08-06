@@ -23,8 +23,8 @@ app.get('/iniciar-sesion', (req, res)=>{
 app.get('/carrito', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/carrito.html'))
 })
-app.get('/producto', (req, res)=>{
-    res.sendFile(path.join(__dirname, '/views/producto.html'))
+app.get('/productos', (req, res)=>{
+    res.sendFile(path.join(__dirname, '/views/productos.html'))
 })
 app.get('/detalleProducto', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/detalleProducto.html'))
@@ -35,6 +35,10 @@ app.get('*', (req, res)=>{
 app.get('/carousel', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/carousel.html'))
 })
+app.get('formulario', (req, res)=>{
+    res.sendFile(path.join(__dirname, '/views/formulario.html'))
+})
+
 
 app.listen(port, () => {
     console.log(`Puerto corriendo en ${port}\n http://localhost:${port}`)
