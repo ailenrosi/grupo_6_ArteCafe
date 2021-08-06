@@ -5,7 +5,7 @@
 }
 
 body{
-    background: url(/img/registro/imagenCafe.jpg);
+    background: url(/img/registro/imagenCafe.jpg)  no-repeat;
 }
 
 .form-registro{
