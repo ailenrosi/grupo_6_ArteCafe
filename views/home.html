@@ -1,301 +1,233 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="home" lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+    <!-- link font awesome   -->
+    <link rel="shortcut icon" href="img/z-imagenes/iconos/icocno_cora.png" type="image/x-icon">
+    <!-- link font awesome   -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/wsp-chat.css">
-  <link rel="stylesheet" href="css/carrusel.css">
-  <link rel="stylesheet" href="css/galeria.css">
-  <link rel="stylesheet" href="css/tarjetas.css">
+    <!-- link css  -->
+    <link rel="stylesheet" href="css/style.css">
 
+    <!-- link fonts  -->
+    <link href="https: //fonts.googleapis.com/css2? family = Gowun + Batang & display = swap " rel=" stylesheet ">
 
-  <link rel="shortcut icon" href="/img/z-imagenes/iconos/icocno_cora.png" type="image/x-icon">
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-  <link href="https: //fonts.googleapis.com/css2? family = Gowun + Batang & display = swap " rel=" stylesheet ">
-
-  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-
-  <title>Home -Arte café</title>
+    <title>Home -Arte café</title>
 </head>
-
 
 <body>
 
-  <header class="main-header">
-    <section class='header-top'>
-      <MARQUEE DIRECTION=right class="envio"> Envío bonificado a partit de $3500 <i class="fas fa-truck"></i></MARQUEE>
-      <hr class="linea">
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fas fa-envelope-open-text"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="tel:541161031216"><i class="fas fa-mobile-alt"></i></i></a>
-      </div>
+    <!-- comienza header      -->
+
+    <header>
+
+        <a href="#" class="logo"><i class="fas fa-mug-hot"></i>Arte Café</a>
+
+        <nav class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="#nosotros">Sobre nosotros</a>
+            <a href="#gallery">Galeria</a>
+            <a href="#products">Productos</a>
+            <a href="#cursos">Cursos</a>
+            <a href="#online">Compra online</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-user"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+        </div>
+
+    </header>
+    <!----  whatts fixed     ---->
+
+    <section id='wsp-chat'>
+        <figure>
+            <a class="wsp" href="https://wa.me/+541161031216?text=Hola%20que%20servicios%20brindan%3F"><img class="wst"
+                    src="img/z-imagenes/iconos/wsp.png" alt=""></a>
+        </figure>
     </section>
-    <section class='header-bottom'>
 
+    <!-- menu buscar  -->
 
-      <div class="logo">
-        <a href="#">ARTE CAFE</a> <br>
-        <h6>Sabores del mundo</h6>
-      </div>
+    <form action="" id="search-form">
+        <input type="search" placeholder="buscar..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
 
-      </div>
-      <div class="fa-fa">
-        <a href="/registrarse"><i class="far fa-user-circle"></i></a>
-        <a href="/productos"><i class="fas fa-shopping-cart"></i></a>
-      </div>
+    <!-- imagen slider  -->
 
-      <section class="box_search">
-        <div class="box">
-          <div class="search">
-            <span class="icon"><i class="fa fa-search"></i></span>
-            <input type="search" id="search" placeholder="Buscar..." />
-          </div>
-      </section>
+    <section class="home" id="home">
 
-      <input type="checkbox" class="menu-btn" id="menu-btn">
-      <label for="menu-btn" class="menu-icon">
-        <span class="menu-icon__line"></span>
-      </label>
-      <ul class="nav-links">
-        <li class="nav-link">
-          <a href="/producto">Productos</a>
-        </li>
-        <li class="nav-link">
-          <a href="/carrito">Compra online</a>
-        </li>
-        <li class="nav-link">
-          <a href="#">Galeria de imágenes</a>
-        </li>
-        <li class="nav-link">
-          <a href="#">Contacto</a>
-        </li>
-      </ul>
+        <div class="swiper-container home-slider">
+            <div class="swiper-wrapper wrapper">
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span class="un_cafe">ARTE CAFE</span>
+                        <h3 class="sabores">Sabores del mundo</h3>
+                        <p class="subt"> Disfurtá de los mejores momentos con la mejor compania en la comodidad de tu
+                            hogar.</p>
+                        <a href="#" class="btn">Ver productos</a>
+                    </div>
+                    <div class="image">
+                        <img class="img_home" src="img/z-imagenes/img_home/img-1-taza.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span class="un_cafe">ARTE CAFE</span>
+                        <h3 class="sabores">Sabores del mundo</h3>
+                        <p class="subt"> Disfurtá de los mejores momentos con la mejor compania en la comodidad de tu
+                            hogar.</p>
+                        <a href="#" class="btn">Ver productos</a>
+                    </div>
+                    <div class="image">
+                        <img class="img_home" src="img/z-imagenes/img_home/img-2-cafetera.jpg" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <span class="un_cafe">ARTE CAFE</span>
+                    <h3 class="sabores">Sabores del mundo</h3>
+                    <p class="subt"> Disfurtá de los mejores momentos con la mejor compania en la comodidad de tu hogar.
+                    </p>
+                    <a href="#" class="btn">Ver productos</a>
+                </div>
+                <div class="image">
+                    <img class="img_home" src="img/z-imagenes/img_home/merienda_campo.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        </div>
     </section>
-  </header>
-  <section id='wsp-chat'>
-    <figure>
-      <a href="https://wa.me/+541161031216?text=Hola%20que%20servicios%20brindan%3F"><img
-          src="img/z-imagenes/iconos/wsp.png" alt=""></a>
-    </figure>
+
+
+   
+      <!-- CATEGORIES -->
+  <section class="categor">
+    <figure class="category">
+        <img src="img/z-imagenes/img_home/coffee_history.jpg" alt="" />
+        <figcaption><i class="ion-android-add"></i></figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="category">
+        <img src="img/z-imagenes/img_home/img-2-cafetera.jpg" alt="" />
+        <figcaption><i class="ion-android-add"></i></figcaption>
+        <a href="#"></a>
+      </figure>
+      <figure class="category">
+        <img src="img/z-imagenes/img_home/cafeMolido.jpg" alt="" />
+        <figcaption><i class="ion-android-add"></i></figcaption>
+        <a href="#"></a>
+      </figure>
   </section>
 
 
-  <main class="home">
-    <!-- CAROUSEL -->
-    <section class="carousel-container">
+    <!-- Meriendas -->
 
-      <div class="slides fade">
-        <img src="img/z-imagenes/imgVarios/Los artesanos del café.png" alt="">
-      </div>
+    <section class="merienda" id="meriendas">
 
-      <div class="slides fade">
-        <img src="img/z-imagenes/imgVarios/img1.jpeg" alt="">
-      </div>
+        <h3 class="sub-heading"> Populares </h3>
+        <h1 class="heading"> Sorprendé con una merienda muy especial </h1>
 
-      <div class="slides fade">
-        <img src="img/z-imagenes/bolsasCafe/bolsaCafe.jpg" alt="">
-      </div>
+        <div class="box-container">
 
-      <div class="slides fade">
-        <img src="img/z-imagenes/imgVarios/img2.jpeg" alt="">
-      </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="img/z-imagenes/img_home/merienda.jpg" alt="">
+                <h3>Merienda simple</h3>
+                <div class="stars">
+                    <span>$400</span>
+                </div>
+                <a href="#" class="btn">Agregar</a>
+            </div>
 
-      <!-- Next and previous buttons -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="img/z-imagenes/img_home/merienda_campo.jpg" alt="">
+                <h3>Merienda campo</h3>
+                <div class="stars">
+                    <span>$600</span>
+                </div>
+                <a href="#" class="btn">Agregar</a>
+            </div>
 
-      <!-- The dots/circles -->
-      <div class="dots">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-      </div>
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="img/z-imagenes/img_home/merienda_2.jpg" alt="">
+                <h3>Merienda premium</h3>
+                <div class="stars">
+                    <span>$750</span>
+                </div>
+                <a href="#" class="btn">Agregar</a>
+            </div>
+        </div>
     </section>
-    <!-- END CAROUSEL -->
-
-  </main>
 
 
-  <section class="bot">
-    <button class="raise"> Seccion</button>
-    <button class="raise"> Seccion</button>
-    <button class="raise"> Seccion</button>
-    <button class="raise"> Seccion</button>
-    <button class="raise"> Seccion</button>
-    <button class="raise"> Seccion</button>
-  </section>
- 
+    <!----   Comieza footer     ----->
 
-  <section class="promo">
-    <h2 class="tit_promo">Promociones Imperdibles</h2>
-    <div class="card estilo-c">
-      <a href="/productos">
-        <div class="img-container">
-          <img src="img/z-imagenes/imgProductos/cafeteraElegante.jpg" alt="producto 1">
-          <span class="promo">15% de descuento</span>
-        </div>
-       </a>
-      <div class="info-container">
-        <h3>cafetera Chemex</h3>
-        <strong>$6000</strong>
-        <a href="#" class="add-cart">Añadir al carrito</a>
-      </div>
-    </div>
-    <div class="card estilo-c">
-      <a href="#">
-        <div class="img-container">
-          <img src="img/z-imagenes/imgProductos/cafeteraFrancesa.jpg" alt="producto 1">
-          <span class="promo">15% de descuento</span>
-        </div>
-        </a>
-      <div class="info-container">
-        <h3>Cafetera Francesa</h3>
-        <strong>$3000</strong>
-        <a href="#" class="add-cart">Añadir al carrito</a>
-      </div>
-    </div>
-    <div class="card estilo-c">
-      <a href="#">
-        <div class="img-container">
-          <img src="img/z-imagenes/imgProductos/voulturno.jpg" alt="producto 1">
-          <span class="promo">15% de descuento</span>
-        </div>
-        </a>
-      <div class="info-container">
-        <h3>Cafetera italiana</h3>
-        <strong>$7000</strong>
-        <a href="#" class="add-cart">Añadir al carrito</a>
-      </div>
-    </div>
-</section>
-
-
-
-
- 
-
-
-
-  <section class="portafolio">
-      <div class="galeria-port">
-        <div class="imagen-port">
-          <img src="img/z-imagenes/imgVarios/chica_con_cafe.jpeg">
-          <div class="hover-galeria">
-            <img src="img/z-imagenes/iconos/coffee-cup.png" alt="">
-            <p>Nuestros clientes</p>
-          </div>
-        </div>
-        <div class="imagen-port">
-          <img src="img/z-imagenes/imgVarios/hombre_moliendoi.jpeg">
-          <div class="hover-galeria">
-            <img src="img/z-imagenes/iconos/coffee-cup.png" alt="">
-            <p>Nuestro trabajo</p>
-          </div>
-        </div>
-        <div class="imagen-port">
-          <img src="img/z-imagenes/imgVarios/tazasDeCafe.png">
-          <div class="hover-galeria">
-            <img src="img/z-imagenes/iconos/coffee-cup.png" alt="">
-            <p>Cursos</p>
-          </div>
-        </div>
-  </section>
-
-<span class="pro_destacado">Los más buscados</span>
-
-  <div class="carrusel">
-    <div class="carrusel-items">
-      <div class="carrusel-item">
-        <img src="img/z-imagenes/imgProductos/cafetera2.jpg" alt="" />
-      </div>
-      <div class="carrusel-item">
-        <img src="img/z-imagenes/imgProductos/cafeteraElegante.jpg" alt="" />
-      </div>
-      <div class="carrusel-item">
-        <img src="img/z-imagenes/imgProductos/cafeteraFrancesa.jpg" alt="" />
-      </div>
-      <div class="carrusel-item">
-        <img src="img/z-imagenes/imgProductos/jarronBlanco.jpg" alt="" />
-      </div>
-      <div class="carrusel-item">
-        <img src="img/z-imagenes/imgProductos/tazaBlanca.jpg" alt="" />
-      </div>
-      <div class="carrusel-item">
-        <img src="img/z-imagenes/imgProductos/cafetera2.jpg" alt="" />
-      </div>
-    </div>
-  </div>
-
- 
-
-
-
-
-  <footer>
     <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
         style="height: 100%; width: 100%;">
         <path d="M0.00,49.98 C132.34,195.88 257.62,12.33 500.84,84.38 L500.00,0.00 L0.00,0.00 Z"
-          style="stroke: none; fill: rgb(238, 235, 235);"></path>
-      </svg></div>
+            style="stroke: none; fill: rgb(243, 244, 245);"></path>
+    </svg></div>
+    <footer>
     <div class="container_footer">
-      <div class="box_footer">
-        <div class="logo">
-          <img src="img/z-imagenes/iconos/logo_black.jpeg" alt="">
+        <div class="box_footer1">
+          <div class="logo">
+            <img src="img/z-imagenes/img_home/logo_black.jpeg" alt="">
+          </div>
+          
         </div>
-        <div class="terms">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit cum cumque velit libero
-            officiis quam doloremque reprehenderit quae corporis! Delectus architecto officia praesentium atque
-            laudantium, nam deleniti sapiente deserunt.</p>
+        <div class="box_footer">
+          <h2>Medios de pago</h2>
+          <a href="#"><i class="fas fa-credit-card"></i> Tarjetas</a>
+          <a href="#"><i class="fas fa-money-bill-wave"></i> Efectivo</a>
+          <a href="#"><i class="fas fa-money-check-alt"></i> Transferencias</a>
+          <a href="#"><i class="far fa-handshake"></i></i> MercadoPago</a>
         </div>
-      </div>
-      <div class="box_footer">
-        <h2>Medios de pago</h2>
-        <a href="#"><i class="fas fa-credit-card"></i> Tarjetas</a>
-        <a href="#"><i class="fas fa-money-bill-wave"></i> Efectivo</a>
-        <a href="#"><i class="fas fa-money-check-alt"></i> Transferencias</a>
-        <a href="#"><i class="far fa-handshake"></i></i> MercadoPago</a>
-      </div>
+  
+        <div class="box_footer">
+          <h2>La empresa</h2>
+          <a href="#"><i class="far fa-laugh-wink"></i> Sobre nosotros</a>
+          <a href="#"><i class="fas fa-mug-hot"></i> Trabajos</a>
+          <a href="#"><i class="fas fa-chalkboard-teacher"></i> Cursos</a>
+          <a href="https://wa.me/541161031216"><i class="fab fa-whatsapp"></i> Contacto</a>
+        </div>
+  
+        <div class="box_footer">
+          <h2>Redes Sociales</h2>
+          <a href="#"><i class="fab fa-facebook-square"></i> Facebook</a>
+          <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+          <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+          <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+        </div>
 
-      <div class="box_footer">
-        <h2>La empresa</h2>
-        <a href="#"><i class="far fa-laugh-wink"></i> Sobre nosotros</a>
-        <a href="#"><i class="fas fa-mug-hot"></i> Trabajos</a>
-        <a href="#"><i class="fas fa-chalkboard-teacher"></i> Cursos</a>
-        <a href="https://wa.me/541161031216"><i class="fab fa-whatsapp"></i> Contacto</a>
-      </div>
-
-      <div class="box_footer">
-        <h2>Redes Sociales</h2>
-        <a href="#"><i class="fab fa-facebook-square"></i> Facebook</a>
-        <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
-        <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
-        <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
-      </div>
-
-
-
-      <div class="box_copyright">
+    <div class="box_copyright">
         <hr>
-        <p>Todos los derechos reservados &copy; <b>Grupo 6 | C8 2021 {Emilce| Rocio| Elias| Alejandro}</b></p>
-      </div>
-  </footer>
+        <p>Todos los derechos reservados &copy; <b>Grupo 6 | C8 2021 <br> {Emilce| Rocio| Elias| Alejandro}</b></p>
+    </div>
+</footer>
 
 
-  <script src="/js/main.js"></script>
+
+
+
+    <!-- links JS -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,12 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body{
 	font-family: "montserrat",sans-serif;
-	background-color: rgba(4, 216, 216, 0.048);
+	
   }
   
   
@@ -26,29 +22,7 @@ dejo espacio x si ponemos una imagen de fondo
 	text-shadow: 2px 2px rgb(225, 248, 242);
   }
   
-
-/************************whats*************************************************/
-
-.whatsapp {
-    position:fixed;
-    width:60px;
-    height:60px;
-    bottom:100px;
-    right:100px;
-    background-color:#25d366;
-    color:#FFF;
-    border-radius:50px;
-    text-align:center;
-    font-size:34px;
-    z-index:100;
-	box-shadow: 1px 1px white;
-  }
-  
-  .whatsapp-icon {
-    margin-top:13px;
-  }
-
-  /***************************************Volver************************************************/
+/***************************************Volver************************************************/
 
 .btn-flotantes{
 	color: #ffffff; /* Color del texto */
