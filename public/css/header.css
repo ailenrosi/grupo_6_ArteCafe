@@ -6,11 +6,9 @@
     --light-color:#666;
     --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
     --letras: rgb(0, 128, 79);
-    
 }
 
 *{
-    
     outline: none;
     border:none;
     transition: all .2s linear;
@@ -23,10 +21,8 @@ html{
     scroll-behavior: smooth;
 }
 section{
-    padding:2rem 9%;
+    padding:2rem;
 }
-
-
 
 .sub-heading{
     text-align: center;
@@ -67,7 +63,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1000;
     box-shadow: var(--box-shadow);
 }
 
@@ -115,9 +110,7 @@ header .icons a:hover{
     transform: rotate(360deg);
 }
 
-header .icons #menu-bars{
-    display: none;
-}
+
 
 #search-form{
     position: fixed;
