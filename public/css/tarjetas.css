@@ -99,3 +99,23 @@
       left: -6px;
 }
   }
+
+  @media (max-width: 600px) {
+    .estilo-c .img-container{
+    height: 137px;
+    display: flex; height: 10em;
+  flex-wrap: wrap; align-content: flex-start;
+    }
+    .estilo-c .img-container .promo{
+      font-size: 12px;
+      padding: 0;
+      color: rgb(1 60 47);
+      top: 25px;
+    }
+    .add-cart{
+      font-size: 12px;
+      padding: 4px;
+    }
+  }
+
+  

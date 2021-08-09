@@ -1,1 +1,41 @@
+<<<<<<< HEAD
 @import url('')
+=======
+@import url('variables.css');
+@import url('meriendas.css');
+@import url('home_slider.css');
+@import url('categories.css');
+@import url('footer.css');
+@import url('wsp-chat.css');
+@import url('medias.css');
+@import url('header.css');
+@import url('');
+@import url('');
+@import url('');
+@import url('');
+@import url('');
+@import url('');
+@import url('');
+@import url('');
+@import url('');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 273a99eced7a4383e5be4484f7081119dc40becc
