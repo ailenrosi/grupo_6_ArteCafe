@@ -1,11 +1,19 @@
-
-.part-1 .imagen img{
-    width: 30%;
-    
+.formulario {
+    padding-top: 16px;
 }
+
+
+.imagen img{
+ width: 30%;
+}
+
 
 .part-1 {
     text-align: center;
+}
+
+.pagar{
+    margin-left: 103px;   
 }
 
 .pagar form{
@@ -53,10 +61,14 @@
     width: 150px;
     text-align: center;
     margin-top: 30px;
-}
+    margin-left: 133px;
+} 
+
 
 .volver{
     margin-top: 70px;
+    position: relative;
+        left: 75%;
 }
 .realizado:hover {
     background-color: rgb(78, 128, 78);
@@ -70,3 +82,69 @@
     flex-direction: row;
     justify-content: space-between;
 }}
+
+@media screen and (min-width: 590px) {
+    .imagen img {
+        width: 59%;}
+    .pagar{
+        position: relative;
+top: 8%;
+left: 7%;
+    }
+    .realizado{
+        border: 1px solid;
+        border-radius: 30px;
+        width: 110px;
+        text-align: center;
+        margin-top: 318px;
+        position: relative;
+        right: 122px;
+    }
+    .volver a{
+        text-decoration: none;
+        position: relative;
+        top: 106%;
+        right: 72%;
+    }
+    .part-2{
+        position: absolute;
+            left: 61%;
+    }
+
+    
+    }
+  
+  
+  
+  @media screen and (min-width: 960px) {
+    .imagen img {
+        width: 59%;}
+     .pagar{
+            position: relative;
+            top: 8%;
+            left: 7%;
+            }
+        .realizado{
+            border: 1px solid;
+            border-radius: 30px;
+            width: 110px;
+            text-align: center;
+            margin-top: 318px;
+            position: relative;
+            right: 206px;
+        }
+        .volver a{
+            text-decoration: none;
+            position: relative;
+            top: 106%;
+            right: 72%;
+        }
+        .part-2{
+            position: absolute;
+                left: 61%;
+                margin-left: -5%;
+            }
+        }
+    
+    
+   

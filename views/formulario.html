@@ -16,12 +16,12 @@
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 
    
-    <link rel="stylesheet" href="css/formulario.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/wsp-chat.css">
-    <link rel="stylesheet" href="css/carrusel.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="../public/css/formulario.css">
+    <link rel="stylesheet" href="../public/css/header.css">
+    <link rel="stylesheet" href="../public/css/footer.css">
+    <link rel="stylesheet" href="../public/css/wsp-chat.css">
+    <link rel="stylesheet" href="../public/css/carrusel.css">
+    <link rel="stylesheet" href="../public/css/home.css">
 
     <title>Pagos -Arte Cafe</title>
 
@@ -95,7 +95,7 @@
         <section class="part-1">
 
             <article class="imagen">
-                <img src="img/z-imagenes/imgProductos/cafeteraElegante.jpg" alt="Chemex" title="Chemex">
+                <img src="../public/img/z-imagenes/img-rocio/chemex.webp" alt="Chemex" title="Chemex">
             </article>
 
             <article class="producto">
@@ -106,13 +106,12 @@
         </section>
 
         <section class="part-2">
-
             <div class="img1">
-                <img src="img/z-imagenes/iconos/visa-logo.jpg" alt="visa">
+              <a href="#"><i class="fab fa-cc-visa"></i> </a>
             </div>
 
             <div class="img2">
-                <img src="img/z-imagenes/iconos/MasterCard-01.webp" alt="mastercard">
+              <a href="#"><i class="fab fa-cc-mastercard"></i> </a>
             </div>
 
         </section>
@@ -120,25 +119,77 @@
         <section class="pagar">
             <form action="">
                 <label for="nombre">Nombre del titular </label>
-                <input type="text" name="nombre" value="Como aparece en la tarjeta">
+                <input type="text" name="nombre">
                 <label for="numero">Numero de tarjeta </label>
                 <input type="number" name="numero">
                 <label for="mes">Fecha de expiracion </label>
-                <input type="month" name="mes">
+                <input type="date" name="mes">
                 <label for="contraseña">Codigo de seguridad </label>
                 <input type="password" name="contraseña">
 
         </section>
 
         <div class="realizado">
-            <a href="/views/realizado.html">Pagar</a>
+            <a href="realizado.html">Pagar</a>
         </div>
 
         <div class="volver">
-            <a href="/views/vista.html">volver</a>
+            <a href="vista.html">volver</a>
         </div>
         </form>
     </main>
+
+
+
+
+    <footer>
+      <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+          style="height: 100%; width: 100%;">
+          <path d="M0.00,49.98 C132.34,195.88 257.62,12.33 500.84,84.38 L500.00,0.00 L0.00,0.00 Z"
+            style="stroke: none; fill: rgb(238, 235, 235);"></path>
+        </svg></div>
+      <div class="container_footer">
+        <div class="box_footer">
+          <div class="logo">
+            <img src="img/z-imagenes/iconos/logo_black.jpeg" alt="">
+          </div>
+          <div class="terms">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit cum cumque velit libero
+              officiis quam doloremque reprehenderit quae corporis! Delectus architecto officia praesentium atque
+              laudantium, nam deleniti sapiente deserunt.</p>
+          </div>
+        </div>
+        <div class="box_footer">
+          <h2>Medios de pago</h2>
+          <a href="#"><i class="fas fa-credit-card"></i> Tarjetas</a>
+          <a href="#"><i class="fas fa-money-bill-wave"></i> Efectivo</a>
+          <a href="#"><i class="fas fa-money-check-alt"></i> Transferencias</a>
+          <a href="#"><i class="far fa-handshake"></i></i> MercadoPago</a>
+        </div>
+  
+        <div class="box_footer">
+          <h2>La empresa</h2>
+          <a href="#"><i class="far fa-laugh-wink"></i> Sobre nosotros</a>
+          <a href="#"><i class="fas fa-mug-hot"></i> Trabajos</a>
+          <a href="#"><i class="fas fa-chalkboard-teacher"></i> Cursos</a>
+          <a href="https://wa.me/541161031216"><i class="fab fa-whatsapp"></i> Contacto</a>
+        </div>
+  
+        <div class="box_footer">
+          <h2>Redes Sociales</h2>
+          <a href="#"><i class="fab fa-facebook-square"></i> Facebook</a>
+          <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+          <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+          <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+        </div>
+  
+  
+  
+        <div class="box_copyright">
+          <hr>
+          <p>Todos los derechos reservados &copy; <b>Grupo 6 | C8 2021 <br> {Emilce| Rocio| Elias| Alejandro}</b></p>
+        </div>
+    </footer>
 </body>
 
 </html>

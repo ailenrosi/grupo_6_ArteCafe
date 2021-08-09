@@ -11,6 +11,10 @@
     font-family: 'Open Sans', sans-serif;
   }
   
+  .container .item .item-text button{
+    text-decoration: none;
+    color: green;
+  }
   
   .container{
     width: 90%;
@@ -25,6 +29,16 @@
     grid-gap: 30px;
   }
   
+ .item-text a{
+  text-decoration: none;
+  border: 1px solid #047a67;
+  background-color: #047a67;
+  font-size: 22px;
+  border-radius: 8px;
+  color: white;
+  margin: 120px;
+  padding: 4px;
+}
   
   .item{
     background-color: #fff;
@@ -69,7 +83,41 @@
     display: block;
   }
   
+
+
+   /***************************************Volver************************************************/
+
+.btn-flotantes{
+	color: #ffffff; /* Color del texto */
+	font-weight: bold; /* Fuente en negrita o bold */
+	font-size: 16px; /* Cambiar el tamaño de la tipografia */
+	text-decoration: none;
+
+}
+.btn-flotante {
+	border-radius: 9px; /* Borde del boton */
+	letter-spacing: 2px; /* Espacio entre letras */
+	background-color: #047a67; /* Color de fondo */
+	padding: 18px 30px; /* Relleno del boton */
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	transition: all 300ms ease 0ms;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	z-index: 99;
+    
+}
+.btn-flotante:hover {
+	background-color: #04ac79; /* Color de fondo al pasar el cursor */
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-7px);
+	position: fixed;
+}
+
+/***************************************************************MQ*********************************************/
   
+
+
   @media screen and (min-width: 590px) {
     
     .container{

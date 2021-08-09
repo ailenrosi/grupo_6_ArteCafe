@@ -9,8 +9,8 @@
 }
 
 h4{
-    margin: 10px;
-    padding: 10px;
+    margin: 17px;
+    padding: 23px;
     border-bottom: 1px solid rgb(189, 185, 185);
 }
 
@@ -114,90 +114,3 @@ header{
     }
 }
 
-/*Aquí debajo va el FOOTER*/
-
-footer{
-    width: 100%;
-    padding: 0.111px;
-    background-size: cover;
-    background-color: rgba(2, 66, 34, 0.829);
-}
- .wave{
-    background: hsla(140, 100%, 13%, 0.911);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, rgb(2, 66, 34, 0.829), #063b18); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgb(2, 66, 34, 0.829), #063b18c2);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: contain;
-    background-attachment: fixed;
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
- }
-
-.container_footer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    margin-top: 90px;
-}
-
-.box_footer{
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-}
-
-.box_footer .logo img{
-    width: 250px;
-    border-radius: 25px;
-}
-
-.box_footer .terms{
-    max-width: 350px;
-    margin-top: 20px;
-    font-weight: 500;
-    color: #cccc;
-    font-size: 18px;
-    justify-content: center;
-}
-
-.box_footer h2{
-    margin-bottom: 20px;
-    color: #e2dfdf;
-    font-weight: 700;
-}
-
-.box_footer a{
-    margin-top: 10px;
-    color: #e2dfdf;
-    font-weight: 600;
-}
-
-.box_footer a:hover{
-    opacity: 0.8;
-}
-
-.box_footer a .fab{
-    font-size: 20px;
-}
-
-.box_copyright{
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
-    padding: 0px 40px;
-}
-
-.box_copyright p{
-    margin-top: 20px;
-    color: #a19f9f;
-}
-
-.box_copyright hr{
-    border: none;
-    height: 1px;
-    background-color: #d4c8c8;
-}
