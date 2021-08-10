@@ -24,8 +24,13 @@ html{
 }
 section{
     padding:2rem;
+
 }
 
+header > section{
+    width: 100%;
+    padding: 0;
+}
 
 
 .sub-heading{
@@ -58,17 +63,25 @@ section{
     background: var(--green);
     letter-spacing: .1rem;
 }
-
 header{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     position: fixed;
+    z-index: 10;
+}
+.header_container{
+    /*position: fixed;*/
     top:0; left: 0; right:0;
     background: #fff;
     padding:1rem 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1000;
+    z-index: 5;
     box-shadow: var(--box-shadow);
+    width: 100%;
 }
 
 header .logo{
@@ -123,7 +136,7 @@ header .icons #menu-bars{
     position: fixed;
     top:-110%; left:0; 
     height:50%; width:100%;
-    z-index: 1004;
+    z-index: 10;
     background:rgba(0,0,0,.8);
     display: flex;
     align-items: center;

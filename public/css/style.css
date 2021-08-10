@@ -6,6 +6,7 @@
 @import url('wsp-chat.css');
 @import url('medias.css');
 @import url('header.css');
+@import url('marquee_redes.css');
 @import url('');
 @import url('');
 @import url('');
@@ -14,10 +15,6 @@
 @import url('');
 @import url('');
 @import url('');
-@import url('');
-
-
-
 
 *{
     margin: 0;

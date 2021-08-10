@@ -24,9 +24,20 @@
 <body>
 
     <!-- comienza header      -->
-
     <header>
-
+<section class="marquee">
+    <MARQUEE DIRECTION= right class="envio"> Envío bonificado a partit de $3500 <i class="fas fa-truck"></i></MARQUEE>
+  
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fas fa-envelope-open-text"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href=""><i class="fas fa-mobile-alt"></i></i></a>
+  </div>
+</section>
+<section class="header_container">
         <a href="#" class="logo"><i class="fas fa-mug-hot"></i>Arte Café</a>
 
         <nav class="navbar">
@@ -44,10 +55,10 @@
             <a href="#" class="fas fa-user"></a>
             <a href="#" class="fas fa-shopping-cart"></a>
         </div>
-
+    </section>
     </header>
-    <!----  whatts fixed     ---->
 
+    <!----  whatts fixed     ---->
     <section id='wsp-chat'>
         <figure>
             <a class="wsp" href="https://wa.me/+541161031216?text=Hola%20que%20servicios%20brindan%3F"><img class="wst"
@@ -56,14 +67,13 @@
     </section>
 
     <!-- menu buscar  -->
-
     <form action="" id="search-form">
         <input type="search" placeholder="buscar..." name="" id="search-box">
         <label for="search-box" class="fas fa-search"></label>
         <i class="fas fa-times" id="close"></i>
     </form>
 
-    <!-- imagen slider  -->
+    <!-- imagen gif  -->
     <section class="home" id="home">
         <div class="swiper-container home-slider">
             <div class="swiper-wrapper wrapper">
@@ -82,8 +92,58 @@
         <div class="swiper-pagination"></div>
         </div>
     </section>
+<!-- CAROUSEL -->
 
 
+
+
+
+
+
+
+
+<!-- imagen cafeteras  -->
+    <section class="merienda" id="meriendas">
+
+        <h3 class="sub-heading"></h3>
+        <h1 class="heading"> Las mejores cafeteras </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="img/z-imagenes/imgProductos/cafetera2.jpg" alt="">
+                <h3>Cafetera filtro</h3>
+                <div class="stars">
+                    <span>$4000</span>
+                </div>
+                <a href="#" class="btn">Agregar</a>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="img/z-imagenes/imgProductos/cafeteraElegante.jpg" alt="">
+                <h3>Cafetera Chemex</h3>
+                <div class="stars">
+                    <span>$6000</span>
+                </div>
+                <a href="#" class="btn">Agregar</a>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="img/z-imagenes/imgProductos/cafeteraFrancesa.jpg" alt="">
+                <h3>Cafetera francesa</h3>
+                <div class="stars">
+                    <span>$7500</span>
+                </div>
+                <a href="#" class="btn">Agregar</a>
+            </div>
+        </div>
+    </section>
 
     <!-- CATEGORIES -->
     <section class="portafolio">
@@ -122,12 +182,10 @@
         </div>
     </section>
 
-
     <!-- Meriendas -->
-
     <section class="merienda" id="meriendas">
 
-        <h3 class="sub-heading"> Populares </h3>
+        <h3 class="sub-heading"></h3>
         <h1 class="heading"> Sorprendé con una merienda muy especial </h1>
 
         <div class="box-container">
@@ -171,7 +229,6 @@
 
 
     <!----   Comieza footer     ----->
-
     <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
             style="height: 100%; width: 100%;">
             <path d="M0.00,49.98 C132.34,195.88 257.62,12.33 500.84,84.38 L500.00,0.00 L0.00,0.00 Z"
@@ -216,12 +273,9 @@
             </div>
     </footer>
 
-
-
-
-
     <!-- links JS -->
     <script src="js/main.js"></script>
+    <script src="js/carrusel.js"></script>
 </body>
 
 </html>

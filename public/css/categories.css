@@ -11,10 +11,11 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  flex-direction: unset;
   width: 100%;
 }
 .imagen-port{
-  width: 24%;
+ width: 24%;
   margin-bottom: 10px;
   height: 200px;
   overflow: hidden;
@@ -51,3 +52,10 @@
   transform: scale(1);
 }
 
+@media (max-width: 500px){
+ .galeria-port{
+   flex-direction: column
+ }
+  .imagen-port{
+  width: 100%;}
+}
