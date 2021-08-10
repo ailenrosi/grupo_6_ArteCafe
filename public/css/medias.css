@@ -61,12 +61,10 @@
     html{
         font-size: 50%;
     }
+    #search-form #search-box{
+        width:50rem;}
 
-    .dishes .box-container .box img{
-        height:auto;
-        width: 100%;
-    }
-
+    
     .order form .inputBox .input{
         width:100%;
     }

@@ -41,6 +41,7 @@ footer{
     border-radius: 25px;
     display: flex;
     flex-direction: row;
+    padding: 10px;
 }
 
 .box_footer {
@@ -85,7 +86,7 @@ footer{
 }
 
 hr{
-    margin-top:-6px;
+    margin-top:-5px;
     border: none;
     padding: 1px;
     background: linear-gradient(to right, rgb(4, 226, 71),rgb(5, 73, 56));

@@ -7,24 +7,11 @@
   color: antiquewhite;
   background: linear-gradient(to right, rgb(5, 73, 56), rgba(3, 153, 48, 0.671));
   height: 15px;
-    align-items: center;
-    display: flex;
+  align-items: center;
+  display: flex;
 }
 
 /*comienza la nav_bar*/
-
-.logo{
-  text-rendering: auto;
-  margin: -12px;
-  text-shadow: darkcyan;
-  line-height: 12px;
-}
-.logo a{
-  font-size: 17px;
-  text-shadow:.5px 1px floralwhite;
-font-weight: bolder; 
-}
-
 .social-icons{
   display: flex;
   justify-content:space-evenly;
@@ -59,7 +46,6 @@ align-items: center;
   -o-transition: all 0.9s ease 0s;
 }
 
-
 .main-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,7 +68,6 @@ align-items: center;
 .main-header a {
   text-decoration: none;
   color: inherit;
-  text-transform: uppercase;
 }
 
 .main-header .nav-links {
