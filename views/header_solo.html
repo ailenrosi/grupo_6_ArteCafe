@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="home" lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/header.css">
-  <link rel="shortcut icon" href="/img/z-imagenes/iconos/icocno_cora.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https: //fonts.googleapis.com/css2? family = Gowun + Batang & display = swap " rel=" stylesheet ">
-  <title>Header</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- link font awesome   -->
+    <link rel="shortcut icon" href="img/z-imagenes/iconos/icocno_cora.png" type="image/x-icon">
+    <!-- link font awesome   -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- link css  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- link fonts  -->
+    <link href="https: //fonts.googleapis.com/css2? family = Gowun + Batang & display = swap " rel=" stylesheet ">
+
+    <title>Home -Arte café</title>
 </head>
 
 <body>
-  <MARQUEE DIRECTION= right class="envio"> Envío bonificado a partit de $3500 <i class="fas fa-truck"></i></MARQUEE>
-  <hr>
+
+    <!-- comienza header      -->
+    <header>
+<section class="marquee">
+    <MARQUEE DIRECTION= right class="envio"> Envío bonificado a partit de $3500 <i class="fas fa-truck"></i></MARQUEE>
   <div class="social-icons">
     <a href="#"><i class="fab fa-facebook"></i></a>
     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -25,48 +35,42 @@
     <a href="#"><i class="fab fa-instagram"></i></a>
     <a href=""><i class="fas fa-mobile-alt"></i></i></a>
   </div>
-  <header class="main-header">
-    <div class="logo">
-      <a href="#">ARTE CAFE</a> <br>
-      <h6>Sabores del mundo</h6>
-    </div>
+</section>
+<section class="header_container">
+        <a href="#" class="logo"><i class="fas fa-mug-hot"></i>Arte Café</a>
 
-    </div>
-    <div class="fa-fa">
-      <a href="#"><i class="far fa-user-circle"></i></a>
-      <a href="#"><i class="fal fa-shopping-cart"></i></a>
-    </div>
-    
-    <input type="checkbox" class="menu-btn" id="menu-btn">
-    <label for="menu-btn" class="menu-icon">
-      <span class="menu-icon__line"></span>
-    </label>
-    <ul class="nav-links">
-      <li class="nav-link">
-        <a href="#">Productos</a>
-      </li>
-      <li class="nav-link">
-        <a href="#">Compra online</a>
-      </li>
-      <li class="nav-link">
-        <a href="#">Galeria de imágenes</a>
-      </li>
-      <li class="nav-link">
-        <a href="#">Contacto</a>
-      </li>
-    </ul>
-<section class="box_search"> 
-    <div class="box">
-      <div class="search">
-          <span class="icon"><i class="fa fa-search"></i></span>
-          <input type="search" id="search" placeholder="Search..." />
-      </div>
-    
-  </header>
+        <nav class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="/sobre_nosotros">Sobre nosotros</a>
+            <a href="/gallery">Galeria</a>
+            <a href="/productos">Productos</a>
+            <a href="/cursos">Cursos</a>
+            <a href="/carrito">Compra online</a>
+        </nav>
 
-  
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="/iniciar_sesion" class="fas fa-user"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+        </div>
+    </section>
+    </header>
 
-  </section>
+    <!----  whatts fixed     ---->
+    <section id='wsp-chat'>
+        <figure>
+            <a class="wsp" href="https://wa.me/+541161031216?text=Hola%20que%20servicios%20brindan%3F"><img class="wst"
+                    src="img/z-imagenes/iconos/wsp.png" alt=""></a>
+        </figure>
+    </section>
+
+    <!-- menu buscar  -->
+    <form action="" id="search-form">
+        <input type="search" placeholder="Buscar..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
 
  
  
