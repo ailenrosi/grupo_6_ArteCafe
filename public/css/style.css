@@ -9,12 +9,14 @@
 @import url('marquee_redes.css');
 @import url('productos_dest.css');
 @import url('tarjetas.css');
+@import url('error_404.css');
 @import url('');
 @import url('');
 @import url('');
 @import url('');
 @import url('');
-@import url('');
+@import url('https://fonts.googleapis.com/css2? family = Gowun + Batang & display = swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 *{
     margin: 0;
