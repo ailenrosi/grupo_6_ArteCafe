@@ -1,0 +1,138 @@
+:root {
+    --colorTextos: #49454567;
+}
+
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.user_f{
+    font-family: 'Roboto';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url(/img/z-imagenes/img_home/img-1-taza.jpg) no-repeat;
+    background-size: 800px;
+    background-position: top;
+    width: 100%;
+}
+.user_form .registro{
+    text-align: center;
+    font-weight: 700;
+    color: rgb(243, 246, 247);
+    padding: 10px;
+}
+
+.user_form{
+    background: rgba(255, 255, 255, 0.473);
+    padding: 40px 0;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.user_form .grupo{
+    position: relative;
+    margin: 45px ;
+}
+
+input{
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+}
+
+
+
+input:focus{ 
+    outline: none;
+    color: #5e5d5d;
+}
+
+label{
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 15px;
+    color: #013b3b;
+    font-weight: bold;
+}
+
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #6ab39d, #04cc68);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before{
+    width: 100%;
+}
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #ca0505;
+    padding-top: 20px;
+}
+
+.btn_user{
+    background: linear-gradient(90deg,#038166, #22e2a9 );
+    font-family: 'roboto';
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: #fff;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn_user:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+.grupo2 .text-footer {
+    display: flex;
+    margin-top: 50px;
+    text-align: center;
+    color: #7a7a7a;
+    font-weight: 400;
+    justify-content: center;
+}
+
+.grupo2 .text-footer a {
+    color: #029EE1;
+    font-weight: 500;
+  
+}

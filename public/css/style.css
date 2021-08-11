@@ -1,6 +1,6 @@
 @import url('variables.css');
 @import url('meriendas.css');
-@import url('home_slider.css');
+@import url('home.css');
 @import url('categories.css');
 @import url('footer.css');
 @import url('wsp-chat.css');
@@ -10,7 +10,7 @@
 @import url('productos_dest.css');
 @import url('tarjetas.css');
 @import url('error_404.css');
-@import url('');
+@import url('user.css');
 @import url('');
 @import url('');
 @import url('');
