@@ -29,20 +29,20 @@ html{
     padding: 2rem;
     
 }
- .header_container div .icons{
+.header_container div .icons{
     position: absolute;
     right: 0;
     
 }
    
- .header_container{
+.header_container{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
     
 }
- .header_container > div{
+.header_container > div{
        position: relative;
     width: 96%;
     display: flex;
@@ -209,5 +209,5 @@ html{
 @media (min-width: 768px) {
  .header_container > div {
         min-height: 8vw;
-}
+ }
 }
