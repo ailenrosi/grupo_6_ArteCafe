@@ -26,9 +26,7 @@
 
 @media (max-width:768px){
   
-    header .icons #menu-bars {
-        display: none;
-            }
+   
     header .navbar{
         position: absolute;
         top:100%; left:0; right:0;

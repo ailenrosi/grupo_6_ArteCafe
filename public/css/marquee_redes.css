@@ -1,7 +1,11 @@
 
 
 
-
+.marquee{
+  margin: 0;
+  padding: 0;
+ 
+}
 .envio{
   color: antiquewhite;
   background: linear-gradient(to right, rgb(5, 73, 56), rgba(3, 153, 48, 0.671));
