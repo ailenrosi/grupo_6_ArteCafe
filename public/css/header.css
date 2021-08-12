@@ -21,14 +21,12 @@ html{
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
 }
- section{
-    padding: 2rem;
-
-}
+ 
 
 .header > section{
     width: 100%;
     padding: 0;
+    padding: 2rem;
     
 }
  .header_container div .icons{
@@ -108,7 +106,7 @@ html{
     font-size: 2rem;
     font-weight: bolder;
     position: absolute;
-    left: 0;
+    left: .5rem;
 }
 
  header .logo i{
