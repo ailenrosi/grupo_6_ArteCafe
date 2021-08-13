@@ -15,34 +15,28 @@
     transition: all .2s linear;
 }
 
-html{
-    font-size: 60%;
-    overflow-x: hidden;
-    scroll-padding-top: 5.5rem;
-    scroll-behavior: smooth;
-}
+
  
 
 .header > section{
     width: 100%;
     padding: 0;
-    padding: 2rem;
     
 }
-.header_container div .icons{
+ .header_container div .icons{
     position: absolute;
     right: 0;
     
 }
    
-.header_container{
+ .header_container{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
     
 }
-.header_container > div{
+ .header_container > div{
        position: relative;
     width: 96%;
     display: flex;
@@ -93,7 +87,6 @@ html{
     /*position: fixed;*/
     top:0; left: 0; right:0;
     background: #fff;
-    
     display: flex;
     align-items: center;
     z-index: 5;
@@ -106,24 +99,27 @@ html{
     font-size: 2rem;
     font-weight: bolder;
     position: absolute;
-    left: .5rem;
+    left: 0;
 }
 
  header .logo i{
     color:rgb(100, 58, 18);
 }
  header .navbar a{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     border-radius: .5rem;
-    padding:.5rem 1.5rem;
+    padding:.3rem 1rem;
     color:var(--light-color);
     font-family: 'Nunito';
+    justify-content: center;
+   
 }
 
  header .navbar a.active,
  header .navbar a:hover{
     color:#fff;
     background: linear-gradient(90deg, #22e2a9, #038166);
+   
 }
 
  header .icons i,
@@ -209,5 +205,8 @@ html{
 @media (min-width: 768px) {
  .header_container > div {
         min-height: 8vw;
- }
+}
+header .navbar a{
+    font-size: 1.3rem;
+}
 }
