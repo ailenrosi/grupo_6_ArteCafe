@@ -9,9 +9,7 @@
     align-items: center;
     background:url(/img/z-imagenes/imgVarios/taza-cafe.jpg) no-repeat;
     background-size: 800px;
-    background-size: contain;
     background-position: top;
-    height: 850px;
     width: 100%;
 }
 .user_form .registro{
@@ -128,16 +126,3 @@ input:focus~.barra::before{
     font-weight: 500;
   
 }
-@media (max-width:500px){
-    .user_f{
-        font-family: 'Roboto';
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background:url(/img/z-imagenes/imgVarios/taza-cafe.jpg) no-repeat;
-        background-size: 800px;
-        background-size: contain;
-        background-position: top;
-        height: 850px;
-        width: 100%;
-    }}
