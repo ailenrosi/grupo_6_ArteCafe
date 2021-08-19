@@ -104,7 +104,7 @@ input:focus~.barra::before{
     background: linear-gradient(90deg,#038166, #22e2a9 );
     font-family: 'roboto';
     border: none;
-    display: block;
+    display: block;  
     width: 80%;
     margin: 10px auto;
     color: #fff;
