@@ -11,6 +11,10 @@
     background-size: 800px;
     background-position: top;
     width: 100%;
+    background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
 }
 .user_form .registro{
     text-align: center;
