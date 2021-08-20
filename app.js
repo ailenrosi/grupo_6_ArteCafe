@@ -11,8 +11,8 @@ app.get('/', (req, res)=>{
 app.get('/user', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/user.html'))
 })
-app.get('/footer', (req, res)=>{
-    res.sendFile(path.join(__dirname, '/views/footer.html'))
+app.get('/carrito', (req, res)=>{
+    res.sendFile(path.join(__dirname, '/views/carrito.html'))
 })
 app.get('/registrarse', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/registrarse.html'))
@@ -26,8 +26,8 @@ app.get('/productos', (req, res)=>{
 app.get('/detalleProducto', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/detalleProducto.html'))
 })
-app.get('/carousel', (req, res)=>{
-    res.sendFile(path.join(__dirname, '/views/carousel.html'))
+app.get('/productos_con_descuento', (req, res)=>{
+    res.sendFile(path.join(__dirname, '/views/productos_con_descuento.html'))
 })
 app.get('/formulario', (req, res)=>{
     res.sendFile(path.join(__dirname, '/views/formulario.html'))

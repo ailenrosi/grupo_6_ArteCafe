@@ -1,18 +1,12 @@
 /* media queries  */
 
 @media (max-width:991px){
-
-    html{
-        font-size: 55%;
-    }
-    
+   
     .header_container{
         padding:1rem 2rem;
     }
 
-    section{
-        padding:2rem;
-    }
+    
 
 
 }
@@ -26,9 +20,7 @@
 
 @media (max-width:768px){
   
-    header .icons #menu-bars {
-        display: none;
-            }
+   
     header .navbar{
         position: absolute;
         top:100%; left:0; right:0;

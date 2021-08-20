@@ -2,25 +2,19 @@
     --colorTextos: #49454567;
 }
 
-
-*,
-::before,
-::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
 .user_f{
     font-family: 'Roboto';
     display: flex;
     justify-content: center;
     align-items: center;
-    background:url(/img/z-imagenes/img_home/img-1-taza.jpg) no-repeat;
+    background:url(/img/z-imagenes/imgVarios/taza-cafe.jpg) no-repeat;
     background-size: 800px;
     background-position: top;
     width: 100%;
+    background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
 }
 .user_form .registro{
     text-align: center;
@@ -110,7 +104,7 @@ input:focus~.barra::before{
     background: linear-gradient(90deg,#038166, #22e2a9 );
     font-family: 'roboto';
     border: none;
-    display: block;
+    display: block;  
     width: 80%;
     margin: 10px auto;
     color: #fff;
