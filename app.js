@@ -45,3 +45,6 @@ app.get('*', (req, res)=>{
 app.listen(port, () => {
     console.log(`Puerto corriendo en ${port}\n http://localhost:${port}`)
 });
+
+
+app.use("vista", vistaRouter)
