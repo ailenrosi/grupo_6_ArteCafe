@@ -3,6 +3,10 @@ const app = express();
 const port = 3000;
 const path = require('path');
 
+var vistaRouter = require('./routes/vista');
+var formularioRouter = require('./routes/formulario');
+var realizadoRouter = require('./routes/realizado');
+
 app.use(express.static('public'));
 
 app.get('/', (req, res)=>{
@@ -47,4 +51,6 @@ app.listen(port, () => {
 });
 
 
-app.use("vista", vistaRouter)
+app.use('/', vistaRouter);
+app.use('/', formularioRouter);
+app.use('/', realizadoRouter);
