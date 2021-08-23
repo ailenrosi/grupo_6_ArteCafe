@@ -27,7 +27,7 @@ Dentro de éste proyecto mi aporte va a ser dinámico, mi roll es en poner metas
 
 Soy Elías González estudiante de programación web, siempre me gusto y llamo la atencion el fantastico mundo de la programacion.Soy de Lanús,actualmente  vivo en Avellaneda tengo 32 años, 2 hermosas hijas , me gustan los videos juegos y el animé.
 
-Mi nombre es Alejandro Romero tengo 25 años, soy de Lanús, Buenos Aires, comencé el proyecto de Arte Café a través del curso de programación de Fundación Formar. A través de este proyecto mi meta es poder demostrar mis habilidades como programador, siempre me gustó todo lo relacionado a la informática. Mi roll en este equipo es verificar y optimizar el código. 
+
 
 Versionando 📌
 Nos inspiramos en las siguientes páginas para hacer este trabajo:
