@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs')%>
+
+    <body class="cc">
+        <%- include('partials/header.ejs') %>
+
+
+
+            <!----contact formulario-->
+            <section class="contact">
+
+                <h1 class="logo_contact">Mandanos <span>tu mensaje</span></h1>
+
+                <div class="contact-wrapper animated bounceInUp">
+                    <div class="contact-form">
+                        <h3>Formulario</h3>
+                        <form action="">
+                            <p>
+                                <label>Nombre </label>
+                                <input type="text" name="name">
+                            </p>
+                            <p>
+                                <label>Email</label>
+                                <input type="email" name="email">
+                            </p>
+                            <p>
+                                <label>Telefono</label>
+                                <input type="tel" name="telefono">
+                            </p>
+                            <p>
+                                <label>Asunto</label>
+                                <input type="text" name="asunto">
+                            </p>
+                            <p class="block">
+                                <label>Mensaje</label>
+                                <textarea name="message" rows="3"></textarea>
+                            </p>
+                            <p class="block">
+                                <button>
+                                    Enviar
+                                </button>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h4>Mas info</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Calle falsa 123</li>
+                            <li><i class="fas fa-phone"></i>1538374393</li>
+                            <li><i class="fas fa-envelope-open-text"></i> artecafe@cafe.com</li>
+                        </ul>
+                        <p>Mandanos tus consultas o sugerencias y nos contactaremos con vos lo amntes posible</p>
+                        <p>ARTE CAFE</p>
+                    </div>
+                </div>
+
+            </section>
+            
+            <%- include('partials/footer.ejs') %>
+    </body>
+
+</html>

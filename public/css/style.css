@@ -1,57 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 @import url('variables.css');
-@import url('meriendas.css');
-@import url('home.css');
-@import url('categories.css');
-@import url('footer.css');
-@import url('wsp-chat.css');
-@import url('meriendas.css');
 @import url('header.css');
-@import url('marquee_redes.css');
-@import url('productos_dest.css');
-@import url('tarjetas.css');
-@import url('error_404.css');
-@import url('user.css');
-@import url('vista.css');
-@import url('productos.css');
-@import url('realizado.css');
-@import url('vista.css');
+@import url('wsp-chat.css');
+@import url('home.css');
+@import url('banner.css');
+@import url('categories.css');
 @import url('video.css');
-@import url('https://fonts.googleapis.com/css2? family = Gowun + Batang & display = swap');
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-
-
-
-.loader-container{
-    position: fixed;
-    top:0; left:0;
-    height:100%; 
-    width:100%;
-    z-index: 10000;
-    background:#fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.loader-container img{
-    width:35rem;
-}
-
-.loader-container.fade-out{
-    top:-110%;
-    opacity:0;
-}
-
-
-
-
-
+@import url('productos_dest.css');
+@import url('footer.css');
+@import url('products_slider.css');
+@import url('newsletter.css');
+@import url('contact.css');
+@import url('emergente.css');
+@import url('productsDetail.css');
+@import url('user.css');
+@import url('productos.css');
+@import url('error_404.css');

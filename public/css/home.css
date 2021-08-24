@@ -1,40 +1,44 @@
 
+
 #home{
-    background:url(/img/z-imagenes/img_home/img-1-cafetera.jpg) no-repeat;
-    background-size: 200%;
-    background-position: top;
+    background:url(/img/img_home/img-5-cafetera.jpg) no-repeat;
+    background-size: cover;
     width: 100%;
     height: 400px;
-    animation: move 15s infinite linear alternate;
+    animation: move 19s infinite linear alternate;
     display: flex;
     align-items: center;
-    min-height: 150vh;
+    min-height: 163vh;
     width: 100%;
 }
-
+  
 @keyframes move {
-from{
-background-position: bottom left;
-}
-to{
-    background-position: top left;
-}    
-}
+    from{
+    background-position: bottom left;
+    }
+    to{
+        background-position: top left;
+    }    
+    }
+
 .home .content{
-    max-width: 45rem;
-    padding: 3rem;
+    max-width: 40rem;
+    padding: 2.5rem;
+    padding-bottom: 6rem;
 }
 
 .home .content h3{
-    font-size: 5rem;
     color:rgb(207, 203, 203);
+    font-size: 3.2rem;
+    max-width: 20rem
 }
 
-.home .content span{
-    font-size: 3rem;
-    padding:1rem 0;
+.home .content span {
+    
+    font-size: 3.5rem;
+    color: greenyellow;
+    padding: 1rem 0;
     line-height: 1.5;
-    color: beige;
 }
 
 .home .content p{
@@ -44,39 +48,83 @@ to{
     line-height: 1.5;
 }
 
-@media (max-width:500px){
-#home{
-    min-height: 90vh;
 
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    color:#fff;
+    background: linear-gradient(90deg,#038166, #22e2a9 );
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+
+
+/******************************MEDIAS***********************************************/
+@media (max-width:320px){
+        
+    .home .content{
+        max-width: 40rem;
+        padding: 1.1rem;  
+    }
+    }
+
+@media (max-width:500px){
+    #home{
+        min-height: 110vh;
+    
+    }
+    .home .content {
+        max-width: 40rem;
+        padding: 1rem;
+        padding-bottom: 1rem;
+    }
+    .home .content h3 {
+        font-size: 1.5rem;
+        
+    }
+    .home .content p {
+        font-size: 1rem;      
+        line-height: 1rem;
+        max-width: fit-content;
+}
+.home .content span {
+    font-size: 2rem;
+}
+.btn{
+    padding: 0.8rem 1.1rem;
+}
+
+@media (max-width:770px){
+    #home{
+        min-height: 115vh; 
+        padding-top: 2rem;
+    }
 }
 .home .content h3 {
-    font-size: 4.5rem;
-    color: rgba(255, 255, 255, 0.932);
+    font-size: 2.8rem;
+    max-width: 21rem;
+}  
+.home .content p {
+    font-size: 1.1rem;
 }
-
+header .navbar a {
+    display: block;
+    padding: 0.3rem;
+    margin: .51rem;
+    font-size: 1.5rem
 }
-
-
-
-.loader-container{
-    position: fixed;
-    top:0; left:0;
-    height:100%; 
-    width:100%;
-    z-index: 10000;
-    background:#fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+.home .content p {
+    max-width: 20rem;
+    font-size: 1.1rem;
+    padding: 1rem 0;
+    line-height: 1.5;
 }
-
-.loader-container img{
-    width:30rem;
-    border-radius: 50%;
-}
-
-.loader-container.fade-out{
-    top:-110%;
-    opacity:0;
 }
