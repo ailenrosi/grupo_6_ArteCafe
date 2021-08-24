@@ -9,6 +9,10 @@ module.exports = {
             productsSlider,
             
         })
+    },
+    contact: (req, res) => {
+        res.render('contact');
     }
+
 }
 

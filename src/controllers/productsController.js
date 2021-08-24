@@ -13,5 +13,12 @@ module.exports = {
             product,
             
         })
-    }
+    },
+    productsDesc: (req, res) => {
+        res.render('productsDesc');
+    },
+    vista:(req,res)=> {
+        res.render('vista')
+    },
+    
 }
