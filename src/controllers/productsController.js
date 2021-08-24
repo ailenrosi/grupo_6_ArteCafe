@@ -9,8 +9,8 @@ module.exports = {
 
         res.render('productDetail', {
             titleSlider: "Productos relacionados",
-            productsSlider,
             product,
+            productsDesc,
             
         })
     },
