@@ -1,9 +1,13 @@
+:root {
+    --colorTextos: #49454567;
+}
+
 .user_f{
     font-family: 'Roboto';
     display: flex;
     justify-content: center;
     align-items: center;
-    background:url(/img/imgVarios/taza-cafe.jpg) no-repeat;
+    background:url(/img/imgVarios/cafe_taza.jpeg) no-repeat;
     background-size: 800px;
     background-position: top;
     width: 100%;
@@ -31,7 +35,7 @@
     margin: 45px ;
 }
 
-.grupo input{
+input{
     background: none;
     color: #c6c6c6;
     font-size: 18px;
@@ -44,12 +48,12 @@
 
 
 
-.gropo input:focus{ 
+input:focus{ 
     outline: none;
     color: #5e5d5d;
 }
 
-.grupo label{
+label{
     color: var(--colorTextos);
     font-size: 16px;
     position: absolute;
@@ -59,8 +63,8 @@
     pointer-events: none;
 }
 
-.grupo input:focus~label,
-.grupo input:valid~label{
+input:focus~label,
+input:valid~label{
     top: -14px;
     font-size: 15px;
     color: #013b3b;
@@ -84,7 +88,7 @@
     left: 0;
 }
 
-.grupo input:focus~.barra::before{
+input:focus~.barra::before{
     width: 100%;
 }
 
@@ -124,4 +128,5 @@
 .grupo2 .text-footer a {
     color: #029EE1;
     font-weight: 500;
+  
 }
