@@ -1,7 +1,3 @@
-:root {
-    --colorTextos: #49454567;
-}
-
 .user_f{
     font-family: 'Roboto';
     display: flex;
@@ -35,7 +31,7 @@
     margin: 45px ;
 }
 
-input{
+.user input{
     background: none;
     color: #c6c6c6;
     font-size: 18px;
@@ -48,12 +44,12 @@ input{
 
 
 
-input:focus{ 
+.user input:focus{ 
     outline: none;
     color: #5e5d5d;
 }
 
-label{
+.user label{
     color: var(--colorTextos);
     font-size: 16px;
     position: absolute;
@@ -63,8 +59,8 @@ label{
     pointer-events: none;
 }
 
-input:focus~label,
-input:valid~label{
+.user input:focus~label,
+.user input:valid~label{
     top: -14px;
     font-size: 15px;
     color: #013b3b;
@@ -88,7 +84,7 @@ input:valid~label{
     left: 0;
 }
 
-input:focus~.barra::before{
+.user input:focus~.barra::before{
     width: 100%;
 }
 
@@ -129,4 +125,10 @@ input:focus~.barra::before{
     color: #029EE1;
     font-weight: 500;
   
+}
+
+@media screen and (max-width: 400px) {
+    .user_f{
+        padding-top: 13rem;
+    }
 }
