@@ -2,7 +2,7 @@
     font-family: 'Roboto';
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     background:url(/img/imgVarios/cafe_taza.jpeg) no-repeat;
     background-size: 800px;
     background-position: top;
