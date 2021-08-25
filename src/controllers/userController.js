@@ -14,4 +14,10 @@ module.exports = {
     registro: (req, res) => {
         res.render('registro');
     },
+    cart: (req, res) => {
+        res.render('cart');
+    },
+    vista:(req,res)=> {
+        res.render('vista')
+    },
 }
