@@ -9,6 +9,8 @@ let indexRouter = require('./routes/index');
 let productsRouter = require('./routes/products');
 let userRouter = require('./routes/user');
 let errorRouter = require ('./routes/error_404');
+let cartRouter = require('./routes/cart')
+
 
 
 /* Middleware */
@@ -23,7 +25,7 @@ app.use('/', indexRouter);
 app.use('/products', productsRouter);
 app.use('/user', userRouter);
 app.use('*', errorRouter);
-
+app.use('/cart',cartRouter)
 
 app.listen(port, () => {
     console.log(`Puerto corriendo en ${port}\n http://localhost:${port}`)
