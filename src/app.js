@@ -24,10 +24,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
 app.use('/user', userRouter);
-app.use('*', errorRouter);
 app.use('/cart',cartRouter)
-app.use('/registro', userRouter);
-
+app.use('*', errorRouter);
 app.listen(port, () => {
     console.log(`Puerto corriendo en ${port}\n http://localhost:${port}`)
 });
