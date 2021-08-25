@@ -1,7 +1,7 @@
 
 module.exports = {
     cart: (req, res) => {
-        res.render('cart/vista');
+        res.render('cart');
     }
     
 }
