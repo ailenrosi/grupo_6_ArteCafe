@@ -39,7 +39,7 @@ En este tercer sptrint los desafios aumentaron, el equipo se encuentra con un in
 * No cumplir con los objetivos.
 
 
-![Grupo6](/aplicacion/estella.png)
+![Grupo6](aplicacion/estella.png)
 
 
 ### Notas
