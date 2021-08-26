@@ -10,7 +10,6 @@ module.exports = {
         res.render('productDetail', {
             titleSlider: "Productos relacionados",
             product,
-           
             
         })
     },

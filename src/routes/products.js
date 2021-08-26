@@ -6,6 +6,8 @@ router.get('/detail:id', controller.detail);
 
 router.get('/productsDesc', controller.productsDesc);
 
+router.get('/vista', controller.vista);
+
 module.exports = router;
 
 
