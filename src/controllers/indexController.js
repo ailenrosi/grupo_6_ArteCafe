@@ -1,4 +1,4 @@
-let { products, /*cart*/ } = require('../data/dataBase'); 
+let { products, } = require('../data/dataBase'); 
 
 module.exports = {
     index: (req, res) => {
@@ -12,7 +12,16 @@ module.exports = {
     },
     contact: (req, res) => {
         res.render('contact');
-    }
-
+    },
+    search: ( req, res) =>{
+        let result =[]
+        products.forEach(product => {
+if( product.name.tolowercase().includes(req.query.name.tolowercase)){
+result.push(product)
+}
+        });
+        res.render('result', {
+        })
+            }
 }
 
