@@ -9,6 +9,7 @@ let indexRouter = require('./routes/index');
 let productsRouter = require('./routes/products');
 let userRouter = require('./routes/user');
 let cartRouter = require('./routes/cart')
+/*el error dejarlo debajo */
 let errorRouter = require ('./routes/error_404');
 
 
@@ -23,11 +24,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
 app.use('/user', userRouter);
-
+app.use('/cart',cartRouter);
+/* el error dejarlo bebajo */
 app.use('*', errorRouter);
-app.use('/cart',cartRouter)
-app.use('/registro', userRouter);
-
 
 
 app.listen(port, () => {
