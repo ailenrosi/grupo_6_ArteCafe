@@ -127,6 +127,16 @@
   
 }
 
+.grupo2{
+    display: flex;
+    margin-top: 50px;
+    text-align: center;
+    color: #7a7a7a;
+    font-weight: 400;
+    justify-content: center;
+}
+}
+
 @media screen and (max-width: 400px) {
     .user_f{
         padding-top: 13rem;
