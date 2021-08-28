@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 
- <%- include('partials/head.ejs') %>
+<%- include('partials/head.ejs') %>
+<%- include('partials/header.ejs') %>
 <body>
-  <%- include('partials/header.ejs') %>
+ 
 
-    <h4>Tu carrito -Arte café</h4>
+    <h4 class="carrito">Tu carrito -Arte café</h4>
     
     <article class="arti">
         <p>Chemex</p>
@@ -18,7 +19,7 @@
             <p>$9500</p>
         </div>
     
-    </article>
+    </article >
     
     <article class="arti">
         <div class="parte3">
@@ -26,8 +27,8 @@
             <p>$10000</p>
         </div>
         <div class="parte4">
-            <a href="productDesc">Elegir más productos</a>
-            <button type="button"><a href="formulario">Comprar</a></button>
+            <a href="product/productDesc">Elegir más productos</a>
+            <button type="button"><a href="cart/formulario">Comprar</a></button>
         </div>
         <div class="Eliminar">
             <button type="reset"><a href="">eliminar</a></button>

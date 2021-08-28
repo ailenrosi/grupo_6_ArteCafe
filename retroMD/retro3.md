@@ -27,6 +27,7 @@ En este tercer sptrint los desafios aumentaron, el equipo se encuentra con un in
 * Adelantar trabajo cuando sea posible.
 
 
+
 ### Seguir haciendo:
 
 * Trabajando en equipo ayudando al compañero que tiene algún problema.

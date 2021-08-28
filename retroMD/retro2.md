@@ -38,7 +38,7 @@ En este segundo sprint ya se puede ver como todo va tomando forma en nuestro tra
 ![](retroMD/estrella.png)
 ### Notas
 
-El equipo sufrió la baja de un compañero, por problemas personales no podrá seguir, es un nuevo desafío que nos ayudará mejorar.
+El equipo sufrió la baja de un compañero, por problemas personales no podrá seguir, es un nuevo desafío que nos ayudará a mejorar.
 
 
 
