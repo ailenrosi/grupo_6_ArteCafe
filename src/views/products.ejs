@@ -1,0 +1,65 @@
+«
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Todos los productos' }) %>
+
+	<body>
+		<!-- Header -->
+		<%- include('partials/header') %>
+			<!-- /Header -->
+
+			<!-- todos los productos -->
+			<% product.forEach (products.product => {
+
+				<div class="container products-wrapper">
+					<div class="row">
+						<div class="col-12">
+							<h2 class="products-title">Todos los productos</h2>
+						</div>
+
+
+						<div class="box-container">
+
+							<div class="box">
+								<span class="discount">
+									<%- product.price - product.price * product.discount %>
+								</span>
+								<div class="icons">
+									<a href="/products/detail/<%- product.id %>" class="fas fa-eye"></a>
+								</div>
+								<img src="/products/detail<%- product.image %> " alt="imagen de producto">
+								<h3>
+									<%= product.name %>
+								</h3>
+								<div class="info_pro">
+									<p class="info_p">
+										<%= product.description %>
+									</p>
+								</div>
+								<div class="price">
+									<%- product.discount %><span>
+											<%= final price %>
+										</span>
+								</div>
+								<div class="quantity">
+									<span>Unidad: </span>
+									<input type="number" min="1" max="1000" value="1">
+									<span></span>
+								</div>
+								<a href="vista" class="btn">Agregar al carrito</a>
+							</div>
+							</a>
+							</section>
+						</div>
+
+					</div>
+				</div>
+				<% }) %>
+
+					<!-- footer -->
+					<%- include('partials/footer') %>
+						<!-- /footer -->
+	</body>
+
+</html>
