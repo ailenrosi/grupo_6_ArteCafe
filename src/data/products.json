@@ -149,7 +149,7 @@
         "price": 280,
         "description": "Aptos para todo tipo de cafeteras eléctricas con portafiltros 'canasta' ",
         "discount": 0,
-        "category": "cafe",
+        "category": "accesorios",
         "image": [
             "filtro.jpp"
         ]
@@ -159,7 +159,7 @@
         "name": "Termometro Con Pinza Para Baristas",
         "price": 1195,
         "description": "Aliado perfecto de todo Barista a la hora de servir un buen café. La temperatura de la leche debe alcanzar una medida de 65-70ªC para una espuma perfecta (y un arte latte garantizado)",
-        "discount": 15,
+        "discount": 0,
         "category": "accesorios",
         "image": [
             "termometro.webp"
@@ -170,7 +170,7 @@
         "name": "Pava Barista Café - Tetera Kettle Cuello De Cisne 1 Lt",
         "price": 5200,
         "description": "Tetera de acero inoxidable de fácil uso. Ofrece un pico delgado para facilitar el vertido del agua en la preparación de tu café .Exclusivo pico fino y alargado que te permitirá controlar perfectamente la ubicación y el flujo de agua que vierte sobre el café. Es apto para fuego directo, vitrocerámica e inducción.",
-        "discount": 25,
+        "discount": 0,
         "category": "accesorios",
         "image": [
             "tetera.jpg"
@@ -192,7 +192,7 @@
         "name": "Balanza Cafe Scale Barista Digital C/ Temporizador Infusores",
         "price": 9000,
         "description": "Balanza Digital ideal para baristas o para complemento de Cocina.",
-        "discount": 25,
+        "discount": 0,
         "category": "accesorios",
         "image": [
             "balanza scale digital.webp"
