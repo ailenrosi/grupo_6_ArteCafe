@@ -48,11 +48,14 @@
 }
 
 .listo {
-    border: 1px solid;
-    border-radius: 30px;
-    width: 150px;
-    text-align: center;
-    margin-top: 30px;
+border: 1px solid;
+border-radius: 30px;
+width: 139px;
+text-align: center;
+margin-top: 293px;
+position: relative;
+top: 59px;
+right: 160px;
 }
 
 .regreso{
@@ -65,8 +68,9 @@
 
 
 @media(min-width:768px){
-.formulario{
+.form-2{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 16%;
 }}
