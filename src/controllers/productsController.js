@@ -13,6 +13,7 @@ module.exports = {
         res.render('productDetail', {
             titleSlider: "Productos relacionados",
             products,
+            product
             
         })
     },
@@ -22,7 +23,7 @@ module.exports = {
     vista:(req,res)=> {
         res.render('vista')
     },
-    vista:(req,res)=> {
+    products:(req,res)=> {
         res.render('products')
     }    
 }
