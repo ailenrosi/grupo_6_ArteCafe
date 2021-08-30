@@ -1,273 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include('partials/head.ejs') %>
-<body>
-    <%- include('partials/header.ejs') %>
- <!-- imagen move  -->
-  <section class="home" id="home">
 
-    <div class="content">
+    <body>
+        <%- include('partials/header.ejs') %>
+            <!-- imagen move  -->
+            <section class="home" id="home">
 
-        <span>Arte café</span>
-        <h3>Sabores del mundo</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet voluptatem esse quasi ullam architecto
-            vitae, quaerat soluta, nesciunt accusamus quas modi consequatur voluptatibus accusantium in at minus
-            doloribus, saepe vel.</p>
-        <a href="/productos" class="btn">Ver productos</a>
-    </div>
+                <div class="content">
 
-</section>
-
-<!-- slider coffee -->
-<%- include('partials/slider.ejs') %>
-
-<!-- CATEGORIES -->
-<section class="portafolio">
-<div class="contenedor">
-    <h1 class="titulo">Secciones</h1>
-    <div class="galeria-port">
-        <div class="imagen-port">
-            <img src="/img/img_home/cafeMolido.jpg">
-            <div class="hover-galeria">
-                <img src="/img/iconos/coffee-cup.png" alt="">
-                <p>Sabores del mundo</p>
-            </div>
-        </div>
-        <div class="imagen-port">
-            <img src="/img/imgProductos/cafeteraChemex.jpg">
-            <div class="hover-galeria">
-                <img src="/img/iconos/coffee-cup.png" alt="">
-                <p>Cafeteras</p>
-            </div>
-        </div>
-        <div class="imagen-port">
-            <img src="/img/img_home/merienda.jpg">
-            <div class="hover-galeria">
-                <img src="/img/iconos/coffee-cup.png" alt="">
-                <p>Meriendas</p>
-            </div>
-        </div>
-        <div class="imagen-port">
-            <img src="/img/img_home/coffee_history.jpg">
-            <div class="hover-galeria">
-                <img src="/img/iconos/coffee-cup.png" alt="">
-                <p>Accesorios</p>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-
-<!-- productos descuentos  -->
-
-<section class="products" id="products">
-
-    <h1 class="heading"> Productos <span>con descuentos.</span> </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <span class="discount">-15%</span>
-            <div class="image">
-                <img class="img_pro" src="img/imgProductos/cafeteraFiltro.jpg" alt="">
-                <div class="icons">
-                    <a href="src/views/produtcDetail.ejs" class="fas fa-eye"></a>
-                    <a href="#" class="cart-btn">Agregar</a>
-                    <a href="#" class="fas fa-share"></a>
+                    <span>Arte café</span>
+                    <h3>Sabores del mundo</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet voluptatem esse quasi ullam
+                        architecto
+                        vitae, quaerat soluta, nesciunt accusamus quas modi consequatur voluptatibus accusantium in at
+                        minus
+                        doloribus, saepe vel.</p>
+                    <a href="/productos" class="btn">Ver productos</a>
                 </div>
-            </div>
-            <div class="content">
-                <h3>Cafetera</h3>
-                <div class="price"> $12.99 <span>$15.99</span> </div>
-            </div>
-        </div>
 
-        <div class="box">
-            <span class="discount">-15%</span>
-            <div class="image">
-                <img class="img_pro" src="/img/imgProductos/cafeteraFrancesa.jpg" alt="">
-                <div class="icons">
-                    <a href="#" class="fas fa-eye"></a>
-                    <a href="#" class="cart-btn">Agregar</a>
-                    <a href="#" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Cafetera</h3>
-                <div class="price"> $12.99 <span>$15.99</span> </div>
-            </div>
-        </div>
+            </section>
 
-        <div class="box">
-            <span class="discount">-20%</span>
-            <div class="image">
-                <img class="img_pro" src="/img/imgProductos/voulturno.jpg" alt="">
-                <div class="icons">
-                    <a href="#" class="fas fa-eye"></a>
-                    <a href="#" class="cart-btn">Agregar</a>
-                    <a href="#" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Cafetera</h3>
-                <div class="price"> $12.99 <span>$15.99</span> </div>
-            </div>
-        </div>
+            <!-- slider coffee -->
+            <%- include('partials/slider.ejs') %>
 
-        <div class="box">
-            <span class="discount">-17%</span>
-            <div class="image">
-                <img class="img_pro" src="/img/imgProductos/cafeteraChemex.jpg" alt="">
-                <div class="icons">
-                    <a href="#" class="fas fa-eye"></a>
-                    <a href="#" class="cart-btn">Agregar</a>
-                    <a href="#" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Cafetera</h3>
-                <div class="price"> $12.99 <span>$15.99</span> </div>
-            </div>
-        </div>
+                <!-- CATEGORIES -->
+                <section class="portafolio">
+                    <div class="contenedor">
+                        <h1 class="titulo" style="color: greenyellow;font-size: 2rem;">Secciones</h1>
+                        <div class="galeria-port">
+                            <div class="imagen-port">
+                                <img src="/img/img_home/cafeMolido.jpg">
+                                <div class="hover-galeria">
+                                    <img src="/img/iconos/coffee-cup.png" alt="">
+                                    <p>Sabores del mundo</p>
+                                </div>
+                            </div>
+                            <div class="imagen-port">
+                                <img src="/img/imgProductos/cafeteraChemex.jpg">
+                                <div class="hover-galeria">
+                                    <img src="/img/iconos/coffee-cup.png" alt="">
+                                    <p>Cafeteras</p>
+                                </div>
+                            </div>
+                            <div class="imagen-port">
+                                <img src="/img/img_home/merienda.jpg">
+                                <div class="hover-galeria">
+                                    <img src="/img/iconos/coffee-cup.png" alt="">
+                                    <p>Meriendas</p>
+                                </div>
+                            </div>
+                            <div class="imagen-port">
+                                <img src="/img/img_home/coffee_history.jpg">
+                                <div class="hover-galeria">
+                                    <img src="/img/iconos/coffee-cup.png" alt="">
+                                    <p>Accesorios</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <div class="box">
-            <span class="discount">-18%</span>
-            <div class="image">
-                <img class="img_pro" src="/img/imgProductos/molinillo.webp" alt="">
-                <div class="icons">
-                    <a href="#" class="fas fa-eye"></a>
-                    <a href="#" class="cart-btn">Agregar</a>
-                    <a href="#" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Molinillo</h3>
-                <div class="price"> $12.99 <span>$15.99</span> </div>
-            </div>
-        </div>
+                <!-- productos descuentos  -->
 
-        <div class="box">
-            <span class="discount">-10%</span>
-            <div class="image">
-                <img class="img_pro" src="/img/imgProductos/tetera.jpg" alt="">
-                <div class="icons">
-                    <a href="#" class="fas fa-eye"></a>
-                    <a href="#" class="cart-btn">Agregar</a>
-                    <a href="#" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Tetera</h3>
-                <div class="price"> $12.99 <span>$15.99</span> </div>
-            </div>
-        </div>
-        <div class="box">
-            <span class="discount">-15%</span>
-            <div class="image">
-                <img class="img_pro" src="/img/imgProductos/cafeteraFrancesa.jpg" alt="">
-                <div class="icons">
-                    <a href="#" class="fas fa-eye"></a>
-                    <a href="#" class="cart-btn">Agregar</a>
-                    <a href="#" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Cafetera</h3>
-                <div class="price"> $12.99 <span>$15.99</span> </div>
-            </div>
-        </div>
+                <section class="products" id="products">
 
-        <div class="box">
-            <span class="discount">-20%</span>
-            <div class="image">
-                <img class="img_pro" src="/img/imgProductos/cafeteraV60.webp" alt="">
-                <div class="icons">
-                    <a href="#" class="fas fa-eye"></a>
-                    <a href="#" class="cart-btn">Agregar</a>
-                    <a href="#" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Cafetera</h3>
-                <div class="price"> $12.99 <span>$15.99</span> </div>
-            </div>
-        </div>
+                    <h1 class="heading"> Productos <span>con descuentos.</span> </h1>
+                    <% productsDisc.forEach(product=> { %>
+                        <div class="box-container">
+                            <div class="box">
+                                <span class="discount"><%= product.discount %></span>
+                                <div class="image">
+                                    <img class="img_pro" src="img/imgProductos/<%- product.image%>" alt="">
+                                    <div class="icons">
+                                        <a href="/products/detail/<%- product.id%>"> class="fas fa-eye"></a>
+                                        <a href="#" class="cart-btn">Agregar</a>
+                                        <a href="#" class="fas fa-share"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h3><%- product.name%></h3>
+                                    <div class="price">$<%- product.price%> <h2><%- toThousand(product.price - product.price * product.discount / 100)%></h2>
+                                        <span><%- product.discount !== 0 ? `${product.discount}% OFF` : "" %></span></div>
+                                </div>
+                                <% }) %>
+                            </div>
+                </section>
 
-</section>
+                <!---banner de iconos-->
+                <section class="icons_bann">
+                    <div class="icon_bann">
+                        <img src="/img/iconos/delivery-truck.png" alt="">
+                        <div class="info">
+                            <h3>Envío a todo el pais</h3>
+                            <span>Bonificado a partir de $3500</span>
+                        </div>
+                    </div>
 
-<!---banner de iconos-->
-<section class="icons_bann">
-    <div class="icon_bann">
-        <img src="/img/iconos/delivery-truck.png" alt="">
-        <div class="info">
-            <h3>Envío a todo el pais</h3>
-            <span>Bonificado a partir de $3500</span>
-        </div>
-    </div>
+                    <div class="icon_bann">
+                        <img src="img/iconos/gif.png" alt="">
+                        <div class="info">
+                            <h3>Gift card</h3>
+                            <span>Regala los mejores momentos</span>
+                        </div>
+                    </div>
 
-    <div class="icon_bann">
-        <img src="img/iconos/gif.png" alt="">
-        <div class="info">
-            <h3>Gift card</h3>
-            <span>Regala los mejores momentos</span>
-        </div>
-    </div>
+                    <div class="icon_bann">
+                        <img src="/img/iconos/escudo.png" alt="">
+                        <div class="info">
+                            <h3>Todos los medios de pago</h3>
+                            <span>Tu compra segura</span>
+                        </div>
+                    </div>
+                </section>
 
-    <div class="icon_bann">
-        <img src="/img/iconos/escudo.png" alt="">
-        <div class="info">
-            <h3>Todos los medios de pago</h3>
-            <span>Tu compra segura</span>
-        </div>
-    </div>
-</section>
+                
 
-   <!--- video-------->
-<section class="video" id="video">
+                <!--- video-------->
+                <section class="video" id="video">
 
-    <h1 class="heading"> <span> Granos </span> seleccionados </h1>
+                    <h1 class="heading"> <span> Granos </span> seleccionados </h1>
 
-    <div class="row">
+                    <div class="row">
 
-        <div class="video_container">
-            <video src="/img/video/Beans - 72745.mp4" loop autoplay muted></video>
-            
-            <h3>Molienda preferida</h3>
-        </div>
+                        <div class="video_container">
+                            <video src="/img/video/Beans - 72745.mp4" loop autoplay muted></video>
 
-        <div class="v_content">
-            <h1 class="heading">Molemos en el <span> momento </span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cumque sit nemo pariatur corporis perspiciatis aspernatur a ullam repudiandae autem asperiores quibusdam omnis commodi alias repellat illum, unde optio temporibus.</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium ea est commodi incidunt magni quia molestias perspiciatis, unde repudiandae quidem.</p>
-            <a href="#" class="btn">Leer mas</a>
-        </div>
+                            <h3>Molienda preferida</h3>
+                        </div>
 
-    </div>
+                        <div class="v_content">
+                            <h1 class="heading">Molemos en el <span> momento </span></h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cumque sit nemo pariatur
+                                corporis perspiciatis aspernatur a ullam repudiandae autem asperiores quibusdam omnis
+                                commodi alias repellat illum, unde optio temporibus.</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium ea est commodi
+                                incidunt magni quia molestias perspiciatis, unde repudiandae quidem.</p>
+                            <a href="#" class="btn">Leer mas</a>
+                        </div>
 
-</section>
+                    </div>
+
+                </section>
 
 
-<!--- newaletter--->
-<section class="newsletter" id="newsletter">
+                <!--- newaletter--->
+                <section class="newsletter" id="newsletter">
 
-    <h3>Recibí las mejores ofertas y novedades</h3>
+                    <h3>Recibí las mejores ofertas y novedades</h3>
 
-    <form action="" >
-        <input class="box_news" type="email" placeholder="Dejanos tu email">
-        <input type="submit" value="subscribirte" class="btn_news">
-    </form>
+                    <form action="">
+                        <input class="box_news" type="email" placeholder="Dejanos tu email">
+                        <input type="submit" value="subscribirte" class="btn_news">
+                    </form>
 
-</section>
+                </section>
 
-<%- include('partials/footer.ejs') %>
-   
- 
-</body>
-<!-- links JS -->
+                <%- include('partials/footer.ejs') %>
 
-<script src="/js/product-slider.js" ></script>
+
+    </body>
+    <!-- links JS -->
+
+    <script src="/js/product-slider.js"></script>
     <script src="/js/productDetail.js"></script>
 
-<!-- JS slider -->
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- JS slider -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 </html>

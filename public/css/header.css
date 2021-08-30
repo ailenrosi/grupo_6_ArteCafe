@@ -278,6 +278,9 @@
        right: 0;
         width: 96%;
 }
+.heading{
+    font-size: 2rem;    
+}
     header .logo{
         padding: 0.7rem;
     }
