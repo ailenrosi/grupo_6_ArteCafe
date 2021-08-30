@@ -11,17 +11,19 @@
       <!-- product section starts  -->
 
       <section class="produc_page" id="produc_page">
-        <h1 class="heading">resultado para <span> <%= search %></span></h1>
+        <h1 class="heading">resultado para <span>
+            <%= search %>
+          </span></h1>
         <% if (result.length> 0) { %>
           <% result.forEach(product=> { %>
-      
+
             <div class="box-container">
               <div class="box">
-                <span class="discount">%
-                  <%= product.discount %>
+                <span class="discount">-
+                  <%= product.discount %>%
                 </span>
                 <div class="icons">
-                  <a href="/products/detail/<%- product.id%>"" class=" fas fa-eye"></a>
+                  <a href="/products/detail/<%- product.id%>" class=" fas fa-eye"></a>
                 </div>
                 <img src="/img/imgProductos/<%- product.image%>" alt="">
                 <h3>
@@ -49,6 +51,7 @@
                       búsqueda</h2>
                   </div>
                   <% } %>
+
             </div>
 
       </section>

@@ -13,8 +13,8 @@ module.exports = {
         res.render('home', {
             titleSlider: "Para los amantes del café.",
             productsSlider,
-            toThousand,
-            productsDisc 
+            productsDisc,
+            toThousand
         })
     },
     contact: (req, res) => {

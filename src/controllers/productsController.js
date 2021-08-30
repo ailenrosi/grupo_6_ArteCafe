@@ -6,18 +6,17 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
-    home: (req, res) => {
-		res.render('products', {
-			products,
-			toThousand
-		})
-	},
+  
     detail: (req, res) => {
-		let product = products.find(product => product.id === +req.params.id);
-		res.render('productDetail', {
-			product,
-			toThousand
-		})
+        let productID = +req.params.id;
+        
+        let product = products.find(product => product.id === productID)
+
+        res.render('productDetail', {
+            product,
+            toThousand
+        })
+            
     },
     productsDesc: (req, res) => {
         res.render('productsDesc');

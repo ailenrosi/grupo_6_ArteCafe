@@ -7,10 +7,11 @@ router.get('/detail/:id', controller.detail);
 
 router.get('/productsDesc', controller.productsDesc);
 
-router.get('/product', controller.products);
+router.get('/products', controller.products);
 
 router.get('/vista', controller.vista);
 
 module.exports = router;
+
 
 

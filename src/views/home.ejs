@@ -16,7 +16,7 @@
                         vitae, quaerat soluta, nesciunt accusamus quas modi consequatur voluptatibus accusantium in at
                         minus
                         doloribus, saepe vel.</p>
-                    <a href="/productos" class="btn">Ver productos</a>
+                    <a href="/products" class="btn">Ver productos</a>
                 </div>
 
             </section>
@@ -69,7 +69,7 @@
                     <% productsDisc.forEach(product=> { %>
                         <div class="box-container">
                             <div class="box">
-                                <span class="discount"><%= product.discount %></span>
+                                <span class="discount">%<%= product.discount %></span>
                                 <div class="image">
                                     <img class="img_pro" src="img/imgProductos/<%- product.image%>" alt="">
                                     <div class="icons">
