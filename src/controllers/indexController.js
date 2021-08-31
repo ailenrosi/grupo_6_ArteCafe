@@ -9,11 +9,11 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
     index: (req, res) => {
         let productsSlider = products.filter(product => product.discount >= 15)
-        let productsDisc = products.filter(product => product.discount === "discount")
+        let productsDesc = products.filter(product => product.discount === "discount")
         res.render('home', {
             titleSlider: "Para los amantes del café.",
             productsSlider,
-            productsDisc,
+            productsDesc,
             toThousand
         })
     },
