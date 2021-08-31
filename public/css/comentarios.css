@@ -24,9 +24,9 @@
     position: absolute;
     top: 2%;
     left: 50%;
-    font-size: 12rem;
+    font-size: 3.2rem;
     font-family: sans-serif;
-    color: #ff7c9c;
+    color: rgb(4, 153, 91);
     line-height: 1;
     transform: translate(-50%, 0);
   }
