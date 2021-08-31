@@ -26,7 +26,7 @@
         "name": "Cafetera Volturno Clásica 6 Pocillos manual italiana",
         "price": 10500,
         "description": "Café tradicional\r\nCon un sabor concentrado y un aroma que se apodera de tu casa, tu café moka es el complemento ideal para cualquier momento del día.\r\n-rose gold\r\n-negro\r\n-plata\r\n-celeste",
-        "discount": 10,
+        "discount": 0,
         "category": "cafeteras",
         "image": [
             "voulturno.jpg"
@@ -59,7 +59,7 @@
         "name": "Capsulas para cafetera recargable +300",
         "price": 2500,
         "description": "Capsulas recargables para máquina Dolce Gusto + 1 cucharita medidora 100% compatible reutilizable mas de 100 veces\r\n-negro\r\n-verde\r\n-plata\r\n-turquesa",
-        "discount": 10,
+        "discount": 0,
         "category": "3",
         "subcategory": "accesorios",
         "image": [
@@ -145,11 +145,11 @@
     },
     {
         "id": 14,
-        "name": "Filtros De Papel Para Cafe Tipo Canasta",
+        "name": "Filtros de papel tipo Canasta",
         "price": 280,
         "description": "Aptos para todo tipo de cafeteras eléctricas con portafiltros 'canasta' ",
         "discount": 0,
-        "category": "cafe",
+        "category": "accesorio",
         "image": [
             "filtro.jpg"
         ]

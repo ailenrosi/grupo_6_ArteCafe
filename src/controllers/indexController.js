@@ -8,8 +8,8 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
     index: (req, res) => {
-        let productsSlider = products.filter(product => product.discount >= 15)
-        let productsDesc = products.filter(product => product.discount === "discount")
+        let productsSlider = products.filter(product => product.category === 'cafe')
+        let productsDesc = products.filter(product => product.discount >=2 )
         res.render('home', {
             titleSlider: "Para los amantes del café.",
             productsSlider,
