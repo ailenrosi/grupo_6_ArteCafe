@@ -12,7 +12,7 @@ module.exports = {
         
         let product = products.find(product => product.id === productID)
 
-        res.render('productDetail', {
+        res.render('productsDetail', {
             product,
             toThousand
         })
