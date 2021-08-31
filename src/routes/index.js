@@ -8,6 +8,8 @@ router.get('/contact', controller.contact);
 
 router.get('/search', controller.search); 
 
+router.get('/sobre_nosotros', controller.sobreNosotros);
+
 
 
 module.exports = router;

@@ -79,9 +79,16 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h3><%- product.name%></h3>
-                                    <div class="price">$<%- product.price%> <h2><%- toThousand(product.price - product.price * product.discount / 100)%></h2>
-                                        <span><%- product.discount !== 0 ? `${product.discount}% OFF` : "" %></span></div>
+                                    <h3>
+                                        <%- product.name%>
+                                    </h3>
+                                    <div class="price">$<%- product.price%>
+                                            <h2>
+                                                <%- toThousand(product.price - product.price * product.discount / 100)%>
+                                            </h2>
+                                            <span>
+                                                <%- product.discount !==0 ? `${product.discount}% OFF` : "" %>
+                                            </span></div>
                                 </div>
                                 <% }) %>
                             </div>
@@ -114,7 +121,28 @@
                     </div>
                 </section>
 
-                
+                <!--- sobre nosotros-->
+                <section class="about" id="about">
+
+                    <h1 class="heading"> <span>Sobre</span> nosotros </h1>
+                    <div class="row">
+                        <div class="image">
+                            <img src="/img/img_home/logo_black.jpeg" alt="logo_black">
+                        </div>
+
+                        <div class="content">
+                            <h3>¿Sabes por qué nuestro cafe es tan especial?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui ea ullam, enim
+                                tempora ipsum fuga alias quae ratione a officiis id temporibus autem? Quod nemo facilis
+                                cupiditate. Ex, vel?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit amet enim quod veritatis,
+                                nihil voluptas culpa! Neque consectetur obcaecati sapiente?</p>
+                            <a href="/sobre_nosotros" class="btn">Leer mas</a>
+                        </div>
+
+                    </div>
+
+                </section>
 
                 <!--- video-------->
                 <section class="video" id="video">

@@ -17,6 +17,7 @@ module.exports = {
             toThousand
         })
     },
+    
     contact: (req, res) => {
         res.render('contact');
     },
@@ -34,5 +35,8 @@ module.exports = {
 			search: req.query.keywords
 		})
 	},
+    sobreNosotros: (req, res) => {
+        res.render('sobre_nosotros');
+    },
 };
 

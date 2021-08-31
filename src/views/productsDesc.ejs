@@ -29,7 +29,9 @@
         <div class="price"> $*** <span> $**** </span> </div>
         <div class="quantity">
           <span>Unidad: </span>
-          <input type="number" min="1" max="1000" value="1">
+          <td>
+            <input type="number" class="form-control cantidad" min="1" value="1">
+        </td>
           <span></span>
         </div>
         <a href="vista" class="btn">Agregar al carrito</a>
@@ -195,7 +197,7 @@
 
   <!----   Comieza footer     ----->
   <%- include('partials/footer.ejs') %>
-
+<script src="js/cart.js"></script>
   <script src="js/main.js"></script>
 
 </body>
