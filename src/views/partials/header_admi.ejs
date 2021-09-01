@@ -1,0 +1,41 @@
+<section id="header_hd">
+    <!-- comienza header  --->
+    <header>
+        <section class="marquee">
+            <MARQUEE DIRECTION=right class="envio"> Bienvenido al Administrador <i class="fas fa-hand-sparkles"></i>
+            </MARQUEE>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="contact"><i class="fas fa-envelope-open-text"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="tel:+5411"><i class="fas fa-mobile-alt"></i></i></a>
+            </div>
+        </section>
+        <section class="header_container">
+            <a href="/" class="logo"><i class="fas fa-mug-hot"></i>Arte Café</a>
+
+            <nav class="navbar">
+                <a class="active" href="/">Home</a>
+                <a href="#">Galeria</a>
+                <a href="#">Editar</a>
+                <a href="#">Eliminar</a>
+            </nav>
+
+            <div class="icons">
+                <i class="fas fa-search" id="search-icon"></i>
+                <a href="user" class="fas fa-user"></a>
+               </div>
+        </section>
+    </header>
+
+   <!-- menu buscar  -->
+   <form action="/search" method="GET" id="search-form">
+    <input type="search" name="keywords" placeholder="Buscar..." id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+</section>
+<script src="/js/header.js"></script>

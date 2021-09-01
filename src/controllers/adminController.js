@@ -1,6 +1,5 @@
 module.exports = {
-    index: (req, res) => {
-        res.render('admin')
+    admin: (req, res) => {
+        res.render('admin');
     }
 }
-    
