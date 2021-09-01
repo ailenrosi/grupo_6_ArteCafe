@@ -8,9 +8,11 @@ const path = require('path');
 let indexRouter = require('./routes/index');
 let productsRouter = require('./routes/products');
 let userRouter = require('./routes/user');
-let cartRouter = require('./routes/cart')
+let cartRouter = require('./routes/cart');
+let prodRouter = require('./routes/prod')
 /*el error dejarlo debajo */
 let errorRouter = require ('./routes/error_404');
+
 
 
 /* Middleware */
@@ -25,8 +27,12 @@ app.use('/', indexRouter);
 app.use('/products', productsRouter);
 app.use('/user', userRouter);
 app.use('/cart',cartRouter);
+app.use('/admin', indexRouter);
+app.use('/prod', prodRouter);
+
 /* el error dejarlo bebajo */
 app.use('*', errorRouter);
+
 
 
 app.listen(port, () => {

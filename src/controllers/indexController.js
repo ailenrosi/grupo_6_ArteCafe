@@ -1,4 +1,6 @@
-let { products, } = require('../data/dataBase'); 
+const fs = require("fs");
+const path = require("path");
+const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","products.json"),"utf-8")); 
 
 module.exports = {
     index: (req, res) => {
@@ -12,6 +14,9 @@ module.exports = {
     },
     contact: (req, res) => {
         res.render('contact');
+    },
+    admin: (req,res) => {
+        res.render('admin', {products})
     },
     search: ( req, res) =>{
         let result =[]

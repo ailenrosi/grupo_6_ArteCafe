@@ -1,14 +1,14 @@
 
 .part-1 .imagen img{
     width: 30%;
-    
+    padding-top: 150px;
 }
 
 .part-1 {
     text-align: center;
 }
 
-.form-pagar form{
+.form-pagar{
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -16,16 +16,17 @@
    
     }
 
-.form-pagar form label {
+.form-pagar label {
     padding: 10px;
     color: gray;
 }
 
-.form-pagar form input{
+.form-pagar input{
     width: 200px; 
     border-radius: 50px;
     padding: 7px;
 }
+
 
 .part-2 .img1 img, .part-2 .img2 img{
     width: 30px;
@@ -48,7 +49,7 @@
 }
 
 .listo {
-border: 1px solid;
+
 border-radius: 30px;
 width: 139px;
 text-align: center;
@@ -61,16 +62,27 @@ right: 160px;
 .regreso{
     margin-top: 70px;
 }
-.listo:hover {
-    background-color: rgb(78, 128, 78);
-    color: white;
-}
+
 
 
 @media(min-width:768px){
+
+.part-1 .imagen img{
+        width: 70%;
+        width: 200px;
+        padding: 30px;
+}
+
 .form-2{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 16%;
+}}
+
+@media(min-width:1024px){
+
+    .part-1 .imagen img{
+        width: 259px;
+      
 }}

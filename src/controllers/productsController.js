@@ -1,4 +1,7 @@
-let { products } = require('../data/dataBase')
+const fs = require("fs");
+const path = require("path");
+
+const products = JSON.parse(fs.readFileSync(path.join(__dirname,"..","data","products.json"),"utf-8"));
  
 module.exports = {
     detail: (req, res) => {
@@ -18,6 +21,7 @@ module.exports = {
     },
     vista:(req,res)=> {
         res.render('vista')
-    },
+    }
+   
     
 }
