@@ -62,18 +62,18 @@
                 </section>
 
                 <!-- productos descuentos  -->
-
+                <h1 class="heading"> Productos <span>con descuentos.</span> </h1>
                 <section class="products" id="products">
-
-                    <h1 class="heading"> Productos <span>con descuentos.</span> </h1>
+                   
                     <% productsDesc.forEach(product=> { %>
                         <div class="box-container">
                             <div class="box">
                                 <span class="discount">-<%= product.discount %>%</span>
                                 <div class="image">
-                                    <img class="img_pro" src="img/imgProductos/<%= product.image%>" alt="">
+                                    <img class="img_pro" src="img/imgProductos/<%= product.image%>"
+                                        alt="<%= product.name%>">
                                     <div class="icons">
-                                        <a href="/products/productsDetail/<%= product.id%>">class="fas fa-eye"></a>
+                                        <a href="/products/productsDetail/<%= product.id%>">Ver</a>
                                         <a href="#" class="cart-btn">Agregar</a>
                                         <a href="#" class="fas fa-share"></a>
                                     </div>
@@ -82,16 +82,18 @@
                                     <h3>
                                         <%= product.name%>
                                     </h3>
-                                    <div class="price">$<%= product.price%>
+                                    <div class="price">$<%= toThousand(product.price)%>
                                             <h2>
-                                                <%= toThousand(product.price - product.price * product.discount / 100)%>
+                                                $<%= toThousand(product.price - product.price * product.discount / 100)%>
                                             </h2>
                                             <span>
                                                 <%= product.discount !==0 ? `${product.discount}% OFF` : "" %>
-                                            </span></div>
+                                            </span>
+                                    </div>
                                 </div>
-                                <% }) %>
                             </div>
+                        </div>
+                        <% }) %>
                 </section>
 
                 <!---banner de iconos-->
