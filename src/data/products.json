@@ -137,7 +137,7 @@
         "name": "Cafetera AeroPress",
         "price": 4300,
         "description": "Sistema antigoteo para servir una taza de café cuando quiera\r\nEl sistema antigoteo le permite servir una taza de café antes de que termine el ciclo de preparación completo.\r\nCon esta cafetera se pueden preparar entre 2 y 10 (tazas grandes)/15 (tazas pequeñas) de café. Tiene un máximo de 1,2 litros.\r\n-negro\r\n-plata",
-        "discount": 10,
+        "discount": 0,
         "category": "cafeteras",
         "image": [
             "aeropress.webp"
@@ -203,7 +203,7 @@
         "name": "Cafe Torrado Molido Intenso ARTE CAFE X 1 Kg",
         "price": 900,
         "description": "Sabor delicado, profundo y pronunciado con un aroma fuerte y persistente.",
-        "discount": 15,
+        "discount": 0,
         "category": "cafe",
         "image": [
             "coffee_intens.jpg"

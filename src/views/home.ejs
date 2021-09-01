@@ -64,13 +64,14 @@
                 <!-- productos descuentos  -->
                 <h1 class="heading"> Productos <span>con descuentos.</span> </h1>
                 <section class="products" id="products">
-                   
+
                     <% productsDesc.forEach(product=> { %>
                         <div class="box-container">
                             <div class="box">
                                 <span class="discount">-<%= product.discount %>%</span>
                                 <div class="image">
-                                    <img class="img_pro" src="img/imgProductos/<%= product.image%>"
+                                    <img class="img_pro" style="max-height: 210px;
+                                    min-width: 210px;" src="img/imgProductos/<%= product.image%> "
                                         alt="<%= product.name%>">
                                     <div class="icons">
                                         <a href="/products/productsDetail/<%= product.id%>">Ver</a>
@@ -84,7 +85,8 @@
                                     </h3>
                                     <div class="price">$<%= toThousand(product.price)%>
                                             <h2>
-                                                $<%= toThousand(product.price - product.price * product.discount / 100)%>
+                                                $<%= toThousand(product.price - product.price * product.discount /
+                                                    100)%>
                                             </h2>
                                             <span>
                                                 <%= product.discount !==0 ? `${product.discount}% OFF` : "" %>
