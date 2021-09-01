@@ -9,6 +9,7 @@ let indexRouter = require('./routes/index');
 let productsRouter = require('./routes/products');
 let userRouter = require('./routes/user');
 let cartRouter = require('./routes/cart')
+let adminRouter = require('./routes/admin')
 /*el error dejarlo debajo */
 let errorRouter = require ('./routes/error_404');
 
@@ -25,6 +26,7 @@ app.use('/', indexRouter);
 app.use('/products', productsRouter);
 app.use('/user', userRouter);
 app.use('/cart',cartRouter);
+app.use('/admin', adminRouter);
 /* el error dejarlo bebajo */
 app.use('*', errorRouter);
 
