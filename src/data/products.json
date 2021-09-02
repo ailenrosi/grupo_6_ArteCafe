@@ -37,7 +37,7 @@
         "name": "Cafetera filtro reutilizable, Jarra 1,2 Lts",
         "price": 6500,
         "description": "Sistema antigoteo para servir una taza de café cuando quiera\r\nEl sistema antigoteo le permite servir una taza de café antes de que termine el ciclo de preparación completo.\r\nCon esta cafetera se pueden preparar entre 2 y 10 (tazas grandes)/15 (tazas pequeñas) de café. Tiene un máximo de 1,2 litros.\r\n-negro\r\n-plata",
-        "discount": 10,
+        "discount": 15,
         "category": "cafeteras",
         "image": [
             "cafeteraFiltro.jpg"
@@ -48,7 +48,7 @@
         "name": "Molinillo de cafe manual, Amoladora de cafe acero inoxidable",
         "price": 4500,
         "description": "No se necesitan baterías, energía ni cables largos de plástico para operar su molinillo portátil, lo que le permite viajar y preparar granos de café molidos recién tostados en su próximo campamento, excursionismo, mochila o viaje al aire libre.\r\nMolino manual con muelas de cerámica.\r\n-negro\r\n-plata\r\n-celeste",
-        "discount": 10,
+        "discount": 15,
         "category": "accesorios",
         "image": [
             "molinillo.webp"
@@ -71,7 +71,7 @@
         "name": "Taza cerámica ARTE CAFE 250ml",
         "price": 750,
         "description": "",
-        "discount": 10,
+        "discount": 15,
         "category": "Accesorios",
         "image": [
             "tazaBlanca.jpg"
@@ -93,7 +93,7 @@
         "name": "Café artesanal, molido en el momento, bolsa 400gr",
         "price": 500,
         "description": "Espresso Napoli, mezcla Signature, es un espresso lleno de sabor y bien balanceado de fuerte carácter e intenso sabor. El proceso de tostado oscuro en conjunto con el suelo rico en nutrientes de Sudámerica, le otorga a los granos de café un sabor de nueces con un toque de cocoa.",
-        "discount": 25,
+        "discount": 10,
         "category": "cafe",
         "image": [
             "cafe_artesanal.jpg"
@@ -126,7 +126,7 @@
         "name": "Combo café de estación dos bolsas 450gr c/u",
         "price": 1200,
         "description": "Blend elaborado con granos de café arábica Supremo, variedad Caturra- Catuaí, seleccionados de las mejores fincas de Colombia, cosechados a 1600 metros de altura. Posee características suaves, sabor balanceado, con notas frutales, leve acidez y cuerpo medio muy aromático, para ser disfrutado en todo momento\n Destacan por sus colores intensos y por un especial proceso de encolado que hace que las minas sean súper resistentes a la rotura. \n Podes seleccionar en la publicación el tipo de molido de tu preferencia, indicándonos el tipo de cafetera. SE MUELE EN EL DIA ANTES DE ENVIARLO.",
-        "discount": 20,
+        "discount": 10,
         "category": "cafe",
         "image": [
             "combo.png"
@@ -149,11 +149,7 @@
         "price": 280,
         "description": "Aptos para todo tipo de cafeteras eléctricas con portafiltros 'canasta' ",
         "discount": 0,
-<<<<<<< HEAD
-        "category": "accesorios",
-=======
         "category": "accesorio",
->>>>>>> emmy
         "image": [
             "filtro.jpg"
         ]
@@ -185,7 +181,7 @@
         "name": "Vaso Con Tapa Y Sorbete Acrilico  Termico",
         "price": 600,
         "description": "Vaso de Acrilico Frio/Calor - Doble Pared, Tapa a Rosca con sello interno para cierre hermetico Sorbete Color Blanco - No descartable",
-        "discount": 0,
+        "discount": 20,
         "category": "accesorios",
         "image": [
             "vasoTransparente.jpg"
@@ -196,11 +192,7 @@
         "name": "Balanza Cafe Scale Barista Digital C/ Temporizador Infusores",
         "price": 9000,
         "description": "Balanza Digital ideal para baristas o para complemento de Cocina.",
-<<<<<<< HEAD
-        "discount": 0,
-=======
-        "discount": 10,
->>>>>>> emmy
+        "discount": 20,
         "category": "accesorios",
         "image": [
             "balanza scale digital.webp"
@@ -221,7 +213,7 @@
         "name": "Jarro Térmico con Tapa Base ARTE CAFE",
         "price": 1080,
         "description": "Están diseñados con doble capa plástica de alta resistencia para que no te quemes.",
-        "discount": 10,
+        "discount": 15,
         "category": "accesorios",
         "image": [
             "jarronMetal.jpg"
