@@ -38,5 +38,8 @@ module.exports = {
     sobreNosotros: (req, res) => {
         res.render('sobre_nosotros');
     },
+    meriendas: (req, res) => {
+        res.render('meriendas');
+    },
 };
 

@@ -10,6 +10,7 @@ router.get('/search', controller.search);
 
 router.get('/sobre_nosotros', controller.sobreNosotros);
 
+router.get('/meriendas', controller.meriendas); 
 
 
 module.exports = router;
