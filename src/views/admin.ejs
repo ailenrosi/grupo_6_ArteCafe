@@ -5,21 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/778560f052.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
 </head>
+
 <body>
-    <section>
+    <section class="tablita">
         <table class="table">
-            <thead>
+            <thead class="columnas">
               <tr>
+                <th>ID</th>
                 <th>Nombre</th>
+                <th>Descripción</th>
                 <th>Precio</th>
                 <th>Categoria</th>
+                <th>Opciones</th>
             </tr>
-            <%= products.forEach(product => { %>
+            <% products.forEach(product => { %>
               <tr>
+                <th scope="col"><%= product.id %> </th>
                 <th scope="col"><%= product.name %> </th>
+                <th scope="col"><%= product.description %> </th>
                 <th scope="col"><%= product.price %> </th>
                 <th scope="col"><%= product.category %> </th>
+                <th scope="col"><a class="edit" href=""><i class="fas fa-edit"></i></a></th>
+                <th scope="col"><a class="delete" href=""><i class="far fa-trash-alt"></i></i></a></th>
               </tr>
               <% }) %>
             </thead>
