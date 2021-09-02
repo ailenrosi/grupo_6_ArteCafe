@@ -41,5 +41,8 @@ module.exports = {
     meriendas: (req, res) => {
         res.render('meriendas');
     },
-};
+    galeria: (req, res) => {
+        res.render('galeria');
+    },
+}
 

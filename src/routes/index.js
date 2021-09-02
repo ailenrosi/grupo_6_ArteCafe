@@ -10,6 +10,8 @@ router.get('/search', controller.search);
 
 router.get('/sobre_nosotros', controller.sobreNosotros);
 
+router.get('/galeria', controller.galeria);
+
 router.get('/meriendas', controller.meriendas); 
 
 
