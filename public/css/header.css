@@ -96,6 +96,7 @@
     color:var(--black);
     font-size: 3rem;
     padding-bottom: 2rem;
+    margin-top: 2rem;
     
 }
 
@@ -277,6 +278,9 @@
         min-height: 10vw;
        right: 0;
         width: 96%;
+}
+.heading{
+    font-size: 2rem;    
 }
     header .logo{
         padding: 0.7rem;

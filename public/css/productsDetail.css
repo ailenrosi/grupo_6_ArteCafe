@@ -63,6 +63,7 @@
     width: 7rem;
     border: 1px solid var(--primary);
     border-radius: 15px;
+    margin-top: 1.6rem;
 }
 
 .productDetail  .productData-container  .counter button {
@@ -144,6 +145,7 @@
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2 );
         border-radius: 10px;
         margin: 10px;
+        margin-top: 10rem;
     }
 
     .productDetail .productData-container {
@@ -170,4 +172,14 @@
         font-size: 1.5rem;
     }
     
+}
+@media screen and (max-width: 500px) {
+    .productDetail {
+        
+        padding: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2 );
+        border-radius: 10px;
+        margin: 10px;
+        margin-top: 9rem;
+    }
 }

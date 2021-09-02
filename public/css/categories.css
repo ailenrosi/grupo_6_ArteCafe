@@ -12,9 +12,11 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   flex-direction: unset;
-  width: 100%;
+  width: 98%;
+  
 }
 .imagen-port{
+  border-radius: 1rem;
  width: 24%;
   margin-bottom: 10px;
   height: 200px;
@@ -56,8 +58,11 @@
 
 @media (max-width: 500px){
  .galeria-port{
-   flex-direction: column
+   flex-direction: column;
+   
  }
   .imagen-port{
-  width: 100%;}
+    width: 95%;
+    margin: .5rem;
+}
 }

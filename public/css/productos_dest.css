@@ -1,16 +1,22 @@
 #products{
-  padding: 1rem;
-  margin: 1rem;
+    margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  display: grid; 
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(1, auto 1fr auto );
+  gap: .5rem;
+  grid-row: repeat (1, auto 1rf auto );
 }
 
 .products .box-container{
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  flex-direction: unset;
-  width: 99%;
-  margin-bottom: 10px;
-  padding-bottom: 2rem;
+  display: grid;
+  grid-row: span 3;
+  width: 96%;
+  grid-template-rows: subgrid;
+  grid-row: repeat (1, auto 1rf auto );
+  width: 96%;
+  grid-column: span 2;
+  
 }
 .products .box-container .box .discount{
   position: absolute;
@@ -82,13 +88,10 @@
   text-align: center;
 }
 
-.products .box-container .box .content h3{
-  font-size: 2.5rem;
-  color:#333;
-}
+
 
 .products .box-container .box .content .price{
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   color:greenyellow;
   font-weight: bolder;
   padding-top: 1rem;
@@ -100,13 +103,29 @@
   font-weight: lighter;
   text-decoration: line-through;
 }
+.products .box-container .box .content .price h2:hover{
+  color: rgb(78, 238, 45);
+  font-size: 3rem;
+}
 .products .box-container .box span{
   color: greenyellow;
   font-family: "montserrat",sans-serif;
 }
 @media (max-width: 500px){
+  #products{
+    display: flex;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    gap: 0;
+  }
+  .products .box-container .box .content .price h2:hover{
+    color: brown;
+    font-size: 2.5rem;
+  }
   .products{
-    flex-direction: column;
+   flex-direction: column;
    justify-content: space-around;
   }
    .box-container{
@@ -116,22 +135,21 @@
  padding: 1rem;
 }
 .products .box-container .box .content h3 {
-  font-size: 2rem;
+  font-size: 1.1rem;
   color: rgb(6 117 21);
 }
-.products .box-container .box .content .price {
-  font-size: 2rem;
+.products .box-container .box .content .price  {
+  font-size: 1.4rem;
   padding-top: 0rem;
 }
+.products .box-container .box .discount {
+  font-size: 1.5rem;
+ 
+}
+
 @media (max-width: 450px){
 .products .box-container .box .image img {
   height: 50%;
 }
 }
 }
-
-/*@media (max-width: 700px){
-.products .box-container .box {
-  flex: 1 1 15rem;
-}
-}*/

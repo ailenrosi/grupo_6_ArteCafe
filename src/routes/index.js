@@ -8,6 +8,18 @@ router.get('/', controller.index);
 
 router.get('/contact', controller.contact);
 
+<<<<<<< HEAD
 router.get('/admin', admin);
 
 module.exports = router;
+=======
+router.get('/search', controller.search); 
+
+router.get('/sobre_nosotros', controller.sobreNosotros);
+
+
+
+module.exports = router;
+
+
+>>>>>>> emmy

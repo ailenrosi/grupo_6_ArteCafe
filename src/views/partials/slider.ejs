@@ -6,7 +6,7 @@
     data-flickity-options='{ "wrapAround": true }' >
     <% productsSlider.forEach(product => {%>
         <div class="carousel-cell productSlide">
-            <a href="/products/detail/<%- product.id%>">
+            <a href="/products/productsDetail/<%- product.id%>">
                 <div class="productDiscount"><%- product.discount %>% OFF</div>
                 <img src="/img/imgProductos/<%- product.image[0] %>" alt="">
                 <p class="productName"><%- product.name %></p>
