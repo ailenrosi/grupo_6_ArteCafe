@@ -1,9 +1,9 @@
 let express = require('express');
 let router = express.Router()
+let { cart, emergente, vista, formulario } = require('../controllers/cartController');
 
-const { cart, emergente,vista, formulario } = require('../controllers/cartController');
+router.get('/', cart);
 
-router.get('/cart', cart);
 
 router.get('/emergente', emergente);
 

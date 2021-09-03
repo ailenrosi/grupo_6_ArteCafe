@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="es">
-<%- include('partials/head.ejs') %>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Carrito</title>
+	<link rel="stylesheet" href="css">	
+</head>
 <body>
-    <%- include('partials/header.ejs') %>
-
-    <a href="#openModal">carrito</a>
-
-    <div id="openModal" class="modalDialog">
-        <div>
-            <a href="#close" title="Close" class="close">X</a>
-            <h2>Mi Carrito</h2>
-            <p>Su carrito está vacio</p>
-            <a href="">Agregar productos</a>
+	<div class="contenedor">
+	
+        <div class="modal-container">
+			<div class="modal modal close">
+				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+				<h3>Para ingresar</h3>
+				<h4>debes iniciar sesion</h4>
+				<form action="">
+					<div class="contenedor-inputs">
+						<input type="text" placeholder="Nombre">
+						<input type="email" placeholder="Correo">
+					</div>
+					<input type="submit" class="btn-submit" value="Iniciar">
+				</form>
+			</div>
+		</div>
+	</div>
     
-        </div>
-    </div>
-    <%- include('partials/footer.ejs') %>
 </body>
-
+	<script src="/js/emergente.js"></script>
 </html>
