@@ -70,13 +70,8 @@
         "id": 7,
         "name": "Taza cerámica ARTE CAFE",
         "price": 750,
-<<<<<<< HEAD
-        "description": "Taza personalizada de la casa",
-        "discount": 10,
-=======
         "description": "",
         "discount": 15,
->>>>>>> 3b90f6becc48db658d457fdc6956e12c9bd5dc5c
         "category": "Accesorios",
         "image": [
             "tazaBlanca.jpg"
@@ -150,11 +145,7 @@
     },
     {
         "id": 14,
-<<<<<<< HEAD
-        "name": "Filtros",
-=======
         "name": "Filtros de papel tipo Canasta",
->>>>>>> f3dc7b40987410793f69917f6864621c13d15529
         "price": 280,
         "description": "Aptos para todo tipo de cafeteras eléctricas con portafiltros 'canasta' ",
         "discount": 0,
