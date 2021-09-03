@@ -18,7 +18,7 @@
 
             <nav class="navbar">
                 <a class="active" href="/">Home</a>
-                <a href="sobre_nosotros">Sobre nosotros</a>
+                <a href="admin">Admin</a>
                 <a href="gallery">Galeria</a>
                 <a href="products/productsDesc">Productos</a>
                 <a href="cursos">Cursos</a>
@@ -29,7 +29,7 @@
             <div class="icons">
                 <i class="fas fa-search" id="search-icon"></i>
                 <a href="user" class="fas fa-user"></a>
-                <a href="vista" class="fas fa-shopping-cart"></a>
+                <a href="/cart" class="fas fa-shopping-cart"></a>
                 <i class="fas fa-bars" id="menu-bars"></i>
             </div>
         </section>
@@ -45,7 +45,7 @@
 
     <!-- menu buscar  -->
     <form action="/search" method="GET" id="search-form">
-        <input type="search" placeholder="Buscar..." name="" id="search-box">
+        <input type="search" name="keywords" placeholder="Buscar..." id="search-box">
         <label for="search-box" class="fas fa-search"></label>
         <i class="fas fa-times" id="close"></i>
     </form>

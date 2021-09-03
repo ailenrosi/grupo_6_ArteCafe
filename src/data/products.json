@@ -26,7 +26,7 @@
         "name": "Cafetera Volturno",
         "price": 10500,
         "description": "Café tradicional\r\nCon un sabor concentrado y un aroma que se apodera de tu casa, tu café moka es el complemento ideal para cualquier momento del día.\r\n-rose gold\r\n-negro\r\n-plata\r\n-celeste",
-        "discount": 10,
+        "discount": 0,
         "category": "cafeteras",
         "image": [
             "voulturno.jpg"
@@ -59,7 +59,7 @@
         "name": "Capsulas recargables",
         "price": 2500,
         "description": "Capsulas recargables para máquina Dolce Gusto + 1 cucharita medidora 100% compatible reutilizable mas de 100 veces\r\n-negro\r\n-verde\r\n-plata\r\n-turquesa",
-        "discount": 10,
+        "discount": 0,
         "category": "3",
         "subcategory": "accesorios",
         "image": [
@@ -137,7 +137,7 @@
         "name": "Cafetera AeroPress",
         "price": 4300,
         "description": "Sistema antigoteo para servir una taza de café cuando quiera\r\nEl sistema antigoteo le permite servir una taza de café antes de que termine el ciclo de preparación completo.\r\nCon esta cafetera se pueden preparar entre 2 y 10 (tazas grandes)/15 (tazas pequeñas) de café. Tiene un máximo de 1,2 litros.\r\n-negro\r\n-plata",
-        "discount": 10,
+        "discount": 0,
         "category": "cafeteras",
         "image": [
             "aeropress.webp"
@@ -145,13 +145,21 @@
     },
     {
         "id": 14,
+<<<<<<< HEAD
         "name": "Filtros",
+=======
+        "name": "Filtros de papel tipo Canasta",
+>>>>>>> f3dc7b40987410793f69917f6864621c13d15529
         "price": 280,
         "description": "Aptos para todo tipo de cafeteras eléctricas con portafiltros 'canasta' ",
         "discount": 0,
+<<<<<<< HEAD
         "category": "accesorios",
+=======
+        "category": "accesorio",
+>>>>>>> emmy
         "image": [
-            "filtro.jpp"
+            "filtro.jpg"
         ]
     },
     {
@@ -181,7 +189,7 @@
         "name": "Vaso Termico",
         "price": 600,
         "description": "Vaso de Acrilico Frio/Calor - Doble Pared, Tapa a Rosca con sello interno para cierre hermetico Sorbete Color Blanco - No descartable",
-        "discount": 10,
+        "discount": 0,
         "category": "accesorios",
         "image": [
             "vasoTransparente.jpg"
@@ -192,7 +200,11 @@
         "name": "Balanza Digital",
         "price": 9000,
         "description": "Balanza Digital ideal para baristas o para complemento de Cocina.",
+<<<<<<< HEAD
         "discount": 0,
+=======
+        "discount": 10,
+>>>>>>> emmy
         "category": "accesorios",
         "image": [
             "balanza scale digital.webp"
