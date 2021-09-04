@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head.ejs') %>
+
+    <body class="user_body" style="display: flex;">
+
+        <div class="container_user">
+
+            <div class="ctn_form">
+
+                <h1 class="title">Registrate</h1>
+
+                <form action="/users" method="POST" class="form-ad">
+
+                    <div class="user_form">
+
+                        <div class="form_user">
+
+                            <input type="text" name="name" placeholder="Nombre con el que te identificas"
+                                value="<%= locals.old && old.name %>">
+                            <% if (locals.errors && errors.name) { %>
+                                <small class="text_error">
+                                    <%= errors.name.msg %>
+                                </small>
+                                <% } %>
+                        </div>
+
+                        <div class="form_user">
+                            <input type="text" name="last_name" placeholder="Apellido"
+                                value="<%= locals.old && old.last_name %>">
+                            <% if (locals.errors && errors.last_name) { %>
+                                <small class="text_error">
+                                    <%= errors.last_name.msg %>
+                                </small>
+                                <% } %>
+                        </div>
+
+                        <div class="form_user"></div>
+                        <input type="email" name="email" placeholder="Tu email">
+                        <% if (locals.errors && errors.email) { %>
+                            <small class="text-danger">
+                                <%= errors.email.msg %>
+                            </small>
+                            <% } %>
+                    </div>
+
+                    <div class="form_user">
+                        <input type="password" name="pass" placeholder="Tu contraseña">
+                        <% if (locals.errors && errors.pass) { %>
+                            <small class="text_error">
+                                <%= errors.pass.msg %>
+                            </small>
+                            <% } %>
+                    </div>
+
+                    <div class="form_user">
+                        <input type="password" name="pass2" placeholder="Repetir contraseña">
+                        <% if (locals.errors && errors.pass2) { %>
+                            <small class="text-danger">
+                                <%= errors.pass2.msg %>
+                            </small>
+                            <% } %>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="remember" id="check" style="margin-top: 1.8rem;">
+                        <label for="check">Mantener sesión abierta</label>
+                    </div>
+
+                    <% if (locals.errorMsg ) { %>
+                        <small class="text_error">
+                            <%= errorMsg %>
+                        </small>
+                        <% } %>
+                          <a href="/"><input type="submit" value="Iniciar"></a>  
+
+
+
+                            <span class="text_end">¿Ya sos miembro?
+                                <a href="/user">Inicia sesion</a>
+                            </span>
+            
+        </div>
+        </form>
+
+        <div class="ctn_text">
+            <div class="capa"></div>
+            <a href="/" class="close_x">&times;</a>
+            <h1 class="title_bvn">BIENVENID@ </h1>
+            <p class="text_bvn" style="text-align: center;">Regristrate para acceder a nuestras
+                promos.
+            </p>
+        </div>
+
+        </div>
+
+
+        <%- include('partials/wsp.ejs') %>
+    </body>
+    <script src="/js/user.js"></script>
+
+</html>

@@ -1,4 +1,9 @@
-.container-all {
+.user_body{
+    background: url(/img/imgVarios/fondocafe.jpg);
+}
+
+
+.container_user {
     width: 100%;
     max-width: 1000px;
     margin: auto;
@@ -8,9 +13,9 @@
     overflow: hidden;
 }
 
-.ctn-form {
+.ctn_form {
     width: 80%;
-    padding: 40px;
+    padding: 20px;
     background: #f7f7f7;
 }
 
@@ -31,14 +36,14 @@ label {
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"]{
     width: 100%;
-    height: 30px;
+    height: 65px;
     background: rgba(0, 0, 0, 0);
     border: 0px;
     outline: 0px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    color: #E30F87;
     font-size: 16px;
 }
 
@@ -56,10 +61,11 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background: linear-gradient(90deg, #024d2a, #00c489);
+    border-radius: 5rem;
 }
 
 
-.text-footer {
+.text_end {
     display: block;
     margin-top: 30px;
     text-align: center;
@@ -67,7 +73,7 @@ input[type="submit"]:hover {
     font-weight: 300;
 }
 
-.text-footer a {
+.text_end a {
     color: #029EE1;
     font-weight: 500;
 }
@@ -75,7 +81,7 @@ input[type="submit"]:hover {
 /* LADO DERECHO */
 
 
-.ctn-text {
+.ctn_text {
     width: 100%;
     background-image: url(/img/imgVarios/welcome.jpeg);
     background-position: center;
@@ -94,15 +100,16 @@ input[type="submit"]:hover {
     opacity: 0.8;
 }
 
-.title-description {
+.title_bvn {
     position: relative;
     top: 80px;
     color: white;
     font-weight: 300;
     font-size: 40px;
+    text-align: center;
 }
 
-.text-description {
+.text_bvn {
     position: relative;
     top: 110px;
     color: white;
@@ -112,7 +119,7 @@ input[type="submit"]:hover {
 
 /* TEXTO DE ERROR */
 
-.msg-error {
+.text_error {
     color: red;
     display: block;
     margin-top: 10px;
@@ -132,8 +139,6 @@ input[type="submit"]:hover {
     font-size: 0.8rem;
   }
   
-
-
   .close_x {
 	color: #aaa;
 	float: right;
@@ -155,15 +160,15 @@ input[type="submit"]:hover {
 
 @media screen and (max-width: 800px) {
 
-    .ctn-text {
+    .ctn_text {
         display: none;
     }
 
-    .ctn-form {
+    .ctn_form {
         margin: auto;
         width: 100%;
-        background: white;
-        padding-bottom: 3rem;
+        background: rgba(255, 255, 255, 0.541);
+        margin-top: -3rem;
     }
 }
 
@@ -172,10 +177,12 @@ input[type="submit"]:hover {
     .title{
         margin-top: 10px;
     }
+
     input[type="submit"]{
-margin-top: 0;
+        margin-top: 0;
     }
-    .text-footer {
+
+    .text_end {
         display: block;
         margin-top: 25px;
 
