@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include('partials/head.ejs') %>
-<body>
-    <%- include('partials/header.ejs') %>
 
-<body class="user">
-    
-    <section class="user_f" id="user_f"> 
-        <form class="user_form" action="" method="POST" id="form">
-            <div class="form">
-                <h1 class="registro">Registrarse</h1>
-                <div class="grupo">
-                    <input type="text" name="" id="name"><span class="barra"></span>
-                    <label for="">Nombre</label>
-                </div>
-                <div class="grupo">
-                    <input type="email" name="" id="email"><span class="barra"></span>
-                    <label for="">Email</label>
-                </div>
-                <div class="grupo">
-                    <input type="password" name="" id="password"><span class="barra"></span>
-                    <label for="">Password</label>
-                </div>
-                
-            <div class="grupo2">¿No tienes cuenta?<a href="user/registro">   Regístrate  </a></div>
-                
-            </div>
-                <button class="btn_user" type="submit">Registrarse</button>
-                <p class="warnings" id="warnings"></p>
+    <body>
+        <%- include('partials/header.ejs') %>
+
+            <body class="user">
+
+                <section class="user_f" id="user_f">
+                    <form class="user_form" action="" method="POST" id="form">
+                        <div class="form">
+                            <h1 class="registro">Registrarse</h1>
+                            <div class="grupo">
+                                <input type="text" name="" id="name"><span class="barra"></span>
+                                <label for="">Nombre</label>
+                            </div>
+                            <div class="grupo">
+                                <input type="email" name="" id="email"><span class="barra"></span>
+                                <label for="">Email</label>
+                            </div>
+                            <div class="grupo">
+                                <input type="password" name="" id="password"><span class="barra"></span>
+                                Password: <input type="password" value="FakePSW" id="myInput">
+
+                                <!-- An element to toggle between password visibility -->
+                                <input type="checkbox" onclick="myFunction()">Show Password
+                                <label for="">Password</label>
+                            </div>
+
+                            <div class="grupo2">¿No tienes cuenta?<a href="user/registro"> Regístrate </a></div>
+
+                        </div>
+                        <button class="btn_user" type="submit">Registrarse</button>
+                        <p class="warnings" id="warnings"></p>
 
 
-            </div>
+                        </div>
 
-        </form>
-    </section>
+                    </form>
+                </section>
 
-    <script src="/js/user.js"></script>
-</body>
+                <script src="/js/user.js"></script>
+            </body>
 
 </html>
