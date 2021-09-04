@@ -8,6 +8,6 @@ router.get('/formulario', controller.formulario);
 
 router.get('/realizado', controller.realizado);
 
-router.get('/registro', controller.registro);
+router.get('registrarse', controller.registrarse);
 
 module.exports = router;

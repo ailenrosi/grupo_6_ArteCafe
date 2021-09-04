@@ -9,7 +9,7 @@ module.exports = {
         res.render('formulario');
     },
    
-    registro: (req, res) => {
-        res.render('registro');
+    registrarse: (req, res) => {
+        res.render('/registrarse');
     }
 }
