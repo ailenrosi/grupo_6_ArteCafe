@@ -2,45 +2,65 @@
 <html lang="es">
 <%- include('partials/head.ejs') %>
 
-    <body>
-        <%- include('partials/header.ejs') %>
-
-            <body class="user">
-
-                <section class="user_f" id="user_f">
-                    <form class="user_form" action="" method="POST" id="form">
-                        <div class="form">
-                            <h1 class="registro">Registrarse</h1>
-                            <div class="grupo">
-                                <input type="text" name="" id="name"><span class="barra"></span>
-                                <label for="">Nombre</label>
-                            </div>
-                            <div class="grupo">
-                                <input type="email" name="" id="email"><span class="barra"></span>
-                                <label for="">Email</label>
-                            </div>
-                            <div class="grupo">
-                                <input type="password" name="" id="password"><span class="barra"></span>
-                                Password: <input type="password" value="FakePSW" id="myInput">
-
-                                <!-- An element to toggle between password visibility -->
-                                <input type="checkbox" onclick="myFunction()">Show Password
-                                <label for="">Password</label>
-                            </div>
-
-                            <div class="grupo2">¿No tienes cuenta?<a href="user/registro"> Regístrate </a></div>
-
-                        </div>
-                        <button class="btn_user" type="submit">Registrarse</button>
-                        <p class="warnings" id="warnings"></p>
+    <body style="display: flex;">
 
 
-                        </div>
+        <a href="javascript: history.go(-1)"> Volver</a>
+        <div class="container-all">
+            <div class="ctn-form">
+                <h1 class="title">Iniciar Sesión</h1>
+                <form action="/users" method="POST" class="form-ad">
+                    <div class="user_form">
+                        <input type="email" name="email" placeholder="Ingresá tu email">
+                        <% if (locals.errors && errors.email) { %>
+                            <small class="text-danger">
+                                <%= errors.email.msg %>
+                            </small>
+                            <% } %>
+                    </div>
+                    <div class="form-ad-input">
+                        <input type="password" name="pass" placeholder="Contraseña">
+                        <% if (locals.errors && errors.pass) { %>
+                            <small class="text-danger">
+                                <%= errors.pass.msg %>
+                            </small>
+                            <% } %>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="remember" id="check" style="margin-top: 1.8rem;">
+                        <label for="check">Mantener sesión abierta</label>
+                    </div>
 
-                    </form>
-                </section>
+                    <% if (locals.errorMsg ) { %>
+                        <small class="text-danger">
+                            <%= errorMsg %>
+                        </small>
+                        <% } %>
+                            <input type="submit" value="Iniciar">
 
-                <script src="/js/user.js"></script>
-            </body>
+
+                            <span class="text-footer">¿Aún no te has regsitrado?
+                                <a href="#">Registrate</a>
+                            </span>
+                            <span class="text-footer">olvidaste tu contraseña?
+                                <a href="#">Recuperar</a>
+                            </span>
+            </div>
+            </form>
+            
+            <div class="ctn-text">
+                <div class="capa"></div>
+                <h1 class="title-description">BIENVENID@ DE NUEVO</h1>
+                <p class="text-description" style="text-align: center;">Inicia sesión para acceder a nuestras
+                    promos.
+                </p>
+            </div>
+
+        </div>
+
+
+
+    </body>
+    <script src="/js/user.js"></script>
 
 </html>
