@@ -1,232 +1,37 @@
-#modal .flex{
-	width: 100%;
-	height:100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-#modal.textos{
-	padding:300px;
-	color:#fff;
-	text-align: center;
-}
-
-#modal h1{
-	font-size: 40px;
-	margin-bottom:20px;
-}
-
-#modal a{
-	text-decoration: none;
-	font-size:20px;
-	display: inline-block;
-	padding: 7px;
-	width: 220px;
-	border:1px solid #fff;
-	border-radius: 10px;
-	color:#fff;
-}
-#modal a:hover{background: #000; color:#fff; border:1px solid #000;}
-
-#modal .modal{
-	display: none;
-	position: fixed;
-	z-index:1;
-	overflow: auto;
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
 	left: 0;
-	top:0;
-	width: 100%;
-	height:100%;
-	background: rgba(0, 0, 0, 0.452);
-}
-
-#modal .contenido-modal{
-	position: relative;
-	background-color: #fefefe;
-	margin: auto;
-	width: 30%;
-	box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
-	animation-name: modal;
-	animation-duration: 1s;
-}
-@keyframes modal{
-	from{top:-330px; opacity:0;}
-	to{top:0; opacity:1;}
-}
-.modal .close{
-	color: #f2f2f2;
-	font-size:30px;
-	font-weight: bold;
-}
-.modal .close:hover{
-	color:#7f8c8d;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-
-.contenedor article {
-	line-height: 28px;
-}
-
-.contenedor article h1 {
-	font-size: 30px;
-	text-align: left;
-	padding: 50px 0;
-}
-
-.contenedor article p {
-	margin-bottom: 20px;
-}
-
-.contenedor article .btn-abrir-popup {
-	padding: 0 20px;
-	margin-bottom: 20px;
-	height: 40px;
-	line-height: 40px;
-	border: none;
-	color: #fff;
-	background: #5E7DE3;
-	border-radius: 3px;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 16px;
-	cursor: pointer;
-	transition: .3s ease all;
-	cursor: pointer;
-}
-
-.contenedor article .btn-abrir-popup:hover {
-	background: rgba(94,125,227, .9);
-}
-
-/* ------------------------- */
-/* POPUP */
-/* ------------------------- */
-
-.overlay {
-	background: rgba(0,0,0,.3);
-	position: fixed;
 	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	align-items: center;
-	justify-content: center;
-	display: flex;
-	visibility: hidden;
-}
-
-.overlay.active {
-	visibility: visible;
-}
-
-.popup {
-	background: #F8F8F8;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
-	border-radius: 3px;
-	font-family: 'Montserrat', sans-serif;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
 	padding: 20px;
-	text-align: center;
-	width: 600px;
-	
-	transition: .3s ease all;
-	transform: scale(0.7);
-	opacity: 0;
-}
-
-.popup .btn-cerrar-popup {
-	font-size: 16px;
-	line-height: 16px;
-	display: block;
-	text-align: right;
-	transition: .3s ease all;
-	color: #BBBBBB;
-}
-
-.popup .btn-cerrar-popup:hover {
-	color: #000;
-}
-
-.popup h3 {
-	font-size: 36px;
-	font-weight: 600;
-	margin-bottom: 10px;
-	opacity: 0;
-}
-
-.popup h4 {
-	font-size: 26px;
-	font-weight: 300;
-	margin-bottom: 40px;
-	opacity: 0;
-}
-
-.popup form .contenedor-inputs {
-	opacity: 0;
-}
-
-.popup form .contenedor-inputs input {
-	width: 100%;
-	margin-bottom: 20px;
-	height: 52px;
-	font-size: 18px;
-	line-height: 52px;
-	text-align: center;
-	border: 1px solid #BBBBBB;
-}
-
-.popup form .btn-submit {
-	padding: 0 20px;
-	height: 40px;
-	line-height: 40px;
-	border: none;
-	color: #fff;
-	background: #5E7DE3;
-	border-radius: 3px;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 16px;
+	border: 1px solid #888;
+	width: 50%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
 	cursor: pointer;
-	transition: .3s ease all;
-}
-
-.popup form .btn-submit:hover {
-	background: rgba(94,125,227, .9);
-}
-
-/* ------------------------- */
-/* ANIMACIONES */
-/* ------------------------- */
-.popup.active {	transform: scale(1); opacity: 1; }
-.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
-.popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
-.popup.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
-
-@keyframes entradaTitulo {
-	from {
-		opacity: 0;
-		transform: translateY(-25px);
-	}
-
-	to {
-		transform: translateY(0);
-		opacity: 1;
-	}
-}
-
-@keyframes entradaSubtitulo {
-	from {
-		opacity: 0;
-		transform: translateY(25px);
-	}
-
-	to {
-		transform: translateY(0);
-		opacity: 1;
-	}
-}
-
-@keyframes entradaInputs {
-	from { opacity: 0; }
-	to { opacity: 1; }
-}
+  }

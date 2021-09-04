@@ -5,7 +5,7 @@
     <body style="display: flex;">
 
 
-        <a href="javascript: history.go(-1)"> Volver</a>
+        <a href="javascript: history.go(-1)" style="color: teal;font-size: 2rem; font-family: sans-serif;"> Volver</a>
         <div class="container-all">
             <div class="ctn-form">
                 <h1 class="title">Iniciar Sesión</h1>
@@ -50,6 +50,7 @@
             
             <div class="ctn-text">
                 <div class="capa"></div>
+                <a href="/" class="close_x">&times;</a>
                 <h1 class="title-description">BIENVENID@ DE NUEVO</h1>
                 <p class="text-description" style="text-align: center;">Inicia sesión para acceder a nuestras
                     promos.
@@ -59,7 +60,7 @@
         </div>
 
 
-
+        <%- include('partials/wsp.ejs') %>
     </body>
     <script src="/js/user.js"></script>
 

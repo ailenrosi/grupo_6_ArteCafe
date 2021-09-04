@@ -25,8 +25,6 @@ Me gusta hacer diseños, el trabajo en equipo y aprender cosas nuevas, mi roll e
 Mi nombre Rocio Rosi tengo 28 años, soy de San Miguel, Buenos Aires, soy barista de profesión, hace un tiempo me interesé en el mundo de la programación estudiando de forma independiente, luego lo complementé con Digital House.
 Dentro de éste proyecto mi aporte va a ser dinámico, mi roll es en poner metas y cumplir con ellas dentro de los tiempos, soy una persona dinámica y con paciencia.   
 
-Soy Elías González estudiante de programación web, siempre me gusto y llamo la atencion el fantastico mundo de la programacion.Soy de Lanús,actualmente  vivo en Avellaneda tengo 32 años, 2 hermosas hijas , me gustan los videos juegos y el animé.
-
 
 
 Versionando 📌
