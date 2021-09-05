@@ -6,26 +6,31 @@
         <%- include('partials/header.ejs') %>
 
             <main class="productDetail-container">
-                <section class="productDetail">
-                    <div class="images-container">
-                        <div class="thumbnailImages">
-                            <% product.image.forEach(element=> { %>
-                                <img src="/img/imgProductos/<%-product.image %>" alt="Imagen de producto"
-                                    onclick="myFunction(this);">
-                                <% }) %>
 
-                        </div>
+                <section class="productDetail">
+
+                    <div class="images-container">
+
+                        <div class="thumbnailImages">
+
+                            <img src="/img/imgProductos/<%-product.image %>" alt="Imagen de producto">
+                        </div><!-- Imagen pequeña del producto-->
+                        
                         <div class="mainImage">
                             <img src="/img/imgProductos/<%= product.image[0]%>" alt="Imagen de producto"
                                 id="expandedImg">
-                        </div>
+                        </div> <!-- Imagen agrandada del producto-->
                     </div>
+
                     <div class="productData-container">
+
                         <h3 class="productName">
                             <%= product.name %>
                         </h3>
+                        
                         <div class="productPrice">$<%= product.price %>
                         </div>
+
                         <div class="productNumber">
                             <label for="cantidad">Cantidad</label>
                             <div class="counter">
@@ -33,16 +38,15 @@
                                     -
                                 </button>
 
-                                <div id="count">1</div>
+                                <div id="count" style="padding-top: 1.5rem;">1</div>
 
                                 <button type="button" id="btn-add" onclick="add();">
                                     +
                                 </button>
                             </div>
-
                         </div>
 
-                        <div class="button-addToCart">
+                        <div class="btn_prod">
                             <a href="#" class="btn">Agregar al carrito</a>
                         </div>
 
@@ -56,15 +60,15 @@
                             <%= product.description %>
                         </p>
                     </div>
-             
+
                 </section>
                 <%- include('partials/comentarios.ejs') %>
 
-
-
-
-
             </main>
+            <section class="slider_slider">
+                <!-- /* Slider */ -->
+                <%- include('partials/slider.ejs') %>
+            </section>
 
             <%- include('partials/footer.ejs') %>
 

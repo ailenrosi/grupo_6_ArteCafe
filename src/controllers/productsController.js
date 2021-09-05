@@ -14,12 +14,14 @@ module.exports = {
     },
 
     detail: (req, res) => {
+        let productsSlider = products.filter(product => product.category === 'cafeteras');
         let productID = +req.params.id;
-
-        let product = products.find(product => product.id === productID)
+        let product = products.find(product => product.id === productID);
 
         res.render('productsDetail', {
             product,
+            titleSlider: "No te lo pierdas.",
+            productsSlider,
             toThousand
         })
     },
