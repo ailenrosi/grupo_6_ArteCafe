@@ -59,6 +59,7 @@
     cursor: pointer;
     padding:.8rem 3rem;
     text-decoration: none;
+    text-align: center;
 }
 
 .btn:hover{

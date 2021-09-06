@@ -1,3 +1,6 @@
+.prod_det{
+    background-color: rgb(243, 244, 245);
+}
 .productDetail-container {
     display: flex;
     flex-direction: column;
@@ -42,12 +45,13 @@
 .productDetail .images-container .mainImage img {
     height: 100%;
     object-fit: contain;
+    margin-bottom: 2rem;
 }
 
 .productDetail .productData-container {
     width: 100%;
     display: flex;
-    color: var(--dark-blue);
+    color: darkolivegreen;
     justify-content: center;
     flex-direction: column;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2 );
@@ -55,42 +59,47 @@
     border-radius: 10px;
 }
 
-.productDetail  .productData-container .counter {
+.productDetail .productData-container .counter {
     display: flex;
-    padding: 5px 20px;
-    justify-content: space-between;
+    padding: 0px 8px;
+    justify-content: center;
     align-items: center;
-    width: 7rem;
-    border: 1px solid var(--primary);
+    width: 5rem;
+    border: 1px solid darkolivegreen;
     border-radius: 15px;
-    margin-top: 1.6rem;
+    margin-top: rem;
 }
-
 .productDetail  .productData-container  .counter button {
-    background-color: white;
     border: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: var(--dark-blue);
 }
 
-.productDetail  .productData-container .productNumber {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
+
+    .productDetail .productData-container .productNumber {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
 }
 
 .productDetail  .productData-container .productName {
     margin: 15px 0;
     color: darkcyan;
+    text-align: center;
 }
 
 .productDetail  .productData-container .productPrice {
     font-size: 1.5rem;
     color: darkcyan;
+    display: contents;
+    
 }
-
+.productDetail  .productData-container .productPrice {
+    font-size: 1.5rem;
+    color: darkcyan;
+    display: contents;
+}
 
 .productDetail-container .productDescription {
     display: flex;
@@ -112,10 +121,11 @@
 
 .productDetail-container .productDescription .description p{
     font-size: 1rem;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
     text-align: justify;
-    border-bottom: 1px solid var(--primary);
+    border-top: 2px solid var(--green);
+    text-align: center;
 }
 
 
@@ -126,7 +136,7 @@
     border-radius: 10px;
 }
 .productNumber label{
-    margin-top: 50px;
+    margin-top: 10px;
         }
 
 /* MEDIA QUERIES */

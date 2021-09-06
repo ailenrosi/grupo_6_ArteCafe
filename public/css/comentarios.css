@@ -1,9 +1,9 @@
 /* Testimonials */
 .testimonial-center {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 1.5rem;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
   
   .testimonial {
     position: relative;
@@ -55,3 +55,11 @@
   .testimonial h4 {
     margin-top: 1rem;
   }
+
+  @media screen and (max-width: 800px) {
+    .testimonial-center {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+      gap: 1rem; 
+  }
+}

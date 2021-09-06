@@ -38,10 +38,19 @@
                 <div class="price"> $<%= toThousand(product.price) %> <span> $<%- toThousand(product.price -
                         product.price * product.discount /100) %> </span> </div>
                 <div class="quantity">
-                  <span>Unidad: </span>
-                  <input type="number" min="1" max="1000" value="1">
-                  <span></span>
-                </div>
+                            <label for="cantidad">Cantidad</label>
+                            <div class="counter">
+                                <button type="button" class="btn-subtract" onclick="subtract();">
+                                    -
+                                </button>
+
+                                <div id="count" style="padding-top: 1.5rem;">1</div>
+
+                                <button type="button" id="btn-add" onclick="add();">
+                                    +
+                                </button>
+                            </div>
+                        </div>
                 <a href="/products/productsDetail/<%- product.id%>" class="btn">Agregar al carrito</a>
               </div>
               <% }) %>
@@ -63,7 +72,7 @@
       <!----   Comieza footer     ----->
       <%- include('partials/footer.ejs') %>
 
-        <script src="js/main.js"></script>
+        <script src="js/productDetail.js"></script>
 
   </body>
 

@@ -2,7 +2,7 @@
 <html lang="es">
 <%- include('partials/head.ejs')%>
 
-    <body>
+    <body class="prod_det">
         <%- include('partials/header.ejs') %>
 
             <main class="productDetail-container">
@@ -15,7 +15,7 @@
 
                             <img src="/img/imgProductos/<%-product.image %>" alt="Imagen de producto">
                         </div><!-- Imagen pequeña del producto-->
-                        
+
                         <div class="mainImage">
                             <img src="/img/imgProductos/<%= product.image[0]%>" alt="Imagen de producto"
                                 id="expandedImg">
@@ -27,10 +27,12 @@
                         <h3 class="productName">
                             <%= product.name %>
                         </h3>
-                        
-                        <div class="productPrice">$<%= product.price %>
+                        <span class="discount">-
+                            <%= product.discount %>%
+                        </span>
+                        <div class="productPrice"> $<%= toThousand(product.price) %> <span> $<%-
+                                        toThousand(product.price - product.price * product.discount /100) %> </span>
                         </div>
-
                         <div class="productNumber">
                             <label for="cantidad">Cantidad</label>
                             <div class="counter">
@@ -38,7 +40,8 @@
                                     -
                                 </button>
 
-                                <div id="count" style="padding-top: 1.5rem;">1</div>
+                                <div id="count" style="padding-top: 0.5rem;
+                                margin: .5rem;">1</div>
 
                                 <button type="button" id="btn-add" onclick="add();">
                                     +
@@ -55,7 +58,7 @@
                 </section>
                 <section class="productDescription">
                     <div class="description">
-                        <h5>Descripción del producto</h5>
+                        <h5 style="color: teal;">Descripción del producto</h5>
                         <p>
                             <%= product.description %>
                         </p>
