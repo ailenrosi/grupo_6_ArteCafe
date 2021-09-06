@@ -9,15 +9,14 @@
 
 
       <!-- product section  -->
-      <h1 class="heading_p" style="font-size: 2.3rem; margin-top: 8.6rem;text-align: center;">Productos<span> <%= search %></span></h1>
-      <section class="produc_page" id="produc_page">
-        
+      <h1 class="heading_p" style="font-size: 2.3rem; margin-top: 8.6rem;text-align: center;">Productos<span>
+          <%= search %>
+        </span></h1>
 
-            
-        
+      <section class="produc_page" id="produc_page">
+
         <% if (result.length> 0) { %>
           <% result.forEach(product=> { %>
-
             <div class="box-container">
               <div class="box">
                 <span class="discount">-
@@ -38,19 +37,19 @@
                 <div class="price"> $<%= toThousand(product.price) %> <span> $<%- toThousand(product.price -
                         product.price * product.discount /100) %> </span> </div>
                 <div class="quantity">
-                            <label for="cantidad">Cantidad</label>
-                            <div class="counter">
-                                <button type="button" class="btn-subtract" onclick="subtract();">
-                                    -
-                                </button>
+                  <label for="cantidad">Cantidad</label>
+                  <div class="counter">
+                    <button type="button" class="btn-subtract" onclick="subtract();">
+                      -
+                    </button>
 
-                                <div id="count" style="padding-top: 1.5rem;">1</div>
+                    <div id="count" style="padding-top: 1.5rem;">1</div>
 
-                                <button type="button" id="btn-add" onclick="add();">
-                                    +
-                                </button>
-                            </div>
-                        </div>
+                    <button type="button" id="btn-add" onclick="add();">
+                      +
+                    </button>
+                  </div>
+                </div>
                 <a href="/products/productsDetail/<%- product.id%>" class="btn">Agregar al carrito</a>
               </div>
               <% }) %>

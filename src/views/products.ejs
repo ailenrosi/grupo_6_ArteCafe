@@ -6,48 +6,48 @@
   <body class="productos">
     <!-- comienza header  --->
     <%- include('partials/header.ejs') %>
-    <h1 class="heading_p" style="font-size: 2.3rem; margin-top: 8.7rem;text-align: center;">Productos<span> disponibles</span></h1>
-      <!-- product section starts  -->
-      <% products.forEach(product=> { %>
-        <section class="produc_page" id="produc_page">
+      <h1 class="heading" style="margin-top: 9rem"> Productos <span>disponibles</span> </h1>
+      <section class="products" id="products">
+
+        <% products.forEach(product=> { %>
           <div class="box-container">
             <div class="box">
-              <span class="discount">
-               - <%= product.discount %> %
-              </span>
-              <div class="icons">
-                <a href="/products/productsDetail/<%- product.id%>" class="fas fa-eye"></a>
+              <span class="discount">-<%= product.discount %>%</span>
+              <div class="image">
+                <img class="img_pro" style="max-height: 210px;
+                        min-width: 210px;" src="img/imgProductos/<%= product.image%> " alt="<%= product.name%>">
+                <div class="icons">
+                  <a href="/products/productsDetail/<%= product.id%>">Ver</a>
+                  <a href="#" class="cart-btn">Agregar</a>
+                  <a href="#" class="fas fa-share"></a>
+                </div>
               </div>
-              <img style="max-height: 250px;
-              min-width: 250px;" src="/img/imgProductos/<%- product.image%>" alt="">
-              <h3>
-                <%- product.name %>
-              </h3>
-              <div class="info_pro">
-                <p class="info_p">
-                  <%- product.description %>
-                </p>
+              <div class="content">
+                <h3>
+                  <%= product.name%>
+                </h3>
+                <div class="price">$<%= toThousand(product.price)%>
+                    <h2>
+                      $<%= toThousand(product.price - product.price * product.discount / 100)%>
+                    </h2>
+                    <span>
+                      <%= product.discount !==0 ? `${product.discount}% OFF` : "" %>
+                    </span>
+                </div>
               </div>
-              <div class="price"> $<%= toThousand(product.price) %> <span> $<%- toThousand(product.price - product.price
-                      * product.discount /100) %> </span> </div>
-              <div class="quantity">
-                <span>Unidad: </span>
-                <input type="number" min="1" max="1000" value="1">
-                <span></span>
-              </div>
-              <a href="/products/productsDetail/<%- product.id%>" class="btn">Agregar al carrito</a>
             </div>
           </div>
-        </section>
-        <% }) %>
-          <div class="btn_volver">
-            <button class="btn_inicio"><a href="/">Volver</a></button>
-          </div>
+          <% }) %>
+      </section>
+      
+      <div class="btn_volver">
+        <a href="/" class="btn">Volver</a>
+      </div>
 
-          <!----   Comieza footer     ----->
-          <%- include('partials/footer.ejs') %>
+      <!----   Comieza footer     ----->
+      <%- include('partials/footer.ejs') %>
 
-            <script src="js/main.js"></script>
+        <script src="js/main.js"></script>
 
 
 

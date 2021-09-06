@@ -2,8 +2,7 @@
   display: grid;
 }
 
-#produc_page{
-  
+#produc_page{  
   display: grid; 
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(1, auto 1fr auto );

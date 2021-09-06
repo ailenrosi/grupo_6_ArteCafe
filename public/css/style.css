@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
-@import url('variables.css');
+@import url('variables.css');/* como los colores que se van a utilizar */
 @import url('header.css');
 @import url('wsp-chat.css');
 @import url('home.css');
@@ -9,7 +9,6 @@
 @import url('categories.css');
 @import url('video.css');
 @import url('productos_dest.css');
-@import url('footer.css');
 @import url('products_slider.css');
 @import url('newsletter.css');
 @import url('contact.css');
@@ -24,4 +23,5 @@
 @import url('comentarios.css');
 @import url('meriendas.css');
 @import url('gallery.css');
+@import url('footer.css');
 @import url('error_404.css');
