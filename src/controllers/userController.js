@@ -6,10 +6,6 @@ module.exports = {
        res.render('realizado')
     },
     formulario: (req, res) => {
-        res.render('formulario');
+        res.render('registrate');
     },
-   
-    registrate: (req, res) => {
-        res.render('user/registrate');
-    }
 }

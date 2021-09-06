@@ -13,6 +13,7 @@
 }
 input.box_news {
   font-size: 2.5rem;
+  
 }
 
 .btn_news{
@@ -33,7 +34,7 @@ input.box_news {
 }
 
 #newsletter h3{
-    font-size: 3rem;
+    font-size: 2rem;
     color:var(--cornsilk);
   }
   
