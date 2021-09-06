@@ -218,5 +218,15 @@
         "image": [
             "jarronMetal.jpg"
         ]
+    }, {
+        "id": 21,
+        "name": "Batidor espumador café/ leche, A pilas",
+        "price": 550,
+        "description": "HACE QUE TU LECHE ESTE ESPUMOSA, IDEAL PARA USAR EN CASA Y OBTENER TERMINACIONES DE UN RESTAURANTE",
+        "discount": 10,
+        "category": "accesorios",
+        "image": [
+            "batidor_cafe.jpg"
+        ]
     }
 ]
