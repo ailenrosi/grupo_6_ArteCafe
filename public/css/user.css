@@ -153,12 +153,30 @@ input[type="submit"]:hover {
 	cursor: pointer;
   }
 
+  .close_x1 {
+	color: #aaa;
+	justify-content: right;
+	font-size: 28px;
+	font-weight: bold;
+    position: relative;
+    display: none;
+    padding-top: 1rem;
+  }
+  
+  .close_x:hover,
+  .close_x:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
 
 /* RESPONSIVE */
 
 
 @media screen and (max-width: 800px) {
-
+    .close_x1 {
+        display: flex;
+    }
     .ctn_text {
         display: none;
     }

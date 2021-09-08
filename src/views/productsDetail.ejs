@@ -4,9 +4,9 @@
 
     <body class="prod_det">
         <%- include('partials/header.ejs') %>
-
+       
             <main class="productDetail-container">
-
+                <h1 style="padding-top: 9.5rem; text-align: center;">Estás viendo <span><%= product.name %></span> </h1>
                 <section class="productDetail">
 
                     <div class="images-container">
@@ -68,10 +68,16 @@
                 <%- include('partials/comentarios.ejs') %>
 
             </main>
+
+
+            <%- include('partials/banner.ejs') %>
+
             <section class="slider_slider">
                 <!-- /* Slider */ -->
                 <%- include('partials/slider.ejs') %>
             </section>
+
+
 
             <%- include('partials/footer.ejs') %>
 

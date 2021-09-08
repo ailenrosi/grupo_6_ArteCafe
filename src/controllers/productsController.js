@@ -30,5 +30,26 @@ module.exports = {
     },
     vista: (req, res) => {
         res.render('vista')
-    }
+    },
+    accesorios: (req, res) => {
+        let productID = +req.params.id;
+        let product = products.find(product => product.id === productID);
+        let productAccesorios = products.filter(product => product.category === 'accesorios');
+        res.render('accesorios', {
+             productAccesorios,
+             product,
+             toThousand
+            });
+    },
+    cafeteras: (req, res) =>{    
+    let cafeteras = products.filter(product => product.category === 'cafeteras');
+    let productID = +req.params.id;
+        let product = products.find(product => product.id === productID);
+    res.render('cafeteras',{
+        cafeteras,
+        product,
+        toThousand
+    })
+},
+
 }

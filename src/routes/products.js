@@ -10,6 +10,9 @@ router.get('/productsDesc', controller.productsDesc);
 
 router.get('/vista', controller.vista);
 
+router.get('/accesorios', controller.accesorios);
+
+router.get('/cafeteras', controller.cafeteras);
 
 module.exports = router;
 

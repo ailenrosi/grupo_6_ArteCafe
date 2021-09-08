@@ -18,4 +18,5 @@ module.exports ={
 	list: (req, res) => {
 		return res.render("listProducts",{products})
 	}
+	
 }
