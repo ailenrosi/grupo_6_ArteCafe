@@ -4,20 +4,26 @@
 <%- include('partials/head.ejs' , {title: 'Tu búsqueda' }) %>
 
   <body class="productos">
+    <!-- comienza header  --->
     <%- include('partials/header.ejs') %>
-      <!-- comienza header  --->
 
-
-      <!-- product section  -->
-      <h1 class="heading_p" style="font-size: 2.3rem; margin-top: 8.6rem;text-align: center;">Productos encontrados para:<span>
+      <!-- titulo  -->
+      <h1 class="heading_p" style="font-size: 2.3rem; margin-top: 8.6rem;text-align: center;">Productos encontrados
+        para:<span>
           <%= search %>
         </span></h1>
 
-      <section class="produc_page" id="produc_page">
+      <!-- boton atrás  -->
+      <div class="atras">
+        <a href="/" style="color: teal;">Volver</a>
+      </div>
 
+      <!-- product section  -->
+      <section class="produc_page" id="produc_page">
         <% if (result.length> 0) { %>
-          <% result.forEach(product=> { %>
+          
             <div class="box-container">
+              <% result.forEach(product=> { %>
               <div class="box">
                 <span class="discount">-
                   <%= product.discount %>%
@@ -35,7 +41,8 @@
                   </p>
                 </div>
                 <div class="price"> $<%= toThousand(product.price) %> <span> $<%- toThousand(product.price -
-                        product.price * product.discount /100) %> </span> </div>
+                        product.price * product.discount /100) %> </span>
+                </div>
                 <div class="quantity">
                   <label for="cantidad">Cantidad</label>
                   <div class="counter">
@@ -64,15 +71,22 @@
             </div>
 
       </section>
-      <div class="btn_volver">
-        <button class="btn_inicio"><a href="/">Volver</a></button>
+
+
+      <!-- boton atrás  -->
+      <div class="atras" style="text-align: center;">
+        <a class="btn" href="/">Volver</a>
       </div>
 
-      <!----   Comieza footer     ----->
-      <%- include('partials/footer.ejs') %>
+      <!-- banner  -->
+      <%- include('partials/banner.ejs') %>
 
-        <script src="js/productDetail.js"></script>
+        <!----   Comieza footer     ----->
+        <%- include('partials/footer.ejs') %>
+
 
   </body>
+  <!-- agrega unidades  -->
+  <script src="/js/productDetail.js"></script>
 
 </html>
