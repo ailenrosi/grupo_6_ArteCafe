@@ -2,45 +2,47 @@
 <html lang="es">
 <%- include('partials/head.ejs')%>
 
-    <body>
+  <body class="productos">
+    <!-- comienza header  --->
+    <%- include('partials/header.ejs') %>
 
-        <%- include('partials/header.ejs') %>
-
-        <% productAccesorios.forEach(product=> { %>
-            <div class="box-container">
-              <div class="box">
-                <span class="discount">-<%= product.discount %>%</span>
-                <div class="image">
-                  <img class="img_pro" style="max-height: 210px;
-                          min-width: 210px;" src="img/imgProductos/<%= product.image%> " alt="<%= product.name%>">
-                  <div class="icons">
-                    <a href="/products/productsDetail/<%= product.id%>">Ver</a>
-                    <a href="#" class="cart-btn">Agregar</a>
-                    <a href="#" class="fas fa-share"></a>
-                  </div>
+      <h1 class="heading" style="margin-top: 9rem"> <span>Tu mejor</span> disponibles </h1>
+      <section class="products" id="products">
+        <%  productAccesorios.forEach(product=> { %>
+          <div class="box-container">
+            <div class="box">
+              <span class="discount">-<%= product.discount %>%</span>
+              <div class="image">
+                <img class="img_pro" style="max-height: 210px;
+                      min-width: 210px;" src="img/imgProductos/<%= product.image%>" alt="<%= product.name%>">
+                <div class="icons">
+                  <a href="/products/productsDetail/<%= product.id%>">Ver</a>
+                  <a href="#" class="cart-btn">Agregar</a>
+                  <a href="#" class="fas fa-share"></a>
                 </div>
-                <div class="content">
-                  <h3>
-                    <%= product.name%>
-                  </h3>
-                  <div class="price">$<%= toThousand(product.price)%>
-                      <h2>
-                        $<%= toThousand(product.price - product.price * product.discount / 100)%>
-                      </h2>
-                      <span>
-                        <%= product.discount !==0 ? `${product.discount}% OFF` : "" %>
-                      </span>
-                  </div>
+              </div>
+              <div class="content">
+                <h3>
+                  <%= product.name%>
+                </h3>
+                <div class="price">$<%= toThousand(product.price)%>
+                    <h2>
+                      $<%= toThousand(product.price - product.price * product.discount / 100)%>
+                    </h2>
+                    <span>
+                      <%= product.discount !==0 ? `${product.discount}% OFF` : "" %>
+                    </span>
                 </div>
               </div>
             </div>
-            <% }) %>
-        </section>
-        
-        <div class="btn_volver">
-          <a href="/" class="btn">Volver</a>
-        </div>
-  
+          </div>
+          <% }) %>
+      </section>
+
+      <div class="btn_volver" style="text-align: center;">
+        <a href="/" class="btn">Volver</a>
+      </div>
+
 
 
         <%- include('partials/footer.ejs') %>
