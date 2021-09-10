@@ -10,16 +10,16 @@
                 <a href="/" class="close_x1">&times;</a>
                 <h1 class="title">Iniciar sesión</h1>
 
-                <form action="/users" method="POST" class="form-ad">
+                <form action="/users/login" method="POST" class="form-ad">
                     <div class="user_form">
                         <input type="email" name="email" placeholder="Ingresá tu email">
                         <% if (locals.errors && errors.email) { %>
-                            <small class="text-danger">
+                            <small class="text_error">
                                 <%= errors.email.msg %>
                             </small>
                             <% } %>
                     </div>
-                    <div class="form-ad-input">
+                    <div class="user_form">
                         <input type="password" name="pass" placeholder="Ingresá tu ontraseña">
                         <% if (locals.errors && errors.pass) { %>
                             <small class="text_error">
@@ -63,6 +63,7 @@
 
         <%- include('partials/wsp.ejs') %>
     </body>
+    <script src="/js/register"></script>
     <script src="/js/user.js"></script>
 
 </html>

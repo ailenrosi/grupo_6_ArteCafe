@@ -6,7 +6,7 @@
         "email": "emmy0@artecafe.com",
         "password": "1234",
         "category": "adm",
-        "image": "user_1.jpg"
+        "image": "coffe_default.jpg"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "email": "rocio@artecafe.com",
         "password": "1234",
         "category": "adm",
-        "image": "user_1.jpg"
+        "image": "coffe_default.jpg"
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "email": "mati@artecafe.com",
         "password": "1234",
         "category": "adm",
-        "image": "user_1.jpg"
+        "image": "coffe_default.jpg"
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "email": "pheathcott1@edublogs.org",
         "password": "ssgaXQ9sAc",
         "category": "user",
-        "image": "user_2.jpg"
+        "image": "coffe_default.jpg"
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "email": "mfarrar2@hatena.ne.jp",
         "password": "PUG1PXV",
         "category": "user",
-        "image": "user_3.jpg"
+        "image": "coffe_default.jpg"
     },
     {
         "id": 7,
@@ -51,24 +51,6 @@
         "email": "gbento3@tuttocitta.it",
         "password": "uNMFme0en3f",
         "category": "user",
-        "image": "user_4.jpg"
-    },
-    {
-        "id": 8,
-        "first_name": "Mark",
-        "last_name": "Kleinsmuntz",
-        "email": "mkleinsmuntz4@yahoo.com",
-        "password": "yPr2AG",
-        "category": "user",
-        "image": "user_5.jpg"
-    },
-    {
-        "id": 9,
-        "first_name": "Jaclyn",
-        "last_name": "Nano",
-        "email": "jnano5@pagesperso-orange.fr",
-        "password": "uNWjw6",
-        "category": "user",
-        "image": "user_6.jpg"
+        "image": "coffe_default.jpg"
     }
 ]
