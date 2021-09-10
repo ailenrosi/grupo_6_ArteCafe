@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const cookieParser = require('cookie-parser')
+const session = require('express-session');
 const methodOverride =  require('method-override');
 const port = 3000;
 
@@ -14,12 +16,18 @@ let adminRouter = require('./routes/admin');
 let errorRouter = require ('./routes/error_404');
 
 
-
 /* Middleware */
 app.use(express.static('./public'));
 app.use(express.json());
 app.use(express.urlencoded({extended : false}));
-app.use(methodOverride('_method'));
+app.use(methodOverride('_method'))
+app.use(cookieParser())
+app.use(session({
+    secret: "artisticaDali",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 30000 }
+}))
 
 /* VIEWS */
 app.set('view engine', 'ejs');

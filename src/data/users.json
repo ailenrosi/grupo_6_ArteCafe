@@ -1,28 +1,28 @@
 [
     {
         "id": 1,
-        "first_name": "Corine",
-        "last_name": "Webbe",
-        "email": "cwebbe0@vinaora.com",
-        "password": "cqGyu2kjeqw",
+        "first_name": "emmy",
+        "last_name": "espinoza",
+        "email": "emmy0@artecafe.com",
+        "password": "1234",
         "category": "adm",
         "image": "user_1.jpg"
     },
     {
         "id": 2,
-        "first_name": "Corine",
-        "last_name": "Webbe",
-        "email": "cwebbe0@vinaora.com",
-        "password": "cqGyu2kjeqw",
+        "first_name": "rocio",
+        "last_name": "roci",
+        "email": "rocio@artecafe.com",
+        "password": "1234",
         "category": "adm",
         "image": "user_1.jpg"
     },
     {
         "id": 3,
-        "first_name": "Corine",
-        "last_name": "Webbe",
-        "email": "cwebbe0@vinaora.com",
-        "password": "cqGyu2kjeqw",
+        "first_name": "mati",
+        "last_name": "lopez",
+        "email": "mati@artecafe.com",
+        "password": "1234",
         "category": "adm",
         "image": "user_1.jpg"
     },
@@ -70,131 +70,5 @@
         "password": "uNWjw6",
         "category": "user",
         "image": "user_6.jpg"
-    },
-    {
-        "id": 10,
-        "first_name": "Orelie",
-        "last_name": "Milton-White",
-        "email": "omiltonwhite6@photobucket.com",
-        "password": "rnrf5dM",
-        "category": "user",
-        "image": "user_7.jpg"
-    },
-    {
-        "id": 11,
-        "first_name": "Cornall",
-        "last_name": "Kingsnoad",
-        "email": "ckingsnoad7@tinyurl.com",
-        "password": "qD5xk5IILA",
-        "category": "user",
-        "image": "user_8.jpg"
-    },
-    {
-        "id": 12,
-        "first_name": "Orv",
-        "last_name": "Schaffel",
-        "email": "oschaffel8@psu.edu",
-        "password": "uqsR8pEqTbk",
-        "category": "user",
-        "image": "user_9.jpg"
-    },
-    {
-        "id": 13,
-        "first_name": "Dex",
-        "last_name": "Dimic",
-        "email": "ddimic9@theglobeandmail.com",
-        "password": "gTrqpXF",
-        "category": "user",
-        "image": "user_10.jpg"
-    },
-    {
-        "id": 14,
-        "first_name": "Ileana",
-        "last_name": "Landrick",
-        "email": "ilandricka@wunderground.com",
-        "password": "ThbjMPdEYH",
-        "category": "user",
-        "image": "user_11.jpg"
-    },
-    {
-        "id": 15,
-        "first_name": "Sophi",
-        "last_name": "Hacker",
-        "email": "shackerb@cbsnews.com",
-        "password": "CTHxUBKEO",
-        "category": "user",
-        "image": "user_12.jpg"
-    },
-    {
-        "id": 16,
-        "first_name": "Marla",
-        "last_name": "Micheau",
-        "email": "mmicheauc@dagondesign.com",
-        "password": "Wr4YSIfQrx",
-        "category": "user",
-        "image": "user_13.jpg"
-    },
-    {
-        "id": 17,
-        "first_name": "Liesa",
-        "last_name": "Paintain",
-        "email": "lpaintaind@globo.com",
-        "password": "Hktybo7jS",
-        "category": "user",
-        "image": "user_14.jpg"
-    },
-    {
-        "id": 18,
-        "first_name": "Margie",
-        "last_name": "Leathard",
-        "email": "mleatharde@upenn.edu",
-        "password": "QOb9Y7R",
-        "category": "user",
-        "image": "user_15.jpg"
-    },
-    {
-        "id": 19,
-        "first_name": "Armin",
-        "last_name": "Dagworthy",
-        "email": "adagworthyf@spiegel.de",
-        "password": "Nx7Zqlc9TcG9",
-        "category": "user",
-        "image": "user_16.jpg"
-    },
-    {
-        "id": 20,
-        "first_name": "Archambault",
-        "last_name": "McInility",
-        "email": "amcinilityg@livejournal.com",
-        "password": "g03ZbKBKqof",
-        "category": "user",
-        "image": "user_17.jpg"
-    },
-    {
-        "id": 21,
-        "first_name": "Vita",
-        "last_name": "Thowes",
-        "email": "vthowesh@icq.com",
-        "password": "UxN0Pit9K",
-        "category": "user",
-        "image": "user_18.jpg"
-    },
-    {
-        "id": 22,
-        "first_name": "Layney",
-        "last_name": "Lembrick",
-        "email": "llembricki@eepurl.com",
-        "password": "IfWwsnCBP",
-        "category": "user",
-        "image": "user_19.jpg"
-    },
-    {
-        "id": 23,
-        "first_name": "Laurie",
-        "last_name": "Prescott",
-        "email": "lprescottj@twitter.com",
-        "password": "HVt9GZ",
-        "category": "user",
-        "image": "user_20.jpg"
     }
 ]
