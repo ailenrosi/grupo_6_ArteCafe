@@ -12,7 +12,7 @@ btn.onclick = function() {
   modal.style.display = "block";
 }
 
-// cuando tocamox la X cierra la ventana
+// cuando tocamos la X cierra la ventana
 span.onclick = function() {
   modal.style.display = "none";
 }
