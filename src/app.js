@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended : false}));
 app.use(methodOverride('_method'))
 app.use(cookieParser())
 app.use(session({
-    secret: "artisticaDali",
+    secret: "arte_cafe",
     resave: false,
     saveUninitialized: true,
     cookie: { maxAge: 30000 }
