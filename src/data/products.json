@@ -239,23 +239,5 @@
         "discount": "12",
         "category": "asdaasd",
         "image": "default-image.png"
-    },
-    {
-        "id": 23,
-        "name": "Rocio",
-        "price": "999999999999",
-        "description": "Me denuncia si la describo en la web",
-        "discount": "0",
-        "category": "Novia",
-        "image": "default-image.png"
-    },
-    {
-        "id": 24,
-        "name": "roffyhgd",
-        "price": "214",
-        "description": "asdf",
-        "discount": "452",
-        "category": "fggfd",
-        "image": "default-image.png"
     }
 ]

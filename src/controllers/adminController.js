@@ -20,12 +20,15 @@ adminLogin: (req, res) => {
         })
     }, 
 	productsCreate: (req, res) => {
-        res.render('admin_form', {
+        res.render('admin_create', {
             // categories, 
             // subcategories,
             session: req.session
         })
     }, 
+    productsCreateSuccess: (req,res) => {
+        res.render('admin_create_success');
+    },
     productStore: (req, res) => {
         let errors = validationResult(req)
         console.log(errors);
@@ -69,7 +72,7 @@ adminLogin: (req, res) => {
     
             writeProductsJSON(products)
     
-            res.redirect('/admin/products')
+            res.redirect('/admin/products/create/success');
         }else {
             res.render("admin_crear", {
                 categories,
@@ -150,6 +153,11 @@ adminLogin: (req, res) => {
         writeProductsJSON(products)
 
         res.redirect('/admin/products')
+    },
+    adminProducts: (req,res) => {
+        res.render('adminProducts',{
+            products
+        });
     }
 }
 
