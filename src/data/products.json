@@ -21,7 +21,7 @@
             "cafeteraChemex.jpg"
         ]
     },
-      {
+    {
         "id": 3,
         "name": "Cafetera Volturno",
         "price": 10500,
@@ -165,7 +165,7 @@
             "termometro.webp"
         ]
     },
-     {
+    {
         "id": 16,
         "name": "Pava Kettle",
         "price": 5200,
@@ -186,7 +186,7 @@
         "image": [
             "vasoTransparente.jpg"
         ]
-    }, 
+    },
     {
         "id": 18,
         "name": "Balanza Digital",
@@ -208,7 +208,8 @@
         "image": [
             "coffee_intens.jpg"
         ]
-    }, {
+    },
+    {
         "id": 20,
         "name": "Jarro Térmico",
         "price": 1080,
@@ -218,7 +219,8 @@
         "image": [
             "jarronMetal.jpg"
         ]
-    }, {
+    },
+    {
         "id": 21,
         "name": "Batidor espumador café/ leche, A pilas",
         "price": 550,
@@ -228,5 +230,32 @@
         "image": [
             "batidor_cafe.jpg"
         ]
+    },
+    {
+        "id": 22,
+        "name": "Producto",
+        "price": "123",
+        "description": "ASD",
+        "discount": "12",
+        "category": "asdaasd",
+        "image": "default-image.png"
+    },
+    {
+        "id": 23,
+        "name": "Rocio",
+        "price": "999999999999",
+        "description": "Me denuncia si la describo en la web",
+        "discount": "0",
+        "category": "Novia",
+        "image": "default-image.png"
+    },
+    {
+        "id": 24,
+        "name": "roffyhgd",
+        "price": "214",
+        "description": "asdf",
+        "discount": "452",
+        "category": "fggfd",
+        "image": "default-image.png"
     }
 ]

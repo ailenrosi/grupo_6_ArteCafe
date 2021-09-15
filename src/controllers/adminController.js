@@ -1,4 +1,4 @@
-const { products, categories, writeProductsJSON } = require('../data/products.json');
+const { products, writeProductsJSON } = require('../data/dataBase.js');
 const { validationResult } = require('express-validator')
 //let save = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(dato,null,2),'utf-8') /* gurada en el json products */
 
@@ -20,14 +20,16 @@ adminLogin: (req, res) => {
         })
     }, 
 	productsCreate: (req, res) => {
-        res.render('admin_crear', {
-            categories, 
-            subcategories,
+        res.render('admin_form', {
+            // categories, 
+            // subcategories,
             session: req.session
         })
     }, 
     productStore: (req, res) => {
         let errors = validationResult(req)
+        console.log(errors);
+        console.log(products);
 
         if(errors.isEmpty()){
             let lastId = 1;
@@ -50,7 +52,6 @@ adminLogin: (req, res) => {
                 price, 
                 discount, 
                 category, 
-                subcategory, 
                 description
                 } = req.body;
     
@@ -61,7 +62,6 @@ adminLogin: (req, res) => {
                 description,
                 discount,
                 category,
-                subcategory,
                 image: arrayImages.length > 0 ? arrayImages : "default-image.png"
             };
     
@@ -72,7 +72,6 @@ adminLogin: (req, res) => {
             res.redirect('/admin/products')
         }else {
             res.render("admin_crear", {
-                subcategories,
                 categories,
                 errors: errors.mapped(),
                 old: req.body,

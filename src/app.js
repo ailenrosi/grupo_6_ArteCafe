@@ -39,6 +39,8 @@ app.use('/products', productsRouter);
 app.use('/users', userRouter);
 app.use('/cart',cartRouter);
 app.use('/admin', adminRouter);
+
+
 /* el error dejarlo bebajo */
 app.use('*', errorRouter);
 

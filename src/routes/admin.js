@@ -11,6 +11,7 @@ let {
     productStore,
     productEdit, 
     productDestroy,
+    productForm,
     productUpdate} = require('../controllers/adminController');
 
 let uploadProductFile = require('../middlewares/uploadProductsFiles')
@@ -25,7 +26,7 @@ router.get('/admin_login', adminLogin);
 router.get('/products', products);
 
 router.get('/products/create', productsCreate);
-router.post('/products/create', uploadProductFile.array("images"), productValidator,productStore);
+router.post('/products/create', uploadProductFile.array("images"), productValidator, productStore);
 
 router.get('/products/edit/:id', productEdit);
 router.put('/products/edit/:id', uploadProductFile.array("images"), productValidator,productUpdate);
