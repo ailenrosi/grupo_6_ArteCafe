@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('partials/head_admin.ejs')%>
-
+    <%- include('partials/head_admin.ejs')%>
     <body>
-
-        <%- include('partials/header_admi.ejs') %>
-   <section style="padding-top: 10rem; text-align: center;">
-    <h1><span> Bienvenid@ de nuevo!</span></h1>
-    <h2>¿Qué vamos a hacer hoy?</h2>
-   </section>     
- 
-        
-</body>
+     <%- include('partials/header_admi.ejs')%>
+         <form class="crearp" action="/admin/products/edit/<%= product.id %>?_method=PUT" method="POST">
+             <div class="elProducto">
+               <label for="inputname" class="form-label">Producto</label>
+               <input type="text" class="form-control" id="inputname" name="name" value="<%=product.name%>"
+             </div>
+             <div class="Descripcion1">
+               <label for="description" class="form-label">Descripcion</label>
+               <input type="text" class="form-control" id="inputdescription" name="description" value="<%=product.description%>">
+             </div>
+             <div class="Precio1">
+               <label for="inputprice" class="form-label">precio</label>
+               <input type="number" class="form-control" id="inputprice" name="price" value="<%=product.price%>">
+             </div>
+             <div class="Descuento1">
+               <label for="inputdiscont" class="form-label">Descuento</label>
+               <input type="number" class="form-control" id="inputdiscont" name="discount" value="<%=product.discount%>">
+             </div>
+             <div class="Categoria1">
+               <label for="inputCategory" class="form-label">Categoria</label>
+               <input type="text" class="form-control" id="inputCategory" name="category" value="<%=product.category%>">
+             </div>
+             
+             <div class="Imagen1">
+               <label for="inputimage" class="form-label">Imagen</label>
+               <input type="file" class="form-control" id="inputimage" name="image" value="<%=product.image%>">
+             </div>
+     
+             </div>
+             <div class="Producto1">
+               <button type="submit" class="btn btn-primary">Editar</button>
+             </div>
+           </form>
+           <%- include('partials/footer.ejs') %>
+ </body>
 </html>

@@ -14,7 +14,7 @@ adminLogin: (req, res) => {
         })
     },
 	products: (req, res) => {
-        res.render('admin_products', {
+        res.render('adminProducts', {
             products,
             session: req.session
         })
@@ -86,8 +86,6 @@ adminLogin: (req, res) => {
     productEdit: (req, res) => {
         let product = products.find(product => product.id === +req.params.id)
         res.render('admin_edit', {
-            categories, 
-            subcategories,
             product,
             session: req.session
         })
@@ -109,7 +107,6 @@ adminLogin: (req, res) => {
             price, 
             discount, 
             category, 
-            subcategory, 
             description
             } = req.body;
         
@@ -121,7 +118,6 @@ adminLogin: (req, res) => {
                 product.description = description,
                 product.discount = discount,
                 product.category = category,
-                product.subcategory = subcategory,
                 product.image = arrayImages > 0 ? arrayImages : product.image
                 console.log(product)
             }
@@ -133,7 +129,6 @@ adminLogin: (req, res) => {
             let product = products.find(product => product.id === +req.params.id)
 
             res.render("admin_edit", {
-                subcategories,
                 categories,
                 product,
                 errors: errors.mapped(),
