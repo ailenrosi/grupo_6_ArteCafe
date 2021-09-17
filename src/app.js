@@ -36,7 +36,7 @@ app.set('views', path.join(__dirname, 'views'));
 /* Rutas */
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
-app.use('/users', userRouter);
+app.use('/user', userRouter);
 app.use('/cart',cartRouter);
 app.use('/admin', adminRouter);
 

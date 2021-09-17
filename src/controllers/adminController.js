@@ -154,8 +154,8 @@ adminLogin: (req, res) => {
         res.render('adminProducts',{
             products
         });
-
-       eliminarProducto: (req, res) => {
+    },
+       delete: (req, res) => {
             products.forEach(product => {
                 if(product.id === +req.params.id){
                     let productAEliminar = product.indexOf(product)
@@ -163,12 +163,12 @@ adminLogin: (req, res) => {
                 }
             })
     
-            writeJson(getProductos)
+            writeJson(products)
     
             res.redirect('/admin/adminProducts')
         }
     }
-}
+
 
 
 
