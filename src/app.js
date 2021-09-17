@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const methodOverride =  require('method-override');
 const port = 3000;
@@ -20,8 +20,8 @@ let errorRouter = require ('./routes/error_404');
 app.use(express.static('./public'));
 app.use(express.json());
 app.use(express.urlencoded({extended : false}));
-app.use(methodOverride('_method'))
-app.use(cookieParser())
+app.use(methodOverride('_method'));
+app.use(cookieParser());
 app.use(session({
     secret: "arte_cafe",
     resave: false,

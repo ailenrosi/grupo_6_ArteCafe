@@ -90,6 +90,7 @@ adminLogin: (req, res) => {
             session: req.session
         })
     },
+    
     productUpdate: (req, res) => {
         let errors = validationResult(req)
 
@@ -153,6 +154,19 @@ adminLogin: (req, res) => {
         res.render('adminProducts',{
             products
         });
+
+       eliminarProducto: (req, res) => {
+            products.forEach(product => {
+                if(product.id === +req.params.id){
+                    let productAEliminar = product.indexOf(product)
+                    products.splice(productAEliminar, 1)
+                }
+            })
+    
+            writeJson(getProductos)
+    
+            res.redirect('/admin/adminProducts')
+        }
     }
 }
 

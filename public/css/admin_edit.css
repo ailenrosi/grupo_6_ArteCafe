@@ -4,11 +4,11 @@
 }
 
 
-form{
+form .crear{
 	width: 400px;
 	padding:20px;
 	border-radius:30px;
 	margin:auto;
-	background-color:rgb(238, 206, 164);
+	background-color: ghostwhite;
 
 }

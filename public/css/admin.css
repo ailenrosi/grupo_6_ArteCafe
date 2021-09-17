@@ -1,6 +1,7 @@
-body {
+body administrador {
     margin: 0;
     padding: 0;
+    background-color: aliceblue;
     /*height: 100vh;
   }
   #login .container #login-row #login-column #login-box {
@@ -10,8 +11,10 @@ body {
     /*border: 1px solid #9C9C9C;
     background-color: #EAEAEA;*/
   }
+  
   #login .container #login-row #login-column #login-box #login-form {
     padding: 30px;
+    background-color: ghostwhite;
   }
   #login .container #login-row #login-column #login-box #login-form #register-link {
     margin-top: 10px;

@@ -7,7 +7,7 @@
 <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
 <body> 
     <%- include('partials/header_admi.ejs') %>
-    <div class="container d-flex flex-wrap justify-content-center">
+    <div class="tabla_productos">
         <table>
             <tr>
                 <th> ID </th>
@@ -24,8 +24,10 @@
                 <td> $ <%= product.price %> </td>
                 <td> <%= product.category %> </td>
                 <td><a href="/admin/products/edit/<%=product.id%>" ><i class="far fa-edit"></i></a></td>
-                <td><a href="" > <i class="far fa-trash-alt"></i></a></td>
 
+            <form action="/adminProducts/eliminarProducto/ <%- product.id  %>?_ method=DELETE" method="POST">
+                <td><button type="submit" > <i class="far fa-trash-alt"></i></a></td>
+            </form>
             </tr>
         <% }) %>    
         </table>

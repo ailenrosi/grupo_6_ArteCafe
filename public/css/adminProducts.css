@@ -1,0 +1,5 @@
+.tabla_productos{
+    display: flex;
+flex-direction: column;
+margin: 20px;
+}
