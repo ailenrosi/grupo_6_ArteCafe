@@ -10,7 +10,7 @@ let {
     productsCreate, 
     productStore,
     productEdit, 
-    productDestroy,
+    deleteProduct,
     productsCreateSuccess,
     adminProducts,
     productUpdate} = require('../controllers/adminController');
@@ -36,7 +36,7 @@ router.get('/products/edit/:id', productEdit);
 router.put('/products/edit/:id', uploadProductFile.array("images"), productValidator,productUpdate);
 
 
-router.delete('/products/delete/:id', productDestroy);
+router.post('/products/delete/:id', deleteProduct);
 
 
 
