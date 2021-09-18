@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include('partials/head_admin.ejs')%>
+   <%- include('partials/header_admi.ejs')%>
    <body>
-    <%- include('partials/header_admi.ejs')%>
-        <form class="crearProduct" method="POST">
+ 
+
+    <div class="crear.producto">
+    <form class="crearProduct" method="POST">
             <div class="elProducto">
               <label for="inputname" class="form-label">Producto</label>
               <input type="text" class="form-control" id="inputname" name="name">
@@ -35,7 +38,9 @@
               <button type="submit" class="btn btn-primary">Crear</button>
             </div>
           </form>
-          <%- include('partials/footer.ejs') %>
+        </div>
+          
 </body>
+<%- include('partials/footer.ejs') %>
 </html>
 
