@@ -1,20 +1,18 @@
 # Retrospectiva sprint 📝
 
-## SPTRINT 3:
+## SPTRINT 5:
 
-En este tercer sptrint los desafios aumentaron, el equipo se encuentra con un integrante menos y no se terminaron con los objetivos.
-
+En este quinto sptrint la carga de tareas aumento al ser solo dos integrantes en equipo.
 ## Teniendo en cuenta Starfish retrospective, podemos sacar las siguientes conclusiones:
 
 
 ### Empezar a hacer:
 
-* TRABAJAR LA COMUNICACION.
+* Aumentar la comunicación.
 * Hacerse tiempo para reuniones por zoom o similar.
-* Mantener el trello actualizado.
 * Dividir las tareas de manera equitativa y que cada miembro del equipo entienda lo que tiene que hacer.
 * Ver y catalogar el trabajo según la dificultad para que la división sea equitativa.
-* Tener día y horario de reunión grupal definida.
+
 
 
 
@@ -34,15 +32,9 @@ En este tercer sptrint los desafios aumentaron, el equipo se encuentra con un in
 * Seguir poniendo el esfuerzo para cumplir los objetivos.
 
 
-### Dejar de hacer
-* Debemos poner el foco en el trabajo pedido, una mal interpretación o un mal manejo de las herramientas puede hacer que perdamos mucho tiempo. 
-* Postergar las tareas importantes.
-* No cumplir con los objetivos.
-
 
 ![Grupo6](aplicacion/estella.png)
 
 
-### Notas
 
-Actualizar los que falte del sprint anterior y dejar funcionando las vistas lo antes posible.
+

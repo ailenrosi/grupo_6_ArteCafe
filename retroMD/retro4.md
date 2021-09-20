@@ -1,8 +1,8 @@
 # Retrospectiva sprint 📝
 
-## SPTRINT 3:
+## SPTRINT 4:
 
-En este tercer sptrint los desafios aumentaron, el equipo se encuentra con un integrante menos y no se terminaron con los objetivos.
+En este cuarto sptrint los desafios aumentaron, el equipo se encuentra con solo con dos integrantes.
 
 ## Teniendo en cuenta Starfish retrospective, podemos sacar las siguientes conclusiones:
 
@@ -14,7 +14,6 @@ En este tercer sptrint los desafios aumentaron, el equipo se encuentra con un in
 * Mantener el trello actualizado.
 * Dividir las tareas de manera equitativa y que cada miembro del equipo entienda lo que tiene que hacer.
 * Ver y catalogar el trabajo según la dificultad para que la división sea equitativa.
-* Tener día y horario de reunión grupal definida.
 
 
 
@@ -43,6 +42,4 @@ En este tercer sptrint los desafios aumentaron, el equipo se encuentra con un in
 ![Grupo6](aplicacion/estella.png)
 
 
-### Notas
 
-Actualizar los que falte del sprint anterior y dejar funcionando las vistas lo antes posible.

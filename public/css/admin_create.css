@@ -1,21 +1,18 @@
-body{
-  
-}
-
-label {
+/*label .form-label{
     display: block;
     margin-top: 10px;
     font-size: 20px;}
 
-input[type="email"], input[type="password"], input[type="text"] {
+input .form-control[type="email"], input[type="password"], input[type="text"] {
         background: rgba(0, 0, 0, 0);
         border: 0px;
         outline: 0px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.12);
         font-size: 16px;
     }
-    input[type="email"], input[type="password"], input[type="text"] {
+    input .form-control[type="email"], input[type="password"], input[type="text"] {
         width: 40%;}
+*/
 
 .elemento{ position: relative;
     left: 32%;
