@@ -13,12 +13,11 @@ let {
     deleteProduct,
     productsCreateSuccess,
     adminProducts,
-    productUpdate} = require('../controllers/adminController');
+    productUpdate } = require('../controllers/adminController');
 
 let uploadProductFile = require('../middlewares/uploadProductsFiles')
 
 let productValidator = require('../validations/productCreateValidator')
-
 
 router.get('/', admin);
 
