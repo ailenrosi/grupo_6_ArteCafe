@@ -5,6 +5,14 @@ let bcrypt = require('bcryptjs')
 module.exports = {
 
     /*Register form */
+    user:  (req, res) => {
+        res.render('user',{
+            categories,
+            user,
+            session: req.session
+        })
+    },
+
     register:  (req, res) => {
         res.render('register', {
             categories,
@@ -22,7 +30,7 @@ module.exports = {
     profile: (req, res) =>{
         let user = users.find(user => user.id === req.session.user.id)
         
-        res.render('userProfile', {
+        res.render('Profile', {
             categories,
             user,
             session: req.session
@@ -32,7 +40,7 @@ module.exports = {
     profileEdit: (req, res) => {
         let user = users.find(user => user.id === +req.params.id)
 
-        res.render('userProfileEdit', {
+        res.render('ProfileEdit', {
             categories,
             user,
             session: req.session
@@ -71,10 +79,10 @@ module.exports = {
 
             req.session.user = user
 
-            res.redirect('/user/profile')
+            res.redirect('/user')
 
         }else{
-            res.render('userProfileEdit', {
+            res.render('ProfileEdit', {
                 categories,
                 errors: errors.mapped(),
                 old:req.body,
@@ -104,9 +112,9 @@ module.exports = {
             
             res.locals.user = req.session.user
 
-            res.redirect('/')
+            res.redirect('/user')
         }else{
-            res.render('user', {
+            res.render('processLogin', {
                 categories,
                 errors: errors.mapped(),
                 session: req.session
@@ -149,14 +157,14 @@ module.exports = {
                 city:""
             }
 
-            users.push(newUser)
+            user.push(newUser)
 
-            writeUsersJSON(users)
+            writeUsersJSON(user)
 
-            res.redirect('/user/login')
+            res.redirect('/user')
 
         } else {
-            res.render('register', {
+            res.render('processRegister', {
                 categories,
                 errors: errors.mapped(),
                 old : req.body,
