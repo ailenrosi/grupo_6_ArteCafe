@@ -1,4 +1,4 @@
-const { categories, users, writeUsersJSON } = require('../data/dataBase')
+const { categories, user, writeUsersJSON } = require('../data/dataBase')
 const { validationResult } = require('express-validator')
 let bcrypt = require('bcryptjs')
 
@@ -65,13 +65,13 @@ module.exports = {
             user.city = city
             user.avatar = req.file ? req.file.filename : user.avatar
 
-            writeUsersJSON(users)
+            writeUsersJSON(user)
 
             delete user.pass
 
             req.session.user = user
 
-            res.redirect('/users/profile')
+            res.redirect('/user/profile')
 
         }else{
             res.render('userProfileEdit', {
@@ -99,14 +99,14 @@ module.exports = {
             }  
 
             if(req.body.remember){
-                res.cookie("userArtisticaDali", req.session.user, {expires: new Date(Date.now() + 900000), httpOnly : true})
+                res.cookie("userarte_cafe", req.session.user, {expires: new Date(Date.now() + 900000), httpOnly : true})
             }
             
             res.locals.user = req.session.user
 
             res.redirect('/')
         }else{
-            res.render('users', {
+            res.render('user', {
                 categories,
                 errors: errors.mapped(),
                 session: req.session
@@ -153,7 +153,7 @@ module.exports = {
 
             writeUsersJSON(users)
 
-            res.redirect('/users/login')
+            res.redirect('/user/login')
 
         } else {
             res.render('register', {
@@ -171,6 +171,6 @@ module.exports = {
             res.cookie('userArte_cafe', '', {maxAge: -1})
         }
 
-        res.redirect('/')
+        res.redirect('/user')
     }
 }
