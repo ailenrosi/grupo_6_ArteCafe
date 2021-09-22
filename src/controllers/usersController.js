@@ -16,7 +16,25 @@ module.exports = {
             session: req.session
         })
     },
+    profile: (req, res) =>{
+        let user = users.find(user => user.id === req.session.user.id)
+        
+        res.render('userProfile', {
+            categories,
+            user,
+            session: req.session
+        })
+    },
+    profileEdit: (req, res) => {
+        let user = users.find(user => user.id === +req.params.id)
 
+        res.render('userEdit', {
+            categories,
+            user,
+            session: req.session
+        })
+
+    },
     realizado:(req,res)=> {
         res.render('realizado')
      },
