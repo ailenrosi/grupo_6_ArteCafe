@@ -19,17 +19,6 @@ module.exports = {
             session: req.session
         })
     },
-    profile: (req, res) =>{
-        let user = users.find(user => user.id === req.session.user.id)
-        
-        res.render('userProfile', {
-            categories,
-            user,
-            session: req.session
-        })
-    },
-    profileEdit: (req, res) => {
-        let user = users.find(user => user.id === +req.params.id)
 
     login:(req, res) => {
         res.render('login', {
@@ -192,5 +181,4 @@ module.exports = {
 
         res.redirect('/user')
     }
-}
 }
