@@ -1,6 +1,6 @@
 # Retrospectiva sprint 📝
 
-## SPTRINT 2:
+## SPTRINT 3:
 
 En este tercer sptrint los desafios aumentaron, el equipo se encuentra con un integrante menos y no se terminaron con los objetivos.
 

@@ -1,10 +1,11 @@
-const { products, categories, writeProductsJSON } = require('../data/products.json');
+const { products, writeProductsJSON } = require('../data/dataBase.js');
 const { validationResult } = require('express-validator')
 //let save = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(dato,null,2),'utf-8') /* gurada en el json products */
 
 
-module.exports ={
-adminLogin: (req, res) => {
+module.exports = {
+
+    adminLogin: (req, res) => {
         res.render('admin_login')
     },
 
@@ -13,21 +14,28 @@ adminLogin: (req, res) => {
             session: req.session
         })
     },
+
 	products: (req, res) => {
-        res.render('admin_products', {
+        res.render('adminProducts', {
             products,
             session: req.session
         })
     }, 
+
 	productsCreate: (req, res) => {
-        res.render('admin_crear', {
-            categories, 
-            subcategories,
+        res.render('admin_create', {
             session: req.session
         })
     }, 
+
+    productsCreateSuccess: (req,res) => {
+        res.render('admin_create_success');
+    },
+
     productStore: (req, res) => {
         let errors = validationResult(req)
+        console.log(errors);
+        console.log(products);
 
         if(errors.isEmpty()){
             let lastId = 1;
@@ -50,7 +58,6 @@ adminLogin: (req, res) => {
                 price, 
                 discount, 
                 category, 
-                subcategory, 
                 description
                 } = req.body;
     
@@ -61,7 +68,6 @@ adminLogin: (req, res) => {
                 description,
                 discount,
                 category,
-                subcategory,
                 image: arrayImages.length > 0 ? arrayImages : "default-image.png"
             };
     
@@ -69,10 +75,9 @@ adminLogin: (req, res) => {
     
             writeProductsJSON(products)
     
-            res.redirect('/admin/products')
-        }else {
+            res.redirect('/admin/products/create/success');
+        } else {
             res.render("admin_crear", {
-                subcategories,
                 categories,
                 errors: errors.mapped(),
                 old: req.body,
@@ -81,15 +86,15 @@ adminLogin: (req, res) => {
         }
      
     }, 
+
     productEdit: (req, res) => {
         let product = products.find(product => product.id === +req.params.id)
         res.render('admin_edit', {
-            categories, 
-            subcategories,
             product,
             session: req.session
         })
     },
+    
     productUpdate: (req, res) => {
         let errors = validationResult(req)
 
@@ -107,7 +112,6 @@ adminLogin: (req, res) => {
             price, 
             discount, 
             category, 
-            subcategory, 
             description
             } = req.body;
         
@@ -119,7 +123,6 @@ adminLogin: (req, res) => {
                 product.description = description,
                 product.discount = discount,
                 product.category = category,
-                product.subcategory = subcategory,
                 product.image = arrayImages > 0 ? arrayImages : product.image
                 console.log(product)
             }
@@ -131,7 +134,6 @@ adminLogin: (req, res) => {
             let product = products.find(product => product.id === +req.params.id)
 
             res.render("admin_edit", {
-                subcategories,
                 categories,
                 product,
                 errors: errors.mapped(),
@@ -140,19 +142,27 @@ adminLogin: (req, res) => {
             })
         }
     },
-    productDestroy: (req, res) => {
-        products.forEach( product => {
+
+    adminProducts: (req,res) => {
+        res.render('adminProducts',{
+            products
+        });
+    },
+
+    deleteProduct: (req, res) => {
+        products.forEach(product => {
             if(product.id === +req.params.id){
-               let productToDestroy = products.indexOf(product);
-               products.splice(productToDestroy, 1)
+                let productAEliminar = products.indexOf(product)
+                products.splice(productAEliminar, 1)
             }
         })
-        
+
         writeProductsJSON(products)
 
-        res.redirect('/admin/products')
+        res.redirect('/admin/adminProducts')
     }
 }
+
 
 
 
