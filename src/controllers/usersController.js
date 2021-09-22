@@ -31,9 +31,6 @@ module.exports = {
     profileEdit: (req, res) => {
         let user = users.find(user => user.id === +req.params.id)
 
-<<<<<<< HEAD
-        res.render('userEdit', {
-=======
     login:(req, res) => {
         res.render('login', {
             categories,
@@ -55,20 +52,12 @@ module.exports = {
         let user = users.find(user => user.id === +req.params.id)
 
         res.render('ProfileEdit', {
->>>>>>> f7e4733ba3880c846a2fbef5c5ee75a03c02fa44
             categories,
             user,
             session: req.session
         })
 
     },
-<<<<<<< HEAD
-    realizado:(req,res)=> {
-        res.render('realizado')
-     },
- 
-}
-=======
 
     updateProfile: (req, res) => {
         let errors = validationResult(req)
@@ -98,7 +87,6 @@ module.exports = {
             writeUsersJSON(user)
 
             delete user.pass
->>>>>>> f7e4733ba3880c846a2fbef5c5ee75a03c02fa44
 
             req.session.user = user
 
@@ -204,4 +192,5 @@ module.exports = {
 
         res.redirect('/user')
     }
+}
 }
