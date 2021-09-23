@@ -1,4 +1,4 @@
-const { categories, user, writeUsersJSON } = require('../data/dataBase')
+const { categories, users, writeUsersJSON } = require('../data/dataBase')
 const { validationResult } = require('express-validator')
 let bcrypt = require('bcryptjs')
 
@@ -8,7 +8,7 @@ module.exports = {
     user:  (req, res) => {
         res.render('user',{
             categories,
-            user,
+            users,
             session: req.session
         })
     },
@@ -105,9 +105,9 @@ module.exports = {
             
             res.locals.user = req.session.user
 
-            res.redirect('/user')
+            res.redirect('/')
         }else{
-            res.render('processLogin', {
+            res.render('user', {
                 categories,
                 errors: errors.mapped(),
                 session: req.session
@@ -132,7 +132,7 @@ module.exports = {
                 name, 
                 last_name,
                 email, 
-                pass1
+                pass
             } = req.body
 
             let newUser = {
@@ -140,7 +140,7 @@ module.exports = {
                 name,
                 last_name,
                 email,
-                pass : bcrypt.hashSync(pass1, 12),
+                pass : bcrypt.hashSync(pass, 12),
                 avatar : req.file ? req.file.filename : "default-image.png",
                 rol: "ROL_USER",
                 tel: "",
@@ -150,14 +150,14 @@ module.exports = {
                 city:""
             }
 
-            user.push(newUser)
+            users.push(newUser)
 
-            writeUsersJSON(user)
+            writeUsersJSON(users)
 
-            res.redirect('/user')
+            res.redirect('/user/login')
 
         } else {
-            res.render('processRegister', {
+            res.render('register', {
                 categories,
                 errors: errors.mapped(),
                 old : req.body,

@@ -16,16 +16,13 @@ const userSessionCheck = require('../middlewares/userSessionCheck');
 const userLog = require('../middlewares/userLog');
 const { get } = require('.');
 
-/* GET - User profile */
-router.get('/user', userLog, user);
-router.post('/user', uploadUserAvatar.single('avatar'),loginValidator, processLogin);
 
 router.get('/register', userLog, register);
-router.post('/register', uploadUserAvatar.single('avatar'), registerValidator, processRegister);
+router.post('/register', registerValidator, processRegister);
 
 /* GET - Login form */
-router.get('/user', userLog, user);
-router.post('/user', loginValidator, processLogin);
+router.get('/login', userLog, user);
+router.post('/login', loginValidator, processLogin);
 router.get('/logout', userSessionCheck, logout);
 
 /* GET - User profile */

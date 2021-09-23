@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
     let btn2 = document.getElementById('btn-pass-2');
     let btn3 = document.getElementById('btn-pass-3');
     
-    let pass1 = document.getElementById('passwordInicio');
+    let pass = document.getElementById('passwordInicio');
     let pass2 = document.getElementById('passwordRegistro');
     let pass3 = document.getElementById('passwordRepeat');
     
@@ -48,7 +48,7 @@ window.addEventListener('load', () => {
     }
     
     btn1.onclick = () => {
-        mostrarConstraseña(pass1, btn1)
+        mostrarConstraseña(pass, btn1)
     }
     
     btn2.onclick = () => {

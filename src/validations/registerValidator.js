@@ -28,7 +28,7 @@ module.exports = [
     })
     .withMessage("Email ya registrado"),
 
-    check('pass1')
+    check('pass')
     .notEmpty()
     .withMessage('Debes escribir tu contraseña')
     .isLength({
@@ -37,7 +37,7 @@ module.exports = [
     .withMessage('La contraseña debe tener como mínimo 4 caracteres'),
 
     body('pass2')
-    .custom((value, {req}) => value !== req.body.pass1 ? false : true)
+    .custom((value, {req}) => value !== req.body.pass ? false : true)
     .withMessage('Las contraseñas no coinciden'),
 
     check('terms')
