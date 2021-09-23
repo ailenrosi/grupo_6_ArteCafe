@@ -255,7 +255,16 @@
     top: 2rem; right:3rem;
     font-size: 4rem;
 }
-
+.session {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #00d900;
+    border-radius: 50px;
+    position: relative;
+    top: -10px;
+    right: 0px;
+}
 /*********************************************/
 /*********************************************/
 
