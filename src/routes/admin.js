@@ -1,7 +1,6 @@
 let express = require('express')
 let router = express.Router()
-//let controller = require('../controllers/adminController.js')
-
+let userAdminCheck = require('../middlewares/userAdminCheck')
 
 let { 
     admin,
@@ -19,11 +18,11 @@ let uploadProductFile = require('../middlewares/uploadProductsFiles')
 
 let productValidator = require('../validations/productCreateValidator')
 
-router.get('/', admin);
+router.get('/', adminLogin, admin);
+
+router.get('/home', userAdminCheck,admin);
 
 router.get('/adminProducts', adminProducts);
-
-router.get('/admin_login', adminLogin);
 
 router.get('/products', products);
 

@@ -4,7 +4,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const methodOverride =  require('method-override');
-const port = 3030;
+let localsCheck = require('./middlewares/localsCheck');
+const port = 3000;
 
 /* ENRUTADORES */
 let indexRouter = require('./routes/index');
@@ -12,6 +13,7 @@ let productsRouter = require('./routes/products');
 let userRouter = require('./routes/user');
 let cartRouter = require('./routes/cart')
 let adminRouter = require('./routes/admin');
+
 /*el error dejarlo debajo */
 let errorRouter = require ('./routes/error_404');
 
@@ -26,8 +28,9 @@ app.use(session({
     secret: "arte_cafe",
     resave: false,
     saveUninitialized: true,
-    cookie: { maxAge: 30000 }
+    
 }))
+app.use(localsCheck)
 
 /* VIEWS */
 app.set('view engine', 'ejs');

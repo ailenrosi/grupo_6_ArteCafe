@@ -4,7 +4,9 @@ const { validationResult } = require('express-validator')
 
 
 module.exports = {
-
+    signin: (req, res) => {
+        res.render('admin_login')
+    },
     adminLogin: (req, res) => {
         res.render('admin_login')
     },
