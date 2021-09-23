@@ -4,7 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const methodOverride =  require('method-override');
-const port = 3000;
+const port = 3030;
 
 /* ENRUTADORES */
 let indexRouter = require('./routes/index');
