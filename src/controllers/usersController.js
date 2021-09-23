@@ -20,13 +20,6 @@ module.exports = {
         })
     },
 
-    login:(req, res) => {
-        res.render('login', {
-            categories,
-            session: req.session
-        })
-    },
-
     profile: (req, res) =>{
         let user = users.find(user => user.id === req.session.user.id)
         
