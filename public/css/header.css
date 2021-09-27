@@ -304,7 +304,7 @@
     }
     header .navbar{
         position: absolute;
-        top:100%; left:0; right:0;
+        top:20%; left:0; right:0;
         background: rgb(17 37 23 / 62%);
         border-top: .1rem solid rgba(0,0,0,.2);
         border-bottom: .1rem solid rgba(0,0,0,.2);
