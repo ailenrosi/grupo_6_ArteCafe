@@ -17,3 +17,9 @@ input .form-control[type="email"], input[type="password"], input[type="text"] {
 .elemento{ position: relative;
     left: 32%;
 }
+
+label.adminedit{
+display: block;
+margin-top: 10px;
+font-size: 20px;
+}
