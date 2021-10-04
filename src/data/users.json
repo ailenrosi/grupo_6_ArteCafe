@@ -80,5 +80,19 @@
         "pc": "",
         "province": "",
         "city": ""
+    },
+    {
+        "id": 10,
+        "name": "Rocío",
+        "last_name": "Rosi",
+        "email": "rorosiailu@gmail.com",
+        "pass": "$2a$12$Rmtt599DddfzAafjD631Num7abp9XKEnPDlDrIGKbWEnX41SHqQsi",
+        "avatar": "default-image.png",
+        "rol": "ROL_USER",
+        "tel": "",
+        "address": "",
+        "pc": "",
+        "province": "",
+        "city": ""
     }
 ]

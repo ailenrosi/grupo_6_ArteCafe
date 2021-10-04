@@ -1,25 +1,18 @@
-/*label .form-label{
-    display: block;
-    margin-top: 10px;
-    font-size: 20px;}
 
-input .form-control[type="email"], input[type="password"], input[type="text"] {
-        background: rgba(0, 0, 0, 0);
-        border: 0px;
-        outline: 0px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-        font-size: 16px;
-    }
-    input .form-control[type="email"], input[type="password"], input[type="text"] {
-        width: 40%;}
-*/
+.crearprod{
+width: 400px;
+padding: 42px;
+border-radius: 40px;
+margin: auto;
+background-color: #e2fbd9;
+margin-top: 30px;
+};
 
-.elemento{ position: relative;
-    left: 32%;
-}
+.main.mainadmin{
+    background-color: rgb(175, 46, 126);
+};
 
-label.adminedit{
-display: block;
-margin-top: 10px;
-font-size: 20px;
-}
+.crearprod .crearProducto .titleadmin{
+    font-family: Georgia, 'Times New Roman', Times, serif
+
+};
