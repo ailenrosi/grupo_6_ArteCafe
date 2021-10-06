@@ -1,24 +1,36 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Subcategory extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
+module.exports = function(sequelize, dataTypes){
+    let alias = "subcategory";
+    let cols = {
+        id: {
+            type: dataTypes.INTEGER(11).UNSIGNED,
+            primaryKey: true,
+            autoIncrement: true,
+            allowNull: false
+        },
+        name: {
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
+        categories_id: {
+            type: dataTypes.INTEGER(11),
+            allowNull: false
+
+        }
+     
     }
-  };
-  Subcategory.init({
-    name: DataTypes.STRING(100),
-    categoryId: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'Subcategory',
-  });
-  return Subcategory;
-};
+    let config = {
+        tableName: "subcategories", 
+        timestamps: true
+    }
+
+    const subcategory = sequelize.define(alias, cols, config)
+
+    subcategory.associate = models => {
+        subcategory.hasMany(models.category, {
+            as: "subcategory",
+            foreignKey: "categories_id"
+        })
+    }
+
+    return subcategory
+}

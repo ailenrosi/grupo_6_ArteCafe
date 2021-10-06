@@ -1,29 +1,58 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class User extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
+module.exports = function(sequelize, dataTypes){
+    let alias = "user";
+    let cols = {
+        id: {
+            type: dataTypes.INTEGER(11).UNSIGNED,
+            primaryKey: true,
+            autoIncrement: true,
+            allowNull: false
+        },
+        name: {
+            type: dataTypes.STRING(45),
+            allowNull: false
+        },
+        last_name:{
+            type: dataTypes.STRING(45),
+            allowNull: false
+        },
+        email:{
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
+        pass:{
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
+        phone:{
+            type: dataTypes.STRING(45),
+            allowNull: false
+        },
+        avatar:{
+            type: dataTypes.STRING(500),
+            allowNull: false
+        },
+        rol:{
+            type: dataTypes.TINYINT(2),
+            allowNull: false
+        }
     }
-  };
-  User.init({
-    name: DataTypes.STRING(100),
-    last_name: DataTypes.STRING(100),
-    email: DataTypes.STRING(100),
-    pass: DataTypes.STRING(100),
-    phone: DataTypes.STRING(100),
-    avatar: DataTypes.STRING(100),
-    rolId: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'User',
-  });
-  return User;
-};
+    let config = {
+        tableName: "users", 
+        timestamps: true
+    }
+
+    const user = sequelize.define(alias, cols, config)
+
+    Product.associate = models => {
+        user.belongsToMany(models.product, {
+            as: "user",
+            through: "products_has_users",
+            foreignKey:"users_id",
+            otherKey:"products_id",
+            timestamps: false
+       
+        })
+    }
+
+    return user
+}

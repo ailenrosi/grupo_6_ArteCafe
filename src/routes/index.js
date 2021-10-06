@@ -2,6 +2,8 @@ let express = require('express');
 let router = express.Router()
 let controller = require('../controllers/indexController.js');
 let cookieCheck = require('../middlewares/cookieCheck')
+
+
 router.get('/', controller.index);
 
 router.get('/contact', controller.contact);

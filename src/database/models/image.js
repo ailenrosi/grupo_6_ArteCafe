@@ -1,24 +1,35 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Image extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
+module.exports = function(sequelize, dataTypes){
+    let alias = "Image";
+    let cols = {
+        id: {
+            type: dataTypes.INTEGER(11).UNSIGNED,
+            primaryKey: true,
+            autoIncrement: true,
+            allowNull: false
+        },
+        image:{
+            type: dataTypes.STRING(500),
+            allowNull: false
+        },
+        Products_id:{
+            type: dataTypes.INTEGER(11),
+            allowNull: false
+
+        }
     }
-  };
-  Image.init({
-    name: DataTypes.STRING(100),
-    productId: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'Image',
-  });
-  return Image;
-};
+    let config = {
+        tableName: "images", 
+        timestamps: true
+    }
+
+    const image = sequelize.define(alias, cols, config)
+
+    image.associate = models => {
+      image.hasMany(models.Products_id, {
+            as: "images",
+            foreignKey: "products_id"
+        })
+    }
+
+    return image
+}
