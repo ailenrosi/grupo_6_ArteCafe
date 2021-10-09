@@ -11,13 +11,14 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.STRING(45),
             allowNull: false
         }, 
-        description: {
-            type: dataTypes.STRING(500),
-        },
         price:{
             type: dataTypes.DECIMAL(8,2),
             allowNull: false
         },
+        description: {
+            type: dataTypes.STRING(500),
+        },
+        
         discount: {
             type: dataTypes.DECIMAL(8,2),
         },

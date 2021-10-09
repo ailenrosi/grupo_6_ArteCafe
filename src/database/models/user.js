@@ -41,18 +41,5 @@ module.exports = function(sequelize, dataTypes){
         timestamps: true
     }
 
-    const user = sequelize.define(alias, cols, config)
-
-    Product.associate = models => {
-        user.belongsToMany(models.product, {
-            as: "user",
-            through: "products_has_users",
-            foreignKey:"users_id",
-            otherKey:"products_id",
-            timestamps: false
-       
-        })
-    }
-
     return user
 }
