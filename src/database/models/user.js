@@ -1,5 +1,7 @@
 module.exports = function(sequelize, dataTypes){
-    let alias = "user";
+
+    let alias = "User";
+
     let cols = {
         id: {
             type: dataTypes.INTEGER(11).UNSIGNED,
@@ -35,11 +37,15 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.TINYINT(2),
             allowNull: false
         }
-    }
+    };
+
     let config = {
         tableName: "users", 
         timestamps: true
-    }
+    };
 
-    return user
+    const User = sequelize.define(alias, cols, config);
+
+    return User;
+    
 }
