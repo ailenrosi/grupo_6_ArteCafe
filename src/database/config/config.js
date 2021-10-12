@@ -1,11 +1,10 @@
 module.exports= {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "artecafe",
+    "password": "password",
+    "database": "arte_cafe",
     "host": "127.0.0.1",
     "dialect": "mysql",
- 
   },
   "test": {
     "username": "root",

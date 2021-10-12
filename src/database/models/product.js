@@ -31,13 +31,13 @@ module.exports = function(sequelize, dataTypes){
 
     let config = {
         tableName: "products", 
-        timestamps: true
+        timestamps: false
     };
 
     const Product = sequelize.define(alias, cols, config);
 
     Product.associate = models => {
-        Product.belongTo(models.Category, {
+        Product.belongsTo(models.Category, {
             as: "category",
             foreignKey: "categories_id"
         })

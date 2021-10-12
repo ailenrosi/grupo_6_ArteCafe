@@ -21,7 +21,7 @@ module.exports = function(sequelize, dataTypes){
 
     let config = {
         tableName: "images", 
-        timestamps: true
+        timestamps: false
     };
 
     const Image = sequelize.define(alias, cols, config)

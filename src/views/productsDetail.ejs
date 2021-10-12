@@ -13,11 +13,11 @@
 
                         <div class="thumbnailImages">
 
-                            <img src="/img/imgProductos/<%-product.image %>" alt="Imagen de producto">
+                            <img src="/img/imgProductos/<%-product.images[0].image %>" alt="Imagen de producto">
                         </div><!-- Imagen pequeña del producto-->
 
                         <div class="mainImage">
-                            <img src="/img/imgProductos/<%= product.image[0]%>" alt="Imagen de producto"
+                            <img src="/img/imgProductos/<%= product.images[0].image %>" alt="Imagen de producto"
                                 id="expandedImg">
                         </div> <!-- Imagen agrandada del producto-->
                     </div>
