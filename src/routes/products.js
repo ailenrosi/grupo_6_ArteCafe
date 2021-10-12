@@ -8,8 +8,6 @@ router.get('/productsDetail/:id', controller.detail);
 
 router.get('/productsDesc', controller.productsDesc);
 
-router.get('/vista', controller.vista);
-
 router.get('/accesorios', controller.accesorios);
 
 router.get('/cafeteras', controller.cafeteras);

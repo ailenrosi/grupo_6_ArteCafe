@@ -1,4 +1,3 @@
-const { categories } = require('../data/dataBase');
 const db = require('../database/models');
 
 /*
@@ -8,6 +7,7 @@ const path = require("path");
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 */
+
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
@@ -64,21 +64,72 @@ module.exports = {
     */
 
     products: (req, res) => {
+        db.Product.findAll({
+            include: [
+                {
+                    association: "images"
+                },
+            ],
+        })
+        .then( products => {
+            res.render('products', {
+                products,
+                toThousand
+            })
+        })
+    },
+
+    /*
+    products: (req, res) => {
         res.render('products', {
             products,
             toThousand
         })
     },
+    */
 
+    productsDesc: (req, res) => {
+        db.Product.findAll({
+            include: [
+                {
+                    association: "images"
+                },
+            ],
+        })
+        .then( products => {
+            res.render('productsDesc',{
+                products,
+                toThousand
+            })
+        });       
+    },
 
+    /*
     productsDesc: (req, res) => {
         res.render('productsDesc');
     },
+    */
 
-    vista: (req, res) => {
-        res.render('vista')
+    accesorios: (req, res) => {
+        db.Product.findAll({
+            where: {
+                categories_id : 2
+            },
+            include: [
+                {
+                    association: "images"
+                },
+            ],
+        })
+        .then( products => {
+            res.render('accesorios', {
+                products,
+                toThousand
+            })
+        })
     },
 
+    /*
     accesorios: (req, res) => {
         let productID = +req.params.id;
         let product = products.find(product => product.id === productID);
@@ -89,7 +140,28 @@ module.exports = {
              toThousand
             });
     },
+    */
 
+    cafeteras: (req, res) => {
+        db.Product.findAll({
+            where: {
+                categories_id : 1
+            },
+            include: [
+                {
+                    association: "images"
+                },
+            ],
+        })
+        .then( products => {
+            res.render('cafeteras', {
+                products,
+                toThousand
+            })
+        })
+    }
+
+    /*
     cafeteras: (req, res) =>{    
         let cafeteras = products.filter(product => product.category === 'cafeteras');
         let productID = +req.params.id;
@@ -100,5 +172,6 @@ module.exports = {
             toThousand
         })
     }
+    */
 
 }
