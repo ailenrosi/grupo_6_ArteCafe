@@ -8,7 +8,7 @@ router.get('/', controller.index);
 
 router.get('/contact', controller.contact);
 
-router.get('/', cookieCheck,controller.index)
+router.get('/', cookieCheck,controller.index);
 
 
 router.get('/search', controller.search); 
