@@ -1,4 +1,4 @@
-const { categories, users, writeUsersJSON } = require('../data/dataBase')
+const { users, writeUsersJSON } = require('../data/dataBase')
 const { validationResult } = require('express-validator')
 let bcrypt = require('bcryptjs')
 
@@ -7,7 +7,6 @@ module.exports = {
     /*Register form */
     user:  (req, res) => {
         res.render('user',{
-            categories,
             users,
             session: req.session
         })
@@ -15,7 +14,6 @@ module.exports = {
 
     register:  (req, res) => {
         res.render('register', {
-            categories,
             session: req.session
         })
     },
@@ -24,7 +22,6 @@ module.exports = {
         let user = users.find(user => user.id === req.session.user.id)
         
         res.render('Profile', {
-            categories,
             user,
             session: req.session
         })
@@ -34,7 +31,6 @@ module.exports = {
         let user = users.find(user => user.id === +req.params.id)
 
         res.render('ProfileEdit', {
-            categories,
             user,
             session: req.session
         })
@@ -76,7 +72,6 @@ module.exports = {
 
         }else{
             res.render('ProfileEdit', {
-                categories,
                 errors: errors.mapped(),
                 old:req.body,
                 session: req.session
@@ -108,7 +103,6 @@ module.exports = {
             res.redirect('/')
         }else{
             res.render('user', {
-                categories,
                 errors: errors.mapped(),
                 session: req.session
             })
@@ -158,7 +152,6 @@ module.exports = {
 
         } else {
             res.render('register', {
-                categories,
                 errors: errors.mapped(),
                 old : req.body,
                 session: req.session
