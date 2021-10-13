@@ -37,6 +37,16 @@
                                 </small>
                                 <% } %>
                         </div>
+                        <div class="form_user">
+                            <input type="number" name="phone" placeholder="Telefono"
+                            value="<%= locals.old && old.last_name %>">
+                            <% if (locals.errors && errors.phone) { %>
+                            <small class="text_error">
+                                <%= errors.phone.msg %>
+                            </small>
+                           <% } %>
+
+                        </div>
 
                         <div class="form_user"></div>
                         <input type="email" name="email" placeholder="Tu email">
@@ -66,7 +76,7 @@
                     </div>
                     <div class="check">
                         <input type="checkbox" name="terms" id="check" style="margin-top: 1.8rem;">
-                        <label for="check">Mantener sesión abierta</label>
+                        <label for="check">Acepto los términos y condiciones</label>
                     </div>
 
                     <% if (locals.errorMsg ) { %>

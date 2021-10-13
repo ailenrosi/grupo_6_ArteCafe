@@ -1,6 +1,7 @@
-const { users, writeUsersJSON } = require('../data/dataBase')
-const { validationResult } = require('express-validator')
-let bcrypt = require('bcryptjs')
+const { users, writeUsersJSON } = require('../data/dataBase');
+const { validationResult } = require('express-validator');
+let bcrypt = require('bcryptjs');
+let db = require("../database/models");
 
 module.exports = {
 
@@ -80,12 +81,15 @@ module.exports = {
     },
 
     processLogin: (req, res) => {
-        let errors = validationResult(req)
+        let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            let user = users.find(user => user.email === req.body.email)
-
+            db.User.findOne({
+                where: {email: req.body.email}
+            })
+            .then(user =>{
             req.session.user = {
+
                 id: user.id,
                 name: user.name,
                 last_name : user.last_name,
@@ -101,7 +105,11 @@ module.exports = {
             res.locals.user = req.session.user
 
             res.redirect('/')
-        }else{
+        })
+        .catch(error => { 
+            res.send(error)
+        })
+    }else{
             res.render('user', {
                 errors: errors.mapped(),
                 session: req.session
@@ -110,54 +118,39 @@ module.exports = {
     },
 
     processRegister: (req, res) => {
-        let errors = validationResult(req)
+        let errors = validationResult(req);
+        if(req.fileValidatorError){
+            let image = {
+                param:"image",
+                msg: req.fileValidatorError,
+            };
+            errors.push(image);
 
-        if (errors.isEmpty()) {
-
-            let lastId = 0;
-
-            users.forEach(user => {
-                if(user.id > lastId){
-                    lastId = user.id
-                }
-            }) 
-
-            let {
-                name, 
-                last_name,
-                email, 
-                pass
-            } = req.body
-
-            let newUser = {
-                id : lastId + 1,
+        }
+        if(errors.isEmpty()){
+            let{ name, last_name, email, phone, pass} = req.body;
+            db.User.create({
                 name,
                 last_name,
                 email,
-                pass : bcrypt.hashSync(pass, 12),
-                avatar : req.file ? req.file.filename : "default-image.png",
-                rol: "ROL_USER",
-                tel: "",
-                address: "",
-                pc: "",
-                province: "",
-                city:""
-            }
-
-            users.push(newUser)
-
-            writeUsersJSON(users)
-
-            res.redirect('/user/login')
-
-        } else {
-            res.render('register', {
-                errors: errors.mapped(),
-                old : req.body,
-                session: req.session
+                phone,
+                pass:bcrypt.hashSync(pass, 12),
+                avatar: req.file ? req.file.filename : "default-image.png",
+                rol:2
             })
+            .then(() => {
+                res.redirect("/users/login");
+            })
+            .catch(err => {console.log(err)});
+        } else {
+            res.render("register", {
+                errors: errors.mapped(),
+                old: req.body,
+                session: req.session
+            });
         }
     },
+
 
     logout: (req, res) => {
         req.session.destroy()
