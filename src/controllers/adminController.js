@@ -78,7 +78,7 @@ module.exports = {
 
     productStore: (req, res) => {
         let errors = validationResult(req);
-        console.log(req)
+
         if (req.fileValidatorError) {
             let image = {
                 param: "image",
@@ -112,7 +112,7 @@ module.exports = {
                             Products_id: product.dataValues.id
                         }
                     })
-                    console.log(images);
+                   res.send(images);
                     db.Image.bulkCreate(images)
                         .then(() => res.redirect("/admin/products"))
                         .catch(err => console.log(err))
@@ -207,7 +207,7 @@ module.exports = {
                 product.discount = discount,
                 product.category = category,
                 product.image = arrayImages > 0 ? arrayImages : product.image
-                console.log(product)
+               
             }
         })
         writeProductsJSON(products)

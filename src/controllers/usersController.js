@@ -139,7 +139,7 @@ module.exports = {
                 rol:2
             })
             .then(() => {
-                res.redirect("/users/login");
+                res.redirect("/user/login");
             })
             .catch(err => {console.log(err)});
         } else {
