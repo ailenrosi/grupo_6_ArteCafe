@@ -28,6 +28,7 @@ router.get('/products', products);
 
 router.get('/products/create', productsCreate);
 router.post('/products/create', uploadProductFile.array("images"), productValidator, productStore);
+
 router.get('/products/create/success', productsCreateSuccess);
 
 router.get('/products/edit/:id', productEdit);
