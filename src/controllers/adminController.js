@@ -1,4 +1,4 @@
-const { products, writeProductsJSON } = require('../data/dataBase.js');
+const db = require("../database/models");
 const { validationResult } = require('express-validator')
 //let save = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(dato,null,2),'utf-8') /* gurada en el json products */
 
@@ -18,29 +18,110 @@ module.exports = {
     },
 
 	products: (req, res) => {
-        res.render('adminProducts', {
+        db.Product.findAll().then(products => {
+            res.render('adminProducts', {
             products,
-            session: req.session
+            session: req.session  
+            })
+      
         })
     }, 
 
+    productsCreate: (req, res) => {
+        let categoriesPromise = db.Category.findAll();
+
+        Promise.all([categoriesPromise])
+        .then(([categories])=> {
+            res.render('admin_create',{
+                        categories,
+                        session: req.session
+        });
+        })
+        .catch((err)=> console.log(err));
+    },
+
+    /*productsCreate: (req, res) => {
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()){
+            let { name, description, price, discount, category} = req.body
+            db.products.create({
+                name,
+                description,
+                price,
+                discount,
+                category,
+                image: req.file ? req.file.filename : "default-image.png"
+            })
+            .then(() => {
+                res.redirect('/admin/products')
+            })
+        }else{
+            res.render('admin_create',{
+                errors: errors.mapped(),
+                session: req.session,
+                old: req.body
+            })
+        }
+            
+    },
+     
 	productsCreate: (req, res) => {
         res.render('admin_create', {
             session: req.session
         })
-    }, 
+    }, */
 
     productsCreateSuccess: (req,res) => {
         res.render('admin_create_success');
     },
 
     productStore: (req, res) => {
-        let errors = validationResult(req)
-        console.log(errors);
-        console.log(products);
+        let errors = validationResult(req);
+        console.log(req)
+        if (req.fileValidatorError) {
+            let image = {
+                param: "image",
+                msg: req.fileValidatorError,
+            };
+            errors.push(image);
+        }
 
         if(errors.isEmpty()){
-            let lastId = 1;
+            let arrayImages = [];
+            if(req.files) {
+                req.files.forEach((image) => {
+                    arrayImages.push(image.filename);
+                  });
+            }
+            
+            let { name, description, price, discount, category } = req.body;
+
+            db.Product.create({
+                name,
+                description,
+                price,
+                discount,
+                categories_id: category
+            })
+            .then(product => {
+                if(arrayImages.length > 0){
+                    let images = arrayImages.map(image => {
+                        return {
+                            image: image,
+                            Products_id: product.dataValues.id
+                        }
+                    })
+                    console.log(images);
+                    db.Image.bulkCreate(images)
+                        .then(() => res.redirect("/admin/products"))
+                        .catch(err => console.log(err))
+                }
+            })
+            .then(() => res.redirect("/admin/products"));
+        }
+    },  
+            /*let lastId = 1;
 
             products.forEach(product => {
                 if(product.id > lastId){
@@ -86,8 +167,8 @@ module.exports = {
                 session: req.session
             })
         }
-     
-    }, 
+     */
+   
 
     productEdit: (req, res) => {
         let product = products.find(product => product.id === +req.params.id)
@@ -152,17 +233,29 @@ module.exports = {
     },
 
     deleteProduct: (req, res) => {
-        products.forEach(product => {
-            if(product.id === +req.params.id){
-                let productAEliminar = products.indexOf(product)
-                products.splice(productAEliminar, 1)
+        db.Product.destroy({
+            where: {
+                id: req.params.id
             }
         })
-
-        writeProductsJSON(products)
-
-        res.redirect('/admin/adminProducts')
+        .then(() => {
+            return res.redirect('/admin/products')
+        })
     }
+
+
+    // deleteProduct: (req, res) => {
+    //     products.forEach(product => {
+    //         if(product.id === +req.params.id){
+    //             let productAEliminar = products.indexOf(product)
+    //             products.splice(productAEliminar, 1)
+    //         }
+    //     })
+
+    //     writeProductsJSON(products)
+
+    //     res.redirect('/admin/adminProducts')
+    // }
 }
 
 

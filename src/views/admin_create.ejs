@@ -21,11 +21,17 @@
           <label for="discount">Descuento</label>
           <input type="number" name="discount">
 
-          <label for="category">Categoría</label>
-          <input type="text" name="category">
+          <select class="form-select" id="specificSizeSelect" name="category">
+            <option selected hidden value="">Categorias</option>
+            <% categories.forEach(category => { %>
+              <option value="<%- category.id%>" <%= locals.old && old.category == category.name ? "selected" : null %>><%- category.name %></option>
+            <% }) %>
+          </select>
+          <% if(locals.errors && errors.category) {%>
+              <small class="text-danger"><%= errors.category.msg %></small>
+          <% } %>
 
-
-          <div class="unaImagen"
+          <div class="unaImagen">
             <label for="inputimage" class="adminedit">Imagen</label>
             <input type="file" class="form-control" id="inputimage" name="image">
           </div>
