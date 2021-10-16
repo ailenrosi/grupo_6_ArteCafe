@@ -265,6 +265,21 @@
     top: -10px;
     right: 0px;
 }
+.menu-user {
+    display: none;
+    position: absolute;
+    font-size: 1rem;
+    width: 9rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-left: -3rem;
+}
+
+.user:hover .menu-user{
+   display: block;
+}
+
 /*********************************************/
 /*********************************************/
 
