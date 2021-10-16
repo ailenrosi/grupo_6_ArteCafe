@@ -18,7 +18,6 @@ module.exports = {
         .then(products => {
             let productsSlider = products.filter( product => product.categories_id === 1 );
             let productsDesc = products.filter( product => product.discount >= 15 );
-            console.log(req.session.user);
             res.render('home', {
                 titleSlider: "Para los amantes del café.",
                 productsSlider,

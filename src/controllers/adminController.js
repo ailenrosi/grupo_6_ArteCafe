@@ -20,8 +20,8 @@ module.exports = {
 	products: (req, res) => {
         db.Product.findAll().then(products => {
             res.render('adminProducts', {
-            products,
-            session: req.session  
+                products,
+                session: req.session  
             })
       
         })
@@ -239,7 +239,9 @@ module.exports = {
             }
         })
         .then(() => {
-            return res.redirect('/admin/products')
+            return res.redirect('/admin/products', {
+                session: req.session
+            })
         })
     }
 
