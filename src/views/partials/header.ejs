@@ -22,13 +22,11 @@
 
             <!-- Menu navbar  --->
             <nav class="navbar">
-                <a class="active" href="/">Home</a>
-                <a href="/sobre_nosotros">Sobre nosostros</a>
-                <a href="/gallery">Galeria</a>
                 <a href="/products">Productos</a>
-                <a href="#">Cursos</a>
-                <a href="/cart">Compra online</a>
-
+                <a href="/sobre_nosotros">Sobre nosostros</a>
+                <% if(session.user != undefined) { %>
+                    <a href="/cart">Compra online</a>
+                <% } %>
             </nav>
 
             <div class="icons">
@@ -40,7 +38,8 @@
                             <a href="/user/userProfile">Mis datos</a>
                             <a href="/user/logout">Cerrar sesión</a>
                             <% if (session.user.rol === 1) { %>
-                                <a href="/admin">ADMIN</a>
+                                <a href="/admin">Usuarios Admin</a>
+                                <a href="/admin/products">Productos Admin</a>
                             <% } %>
                         </div>
                     <% } else {%>

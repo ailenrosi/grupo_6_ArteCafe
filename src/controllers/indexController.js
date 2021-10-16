@@ -18,6 +18,7 @@ module.exports = {
         .then(products => {
             let productsSlider = products.filter( product => product.categories_id === 1 );
             let productsDesc = products.filter( product => product.discount >= 15 );
+            console.log(req.session.user);
             res.render('home', {
                 titleSlider: "Para los amantes del café.",
                 productsSlider,
@@ -87,7 +88,9 @@ module.exports = {
     */
 
     sobreNosotros: (req, res) => {
-        res.render('sobre_nosotros');
+        res.render('sobre_nosotros', {
+            session: req.session
+        });
     },
 
     meriendas: (req, res) => {

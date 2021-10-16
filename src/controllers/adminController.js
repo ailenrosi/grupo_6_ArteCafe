@@ -112,7 +112,7 @@ module.exports = {
                             Products_id: product.dataValues.id
                         }
                     })
-                   res.send(images);
+                    res.send(images);
                     db.Image.bulkCreate(images)
                         .then(() => res.redirect("/admin/products"))
                         .catch(err => console.log(err))

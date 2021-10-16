@@ -66,6 +66,7 @@ module.exports = {
         .then( products => {
             res.render('products', {
                 products,
+                session: req.session,
                 toThousand
             })
         })

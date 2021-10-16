@@ -151,13 +151,12 @@ module.exports = {
         }
     },
 
-
     logout: (req, res) => {
         req.session.destroy()
         if(req.cookies.userarte_cafe){
             res.cookie('userArte_cafe', '', {maxAge: -1})
         }
 
-        res.redirect('/user')
+        res.redirect('/')
     }
 }
