@@ -40,38 +40,6 @@ module.exports = {
         .catch((err)=> console.log(err));
     },
 
-    /*productsCreate: (req, res) => {
-        let errors = validationResult(req);
-
-        if(errors.isEmpty()){
-            let { name, description, price, discount, category} = req.body
-            db.products.create({
-                name,
-                description,
-                price,
-                discount,
-                category,
-                image: req.file ? req.file.filename : "default-image.png"
-            })
-            .then(() => {
-                res.redirect('/admin/products')
-            })
-        }else{
-            res.render('admin_create',{
-                errors: errors.mapped(),
-                session: req.session,
-                old: req.body
-            })
-        }
-            
-    },
-     
-	productsCreate: (req, res) => {
-        res.render('admin_create', {
-            session: req.session
-        })
-    }, */
-
     productsCreateSuccess: (req,res) => {
         res.render('admin_create_success');
     },
@@ -121,74 +89,34 @@ module.exports = {
             .then(() => res.redirect("/admin/products"));
         }
     },  
-            /*let lastId = 1;
-
-            products.forEach(product => {
-                if(product.id > lastId){
-                    lastId = product.id
-                }
-            })
-    
-            let arrayImages = [];
-            if(req.files){
-                req.files.forEach(image => {
-                    arrayImages.push(image.filename)
-                })
-            }
-    
-            let {
-                name, 
-                price, 
-                discount, 
-                category, 
-                description
-                } = req.body;
-    
-            let newProduct = {
-                id: lastId + 1,
-                name,
-                price,
-                description,
-                discount,
-                category,
-                image: arrayImages.length > 0 ? arrayImages : "default-image.png"
-            };
-    
-            products.push(newProduct);
-    
-            writeProductsJSON(products)
-    
-            res.redirect('/admin/products/create/success');
-        } else {
-            res.render("admin_crear", {
-                categories,
-                errors: errors.mapped(),
-                old: req.body,
-                session: req.session
-            })
-        }
-     */
-   
 
     productEdit: (req, res) => {
-        let product = products.find(product => product.id === +req.params.id)
-        res.render('admin_edit', {
-            product,
-            session: req.session
+        let categories = db.Category.findAll();
+        let product = db.Product.findOne ({
+            where:{id: req.params.id},
+        }); 
+        
+        Promise.all(([categories, product]))
+        .then(([categories, product]) => {
+            res.render("admin_edit", {
+                product,
+                categories,
+                session: req.session
+            })
         })
     },
     
     productUpdate: (req, res) => {
         let errors = validationResult(req)
-
+        console.log(errors);
         if(errors.isEmpty()){
 
-        let arrayImages = [];
+        /* let arrayImages = [];
         if(req.files){
             req.files.forEach(image => {
                 arrayImages.push(image.filename)
             })
-        }
+        } */
         
         let {
             name, 
@@ -196,9 +124,31 @@ module.exports = {
             discount, 
             category, 
             description
-            } = req.body;
+        } = req.body;
+
+        console.log("adsadadsasadad", category);
         
-        products.forEach( product => {
+            db.Product.update(
+                {
+                    name,
+                    price,
+                    discount,
+                    categories_id: category,
+                    description
+                },
+                {
+                    where:{
+                        id:req.params.id,
+                    },
+                }
+            )
+            .then(()=>{
+                res.redirect("/admin/products");
+            })
+            .catch((error)=> console.log(error));
+        }
+    },
+       /*  products.forEach( product => {
             if(product.id === +req.params.id){
                 product.id = product.id,
                 product.name = name,
@@ -225,7 +175,7 @@ module.exports = {
             })
         }
     },
-
+ */
     adminProducts: (req,res) => {
         res.render('adminProducts',{
             products

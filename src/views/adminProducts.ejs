@@ -22,7 +22,7 @@
                 <td> <%= product.id %></td>               
                 <td> <%= product.name %> </td>
                 <td> $ <%= product.price %> </td>
-                <td> <%= product.category %> </td>
+                <td> <%= product.categories_id %> </td>
                 <td><a href="/admin/products/edit/<%=product.id%>" ><i class="far fa-edit"></i></a></td>
 
             <form action="/admin/products/delete/<%=product.id%>?_ method=DELETE" method="POST">

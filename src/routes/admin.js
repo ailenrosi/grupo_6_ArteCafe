@@ -32,7 +32,7 @@ router.post('/products/create', uploadProductFile.array("images"), productValida
 router.get('/products/create/success', productsCreateSuccess);
 
 router.get('/products/edit/:id', productEdit);
-router.put('/products/edit/:id', uploadProductFile.array("images"), productValidator,productUpdate);
+router.put('/products/edit/:id', uploadProductFile.array("images"), productValidator, productUpdate);
 
 
 router.post('/products/delete/:id', deleteProduct);
