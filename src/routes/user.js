@@ -6,6 +6,10 @@ const {
     register,
     processRegister,
     processLogin,
+    profileEdit,
+    userProfile,
+    userUpdate,
+    userEdit,
     logout,
     profile } = require('../controllers/usersController');
 
@@ -30,9 +34,14 @@ router.get('/logout', userSessionCheck, logout);
 router.put('/profile/edit/:id', uploadUserAvatar.single('avatar'), updateProfile)*/
 
 
-
+router.get('/profileEdit', profileEdit);
+router.post('/profileEdit', profileEdit);
 
 router.get('/profile', userSessionCheck, profile)
 
+router.get('/userProfile', userSessionCheck, userProfile)
+router.get('/userEdit', userSessionCheck, userEdit)
+
+router.post('/userUpdate', userSessionCheck, userUpdate);
 
 module.exports = router;
