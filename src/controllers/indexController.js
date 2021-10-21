@@ -64,6 +64,7 @@ module.exports = {
             res.render('results', {
                 result,
                 toThousand,
+                session: req.session,
                 search: req.query.keywords
             });
         })
