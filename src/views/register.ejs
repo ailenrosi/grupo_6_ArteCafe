@@ -12,13 +12,10 @@
                 <a href="/" class="close_x1">&times;</a>
                 <h1 class="title">Registrate</h1>
 
-    
-                <form action="/user/register" method="POST" class="form-ad">
-
+                <form action="/user/register" method="POST" enctype="multipart/form-data" class="form-ad">
                     <div class="user_form">
 
                         <div class="form_user">
-
                             <input type="text" name="name" placeholder="Nombre con el que te identificas"
                                 value="<%= locals.old && old.name %>">
                             <% if (locals.errors && errors.name) { %>
@@ -37,6 +34,7 @@
                                 </small>
                                 <% } %>
                         </div>
+
                         <div class="form_user">
                             <input type="number" name="phone" placeholder="Telefono"
                             value="<%= locals.old && old.last_name %>">
@@ -45,26 +43,25 @@
                                 <%= errors.phone.msg %>
                             </small>
                            <% } %>
-
                         </div>
 
-                        <div class="form_user"></div>
-                        <input type="email" name="email" placeholder="Tu email">
-                        <% if (locals.errors && errors.email) { %>
-                            <small class="text-danger">
-                                <%= errors.email.msg %>
-                            </small>
+                        <div class="form_user">
+                            <input type="email" name="email" placeholder="Tu email">
+                            <% if (locals.errors && errors.email) { %>
+                                <small class="text-danger">
+                                    <%= errors.email.msg %>
+                                </small>
                             <% } %>
-                    </div>
+                        </div>
 
-                    <div class="form_user">
-                        <input type="password" name="pass" placeholder="Tu contraseña">
-                        <% if (locals.errors && errors.pass) { %>
-                            <small class="text_error">
+                        <div class="form_user">
+                            <input type="password" name="pass" placeholder="Tu contraseña">
+                            <% if (locals.errors && errors.pass) { %>
+                                <small class="text_error">
                                 <%= errors.pass.msg %>
-                            </small>
+                                </small>
                             <% } %>
-                    </div>
+                        </div>
 
                     <div class="form_user">
                         <input type="password" name="pass2" placeholder="Repetir contraseña">
@@ -72,27 +69,25 @@
                             <small class="text-danger">
                                 <%= errors.pass2.msg %>
                             </small>
-                            <% } %>
+                        <% } %>
                     </div>
+
+                    <div class="box-form">
+                        <label class="img-perfil" for="imgUser">Imagen De Perfil</label>
+                        <input class="img-input" type="file" name="avatar" id="imgUser">
+                    </div>
+
                     <div class="check">
                         <input type="checkbox" name="terms" id="check" style="margin-top: 1.8rem;">
                         <label for="check">Acepto los términos y condiciones</label>
                     </div>
+                          
+                    <a href="/"><input type="submit" value="Registrarse"></a>  
 
-                    <% if (locals.errorMsg ) { %>
-                        <small class="text_error">
-                            <%= errorMsg %>
-                        </small>
-                        <% } %>
-                          <a href="/"><input type="submit" value="Iniciar"></a>  
-
-
-
-                            <span class="text_end">¿Ya sos miembro?
-                                <a href="/user">Inicia sesion</a>
-                            </span>
+                    <span class="text_end">¿Ya sos miembro?
+                        <a href="/user">Inicia sesion</a>
+                    </span>
             
-        </div>
         </form>
 
         <div class="ctn_text">

@@ -138,7 +138,7 @@ module.exports = {
     }
   },
 
-  processRegister: (req, res) => {
+/*   processRegister: async(req, res) => {
     let errors = validationResult(req);
     if (req.fileValidatorError) {
       let image = {
@@ -146,24 +146,33 @@ module.exports = {
         msg: req.fileValidatorError,
       };
       errors.push(image);
-    }
+    } 
     if (errors.isEmpty()) {
       let { name, last_name, email, phone, pass } = req.body;
-      db.User.create({
+
+      console.log(req)
+      if(req.body.avatar.length !== 0){
+        let images = req.body.avatar.map(image=>{
+          let item ={
+            file:image.filename, 
+          }
+          return item 
+        })
+      }
+
+      let avatar = await db.Image.bulkCreate(images, { validate: true})
+      await db.User.create({
         name,
         last_name,
         email,
         phone,
         pass: bcrypt.hashSync(pass, 12),
-        avatar: req.file ? req.file.filename : "default-image.png",
+        avatar: avatar[0].dataValues.id,  
         rol: 2,
-      })
-        .then(() => {
-          res.redirect("/user/login");
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      });
+        
+      res.redirect("/user/login");
+  
     } else {
       res.render("register", {
         errors: errors.mapped(),
@@ -171,6 +180,44 @@ module.exports = {
         session: req.session,
       });
     }
+  }, */
+
+  processRegister: (req, res) => {
+    let errors = validationResult(req);
+
+    if(req.fileValidatorError){
+      let image = {
+        param: "image",
+        msg: req.fileValidatorError,
+      };
+      errors.push(image);
+    }
+
+    if(errors.isEmpty()){
+      let { name, last_name, phone, email, pass } = req.body;
+
+      db.User.create({
+        name,
+        last_name,
+        phone,
+        email,
+        pass,
+        avatar: req.file ? req.file.filename : "coffe_default.png",
+        rol: 2,
+      }).then(() => {
+        res.redirect("/users/login");
+      })
+
+    } else {
+
+      res.render("register", {
+        errors: errors.mapped(),
+        old: req.body,
+        session: req.session,
+      });
+
+    } 
+
   },
 
   userProfile: (req, res) => {

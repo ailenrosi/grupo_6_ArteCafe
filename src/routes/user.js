@@ -15,14 +15,14 @@ const {
 
 const loginValidator = require('../validations/loginValidator');
 const registerValidator = require('../validations/registerValidator');
-const uploadUserAvatar = require('../middlewares/uploadUserAvatar');
+const upload = require('../middlewares/uploadUserAvatar');
 const userSessionCheck = require('../middlewares/userSessionCheck');
 const userLog = require('../middlewares/userLog');
 const { get } = require('.');
 
 
 router.get('/register', userLog, register);
-router.post('/register', registerValidator, processRegister);
+router.post('/register', upload.single('avatar'), registerValidator, processRegister);
 
 /* GET - Login form */
 router.get('/login', userLog, user);

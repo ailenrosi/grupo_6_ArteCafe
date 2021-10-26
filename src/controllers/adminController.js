@@ -183,16 +183,19 @@ module.exports = {
     },
 
     deleteProduct: (req, res) => {
+       
         db.Product.destroy({
             where: {
-                id: req.params.id
-            }
+                id: req.params.id,
+               
+            } 
         })
         .then(() => {
-            return res.redirect('/admin/products', {
-                session: req.session
+            return res.redirect('/admin/products')
+               
             })
-        })
+            .catch(error => console.log(error))	
+        },
     }
 
 
@@ -208,7 +211,7 @@ module.exports = {
 
     //     res.redirect('/admin/adminProducts')
     // }
-}
+
 
 
 
