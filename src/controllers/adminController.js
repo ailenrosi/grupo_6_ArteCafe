@@ -1,5 +1,6 @@
 const db = require("../database/models");
-const { validationResult } = require('express-validator')
+const { validationResult } = require('express-validator');
+const fs = require("fs");
 //let save = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(dato,null,2),'utf-8') /* gurada en el json products */
 
 
@@ -108,7 +109,6 @@ module.exports = {
     
     productUpdate: (req, res) => {
         let errors = validationResult(req)
-        console.log(errors);
         if(errors.isEmpty()){
 
         /* let arrayImages = [];
@@ -125,8 +125,6 @@ module.exports = {
             category, 
             description
         } = req.body;
-
-        console.log("adsadadsasadad", category);
         
             db.Product.update(
                 {
@@ -182,35 +180,37 @@ module.exports = {
         });
     },
 
-    deleteProduct: (req, res) => {
+    deleteProduct: async(req, res) => {
        
-        db.Product.destroy({
+        let images = await db.Image.findAll({
+            where: {
+                Products_id : req.params.id
+            }
+        });
+
+        images.forEach( image => {
+            fs.existsSync("./public/img/imgProductos", image.image) 
+                ? fs.unlinkSync("./public/img/imgProductos/" + image.image)
+                : console.log("-- No se encontró");
+        });
+
+        await db.Image.destroy({
+            where: {
+                Products_id : req.params.id,
+            }
+        });
+
+        await db.Product.destroy({
             where: {
                 id: req.params.id,
-               
-            } 
-        })
-        .then(() => {
-            return res.redirect('/admin/products')
-               
-            })
-            .catch(error => console.log(error))	
-        },
+            }
+        });
+
+        res.redirect("/admin/products");
+
     }
 
-
-    // deleteProduct: (req, res) => {
-    //     products.forEach(product => {
-    //         if(product.id === +req.params.id){
-    //             let productAEliminar = products.indexOf(product)
-    //             products.splice(productAEliminar, 1)
-    //         }
-    //     })
-
-    //     writeProductsJSON(products)
-
-    //     res.redirect('/admin/adminProducts')
-    // }
+}
 
 
 
