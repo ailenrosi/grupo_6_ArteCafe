@@ -205,7 +205,7 @@ module.exports = {
         avatar: req.file ? req.file.filename : "coffe_default.png",
         rol: 2,
       }).then(() => {
-        res.redirect("/users/login");
+        res.redirect("/");
       })
 
     } else {

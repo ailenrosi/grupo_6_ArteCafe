@@ -33,7 +33,9 @@
                 <i class="fas fa-search" id="search-icon"></i>
                 <div class="user">
                     <% if (typeof session.user != "undefined") { %>
-                        <i class="fas fa-user"></i><span class="session"></span>
+                        <div class="img-user">
+                            <img class="icons" src="/img/users_avatars/<%= session.user.avatar %>"></a>
+                        </div>
                         <div class="menu-user">
                             <a href="/user/userProfile">Mi perfil</a>
                             <a href="/user/logout">Cerrar sesión</a>
