@@ -18,14 +18,15 @@ module.exports = {
         })
     },
 
-	products: (req, res) => {
-        db.Product.findAll().then(products => {
-            res.render('adminProducts', {
-                products,
-                session: req.session  
-            })
-      
-        })
+	products: async(req, res) => {
+        
+        let products = await db.Product.findAll();
+
+        res.render('adminProducts', {
+            products,
+            session: req.session
+        });
+        
     }, 
 
     productsCreate: (req, res) => {

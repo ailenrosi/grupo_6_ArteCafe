@@ -8,10 +8,10 @@
             
             <div class="ctn_form">
                 <a href="/" class="close_x1">&times;</a>
-                <h1 class="title">Editar Perfil</h1>
+                <h1 class="title-perfil">Editar Perfil</h1>
 
                 <form action="/user/userUpdate" method="POST" class="form-ad">
-                    <div class="user_form">
+                    <div class="campo-edit">
                         <label>Nombre</label>
                         <input type="text" name="name" value=<%=user.name%>>
                         <% if (locals.errors && errors.name) { %>
@@ -20,7 +20,7 @@
                             </small>
                             <% } %>
                     </div>
-                    <div class="user_form">
+                    <div class="campo-edit">
                         <label> Apellido </label>
                         <input type="text" name="last_name" value=<%=user.last_name%>>
                         <% if (locals.errors && errors.last_name) { %>
@@ -29,7 +29,7 @@
                             </small>
                             <% } %>
                     </div>
-                    <div class="user_form">
+                    <div class="campo-edit">
                         <label> Email </label>
                         <input type="text" name="email" value=<%=user.email%>>
                         <% if (locals.errors && errors.email) { %>
@@ -38,7 +38,7 @@
                             </small>
                             <% } %>
                     </div>
-                    <div class="user_form">
+                    <div class="campo-edit">
                         <label> Teléfono </label>
                         <input type="text" name="phone" value=<%=user.phone%>>
                         <% if (locals.errors && errors.phone) { %>
@@ -54,7 +54,9 @@
                             <%= errorMsg %>
                         </small>
                         <% } %>
+                        <div class="guardar-edit">
                             <input type="submit" value="Guardar">
+                        </div>
             </form>
 
         </div>

@@ -1,0 +1,23 @@
+
+
+.ctn_form {
+    width: 80%;
+    padding: 20px;
+    background: #f7f7f7;
+    margin: 35px;
+}
+
+
+.title-perfil{
+    text-align: center;
+    font-family: fangsong;
+    padding: 20px;
+}
+
+.campo-edit{
+color: blue;
+}
+
+.guardar-edit{
+    background-color: blue;
+}
