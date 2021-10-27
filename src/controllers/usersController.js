@@ -214,4 +214,17 @@ module.exports = {
 
     res.redirect("/");
   },
-};
+
+userDelete: (req,res) => {
+  req.session.destroy();
+  if (req.cookies.user){
+    res.cookie('user','',{maxAge:-1});
+  } 
+  db.User.destroy({
+    where:{
+      id : req.params.id
+    }
+  })
+  res.redirect('/') 
+}
+}

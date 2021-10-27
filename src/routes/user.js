@@ -9,6 +9,7 @@ const {
     profileEdit,
     userProfile,
     userUpdate,
+    userDelete,
     userEdit,
     logout,
     profile } = require('../controllers/usersController');
@@ -43,5 +44,7 @@ router.get('/userProfile', userSessionCheck, userProfile)
 router.get('/userEdit', userSessionCheck, userEdit)
 
 router.post('/userUpdate', userSessionCheck, userUpdate);
+
+router.delete('/userDelete/:id',userSessionCheck, userDelete);
 
 module.exports = router;

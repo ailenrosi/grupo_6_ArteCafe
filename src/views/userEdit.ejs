@@ -11,7 +11,7 @@
                 <h1 class="title-perfil">Editar Perfil</h1>
                 
                 <div class="profile_user_img">
-                    <img src="/img/users_avatars/<%= user.avatar %>">
+                    <img class="imagenPerfil" src="/img/users_avatars/<%= user.avatar %>">
                 </div>
 
                 <form action="/user/userUpdate" method="POST" class="form-ad">
@@ -64,6 +64,10 @@
             </form>
 
         </div>
+
+        <form action="/user/userDelete/<%= user.id%>?_method=DELETE" method="POST">
+            <button type="submit" class="btn btn-danger">Eliminarme</button>
+        </form>
 
 
         <%- include('partials/wsp.ejs') %>

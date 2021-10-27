@@ -64,3 +64,9 @@
 .profile_user_img{
     text-align: center;
 }
+
+.imagenPerfil{
+    width: 129px;
+    height: 129px;
+    border-radius: 67px;
+}
