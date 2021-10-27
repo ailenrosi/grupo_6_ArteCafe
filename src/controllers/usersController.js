@@ -4,7 +4,6 @@ let bcrypt = require("bcryptjs");
 let db = require("../database/models");
 
 module.exports = {
-  /*Register form */
   user: (req, res) => {
     res.render("user", {
       users,
@@ -57,15 +56,6 @@ module.exports = {
     }
   },
 
-  /*     profileEdit: (req, res) => {
-        let user = users.find(user => user.id === +req.params.id)
-
-        res.render('ProfileEdit', {
-            user,
-            session: req.session
-        })
-
-    },  */
   updateProfile: (req, res) => {
     let errors = validationResult(req);
 
@@ -138,62 +128,18 @@ module.exports = {
     }
   },
 
-/*   processRegister: async(req, res) => {
+  processRegister: (req, res) => {
     let errors = validationResult(req);
+
     if (req.fileValidatorError) {
       let image = {
         param: "image",
         msg: req.fileValidatorError,
       };
       errors.push(image);
-    } 
+    }
+
     if (errors.isEmpty()) {
-      let { name, last_name, email, phone, pass } = req.body;
-
-      console.log(req)
-      if(req.body.avatar.length !== 0){
-        let images = req.body.avatar.map(image=>{
-          let item ={
-            file:image.filename, 
-          }
-          return item 
-        })
-      }
-
-      let avatar = await db.Image.bulkCreate(images, { validate: true})
-      await db.User.create({
-        name,
-        last_name,
-        email,
-        phone,
-        pass: bcrypt.hashSync(pass, 12),
-        avatar: avatar[0].dataValues.id,  
-        rol: 2,
-      });
-        
-      res.redirect("/user/login");
-  
-    } else {
-      res.render("register", {
-        errors: errors.mapped(),
-        old: req.body,
-        session: req.session,
-      });
-    }
-  }, */
-
-  processRegister: (req, res) => {
-    let errors = validationResult(req);
-
-    if(req.fileValidatorError){
-      let image = {
-        param: "image",
-        msg: req.fileValidatorError,
-      };
-      errors.push(image);
-    }
-
-    if(errors.isEmpty()){
       let { name, last_name, phone, email, pass } = req.body;
 
       db.User.create({
@@ -206,18 +152,14 @@ module.exports = {
         rol: 2,
       }).then(() => {
         res.redirect("/");
-      })
-
+      });
     } else {
-
       res.render("register", {
         errors: errors.mapped(),
         old: req.body,
         session: req.session,
       });
-
-    } 
-
+    }
   },
 
   userProfile: (req, res) => {
