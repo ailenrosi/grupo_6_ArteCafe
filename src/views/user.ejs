@@ -12,20 +12,22 @@
 
                 <form action="/user/login" method="POST" class="form-ad">
                     <div class="user_form">
-                        <input type="email" name="email" placeholder="Ingresá tu email">
+                        <input id="email" type="email" name="email" placeholder="Ingresá tu email">
                         <% if (locals.errors && errors.email) { %>
                             <small class="text_error">
                                 <%= errors.email.msg %>
                             </small>
                             <% } %>
+                            <span id="emailErrors"></span>
                     </div>
                     <div class="user_form">
-                        <input type="password" name="pass" placeholder="Ingresá tu contraseña">
+                        <input id="pass" type="password" name="pass" placeholder="Ingresá tu contraseña">
                         <% if (locals.errors && errors.pass) { %>
                             <small class="text_error">
                                 <%= errors.pass.msg %>
                             </small>
                             <% } %>
+                            <span id="passErrors"></span>
                     </div>
                     <div class="check">
                         <input type="checkbox" name="remember" id="check" style="margin-top: 1.8rem;">

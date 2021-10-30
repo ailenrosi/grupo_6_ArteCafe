@@ -21,3 +21,14 @@ color: blue;
 .guardar-edit{
     background-color: blue;
 }
+
+.editButtonDiv {
+    text-align: end;
+    font-size: 15px;
+    background-color: #27ae60;
+    box-shadow: 10px 4px 26px -3px rgb(0 0 0 / 75%);
+    -webkit-box-shadow: 10px 4px 26px -3px rgb(0 0 0 / 75%);
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+}
