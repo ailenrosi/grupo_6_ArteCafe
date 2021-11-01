@@ -16,13 +16,15 @@
                     <div class="user_form">
 
                         <div class="form_user">
-                            <input type="text" name="name" placeholder="Nombre con el que te identificas"
-                                value="<%= locals.old && old.name %>">
+                            <input id="name" type="text" name="name" placeholder="Nombre"
+                                value="<%= locals.old && old.name %>">  
+                                <span id="nameErrors" class="error"></span>
                             <% if (locals.errors && errors.name) { %>
                                 <small class="text_error">
                                     <%= errors.name.msg %>
                                 </small>
                                 <% } %>
+                              
                         </div>
 
                         <div class="form_user">
@@ -33,7 +35,7 @@
                                     <%= errors.last_name.msg %>
                                 </small>
                                 <% } %>
-                        </div>
+                                <span class="error" id="last_nameErrors"></span>
 
                         <div class="form_user">
                             <input type="number" name="phone" placeholder="Telefono"
@@ -46,7 +48,7 @@
                         </div>
 
                         <div class="form_user">
-                            <input type="email" name="email" placeholder="Tu email">
+                            <input type="email" name="email" placeholder="Email">
                             <% if (locals.errors && errors.email) { %>
                                 <small class="text-danger">
                                     <%= errors.email.msg %>
@@ -55,7 +57,7 @@
                         </div>
 
                         <div class="form_user">
-                            <input type="password" name="pass" placeholder="Tu contraseña">
+                            <input type="password" name="pass" placeholder="Contraseña">
                             <% if (locals.errors && errors.pass) { %>
                                 <small class="text_error">
                                 <%= errors.pass.msg %>
@@ -104,6 +106,6 @@
 
         <%- include('partials/wsp.ejs') %>
     </body>
-    <script src="/js/user.js"></script>
+    <script src="/js/register.js"></script>
 
 </html>
