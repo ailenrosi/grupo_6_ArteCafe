@@ -19,9 +19,9 @@ window.addEventListener("load",function(){
     $form = qs("#form"),
 
 
-    regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/
+    regExAlpha = /^[0-9a-zA-Z,.\sñáéíóúü ]*$/
     regExName = /[0-9a-zA-Z]{5,50}/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-    regExDescription = /[0-9a-zA-Z]{20,200}/
+    regExDescription = /[0-9a-zA-Z,.\sñáéíóúü]{20,200}/
 
 
 $name.addEventListener("blur", function(){
@@ -30,11 +30,7 @@ $name.addEventListener("blur", function(){
           $nameErrors.innerHTML = "El campo nombre es obligatorio";
           $name.classList.add("is-invalid");
           break;
-        case !regExAlpha.test($name.value):
-          $nameErrors.innerHTML = "El nombre debe contener al menos 5 caracteres";
-          $name.classList.add("is-invalid");
-          break;  
-          case !regExName.test($name.value):
+        case !regExName.test($name.value):
             $nameErrors.innerHTML = "El nombre debe contener al menos 5 caracteres";
             $name.classList.add("is-invalid");
             break; 
@@ -93,17 +89,11 @@ $file.addEventListener('change',
         let elementosForm = this.elements
         
         for (let index = 0; index < elementosForm.length-1; index++) {
-            if(elementosForm[index].value == "" && elementosForm[index].name !== "archivo"){
+            if(elementosForm[index].value == "" && elementosForm[index].name !== "images"){
                 elementosForm[index].classList.add('is-invalid');
                 submitErrors.innerHTML = "Los campos señalados son obligatorios";
                 error = true;
             }
-        }
-    
-        if(!$terms.checked){
-            $terms.classList.add('is-invalid');
-            $termsErrors.innerHTML = "Debes aceptar las bases y condiciones"
-            error = true
         }
     
         if(!error){
