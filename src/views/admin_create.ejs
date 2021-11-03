@@ -4,14 +4,16 @@
   <main class="mainadmin">
 
     <div class="crearprod">
-      <form class="crearProducto" method="POST" enctype="multipart/form-data">
+      <form class="crearProducto" id="form" method="POST" enctype="multipart/form-data">
         <p class="titleadmin">Editar Producto</p>
 
         <label for="name">Nombre del producto</label>
-        <input type="text" name="name"/>
+        <input type="text" id="name" name="name"/>
+        <span id="nameErrors"></span>
 
         <label for="description">Descripción</label>
-        <input type="text" name="description"/>
+        <input type="text" id="description" name="description"/>
+        <span id="descriptionErrors"></span>
 
         <label for="price">Precio</label>
         <input type="number" name="price"/>
@@ -29,11 +31,17 @@
           <small class="text-danger"><%= errors.category.msg %></small>
         <% } %>
 
+        <div class="box-2 mt-3">
+          <div class="img-container" id="img-preview">
+              
+          </div>
+
         <div class="unaImagen">
           <label for="inputimage" class="adminedit">Imagen</label>
-          <input type="file" class="form-control" id="inputimage" name="images" multiple />
+          <input type="file" class="form-control" id="formFile" name="images" multiple />
+          <span id="fileErrors"></span>
         </div>
-
+        <span id="submitErrors"></span>
         <div class="botonCrear">
           <button type="submit" class="Crear">Crear</button>
         </div>
