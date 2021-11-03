@@ -1,50 +1,48 @@
-<!DOCTYPE html>
-<html lang="es">
 <%- include('partials/head_admin.ejs')%>
 <%- include('partials/header_admi.ejs')%>
-
+<body>
   <main class="mainadmin">
-    <body>
-      <div class="crearprod">
-        <form class="crearProducto" method="POST" enctype="multipart/form-data">
-          <p class="titleadmin">Editar Producto</p>
 
-          <label for="name">Nombre del producto</label>
-          <input type="text" name="name">
+    <div class="crearprod">
+      <form class="crearProducto" method="POST" enctype="multipart/form-data">
+        <p class="titleadmin">Editar Producto</p>
 
-          <label for="description">Descripción</label>
-          <input type="text" name="description">
+        <label for="name">Nombre del producto</label>
+        <input type="text" name="name"/>
 
-          <label for="price">Precio</label>
-          <input type="number" name="price">
+        <label for="description">Descripción</label>
+        <input type="text" name="description"/>
 
-          <label for="discount">Descuento</label>
-          <input type="number" name="discount">
+        <label for="price">Precio</label>
+        <input type="number" name="price"/>
 
-          <select class="form-select" id="specificSizeSelect" name="category">
-            <option selected hidden value="">Categorias</option>
-            <% categories.forEach(category => { %>
-              <option value="<%- category.id%>" <%= locals.old && old.category == category.name ? "selected" : null %>><%- category.name %></option>
-            <% }) %>
-          </select>
-          <% if(locals.errors && errors.category) {%>
-              <small class="text-danger"><%= errors.category.msg %></small>
-          <% } %>
+        <label for="discount">Descuento</label>
+        <input type="number" name="discount"/>
 
-          <div class="unaImagen">
-            <label for="inputimage" class="adminedit">Imagen</label>
-            <input type="file" class="form-control" id="inputimage" name="images"multiple>
-          </div>
+        <select class="form-select" id="specificSizeSelect" name="category">
+          <option selected hidden value="">Categorias</option>
+          <% categories.forEach(category => { %>
+            <option value="<%- category.id%>" <%= locals.old && old.category == category.name ? "selected" : null %>><%- category.name %></option>
+          <% }) %>
+        </select>
+        <% if(locals.errors && errors.category) {%>
+          <small class="text-danger"><%= errors.category.msg %></small>
+        <% } %>
 
-      </div>
-      <div class="botonCrear">
-        <button type="submit" class="Crear">Crear</button>
-      </div>
+        <div class="unaImagen">
+          <label for="inputimage" class="adminedit">Imagen</label>
+          <input type="file" class="form-control" id="inputimage" name="images" multiple />
+        </div>
+
+        <div class="botonCrear">
+          <button type="submit" class="Crear">Crear</button>
+        </div>
+
       </form>
-      </div>
-    </body>
-    </main>
-    <%- include('partials/footer.ejs') %>
+    </div>
 
-</html>
+    <script src='/js/admin_create.js'></script>
 
+  </main>
+</body>
+<%- include('partials/footer.ejs') %>

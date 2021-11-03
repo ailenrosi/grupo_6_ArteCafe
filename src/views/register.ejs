@@ -12,34 +12,36 @@
                 <a href="/" class="close_x1">&times;</a>
                 <h1 class="title">Registrate</h1>
 
-                <form action="/user/register" method="POST" enctype="multipart/form-data" class="form-ad">
+                <form action="/user/register" id="form" method="POST" enctype="multipart/form-data" class="form-ad">
                     <div class="user_form">
 
                         <div class="form_user">
                             <input id="name" type="text" name="name" placeholder="Nombre"
                                 value="<%= locals.old && old.name %>">  
-                                <span id="nameErrors" class="error"></span>
+                                <span id="nameErrors" class=""></span>
                             <% if (locals.errors && errors.name) { %>
                                 <small class="text_error">
                                     <%= errors.name.msg %>
                                 </small>
-                                <% } %>
+                            <% } %>
                               
                         </div>
 
                         <div class="form_user">
-                            <input type="text" name="last_name" placeholder="Apellido"
+                            <input type="text" id="lastname" name="last_name" placeholder="Apellido"
                                 value="<%= locals.old && old.last_name %>">
+                                <span class="errors" id="lastnameErrors"></span>
                             <% if (locals.errors && errors.last_name) { %>
-                                <small class="text_error">
+                                <small class="">
                                     <%= errors.last_name.msg %>
                                 </small>
-                                <% } %>
-                                <span class="error" id="last_nameErrors"></span>
+                             <% } %>
+                                
 
                         <div class="form_user">
-                            <input type="number" name="phone" placeholder="Telefono"
+                            <input type="number" id="phone" name="phone" placeholder="Telefono"
                             value="<%= locals.old && old.last_name %>">
+                            <span class="errors" id="phoneErrors"></span>
                             <% if (locals.errors && errors.phone) { %>
                             <small class="text_error">
                                 <%= errors.phone.msg %>
@@ -48,8 +50,10 @@
                         </div>
 
                         <div class="form_user">
-                            <input type="email" name="email" placeholder="Email">
+                            <input type="email" id="email" name="email" placeholder="Email"> 
+                            <span class="errors" id="emailErrors"></span>
                             <% if (locals.errors && errors.email) { %>
+                               
                                 <small class="text-danger">
                                     <%= errors.email.msg %>
                                 </small>
@@ -57,7 +61,8 @@
                         </div>
 
                         <div class="form_user">
-                            <input type="password" name="pass" placeholder="Contraseña">
+                            <input type="password" id="pass" name="pass" placeholder="Contraseña">
+                            <span class="errors" id="passErrors"></span>
                             <% if (locals.errors && errors.pass) { %>
                                 <small class="text_error">
                                 <%= errors.pass.msg %>
@@ -66,7 +71,8 @@
                         </div>
 
                     <div class="form_user">
-                        <input type="password" name="pass2" placeholder="Repetir contraseña">
+                        <input type="password" id="pass2" name="pass2" placeholder="Repetir contraseña">
+                        <span class="errors" id="pass2Errors"></span>
                         <% if (locals.errors && errors.pass2) { %>
                             <small class="text-danger">
                                 <%= errors.pass2.msg %>
@@ -74,17 +80,24 @@
                         <% } %>
                     </div>
 
+                    <div class="box-2 mt-3">
+                        <div class="img-container" id="img-preview">
+                            
+                        </div>
+
                     <div class="box-form">
                         <label class="img-perfil" for="imgUser">Imagen De Perfil</label>
-                        <input class="img-input" type="file" name="avatar" id="imgUser">
+                        <input class="img-input" type="file" name="avatar" id="formFile">
+                        <span id="fileErrors"></span>
                     </div>
 
                     <div class="check">
                         <input type="checkbox" name="terms" id="check" style="margin-top: 1.8rem;">
                         <label for="check">Acepto los términos y condiciones</label>
+                        <span id="termsErrors"></span>
                     </div>
                           
-                    <a href="/"><input type="submit" value="Registrarse"></a>  
+                    <a href="/"><input type="submit" id="submitErrors" value="Registrarse"></a>  
 
                     <span class="text_end">¿Ya sos miembro?
                         <a href="/user">Inicia sesion</a>
