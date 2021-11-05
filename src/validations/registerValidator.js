@@ -1,43 +1,59 @@
 const { check, body } = require('express-validator')
 const { users } = require('../data/dataBase')
+const db = require('../database/models')
 
 module.exports = [
     check('name')
     .notEmpty()
-    .withMessage('Debes ingresar un nombre'),
+    .withMessage('Debes ingresar un nombre').bail()
+    .isLength({ min:2 }).withMessage('Tu nombre debe tener mínimo 2 caracteres'),
 
     check('last_name')
     .notEmpty()
-    .withMessage('Debes ingresar un apellido'),
+    .withMessage('Debes ingresar un apellido').bail()
+    .isLength({ min:2 }).withMessage('El apellido debe tener al menos 2 caracteres'),
+
 
     check('email')
-    .notEmpty()
-    .withMessage('Debes escribir un email').bail()
-    .isEmail()
-    .withMessage('Debes escribir un email válido'),
+    .isEmail().withMessage('Debes ingresar un email válido').bail()
+    .notEmpty().withMessage('Debes ingresar un email'),
 
     body('email')
     .custom(value => {
-        let user = users.find(user => user.email === value)
+        return db.User.findOne({
+            where:{
+            email: value
+            }
+        })
+        .then(user =>{
+            if(user){
+                return Promise.reject ('Este mail ya está registrado')
+            }
+        })
+        .withMessage('Este mail ya está registrado')
 
-        if(user === undefined){
-            return true
-        }else{
-            return false
-        }
-    })
-    .withMessage("Email ya registrado"),
+       
+    }),
 
     check('pass')
-    .notEmpty()
-    .withMessage('Debes escribir tu contraseña')
+    .notEmpty().withMessage('Debes escribir tu contraseña')
     .isLength({
         min: 8
     })
     .withMessage('La contraseña debe tener como mínimo 8 caracteres'),
 
+    check('pass')
+    .isAlphanumeric(['es-ES'])
+    .withMessage('La contraeña debe tener al menos una letra y número'),
+
+
     body('pass2')
-    .custom((value, {req}) => value !== req.body.pass ? false : true)
+    .custom(function(value,{req}){
+        if(value != req.body.pass){
+            return false
+        } return true
+    })
+    
     .withMessage('Las contraseñas no coinciden'),
 
     check('terms')
