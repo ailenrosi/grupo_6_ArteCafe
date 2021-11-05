@@ -1,7 +1,7 @@
 module.exports= {
   "development": {
     "username": "root",
-    //"password": "password",
+    "password": "password",
     "database": "arte_cafe",
     "host": "127.0.0.1",
     "dialect": "mysql"

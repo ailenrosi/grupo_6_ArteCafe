@@ -12,7 +12,7 @@ module.exports = [
     .isLength({ min:2 }).withMessage('El apellido debe tener al menos 2 caracteres'),
 
 
-    /* check('email')
+    check('email')
     .isEmail().withMessage('Debes ingresar un email válido').bail()
     .notEmpty().withMessage('Debes ingresar un email'),
 
@@ -31,7 +31,7 @@ module.exports = [
         .withMessage('Este mail ya está registrado')
 
        
-    }), */
+    }),
 
     check('pass')
     .notEmpty().withMessage('Debes escribir tu contraseña')
