@@ -20,7 +20,7 @@ window.addEventListener("load",function(){
 
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/
     regExName = /[0-9a-zA-Z]{5,50}/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-    regExDescription = /[0-9a-zA-Z]{20,200}/
+    regExDescription = /[0-9a-zA-Z,.\sñáéíóúü]{20,200}/
 
 
 $name.addEventListener("blur", function(){

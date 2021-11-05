@@ -7,11 +7,17 @@
              <div class="elProducto">
                <label for="inputname" class="form-label">Producto</label>
                <input type="text" class="form-control" id="name" name="name" value="<%=product.name%>" />
+               <% if(locals.errors && errors.name) {%>
+                <small class="text-danger"><%= errors.name.msg %></small>
+                <% } %>
                <span id="nameErrors"></span>
              </div>
              <div class="Descripcion1">
-               <label for="description" class="form-label">Descripcion</label>
+               <label for="description" class="form-label">Descripcion</label> 
                <input type="text" class="form-control" id="description" name="description" value="<%=product.description%>" />
+               <% if (locals.errors && errors.description) { %>
+                <small class="text-danger"><%= errors.description.msg %></small>
+                <% } %>
              <span id="descriptionErrors"></span>
               </div>
              <div class="Precio1">

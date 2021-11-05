@@ -18,13 +18,13 @@
                         <div class="form_user">
                             <input id="name" type="text" name="name" placeholder="Nombre"
                                 value="<%= locals.old && old.name %>">  
-                                <span id="nameErrors" class=""></span>
+                           
                             <% if (locals.errors && errors.name) { %>
                                 <small class="text_error">
                                     <%= errors.name.msg %>
                                 </small>
                             <% } %>
-                              
+                               <span id="nameErrors" class=""></span>    
                         </div>
 
                         <div class="form_user">

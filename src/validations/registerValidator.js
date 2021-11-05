@@ -4,11 +4,11 @@ const { users } = require('../data/dataBase')
 module.exports = [
     check('name')
     .notEmpty()
-    .withMessage('Debes escribir un email'),
+    .withMessage('Debes ingresar un nombre'),
 
     check('last_name')
     .notEmpty()
-    .withMessage('Debes escribir un email'),
+    .withMessage('Debes ingresar un apellido'),
 
     check('email')
     .notEmpty()
@@ -32,9 +32,9 @@ module.exports = [
     .notEmpty()
     .withMessage('Debes escribir tu contraseña')
     .isLength({
-        min: 4
+        min: 8
     })
-    .withMessage('La contraseña debe tener como mínimo 4 caracteres'),
+    .withMessage('La contraseña debe tener como mínimo 8 caracteres'),
 
     body('pass2')
     .custom((value, {req}) => value !== req.body.pass ? false : true)
@@ -42,5 +42,12 @@ module.exports = [
 
     check('terms')
     .isString('on')
-    .withMessage('Debes aceptar los términos y condiciones')
+    .withMessage('Debes aceptar los términos y condiciones'),
+
+    check('terms')
+    .isString('on')
+    .withMessage('Debes aceptar las bases y condiciones')
 ]
+
+  
+        

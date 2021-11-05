@@ -37,11 +37,16 @@ function qs(element) {
       regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
       regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
       regExPhone = /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/
+      regExName = /[0-9a-zA-Z]{2,50}/,
   
     $inputName.addEventListener("blur", function () {
       switch (true) {
         case !$inputName.value.trim():
           $nameErrors.innerHTML = "El campo nombre es obligatorio";
+          $inputName.classList.add("is-invalid");
+          break;
+          case !regExName.test($inputName.value):
+          $nameErrors.innerHTML = "Debes ingresar al menos 2 caracteres";
           $inputName.classList.add("is-invalid");
           break;
         case !regExAlpha.test($inputName.value):
@@ -61,6 +66,10 @@ function qs(element) {
       switch (true) {
         case !$inputLastname.value.trim():
           $lastnameErrors.innerHTML = "El campo apellido es obligatorio";
+          $inputLastname.classList.add("is-invalid");
+          break;
+          case !regExName.test($inputLastname.value):
+          $lastnameErrors.innerHTML = "Debes ingresar al menos 2 caracteres";
           $inputLastname.classList.add("is-invalid");
           break;
         case !regExAlpha.test($inputLastname.value):

@@ -9,14 +9,29 @@
 
         <label for="name">Nombre del producto</label>
         <input type="text" id="name" name="name"/>
+        <% if (locals.errors && errors.name) { %>
+          <small class="text_error">
+              <%= errors.name.msg %>
+          </small>
+      <% } %>
         <span id="nameErrors"></span>
 
         <label for="description">Descripción</label>
         <input type="text" id="description" name="description"/>
+        <% if (locals.errors && errors.description) { %>
+          <small class="text_error">
+              <%= errors.description.msg %>
+          </small>
+      <% } %>
         <span id="descriptionErrors"></span>
 
         <label for="price">Precio</label>
         <input type="number" name="price"/>
+        <% if (locals.errors && errors.price) { %>
+          <small class="text_error">
+              <%= errors.price.msg %>
+          </small>
+      <% } %>
 
         <label for="discount">Descuento</label>
         <input type="number" name="discount"/>
