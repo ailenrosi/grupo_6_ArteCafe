@@ -1,4 +1,3 @@
-const cart = require('../data/dataBase')
 
 module.exports = {
     cart: (req, res) => {
