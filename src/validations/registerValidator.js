@@ -1,4 +1,5 @@
 const { check, body } = require('express-validator')
+const db = require('../database/models');
 
 module.exports = [
     check('name')
@@ -28,10 +29,8 @@ module.exports = [
                 return Promise.reject ('Este mail ya está registrado')
             }
         })
-        .withMessage('Este mail ya está registrado')
-
-       
-    }),
+        
+    }).withMessage('Este mail ya está registrado'),
 
     check('pass')
     .notEmpty().withMessage('Debes escribir tu contraseña')
@@ -51,16 +50,13 @@ module.exports = [
             return false
         } return true
     })
-    
     .withMessage('Las contraseñas no coinciden'),
 
     check('terms')
     .isString('on')
     .withMessage('Debes aceptar los términos y condiciones'),
 
-    check('terms')
-    .isString('on')
-    .withMessage('Debes aceptar las bases y condiciones')
+
 ]
 
   
