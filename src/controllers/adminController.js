@@ -1,7 +1,6 @@
 const db = require("../database/models");
 const { validationResult } = require('express-validator');
 const fs = require("fs");
-//let save = (dato) => fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(dato,null,2),'utf-8') /* gurada en el json products */
 
 
 module.exports = {
@@ -112,12 +111,7 @@ module.exports = {
         let errors = validationResult(req)
         if(errors.isEmpty()){
 
-        /* let arrayImages = [];
-        if(req.files){
-            req.files.forEach(image => {
-                arrayImages.push(image.filename)
-            })
-        } */
+    
         
         let {
             name, 
@@ -147,34 +141,7 @@ module.exports = {
             .catch((error)=> console.log(error));
         }
     },
-       /*  products.forEach( product => {
-            if(product.id === +req.params.id){
-                product.id = product.id,
-                product.name = name,
-                product.price = price,
-                product.description = description,
-                product.discount = discount,
-                product.category = category,
-                product.image = arrayImages > 0 ? arrayImages : product.image
-               
-            }
-        })
-        writeProductsJSON(products)
-
-        res.redirect('/admin/products')
-        } else {
-            let product = products.find(product => product.id === +req.params.id)
-
-            res.render("admin_edit", {
-                categories,
-                product,
-                errors: errors.mapped(),
-                old: req.body,
-                session: req.session
-            })
-        }
-    },
- */
+      
     adminProducts: (req,res) => {
         res.render('adminProducts',{
             products

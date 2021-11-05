@@ -40,21 +40,7 @@ module.exports = {
 
     },
 
-    /*
-    detail: (req, res) => {
-        let productsSlider = products.filter(product => product.category === 'cafeteras');
-        let productID = +req.params.id;
-        let product = products.find(product => product.id === productID);
-
-        res.render('productsDetail', {
-            product,
-            titleSlider: "No te lo pierdas.",
-            productsSlider,
-            toThousand
-        })
-    }, 
-    */
-
+  
     products: (req, res) => {
         db.Product.findAll({
             include: [
@@ -72,15 +58,6 @@ module.exports = {
         })
     },
 
-    /*
-    products: (req, res) => {
-        res.render('products', {
-            products,
-            toThousand
-        })
-    },
-    */
-
     productsDesc: (req, res) => {
         db.Product.findAll({
             include: [
@@ -96,12 +73,6 @@ module.exports = {
             })
         });       
     },
-
-    /*
-    productsDesc: (req, res) => {
-        res.render('productsDesc');
-    },
-    */
 
     accesorios: (req, res) => {
         db.Product.findAll({
@@ -122,19 +93,6 @@ module.exports = {
         })
     },
 
-    /*
-    accesorios: (req, res) => {
-        let productID = +req.params.id;
-        let product = products.find(product => product.id === productID);
-        let productAccesorios = products.filter(product => product.category === 'accesorios');
-        res.render('accesorios', {
-             productAccesorios,
-             product,
-             toThousand
-            });
-    },
-    */
-
     cafeteras: (req, res) => {
         db.Product.findAll({
             where: {
@@ -153,18 +111,5 @@ module.exports = {
             })
         })
     }
-
-    /*
-    cafeteras: (req, res) =>{    
-        let cafeteras = products.filter(product => product.category === 'cafeteras');
-        let productID = +req.params.id;
-            let product = products.find(product => product.id === productID);
-        res.render('cafeteras',{
-            cafeteras,
-            product,
-            toThousand
-        })
-    }
-    */
 
 }

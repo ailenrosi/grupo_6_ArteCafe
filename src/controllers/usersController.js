@@ -1,4 +1,4 @@
-const { users, writeUsersJSON } = require("../data/dataBase");
+
 const { validationResult } = require("express-validator");
 let bcrypt = require("bcryptjs");
 let db = require("../database/models");
@@ -6,7 +6,6 @@ let db = require("../database/models");
 module.exports = {
   user: (req, res) => {
     res.render("user", {
-      users,
       session: req.session,
     });
   },
