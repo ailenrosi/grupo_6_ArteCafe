@@ -1,10 +1,4 @@
 const { check, body } = require('express-validator')
-<<<<<<< HEAD
-
-=======
-const { users } = require('../data/dataBase')
-const db = require('../database/models')
->>>>>>> 38d0ed2b1f7e7a247fb035d48920a3c56e713914
 
 module.exports = [
     check('name')
