@@ -35,8 +35,8 @@ function qs(element) {
       
       regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,
       regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-      regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
-      regExPhone = /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/D
+      regExPass = /[0-9a-zA-Z]{8,50}/,
+      regExPhone = /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/
       regExName = /[0-9a-zA-Z]{2,50}/,
   
     $inputName.addEventListener("blur", function () {
@@ -125,7 +125,7 @@ function qs(element) {
                 $pass.classList.add('is-invalid')
                 break;
             case !regExPass.test($pass.value):
-                $passErrors.innerHTML = 'La contraseña debe tener: entre 6 o 12 caracteres, al menos una mayúscula, una minúscula y un número';
+                $passErrors.innerHTML = 'La contraseña debe tener al menos 8 caracteres';
                 $pass.classList.add('is-invalid')
                 break
             default:

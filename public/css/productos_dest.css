@@ -101,7 +101,7 @@
   font-size: 1.5rem;
   color:#999;
   font-weight: lighter;
-  text-decoration: line-through;
+ 
 }
 .products .box-container .box .content .price h2:hover{
   color: rgb(78, 238, 45);
