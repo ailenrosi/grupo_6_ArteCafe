@@ -171,7 +171,7 @@ input[type="submit"]:hover {
 	cursor: pointer;
   }
   
-span {
+.spanColor {
     color: red;
 }
 /* RESPONSIVE */
