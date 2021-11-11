@@ -32,6 +32,7 @@ module.exports = {
                     titleSlider: "No te lo pierdas.",
                     productsSlider,
                     product,
+                    session: req.session,
                     toThousand
                 })
             })
