@@ -1,92 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('partials/head.ejs' , {title: 'Tu búsqueda' }) %>
+<%- include('partials/head.ejs' , {title: 'Productos' }) %>
 
   <body class="productos">
     <!-- comienza header  --->
     <%- include('partials/header.ejs') %>
-
-      <!-- titulo  -->
-      <h1 class="heading_p" style="font-size: 2.3rem; margin-top: 8.6rem;text-align: center;">Productos encontrados
-        para:<span>
-          <%= search %>
-        </span></h1>
-
+      
+      </h1>
       <!-- boton atrás  -->
       <div class="atras">
-        <a href="/" style="color: teal;">Volver</a>
+        <a href="/" style="color: teal">Volver</a>
       </div>
-
-      <!-- product section  -->
-      <section class="produc_page" id="produc_page">
-        <% if (result.length> 0) { %>
-          
-            <div class="box-container">
-              <% result.forEach(product=> { %>
-              <div class="box">
-                <span class="discount">-
-                  <%= product.discount %>%
-                </span>
-                <div class="icons">
-                  <a href="/products/productsDetail/<%- product.id%>" class="fas fa-eye"></a>
-                </div>
-                <img src="/img/imgProductos/<%- product.images[0].image%>" alt="">
-                <h3>
-                  <%- product.name %>
-                </h3>
-                <div class="info_pro">
-                  <p class="info_p">
-                    <%- product.description %>
-                  </p>
-                </div>
-                <div class="price"> $<%= toThousand(product.price) %> <span> $<%- toThousand(product.price -
-                        product.price * product.discount /100) %> </span>
-                </div>
-                <div class="quantity">
-                  <label for="cantidad">Cantidad</label>
-                  <div class="counter">
-                    <button type="button" class="btn-subtract" onclick="subtract();">
-                      -
-                    </button>
-
-                    <div id="count" style="padding-top: 1.5rem;">1</div>
-
-                    <button type="button" id="btn-add" onclick="add();">
-                      +
-                    </button>
-                  </div>
-                </div>
-                <a href="/products/productsDetail/<%- product.id%>" class="btn">Agregar al carrito</a>
-              </div>
-              <% }) %>
-                <% } else { %>
-                  <div class="col-12">
-                    <h2 class="products-title" style="color: tomato;">No hay productos que coincidan
-                      con esa
-                      búsqueda</h2>
-                  </div>
-                  <% } %>
-
-            </div>
-
+      <h1 class="heading_p" style="font-size: 2.3rem; margin-top: 8.6rem; text-align: center">
+        Productos encontrados para:<span>
+          <%= search %>
+        </span>
+     
+      <section class="products" id="products">
+        <div class="box-container">
+              <% if (result.length > 0) { %>
+                
+                  <section class="products" id="products">
+                      <% result.forEach(product => { %>
+                        <div class="box-container">
+                              <a href="/products/detail/<%- product.id %>">
+                                  <div class="discount"><%- product.discount %>% OFF</div>
+                                  <div class="image">
+                                    <img src="/images/productos/<%- product.images[0].image%>" alt="">
+                                  </div>
+                                 
+                                  <p class="productName"> 
+                                      <% if (product.name.length > 30) { %>
+                                          <%- `${product.name.slice(0,30)}...` %>
+                                      <% } else { %>
+                                          <%= product.name %>
+                                      <% } %></p>
+                                      <div class="price">$<%= toThousand(product.price)%>
+                              </a>
+                          </div>
+                      <% }) %> 
+                  </section> 
+              <% }else{%>
+                  <h2 class="subtitle">No hay resultados de la búsqueda de <%- search %></h2>
+              <% } %>
+          </div>
       </section>
 
-
-      <!-- boton atrás  -->
-      <div class="atras" style="text-align: center;">
-        <a class="btn" href="/">Volver</a>
+      <div class="btn_volver" style="text-align: center;">
+        <a href="/" class="btn">Volver</a>
       </div>
-
-      <!-- banner  -->
       <%- include('partials/banner.ejs') %>
-
         <!----   Comieza footer     ----->
         <%- include('partials/footer.ejs') %>
 
+          <script src="js/main.js"></script>
+
+
 
   </body>
-  <!-- agrega unidades  -->
-  <script src="/js/productDetail.js"></script>
 
 </html>
