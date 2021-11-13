@@ -6,7 +6,7 @@
   <body class="productos">
     <!-- comienza header  --->
     <%- include('partials/header.ejs') %>
-      
+
       </h1>
       <!-- boton atrás  -->
       <div class="atras">
@@ -16,45 +16,65 @@
         Productos encontrados para:<span>
           <%= search %>
         </span>
-     
-      <section class="products" id="products">
-        <div class="box-container">
-              <% if (result.length > 0) { %>
-                
-                  <section class="products" id="products">
-                      <% result.forEach(product => { %>
-                        <div class="box-container">
-                              <a href="/products/detail/<%- product.id %>">
-                                  <div class="discount"><%- product.discount %>% OFF</div>
-                                  <div class="image">
-                                    <img src="/images/productos/<%- product.images[0].image%>" alt="">
-                                  </div>
-                                 
-                                  <p class="productName"> 
-                                      <% if (product.name.length > 30) { %>
-                                          <%- `${product.name.slice(0,30)}...` %>
-                                      <% } else { %>
-                                          <%= product.name %>
-                                      <% } %></p>
-                                      <div class="price">$<%= toThousand(product.price)%>
-                              </a>
-                          </div>
-                      <% }) %> 
-                  </section> 
-              <% }else{%>
-                  <h2 class="subtitle">No hay resultados de la búsqueda de <%- search %></h2>
-              <% } %>
+<main>
+  <% if (result.length> 0) { %>
+
+        <section class="products" id="products">
+          
+             <% result.forEach(product=> { %>
+            <div class="box-container">
+             
+                <div class="box">
+                  <span class="discount">-<%= product.discount %>%</span>
+                  <div class="image">
+                    <img class="img_pro" style="max-height: 210px;
+                          min-width: 210px;" src="img/imgProductos/<%= product.images[0]?.image%> "
+                      alt="<%= product.name%>">
+                    <div class="icons">
+                      <a href="/products/productsDetail/<%= product.id%>">Ver</a>
+                      <a href="#" class="cart-btn">Agregar</a>
+                      <a href="#" class="fas fa-share"></a>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <h3 style="color: chartreuse;">
+                      <%= product.name%>
+                    </h3>
+                    <span>
+                      <%= product.discount !==0 ? `${product.discount}% OFF` : "" %>
+                    </span>
+                    <div class="price">$<%= toThousand(product.price)%>
+                        <h2>
+                          $<%= toThousand(product.price - product.price * product.discount / 100)%>
+                        </h2>
+                    </div>
+                    <p style="font-size: 50%;">
+                      <%= product.description %>
+                    </p>
+                  </div>
+                </div>
+            </div>
+            <% }) %>
+              </div>
+        </section>
+        <% } else { %>
+          <div class="col-12">
+            <h2 class="products-title" style="color: tomato">
+              No hay productos que coincidan con esa búsqueda
+            </h2>
           </div>
-      </section>
+          <% } %>
 
-      <div class="btn_volver" style="text-align: center;">
-        <a href="/" class="btn">Volver</a>
-      </div>
-      <%- include('partials/banner.ejs') %>
-        <!----   Comieza footer     ----->
-        <%- include('partials/footer.ejs') %>
+        </main>
 
-          <script src="js/main.js"></script>
+            <div class="btn_volver" style="text-align: center;">
+              <a href="/" class="btn">Volver</a>
+            </div>
+            <%- include('partials/banner.ejs') %>
+              <!----   Comieza footer     ----->
+              <%- include('partials/footer.ejs') %>
+
+                <script src="js/main.js"></script>
 
 
 

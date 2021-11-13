@@ -84,14 +84,15 @@
                                     <h3>
                                         <%= product.name%>
                                     </h3>
+                                    <span>
+                                        <%= product.discount !==0 ? `${product.discount}% OFF` : "" %>
+                                    </span>
                                     <div class="price">$<%= toThousand(product.price)%>
                                             <h2>
                                                 $<%= toThousand(product.price - product.price * product.discount /
                                                     100)%>
                                             </h2>
-                                            <span>
-                                                <%= product.discount !==0 ? `${product.discount}% OFF` : "" %>
-                                            </span>
+                                          
                                     </div>
                                 </div>
                             </div>
@@ -127,7 +128,7 @@
                 </section>
 
                 <!--- sobre nosotros-->
-                <section class="about" id="about">
+               <!-- <section class="about" id="about">
 
                     <h1 class="heading"> Sobre nosotros </h1>
                     <div class="row">
@@ -148,7 +149,28 @@
                     </div>
 
                 </section>
+            -->
 
+            <section class="about" id="about">
+
+                <h1 class="heading"> Artesanos del café <span>Sobre nosostros</span> </h1>    
+            
+                <div class="row">
+            
+                    <div class="image">
+                        <img src="/img/img_home/empleados.png" alt="">
+                    </div>
+            
+                    <div class="content">
+                        <h3 class="title">Una empresa con un café especial!</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse et commodi, ad, doloremque obcaecati maxime quam minima dolore mollitia saepe quos, debitis incidunt. Itaque possimus adipisci ipsam harum at autem.</p>
+                        <a href="/sobre_nosotros" class="btn">Leer mas</a>
+                        
+                    </div>
+            
+                </div>
+            
+            </section>
                 <!--- video-------->
                 <section class="video" id="video">
 
