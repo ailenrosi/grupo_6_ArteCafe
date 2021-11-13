@@ -1,23 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
+
 <%- include('partials/head.ejs')%>
 
     <body class="prod_det">
         <%- include('partials/header.ejs') %>
        
             <main class="productDetail-container">
-                <h1 style="padding-top: 9.5rem; text-align: center;">Estás viendo <span><%= product.name %></span> </h1>
+                <h1 style="padding-top: 9.5rem; text-align: center;"> <%= product.name %> </h1>
                 <section class="productDetail">
 
                     <div class="images-container">
 
                         <div class="thumbnailImages">
 
-                            <img src="/img/imgProductos/<%-product.images[0].image %>" alt="Imagen de producto">
+                            <img class="imgChica" name="imgChica" src="/img/imgProductos/<%-product.images[0].image %>" alt="Imagen de producto" width="400">
                         </div><!-- Imagen pequeña del producto-->
 
-                        <div class="mainImage">
-                            <img src="/img/imgProductos/<%= product.images[0].image %>" alt="Imagen de producto"
+                        <div  class="mainImage">
+                            <img class="imgGrande" name="imgGrande" src="/img/imgProductos/<%= product.images[0].image %>" alt="Imagen de producto" width="800"
                                 id="expandedImg">
                         </div> <!-- Imagen agrandada del producto-->
                     </div>

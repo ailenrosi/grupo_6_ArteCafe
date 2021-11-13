@@ -1,3 +1,24 @@
+.imgGrande{
+   
+    top:0px;
+    left: 0px;
+    border: 0px;
+    overflow: hidden;
+    display: block;  
+    
+  clip: rect(0px, 100px, 100px, 0px);
+}
+
+.imgChica{
+
+    top:0px;
+    left: 0px;
+    border: 0px;
+    overflow: hidden;
+    display: block;  
+    
+}
+
 .prod_det{
     background-color: rgb(243, 244, 245);
 }
