@@ -1,5 +1,4 @@
 
-
 #home{
     background:url(/img/img_home/img-1-cafetera.jpg) no-repeat;
     background-size: cover;
@@ -8,7 +7,7 @@
     animation: move 19s infinite linear alternate;
     display: flex;
     align-items: center;
-    min-height: 150vh;
+    min-height: 90vh;
     width: 100%;
 }
   
@@ -74,8 +73,6 @@
         
     .home .content{
         max-width: 35rem;
-        padding: 1.1rem;  
-        
     }
     }
 

@@ -33,14 +33,14 @@
                 <i class="fas fa-search" id="search-icon"></i>
                 <div class="user">
                     <% if (typeof session.user != "undefined") { %>
-                        <div class="img-user">
+                        <div class="img-user" >
                             <img class="icons" src="/img/users_avatars/<%= session.user.avatar %>"></a>
                         </div>
                         <div class="menu-user">
-                            <a href="/user/userProfile">Mi perfil</a>
-                            <a href="/user/logout">Cerrar sesión</a>
+                            <a href="/user/userProfile" style="background:white;">Mi perfil</a>
+                            <a href="/user/logout" style="background:white;">Cerrar sesión</a>
                             <% if (session.user.rol === 1) { %>
-                                <a href="/admin/products">Productos Admin</a>
+                                <a href="/admin/products" >Productos Admin</a>
                             <% } %>
                         </div>
                     <% } else {%>
