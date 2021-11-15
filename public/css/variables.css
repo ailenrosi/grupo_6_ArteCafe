@@ -9,4 +9,9 @@
     --letras: rgb(0, 128, 79);
     --blue:#2c2c54;
     --linear-gradient: 90deg,#038166, #22e2a9;
-}
+    --main-color: #443;
+    --border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95%/95% 4% 92% 5%;
+    --border: 0.2rem solid var(--main-color);
+    --border-hover: 0.2rem dashed var(--main-color);
+  }

@@ -162,22 +162,22 @@
 
 
 */
-:root{
-  --main-color:#443;
-  --border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
-  --border-radius-hover:4% 95% 6% 95%/95% 4% 92% 5%;
-  --border:.2rem solid var(--main-color);
-  --border-hover:.2rem dashed var(--main-color);
+:root {
+  --main-color: #443;
+  --border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+  --border-radius-hover: 4% 95% 6% 95%/95% 4% 92% 5%;
+  --border: 0.2rem solid var(--main-color);
+  --border-hover: 0.2rem dashed var(--main-color);
 }
-.about .heading{
-font-size: 5rem;
-text-transform: uppercase;
-color: transparent;
--webkit-text-stroke: 0.05rem var(--main-color);
-letter-spacing: .2rem;
-text-align: center;
-pointer-events: none;
-position: relative;
+.about .heading {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 0.05rem var(--main-color);
+  letter-spacing: 0.2rem;
+  text-align: center;
+  pointer-events: none;
+  position: relative;
 }
 
 .about .heading span {
@@ -189,58 +189,64 @@ position: relative;
   color: var(--main-color);
   font-size: 2rem;
 }
-.about .row{
+.about .row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap:1rem;
+  gap: 1rem;
 }
 
-.about .row .image{
-  flex:1 1 42rem;
+.about .row .image {
+  flex: 1 1 42rem;
 }
 
-.about .row .image img{
+.about .row .image img {
   width: 100%;
-  animation:aboutImage 4s linear infinite;
+  animation: aboutImage 4s linear infinite;
 }
 
 @keyframes aboutImage {
-  0%, 100%{
-      transform: scale(.9);
-      border-radius: var(--border-radius-hover);
+  0%,
+  100% {
+    transform: scale(0.9);
+    border-radius: var(--border-radius-hover);
   }
-  50%{
-      transform: scale(.8);
-      border-radius: var(--border-radius);
+  50% {
+    transform: scale(0.8);
+    border-radius: var(--border-radius);
   }
 }
 
-.about .row .content{
-  flex:1 1 42rem;
+.about .row .content {
+  flex: 1 1 42rem;
+  margin:1.2rem;
 }
 
-.about .row .content .title{
-  color:var(--main-color);
+.about .row .content .title {
+  color: var(--main-color);
   font-size: 3rem;
   line-height: 1.8;
 }
 
-.about .row .content p{
-  color:var(--main-color);
+.about .row .content p {
+  color: var(--main-color);
   font-size: 1.5rem;
   line-height: 1.8;
-  padding:1rem 0;
+  padding: 1rem 0;
+  text-align: justify;
 }
-
 
 @media (max-width: 768px) {
-
-.about .heading span {
-  top: 72%;
-  font-size: .5rem;
-}
-.about .heading{
-  font-size: 2rem
+  .about .heading span {
+    top: 72%;
+    font-size: 0.5rem;
+  }
+  .about .heading {
+    font-size: 2rem;
+  }
+  
+.about .row .content p {
+  margin: 1 rem;
+  text-align: justify;
 }
 }

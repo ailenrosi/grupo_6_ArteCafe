@@ -8,7 +8,7 @@
 }
 
 .btn_news{
-    padding: 0.8rem 1.1rem;
+    padding: 0.9rem 1.1rem;
     
 }
 input.box_news {
@@ -83,7 +83,6 @@ input.box_news {
     #newsletter form .box_news {
       width: 100%;
       padding: .7rem 1rem;
-      font-size: .8rem;
     }
    #newsletter  h3{
       font-size: 1.2rem;

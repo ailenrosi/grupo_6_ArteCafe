@@ -12,11 +12,11 @@
                     <span>Arte café</span>
                     <h3>Sabores del mundo</h3>
                     <p> Café de especialidad
-                        cafeteras, accesorios 
+                        cafeteras, accesorios
                         y todo lo que necesitas
                         para disfrutar del arte del café
-                         
-                    <a href="/products" class="btn">Ver productos</a>
+
+                        <a href="/products" class="btn">Ver productos</a>
                 </div>
 
             </section>
@@ -63,7 +63,7 @@
                 </section>
 
                 <!-- productos descuentos  -->
-                <h1 class="heading"> Productos con descuentos </h1>
+                <h1 class="heading"> Productos con <span style="color: greenyellow; font-size: 100%;"> descuentos</span></h1>
                 <section class="products" id="products">
 
                     <% productsDesc.forEach(product=> { %>
@@ -92,7 +92,7 @@
                                                 $<%= toThousand(product.price - product.price * product.discount /
                                                     100)%>
                                             </h2>
-                                          
+
                                     </div>
                                 </div>
                             </div>
@@ -128,49 +128,29 @@
                 </section>
 
                 <!--- sobre nosotros-->
-               <!-- <section class="about" id="about">
 
-                    <h1 class="heading"> Sobre nosotros </h1>
+                <section class="about" id="about">
+
+                    <h1 class="heading"> Artesanos del café <span >Sobre nosostros</span> </h1>
+
                     <div class="row">
+
                         <div class="image">
-                            <img src="/img/img_home/logo_black.jpeg" alt="logo_black">
+                            <img src="/img/img_home/empleados.png" alt="">
                         </div>
 
                         <div class="content">
-                            <h3>¿Sabes por qué nuestro cafe es tan especial?</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui ea ullam, enim
-                                tempora ipsum fuga alias quae ratione a officiis id temporibus autem? Quod nemo facilis
-                                cupiditate. Ex, vel?</p>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit amet enim quod veritatis,
-                                nihil voluptas culpa! Neque consectetur obcaecati sapiente?</p>
+                            <h3 class="title">Una empresa con un café especial!</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse et commodi, ad, doloremque
+                                obcaecati maxime quam minima dolore mollitia saepe quos, debitis incidunt. Itaque
+                                possimus adipisci ipsam harum at autem.</p>
                             <a href="/sobre_nosotros" class="btn">Leer mas</a>
+
                         </div>
 
                     </div>
 
                 </section>
-            -->
-
-            <section class="about" id="about">
-
-                <h1 class="heading"> Artesanos del café <span>Sobre nosostros</span> </h1>    
-            
-                <div class="row">
-            
-                    <div class="image">
-                        <img src="/img/img_home/empleados.png" alt="">
-                    </div>
-            
-                    <div class="content">
-                        <h3 class="title">Una empresa con un café especial!</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse et commodi, ad, doloremque obcaecati maxime quam minima dolore mollitia saepe quos, debitis incidunt. Itaque possimus adipisci ipsam harum at autem.</p>
-                        <a href="/sobre_nosotros" class="btn">Leer mas</a>
-                        
-                    </div>
-            
-                </div>
-            
-            </section>
                 <!--- video-------->
                 <section class="video" id="video">
 
@@ -205,7 +185,8 @@
                     <h3>Recibí las mejores ofertas y novedades</h3>
 
                     <form action="">
-                        <input style="background-color: #e2dfdf;"  class="box_news" type="email" placeholder="Dejanos tu email">
+                        <input style="background-color: #e2dfdf;" class="box_news" type="email"
+                            placeholder="Dejanos tu email">
                         <input type="submit" value="subscribirte">
                     </form>
 
