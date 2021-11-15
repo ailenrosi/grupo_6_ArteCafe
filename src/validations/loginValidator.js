@@ -3,12 +3,9 @@ let bcrypt = require('bcryptjs')
 let db = require ("../database/models"); 
 
 module.exports = [
-
-    check('email')
-    .notEmpty()
-    .withMessage('Debes escribir un email').bail()
-    .isEmail()
-    .withMessage('Debes escribir un email válido'),
+  
+    check('email').not().isEmpty().normalizeEmail().withMessage('Debes escribir un email').bail(),
+    check('email').isEmail().withMessage('Debes escribir un email válido').bail(),
 
     body('pass').custom((value, {req}) => {
         return db.User.findOne({

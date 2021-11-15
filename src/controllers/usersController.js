@@ -109,6 +109,7 @@ module.exports = {
             res.cookie("userarte_cafe", req.session.user, {
               expires: new Date(Date.now() + 900000),
               httpOnly: true,
+              secure: true,
             });
           }
 

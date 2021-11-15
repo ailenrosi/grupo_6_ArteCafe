@@ -32,7 +32,7 @@
                                 value="<%= locals.old && old.last_name %>">
                                 <span class="errors" id="lastnameErrors"></span>
                             <% if (locals.errors && errors.last_name) { %>
-                                <small class="">
+                                <small class="text_error">
                                     <%= errors.last_name.msg %>
                                 </small>
                              <% } %>
@@ -54,7 +54,7 @@
                             <span class="errors" id="emailErrors"></span>
                             <% if (locals.errors && errors.email) { %>
                                
-                                <small class="text-danger">
+                                <small class="text_error">
                                     <%= errors.email.msg %>
                                 </small>
                             <% } %>
@@ -74,7 +74,7 @@
                         <input type="password" id="pass2" name="pass2" placeholder="Repetir contraseña">
                         <span class="errors" id="pass2Errors"></span>
                         <% if (locals.errors && errors.pass2) { %>
-                            <small class="text-danger">
+                            <small class="text_error">
                                 <%= errors.pass2.msg %>
                             </small>
                         <% } %>
@@ -88,7 +88,12 @@
                     <div class="box-form">
                         <label class="img-perfil" for="imgUser">Imagen De Perfil</label>
                         <input class="img-input" type="file" name="avatar" id="formFile">
-                        <span id="fileErrors"></span>
+                        <span id="text"></span>
+                        <% if (locals.errors && errors.file) { %>
+                            <small class="text_error">
+                                <%= errors.file.msg %>
+                            </small>
+                        <% } %>
                     </div>
 
                     <div class="check">

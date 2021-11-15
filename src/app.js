@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const methodOverride =  require('method-override');
 let localsCheck = require('./middlewares/localsCheck');
-const port = 3001;
+const port = 3000;
 
 /* ENRUTADORES */
 let indexRouter = require('./routes/index');

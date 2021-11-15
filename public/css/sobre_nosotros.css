@@ -17,11 +17,7 @@
     flex:1 1 45rem;
     padding:2rem;
     text-align: center;
-}
-.row{
-  position: relative;
-  left: 17%;
-}
+} 
 
 .about .row .content h3{
     font-size: 2rem;

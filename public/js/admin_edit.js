@@ -23,7 +23,8 @@ window.addEventListener("load",function(){
     regExDescription = /[0-9a-zA-Z,.\sñáéíóúü]{20,200}/
 
 
-$name.addEventListener("blur", function(){
+$name.addEventListener("blur", function(event){
+    event.preventDefault()
     switch (true) {
         case !$name.value.trim():
           $nameErrors.innerHTML = "El campo nombre es obligatorio";
