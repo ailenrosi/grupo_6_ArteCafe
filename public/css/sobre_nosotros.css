@@ -167,6 +167,7 @@ p{
 
 .slider {
 	position: relative;
+  
 }
 
 .slides {
@@ -176,8 +177,9 @@ p{
 
 }
 
-.slide {
+.slides2 {
 	width: 100vw;
+  
 	flex-shrink: 0;
 	animation-name: slide;
 	animation-duration: 20s;
@@ -185,16 +187,17 @@ p{
 	animation-timing-function: linear;
 }
 
-.slides:hover .slide {
+.slidess2:hover .slide {
 	animation-play-state: paused;
 }
 
-.slide img {
+.slides2 img {
 	width: 100%;
 	vertical-align: top;
+
 }
 
-.slide a {
+.slides2 a {
 	width: 100%;
   display: inline-block;
 	position: relative;
@@ -209,7 +212,7 @@ p{
 	right: 4vw;
 }
 
-.slide:target {
+.slides2:target {
 	animation-name: none;
 	position: absolute;
 	left: 0;
@@ -245,7 +248,7 @@ p{
 }
 
 @media only screen and (min-width: 1200px) {
-	.slide {
+	.slides2 {
 		width: 1200px;
 	}
 
@@ -254,4 +257,35 @@ p{
 		bottom: 96px;
 		right: 50px;
 	}
+}
+
+@media only screen and (min-width: 770px) {
+  .wrapper{
+display: none;
+	}
+}
+@media only screen and (max-width: 770px) {
+  #imgNos{
+display: none;
+	}
+}
+
+#imgNos{
+  margin: 1rem;
+}
+#imgNos .columna {
+  float: left;
+  width: 33%;
+  padding-right: 5px;
+}
+
+#imgNos .fila::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#imgNos img {
+  /* Para que sea responsiva */
+  width: 100%;
 }
