@@ -14,7 +14,6 @@
 @import url('contact.css');
 @import url('carrito_modal.css');
 @import url('productsDetail.css');
-@import url('user.css');
 @import url('productos.css');
 @import url('vista.css');
 @import url('registro.css');
@@ -31,5 +30,5 @@
 @import url('adminProducts.css');
 @import url('admin_edit.css');
 @import url('profileEdit.css');
-@import url('registro.css');
+@import url('user.css');
 

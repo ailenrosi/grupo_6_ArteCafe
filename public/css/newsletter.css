@@ -64,12 +64,7 @@ input.box_news {
 
   /* media queries  */
   
-  @media(max-width:991px){
   
-    #newsletter section{
-      padding:2rem;
-    }
-  }
   
   @media(max-width:768px){
    .btn_news{
@@ -79,6 +74,10 @@ input.box_news {
       width: 1rem;
       justify-content: center;
       text-align: center;
+    }
+    #newsletter{
+      width: 99%;
+      padding: 0.2rem;
     }
     #newsletter form .box_news {
       width: 100%;

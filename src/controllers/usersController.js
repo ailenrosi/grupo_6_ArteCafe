@@ -11,8 +11,9 @@ module.exports = {
   },
 
   register: (req, res) => {
-    res.render("register", {
+    res.render('user/register', {
       session: req.session,
+      usuario : req.session.user ? req.session.user : ""
     });
   },
 
