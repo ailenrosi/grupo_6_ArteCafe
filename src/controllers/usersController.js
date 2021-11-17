@@ -5,7 +5,6 @@ let db = require("../database/models");
 module.exports = {
   user: (req, res) => {
     res.render("user", {
-      users,
       session: req.session,
     });
   },
