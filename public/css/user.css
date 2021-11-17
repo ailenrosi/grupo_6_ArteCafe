@@ -8,14 +8,16 @@
   margin: auto;
   margin-top: 2rem;
   display: flex;
-  border-radius: 20px;
+  border-radius: 50px;
   overflow: hidden;
+  justify-content: center;
+  
 }
 
 .ctn_form {
   width: 80%;
   padding: 20px;
-  background: #f7f7f7;
+  background: #f7f7f7e5;
 }
 
 .title {
@@ -332,6 +334,19 @@ input[type="submit"]:hover {
   text-transform: uppercase;
 }
 
+#formDel {
+  width: 100%;
+  height: 50 px;
+  color: white;
+  border: 0 px;
+  background: linear-gradient(90deg, #419e02, #11580b);
+  font-weight: 300;
+  cursor: pointer;
+  font-size: 18px;
+}
+#formDel:hover {
+background: linear-gradient(90deg, #a34747, #f30000);
+}
 /************REGISTRO*********************/
 .registerArt {
   margin-left: 20%;
