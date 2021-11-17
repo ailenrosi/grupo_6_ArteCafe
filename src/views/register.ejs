@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="es">
 <%- include('partials/head.ejs') %>
 
@@ -20,7 +20,7 @@
                         <div class="form_user">
 
                             <input type="text" name="name" placeholder="Nombre con el que te identificas"
-                                value="<%= locals.old && old.name %>">
+                                value="<%= locals.old && old.name %>"/>
                             <% if (locals.errors && errors.name) { %>
                                 <small class="text_error">
                                     <%= errors.name.msg %>
@@ -39,7 +39,7 @@
                         </div>
                         <div class="form_user">
                             <input type="text" name="last_name" placeholder="Apellido"
-                                value="<%= locals.old && old.last_name %>">
+                                value="<%= locals.old && old.last_name %>"/>
                             <% if (locals.errors && errors.last_name) { %>
                                 <small class="text_error">
                                     <%= errors.last_name.msg %>
@@ -48,16 +48,18 @@
                         </div>
 
                         <div class="form_user"></div>
-                        <input type="email" name="email" placeholder="Tu email">
+                        <input type="email" name="email" placeholder="Tu email"
+                        value="<%= locals.old && old.email %>"/>
                         <% if (locals.errors && errors.email) { %>
-                            <small class="text-danger">
+                            <small class="text_error">
                                 <%= errors.email.msg %>
                             </small>
                             <% } %>
                     </div>
 
                     <div class="form_user">
-                        <input type="password" name="pass" placeholder="Tu contraseña">
+                        <input type="password" name="pass" placeholder="Tu contraseña"
+                        value="<%= locals.old && old.pass %>"/>
                         <% if (locals.errors && errors.pass) { %>
                             <small class="text_error">
                                 <%= errors.pass.msg %>
@@ -66,9 +68,10 @@
                     </div>
 
                     <div class="form_user">
-                        <input type="password" name="pass2" placeholder="Repetir contraseña">
+                        <input type="password" name="pass2" placeholder="Repetir contraseña"
+                        value="<%= locals.old && old.pass2 %>"/>
                         <% if (locals.errors && errors.pass2) { %>
-                            <small class="text-danger">
+                            <small class="text_error">
                                 <%= errors.pass2.msg %>
                             </small>
                             <% } %>
@@ -76,7 +79,8 @@
 
                     <div class="box-form">
                         <label class="img-perfil" for="imgUser">Imagen De Perfil</label>
-                        <input class="img-input" type="file" name="avatar" id="formFile">
+                        <input class="img-input" type="file" name="avatar" id="formFile"
+                        value="<%= locals.old && old.file %>"/>
                         <span id="text"></span>
                         <% if (locals.errors && errors.file) { %>
                             <small class="text_error">
@@ -88,8 +92,14 @@
 
                     
                     <div class="check">
+<<<<<<< HEAD
                         <input type="checkbox" name="terms" id="check" style="margin-top: 1.8rem;">
                         <label for="check"><a href="/">Acepto terminos y condiciones</a></label>
+=======
+                        <input type="checkbox" name="terms" id="check" style="margin-top: 1.8rem;"
+                        value="<%= locals.old && old.terms %>"/>
+                        <label for="check">Mantener sesión abierta</label>
+>>>>>>> caa85350159fc34d2cb37e6c744d9a3fcfe058c1
                     </div>
 
                     <% if (locals.errorMsg ) { %>
@@ -97,8 +107,18 @@
                             <%= errorMsg %>
                         </small>
                         <% } %>
+<<<<<<< HEAD
                           <a href="#"><input type="submit" value="Iniciar"></a>  
+=======
+>>>>>>> caa85350159fc34d2cb37e6c744d9a3fcfe058c1
 
+                          <a href="/"><input type="submit" name="submit" value="Registrate<%= locals.old && old.submit %>"></a>  
+                            <% if (locals.errors && errors.submit) { %>
+                                <small class="text_error">
+                            <%= errors.submit.msg %>
+                                </small>
+                            <% } %>
+                                <span id="submitErrors"></span>
 
 
                             <span class="text_end">¿Ya sos miembro?

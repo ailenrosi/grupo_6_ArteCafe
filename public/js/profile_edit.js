@@ -5,10 +5,6 @@ function qs ( element){
 window.addEventListener("load",function(){
     let $name = qs("#name");
     $nameErrors = qs("#nameErrors"),
-
-    $description = qs("#description"),
-    $descriptionErrors = qs("#descriptionErrors"),
-
     
     $file = qs("#formFile"),
     $fileErrors = qs("#fileErrors"),
@@ -20,7 +16,7 @@ window.addEventListener("load",function(){
 
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/
     regExName = /[0-9a-zA-Z]{5,50}/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-    regExDescription = /[0-9a-zA-Z,.\sñáéíóúü]{20,200}/
+   
 
 
 $name.addEventListener("blur", function(event){
