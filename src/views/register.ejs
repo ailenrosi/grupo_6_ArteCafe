@@ -39,7 +39,8 @@
                         </div>
 
                         <div class="form_user"></div>
-                        <input type="email" name="email" placeholder="Tu email"/>
+                        <input type="email" name="email" placeholder="Tu email"
+                        value="<%= locals.old && old.email %>"/>
                         <% if (locals.errors && errors.email) { %>
                             <small class="text_error">
                                 <%= errors.email.msg %>
@@ -48,7 +49,8 @@
                     </div>
 
                     <div class="form_user">
-                        <input type="password" name="pass" placeholder="Tu contraseña"/>
+                        <input type="password" name="pass" placeholder="Tu contraseña"
+                        value="<%= locals.old && old.pass %>"/>
                         <% if (locals.errors && errors.pass) { %>
                             <small class="text_error">
                                 <%= errors.pass.msg %>
@@ -57,7 +59,8 @@
                     </div>
 
                     <div class="form_user">
-                        <input type="password" name="pass2" placeholder="Repetir contraseña"/>
+                        <input type="password" name="pass2" placeholder="Repetir contraseña"
+                        value="<%= locals.old && old.pass2 %>"/>
                         <% if (locals.errors && errors.pass2) { %>
                             <small class="text_error">
                                 <%= errors.pass2.msg %>
@@ -66,7 +69,8 @@
                     </div>
                     <div class="box-form">
                         <label class="img-perfil" for="imgUser">Imagen De Perfil</label>
-                        <input class="img-input" type="file" name="avatar" id="formFile"/>
+                        <input class="img-input" type="file" name="avatar" id="formFile"
+                        value="<%= locals.old && old.file %>"/>
                         <span id="text"></span>
                         <% if (locals.errors && errors.file) { %>
                             <small class="text_error">
@@ -75,7 +79,8 @@
                             <% } %>
                     </div>
                     <div class="check">
-                        <input type="checkbox" name="terms" id="check" style="margin-top: 1.8rem;"/>
+                        <input type="checkbox" name="terms" id="check" style="margin-top: 1.8rem;"
+                        value="<%= locals.old && old.terms %>"/>
                         <label for="check">Mantener sesión abierta</label>
                     </div>
 
@@ -84,8 +89,14 @@
                             <%= errorMsg %>
                         </small>
                         <% } %>
-                          <a href="/"><input type="submit" value="Iniciar"></a>  
 
+                          <a href="/"><input type="submit" name="submit" value="Registrate<%= locals.old && old.submit %>"></a>  
+                            <% if (locals.errors && errors.submit) { %>
+                                <small class="text_error">
+                            <%= errors.submit.msg %>
+                                </small>
+                            <% } %>
+                                <span id="submitErrors"></span>
 
 
                             <span class="text_end">¿Ya sos miembro?
