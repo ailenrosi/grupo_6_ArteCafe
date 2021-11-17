@@ -19,6 +19,7 @@ router.get('/gallery', controller.gallery);
 
 router.get('/meriendas', controller.meriendas); 
 
+router.get('/molemos', controller.molemos); 
 
 module.exports = router;
 

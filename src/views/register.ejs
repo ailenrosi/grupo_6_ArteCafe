@@ -13,7 +13,7 @@
                 <h1 class="title">Registrate</h1>
 
     
-                <form action="/user/register" method="POST" class="form-ad">
+                <form action="/user/register" method="POST" class="form-ad" id="">
 
                     <div class="user_form">
 
@@ -27,7 +27,16 @@
                                 </small>
                                 <% } %>
                         </div>
-
+                        <div class="form_user">
+                            <input type="number" id="phone" name="phone" placeholder="Telefono"
+                            value="<%= locals.old && old.last_name %>">
+                            <span class="errors" id="phoneErrors"></span>
+                            <% if (locals.errors && errors.phone) { %>
+                            <small class="text_error">
+                                <%= errors.phone.msg %>
+                            </small>
+                           <% } %>
+                        </div>
                         <div class="form_user">
                             <input type="text" name="last_name" placeholder="Apellido"
                                 value="<%= locals.old && old.last_name %>">
@@ -64,6 +73,7 @@
                             </small>
                             <% } %>
                     </div>
+
                     <div class="box-form">
                         <label class="img-perfil" for="imgUser">Imagen De Perfil</label>
                         <input class="img-input" type="file" name="avatar" id="formFile">
@@ -74,9 +84,12 @@
                             </small>
                             <% } %>
                     </div>
+                    
+
+                    
                     <div class="check">
                         <input type="checkbox" name="terms" id="check" style="margin-top: 1.8rem;">
-                        <label for="check">Mantener sesión abierta</label>
+                        <label for="check"><a href="/">Acepto terminos y condiciones</a></label>
                     </div>
 
                     <% if (locals.errorMsg ) { %>
@@ -84,7 +97,7 @@
                             <%= errorMsg %>
                         </small>
                         <% } %>
-                          <a href="/"><input type="submit" value="Iniciar"></a>  
+                          <a href="#"><input type="submit" value="Iniciar"></a>  
 
 
 
