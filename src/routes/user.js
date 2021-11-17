@@ -11,6 +11,7 @@ const {
     userUpdate,
     userDelete,
     userEdit,
+    updateProfile,
     logout,
     profile } = require('../controllers/usersController');
 
@@ -34,9 +35,12 @@ router.get('/logout', userSessionCheck, logout);
 /*router.get('/user/edit/:id', userSessionCheck, profileEdit)
 router.put('/profile/edit/:id', uploadUserAvatar.single('avatar'), updateProfile)*/
 
+//profile edit
+router.get('profile/userEdit/:id',userSessionCheck, profileEdit)
+router.put('/profile/userEdit/:id', upload.single('avatar'),updateProfile)
 
-router.get('/profileEdit', profileEdit);
-router.post('/profileEdit', profileEdit);
+router.get('/userEdit', profileEdit);
+router.post('/userEdit', profileEdit);
 
 router.get('/profile', userSessionCheck, profile)
 

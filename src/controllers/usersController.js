@@ -40,7 +40,7 @@ module.exports = {
           name,
           email,
           password,
-          avatar: req.file ? req.file.filename : user.avatar,
+          avatar: req.file ? req.file.filename : User.avatar,
         },
         {
           where: {
