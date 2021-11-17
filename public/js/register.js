@@ -1,5 +1,5 @@
 
-function qs(element) {
+ function qs(element) {
     return document.querySelector(element);
   }
   
@@ -208,81 +208,13 @@ $file.addEventListener('change',
                     $imgPreview.innerHTML = '<img src="' + e.target.result +'"/>';
                 };
                 reader.readAsDataURL($file.files[0]);
-                $fileErrors.innerHTML = '';
+                $fileErrors.innerHTML = 'Debes ingresar una imágen';
                 $file.classList.remove('is-invalid')
             }
         }
-    })
+    }) 
+})
 
   
 
-    $form.addEventListener('submit',function(event){
-        event.preventDefault()
-        switch(true){
-        case $inputName.value.length == 0:
-            errorName.innerHTML = "El campo no puede ir vacio";
-            $inputName.classList.add('is-invalid')
-            errores = true
-            break;
-        case $inputName.value.length <= 2 : errorName.innerHTML = "El campo nombre debe tener al menos 3 letras";
-            $inputName.classList.add('is-invalid')
-            errores = true;
-            break;
-        case $inputLastname.value.length == 0:
-            $lastnameErrors.innerHTML = "El campo no puede ir vacio";
-            $inputLastname.classList.add('is-invalid');
-            errores = true
-            break;
-        case $inputLastname.value.length <=2:
-            $lastnameErrors.innerHTML = "El campo apellido debe tener al menos 3 letras";
-            $inputLastname.classList.add('is-invalid')
-            errores = true;
-            break;
-        case $email.value.length == 0:
-            $emailErrors.innerHTML = "El campo no puede ir vacio";
-            $email.classList.add('is-invalid');
-            errores = true
-            break;
-        case !regExEmail.test($email.value):
-            $emailErrors.innerHTML = "Debes escribir un mail válido";
-            $email.classList.add('is-invalid')
-            errores = true;
-            break;
-        case $pass.value.length == 0:
-           $passErrors.innerHTML = "El campo no puede ir vacio";
-            $pass.classList.add('is-invalid');
-            errores = true
-            break;
-        case !regExPass.test($pass.value):
-           $passErrors.innerHTML = "El campo contraseña debe tener al menos 8 caracteres";
-            $pass.classList.add('is-invalid')
-            errores = true;
-            break;
-        case $pass2.value.length == 0:
-            $pass2Errors.innerHTML = "El campo no puede ir vacio";
-            $pass2.classList.add('is-invalid');
-            errores = true
-            break;
-        case $pass2.value != $pass.value:
-            $pass2Errors.innerHTML = "Las contraseñas no coinciden"
-            $pass2.classList.add('is-invalid')
-            errores = true;
-            break;  
-        case $file.value.length == 0:
-            $fileErrors.innerHTML = "Debes ingresar una imágen";
-            $file.classList.add('is-invalid')
-            errores = true
-            break;
-
-        default:
-        if(!errores){
-                $form.submit()
-                errores = false
-            }else{
-                errores = true;
-            }
-        }
-        console.log(errores)
-    })
-
-})
+  

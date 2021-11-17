@@ -46,6 +46,7 @@ module.exports = [
 
 
     body('pass2')
+    .notEmpty().withMessage('Debes escribir tu contraseña')
     .custom(function(value,{req}){
         if(value != req.body.pass){
             return false
