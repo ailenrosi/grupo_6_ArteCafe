@@ -2,10 +2,10 @@
 const { validationResult } = require("express-validator");
 let bcrypt = require("bcryptjs");
 let db = require("../database/models");
-
 module.exports = {
   user: (req, res) => {
     res.render("user", {
+      users,
       session: req.session,
     });
   },
@@ -15,7 +15,6 @@ module.exports = {
       session: req.session,
     });
   },
-
   profile: (req, res) => {
     let user = users.find((user) => user.id === req.session.user.id);
 

@@ -157,9 +157,9 @@ module.exports = {
         });
 
         images.forEach( image => {
-            fs.existsSync("./public/img/imgProductos", image.image) 
-                ? fs.unlinkSync("./public/img/imgProductos/" + image.image)
-                : console.log("-- No se encontró");
+            fs.existsSync("/img/imgProductos", image.image) 
+                ? fs.unlinkSync("/img/imgProductos" + image.image)
+                : console.log("--No se encontró");
         });
 
         await db.Image.destroy({

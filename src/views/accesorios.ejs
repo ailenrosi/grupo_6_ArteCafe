@@ -6,12 +6,12 @@
     <!-- comienza header  --->
     <%- include('partials/header.ejs') %>
 
-      <h1 class="heading" style="margin-top: 9rem"> <span>Accesorios</span> disponibles </h1>
+      <h1 class="heading"> <span style="color: greenyellow;">Accesorios</span> disponibles </h1>
       <section class="products" id="products">
         <%  products.forEach(product=> { %>
           <div class="box-container">
             <div class="box">
-              <span class="discount">-<%= product.discount %>%</span>
+              <span class="discount" >-<%= product.discount %>%</span>
               <div class="image">
                 <img class="img_pro" style="max-height: 210px;
                       min-width: 210px;" src="/img/imgProductos/<%= product.images[0].image%>" alt="<%= product.name%>">

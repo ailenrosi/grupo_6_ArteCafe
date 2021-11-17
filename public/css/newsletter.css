@@ -8,7 +8,7 @@
 }
 
 .btn_news{
-    padding: 0.8rem 1.1rem;
+    padding: 0.9rem 1.1rem;
     
 }
 input.box_news {
@@ -64,12 +64,7 @@ input.box_news {
 
   /* media queries  */
   
-  @media(max-width:991px){
   
-    #newsletter section{
-      padding:2rem;
-    }
-  }
   
   @media(max-width:768px){
    .btn_news{
@@ -80,10 +75,13 @@ input.box_news {
       justify-content: center;
       text-align: center;
     }
+    #newsletter{
+      width: 99%;
+      padding: 0.2rem;
+    }
     #newsletter form .box_news {
       width: 100%;
       padding: .7rem 1rem;
-      font-size: .8rem;
     }
    #newsletter  h3{
       font-size: 1.2rem;
