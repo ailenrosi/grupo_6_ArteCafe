@@ -1,6 +1,4 @@
 /* funciones para que active el buscador del header y el menu hamnurguesa */
-
-
 let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
 
