@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
     /* regEx para varios campos */
     let regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/; //Usado en name y lastname
     let regExName = /[0-9a-zA-Z]{2,50}/; //Usado en name y lastname
-    let regExPass = /[0-9a-zA-Z]{8,50}/; //Usado en ambos passwords
+    let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/; //Usado en ambos passwords
     
     /* Validaciones del name */ 
     let $inputName = qs("#name");
@@ -40,7 +40,6 @@ window.addEventListener("load", function () {
     let $lastnameErrors = qs("#lastnameErrors");
 
     $inputLastname.addEventListener("blur", function () {
-        console.log("hola")
       switch (true) {
         case !$inputLastname.value.trim():
           $lastnameErrors.innerHTML = "El campo apellido es obligatorio";
@@ -78,6 +77,11 @@ window.addEventListener("load", function () {
                 $phone.classList.add('is-invalid');
                 $phoneErrors.innerHTML = '';
             break;
+            default:
+                $phone.classList.remove('is-invalid');
+                $phone.classList.add('is-valid');
+                $phoneErrors.innerHTML = '';
+            break;
         }
     });
 
@@ -87,7 +91,6 @@ window.addEventListener("load", function () {
     let regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 
     $email.addEventListener('blur', function() {
-        console.log($emailErrors);
         switch (true) {
             case !$email.value.trim():
                 $emailErrors.innerHTML = 'El campo email es obligatorio';
@@ -116,7 +119,7 @@ window.addEventListener("load", function () {
                 $pass.classList.add('is-invalid')
                 break;
             case !regExPass.test($pass.value):
-                $passErrors.innerHTML = 'La contraseña debe tener al menos 8 caracteres';
+                $passErrors.innerHTML = 'La contraseña debe tener al menos 8 caracteres, una mayúscula y un número';
                 $pass.classList.add('is-invalid')
                 break
             default:
@@ -174,24 +177,24 @@ window.addEventListener("load", function () {
             $imgPreview.innerHTML = '';
             return false;
         }else{
-            console.log($file.files);
             if($file.files && $file.files[0]){
                 let reader = new FileReader();
                 reader.onload = function(e){
                     $imgPreview.innerHTML = '<img src="' + e.target.result +'"/>';
                 };
                 reader.readAsDataURL($file.files[0]);
-                $fileErrors.innerHTML = 'Debes ingresar una imágen';
+                $fileErrors.innerHTML = '';
                 $file.classList.remove('is-invalid');
             }
         }
     }) 
     
     /* Manejo del formulario */
-    let $form = qs("#form");
-    console.log($form)
+    let $form = qs("form");
+    let submitErrors = qs("#submitErrors");
     
     $form.addEventListener('submit',function(event){
+
         let error = false;
         event.preventDefault();
         let elementosForm = this.elements;
@@ -211,7 +214,6 @@ window.addEventListener("load", function () {
         }
         
         if(!error){
-            console.log('Todo bien');
             $form.submit();
         }
         

@@ -30,15 +30,19 @@ window.addEventListener("load", function () {
     /* Validaciones de Pass*/
     let $pass = qs("#pass");
     let $passErrors = qs("#passErrors");
-    let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,12}$/;
+    let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/;
 
     $pass.addEventListener('blur', function() {
+
+        console.log(regExPass.test($pass.value));
+
         switch (true) {
             case !$pass.value.trim():
                 $passErrors.innerHTML = 'El campo contraseña es obligatorio';
                 $pass.classList.add('is-invalid')
             break;
             case !regExPass.test($pass.value):
+                console.log($pass.value)
                 $passErrors.innerHTML = 'Debe ingresar una contraseña válida';
                 $pass.classList.add('is-invalid')
             break
@@ -53,15 +57,17 @@ window.addEventListener("load", function () {
     /* Manejo del formulario */
     let $form = qs("form");
     let submitErrors = qs("#submitErrors");
+    console.log($form)
 
-    $form.addEventListener('submit', (e) => {
+    $form.addEventListener('submit', function(e){
 
         let error = false;
         e.preventDefault();
-        let elementosForm = $form.elements;
+        let elementosForm = this.elements;
+        console.log(elementosForm);
 
         for(let index = 0; index < elementosForm.length-1; index++){
-            if(elementosForm[index].value == ""){
+            if(elementosForm[index].value == "" && elementosForm[index].name !== "remember"){
                 elementosForm[index].classList.add('is-invalid');
                 submitErrors.innerHTML = "Los campos señalados son obligatorios";
                 error = true;
