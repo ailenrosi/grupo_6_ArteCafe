@@ -158,7 +158,10 @@ span{
   font-size: 1.3rem;
   text-align: left;
   padding-left: 1rem;
+}
 
+.tachado{
+  text-decoration: line-through;
 }
 
   @media (max-width: 750px){
