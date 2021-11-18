@@ -61,7 +61,7 @@ window.addEventListener("load", function () {
         let elementosForm = $form.elements;
 
         for(let index = 0; index < elementosForm.length-1; index++){
-            if(elementosForm[index].value == "" && elementosForm[index].name !== "archivo"){
+            if(elementosForm[index].value == ""){
                 elementosForm[index].classList.add('is-invalid');
                 submitErrors.innerHTML = "Los campos señalados son obligatorios";
                 error = true;
