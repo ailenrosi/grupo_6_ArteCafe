@@ -2,7 +2,7 @@
     position: fixed;
     display: flex;
     bottom: 10px;
-    right: 10px;
+    right: 15px;
     flex-direction: column;
     z-index: 8;
 }

@@ -137,9 +137,9 @@ module.exports = {
       errors.push(image);
     }
 
+    
     if (errors.isEmpty()) {
       let { name, last_name, phone, email, pass } = req.body;
-
       db.User.create({
         name,
         last_name,
@@ -149,7 +149,7 @@ module.exports = {
         avatar: req.file ? req.file.filename : "coffe_default.png",
         rol: 2,
       }).then(() => {
-        res.redirect("/");
+        res.redirect("/user/login");
       });
     } else {
       res.render("register", {

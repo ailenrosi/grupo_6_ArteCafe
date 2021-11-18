@@ -15,17 +15,27 @@
            <nav class="navbar">
         
               
-                <a href="/admin/products/create">Cargar nuevo producto</a>
+                <a href="/admin/products/create" >Cargar nuevo producto</a>
                 
                 
             </nav>
 
             <div class="icons">
                 <i class="fas fa-search" id="search-icon"></i>
-                <a href="#" class="fas fa-user"></a>
+                <% if (typeof session.user != "undefined") { %>
+                    <div class="img-user" >
+                        <img class="icons" src="/img/users_avatars/<%= session.user.avatar %>"></a>
+                    </div>
+                    <% } else {%>
+                        <a href="/user/login" class="fas fa-user"></a> 
+                      <% } %>
                 <i class="fas fa-bars" id="menu-bars"></i>
             </div>
         </section>
+
+        
+
+
     </header>
 
     <!-- menu buscar  -->

@@ -89,6 +89,7 @@ module.exports = {
         .then( products => {
             res.render('accesorios', {
                 products,
+                session: req.session,
                 toThousand
             })
         })

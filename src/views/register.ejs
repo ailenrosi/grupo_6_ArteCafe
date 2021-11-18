@@ -13,7 +13,7 @@
                 <h1 class="title">Registrate</h1>
 
     
-                <form action="/user/register" method="POST" class="form-ad">
+                <form action="/user/register" method="POST" class="form-ad" id="">
 
                     <div class="user_form">
 
@@ -27,7 +27,16 @@
                                 </small>
                                 <% } %>
                         </div>
-
+                        <div class="form_user">
+                            <input type="number" id="phone" name="phone" placeholder="Telefono"
+                            value="<%= locals.old && old.last_name %>">
+                            <span class="errors" id="phoneErrors"></span>
+                            <% if (locals.errors && errors.phone) { %>
+                            <small class="text_error">
+                                <%= errors.phone.msg %>
+                            </small>
+                           <% } %>
+                        </div>
                         <div class="form_user">
                             <input type="text" name="last_name" placeholder="Apellido"
                                 value="<%= locals.old && old.last_name %>"/>
@@ -67,11 +76,14 @@
                             </small>
                             <% } %>
                     </div>
+<<<<<<< HEAD
                     <div class="imagen-perfil">
                         <div class="img-preview" id="img-preview">
                             
                         </div>
 
+=======
+>>>>>>> c0781b59646c0a33163162e5d4d0e60d75845570
 
                     <div class="box-form">
                         <label class="img-perfil" for="imgUser">Imagen De Perfil</label>
@@ -84,10 +96,18 @@
                             </small>
                             <% } %>
                     </div>
+                    
+
+                    
                     <div class="check">
+<<<<<<< HEAD
+                        <input type="checkbox" name="terms" id="check" style="margin-top: 1.8rem;">
+                        <label for="check"><a href="/">Acepto terminos y condiciones</a></label>
+=======
                         <input type="checkbox" name="terms" id="check" style="margin-top: 1.8rem;"
                         value="<%= locals.old && old.terms %>"/>
                         <label for="check">Mantener sesión abierta</label>
+>>>>>>> caa85350159fc34d2cb37e6c744d9a3fcfe058c1
                     </div>
 
                     <% if (locals.errorMsg ) { %>
@@ -95,6 +115,10 @@
                             <%= errorMsg %>
                         </small>
                         <% } %>
+<<<<<<< HEAD
+                          <a href="#"><input type="submit" value="Iniciar"></a>  
+=======
+>>>>>>> caa85350159fc34d2cb37e6c744d9a3fcfe058c1
 
                           <a href="/"><input type="submit" name="submit" value="Registrate<%= locals.old && old.submit %>"></a>  
                             <% if (locals.errors && errors.submit) { %>

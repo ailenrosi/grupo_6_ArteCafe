@@ -13,23 +13,25 @@ module.exports = {
                 },
             ],
         })
-        .then(products => {
-            let productsSlider = products.filter( product => product.categories_id === 1 );
-            let productsDesc = products.filter( product => product.discount >= 15 );
-            res.render('home', {
-                titleSlider: "Para los amantes del café.",
-                productsSlider,
-                productsDesc,
-                session: req.session,
-                toThousand
-            })
+            .then(products => {
+                let productsSlider = products.filter(product => product.categories_id === 1);
+                let productsDesc = products.filter(product => product.discount >= 15);
+                res.render('home', {
+                    titleSlider: "Para los amantes del café.",
+                    productsSlider,
+                    productsDesc,
+                    session: req.session,
+                    toThousand
+                })
 
-        });
+            });
     },
 
-  
+
     contact: (req, res) => {
-        res.render('contact');
+        res.render('contact', {
+            session: req.session,
+        })
     },
 
     search: (req, res) => {
@@ -40,20 +42,20 @@ module.exports = {
                 },
             ],
         })
-        .then( products => {
-            let result = [];
-		    products.forEach(product => {
-			    if(product.name.toLowerCase().includes(req.query.keywords.toLowerCase())){
-    				result.push(product)
-			    }    
-            });
-            res.render('results', {
-                result,
-                toThousand,
-                session: req.session,
-                search: req.query.keywords
-            });
-        })
+            .then(products => {
+                let result = [];
+                products.forEach(product => {
+                    if (product.name.toLowerCase().includes(req.query.keywords.toLowerCase())) {
+                        result.push(product)
+                    }
+                });
+                res.render('results', {
+                    result,
+                    toThousand,
+                    session: req.session,
+                    search: req.query.keywords
+                });
+            })
     },
 
 
@@ -65,11 +67,20 @@ module.exports = {
     },
 
     meriendas: (req, res) => {
-        res.render('meriendas');
+        res.render('meriendas',
+            {
+                session: req.session,
+            });
     },
-
+    molemos: (req, res) => {
+        res.render('molemos', {
+            session: req.session,
+        })
+    },
     gallery: (req, res) => {
-        res.render('gallery');
+        res.render('gallery',{
+            session: req.session,
+        });
     },
 }
 

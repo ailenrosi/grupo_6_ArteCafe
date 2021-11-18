@@ -21,6 +21,7 @@
 
 .productSlide:hover {
     transform: scale(1.03);
+   
 }
 
 .productSlide .productDiscount {
@@ -65,15 +66,13 @@
 }
 
 .productSlide .productPrice:hover {
-color: crimson;
+color: greenyellow;
 font-size: 3rem;
 }
 .flickity-page-dots { display: none;}
 
 @media screen and (min-width: 768px) {
-    .productSlide .productPrice:hover {
-        color: crimson;
-    }
+    
     .productSlide {
         width: 33%;
         height: fit-content;
