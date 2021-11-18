@@ -35,8 +35,7 @@ function qs(element) {
                 $pass.classList.add('is-invalid')
                 break;
             case !regExPass.test($pass.value):
-                $passl
-Errors.innerHTML = 'Debe ingresar una contraseña válida';
+                $passErrors.innerHTML = 'Debe ingresar una contraseña válida';
                 $pass.classList.add('is-invalid')
                 break
             default:
