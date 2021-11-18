@@ -58,7 +58,23 @@ module.exports = {
             })
     },
 
+    laEmpresa: (req, res) => {
+        res.render('laEmpresa', {
+            session: req.session
+        });
+    },
 
+    cursos: (req, res) => {
+        res.render('cursos',
+            {
+                session: req.session,
+            });
+    },
+    trabajos: (req, res) => {
+        res.render('trabajos', {
+            session: req.session,
+        })
+    },
 
     sobreNosotros: (req, res) => {
         res.render('sobre_nosotros', {

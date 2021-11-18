@@ -23,19 +23,19 @@ no<!DOCTYPE html>
                 <% } %>
             </div>
             <div class="form-ad-input">
-                <input type="email" name="email" placeholder="Ingresá tu email" readonly value="<%= user.email %>">
+                <input type="email" name="email" placeholder="Ingresá tu email" readonly value="<%= user.email %>"/>
             </div>
             <div class="form-ad-input">
-                <input type="text" name="phone" placeholder="Ingresá tu teléfono" value="<%= user.phone ? user.phone : "" %>">
+                <input type="text" name="phone" placeholder="Ingresá tu teléfono" value="<%= user.phone ? user.phone : '' %>"/>
             </div>
             <div class="form-ad-input">
-                <input type="text" name="street" placeholder="Calle" value="<%= user.addresses[0]?.street ? user.addresses[0].street : "" %>">
+                <input type="text" name="street" placeholder="Calle" value="<%= user.addresses[0]?.street ? user.addresses[0].street : '' %>"/>
             </div>
             <div class="form-ad-input">
-                <input type="number" name="number" placeholder="Número" value="<%= user.addresses[0]?.number ? user.addresses[0].number : "" %>">
+                <input type="number" name="number" placeholder="Número" value="<%= user.addresses[0]?.number ? user.addresses[0].number : '' %>"/>
             </div>
             <div class="form-ad-input">
-                <input type="text" name="postal_code" placeholder="Código postal" value="<%= user.addresses[0]?.postal_code ? user.addresses[0].postal_code : "" %>">
+                <input type="text" name="postal_code" placeholder="Código postal" value="<%= user.addresses[0]?.postal_code ? user.addresses[0].postal_code : '' %>"/>
             </div>
             <div class="form-ad-input">
                 <select name="province" id="">
@@ -49,7 +49,7 @@ no<!DOCTYPE html>
             </div>
             <div class="input-file">
                 <p>Cambiar foto de perfil</p>
-                <input type="file" name="avatar">
+                <input type="file" name="avatar"/>
             </div>
           
             <button type="submit" class="btn btn-ad-primary">

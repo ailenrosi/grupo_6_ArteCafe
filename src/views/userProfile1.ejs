@@ -17,7 +17,7 @@
 
                         <div class="form_user">
                             <input id="name" type="text" name="name" placeholder="Nombre"
-                                value="<%= locals.old && old.name %>">
+                                value="<%= locals.old && old.name %>"/>
 
                             <% if (locals.errors && errors.name) { %>
                                 <small class="text_error">
@@ -29,7 +29,7 @@
 
                         <div class="form_user">
                             <input type="text" id="lastname" name="last_name" placeholder="Apellido"
-                                value="<%= locals.old && old.last_name %>">
+                                value="<%= locals.old && old.last_name %>"/>
                             <span class="errors" id="lastnameErrors"></span>
                             <% if (locals.errors && errors.last_name) { %>
                                 <small class="text_error">
@@ -40,7 +40,7 @@
 
                                     <div class="form_user">
                                         <input type="number" id="phone" name="phone" placeholder="Telefono"
-                                            value="<%= locals.old && old.last_name %>">
+                                            value="<%= locals.old && old.last_name %>"/>
                                         <span class="errors" id="phoneErrors"></span>
                                         <% if (locals.errors && errors.phone) { %>
                                             <small class="text_error">
@@ -50,7 +50,7 @@
                                     </div>
 
                                     <div class="form_user">
-                                        <input type="email" id="email" name="email" placeholder="Email">
+                                        <input type="email" id="email" name="email" placeholder="Email"/>
                                         <span class="errors" id="emailErrors"></span>
                                         <% if (locals.errors && errors.email) { %>
 
@@ -61,7 +61,7 @@
                                     </div>
 
                                     <div class="form_user">
-                                        <input type="password" id="pass" name="pass" placeholder="Contraseña">
+                                        <input type="password" id="pass" name="pass" placeholder="Contraseña"/>
                                         <span class="errors" id="passErrors"></span>
                                         <% if (locals.errors && errors.pass) { %>
                                             <small class="text_error">
@@ -71,7 +71,7 @@
                                     </div>
 
                                     <div class="form_user">
-                                        <input type="password" id="pass2" name="pass2" placeholder="Repetir contraseña">
+                                        <input type="password" id="pass2" name="pass2" placeholder="Repetir contraseña"/>
                                         <span class="errors" id="pass2Errors"></span>
                                         <% if (locals.errors && errors.pass2) { %>
                                             <small class="text_error">
@@ -87,7 +87,7 @@
 
                                         <div class="box-form">
                                             <label class="img-perfil" for="imgUser">Imagen De Perfil</label>
-                                            <input class="img-input" type="file" name="avatar" id="formFile">
+                                            <input class="img-input" type="file" name="avatar" id="formFile"/>
                                             <span id="text"></span>
                                             <% if (locals.errors && errors.file) { %>
                                                 <small class="text_error">
@@ -97,12 +97,12 @@
                                         </div>
 
                                         <div class="check">
-                                            <input type="checkbox" name="terms" id="check" style="margin-top: 1.8rem;">
+                                            <input type="checkbox" name="terms" id="check" style="margin-top: 1.8rem;"/>
                                             <label for="check">Acepto los términos y condiciones</label>
                                             <span id="termsErrors"></span>
                                         </div>
 
-                                        <a href="/"><input type="submit" id="submitErrors" value="Registrarse"></a>
+                                        <a href="/"><input type="submit" id="submitErrors" value="Registrarse"/></a>
 
                                         <span class="text_end">¿Ya sos miembro?
                                             <a href="/user/login">Inicia sesion</a>
@@ -122,7 +122,6 @@
                     </p>
                 </div>
             </div>
-
 
             <%- include('partials/wsp.ejs') %>
     </body>

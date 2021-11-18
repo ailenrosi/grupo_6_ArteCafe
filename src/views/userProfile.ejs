@@ -20,7 +20,7 @@
                 <form action="/user/userUpdate" method="POST" class="form-ad">
                     <div class="campo-edit">
                         <label>Nombre</label>
-                        <input type="text" name="name" value=<%=user.name%>>
+                        <input type="text" name="name" value="<%=user.name%>"/>
                         <% if (locals.errors && errors.name) { %>
                             <small class="text_error">
                                 <%= errors.name.msg %>
@@ -29,7 +29,7 @@
                     </div>
                     <div class="campo-edit">
                         <label> Apellido </label>
-                        <input type="text" name="last_name" value=<%=user.last_name%>>
+                        <input type="text" name="last_name" value="<%=user.last_name%>"/>
                         <% if (locals.errors && errors.last_name) { %>
                             <small class="text_error">
                                 <%= errors.last_name.msg %>
@@ -38,7 +38,7 @@
                     </div>
                     <div class="campo-edit">
                       <label>Email</label>
-                        <input type="text" name="email" value=<%=user.email%>>
+                        <input type="text" name="email" value="<%=user.email%>"/>
                         <% if (locals.errors && errors.email) { %>
                             <small class="text_error">
                                 <%= errors.email.msg %>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="campo-edit">
                         <label> Teléfono </label>
-                        <input type="text" name="phone" value=<%=user.phone%>>
+                        <input type="text" name="phone" value="<%=user.phone%>"/>
                         <% if (locals.errors && errors.phone) { %>
                             <small class="text_error">
                                 <%= errors.phone.msg %>
@@ -62,7 +62,7 @@
                         </small>
                         <% } %>
                         <div class="guardar-edit">
-                            <input type="submit" value="Guardar">
+                            <input type="submit" value="Guardar"/>
                         </div>
             </form>
             <form id="delete-user" action="/user/userDelete/<%= user.id%>?_method=DELETE" method="POST">
