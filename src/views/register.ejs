@@ -10,13 +10,13 @@
                 <h1 class="title">Registrate</h1>
 
     
-                <form action="/user/register" method="POST" class="form-ad" id="">
+                <form action="/user/register" method="POST" class="form-ad" id="form">
 
                     <div class="user_form">
 
                         <div class="form_user">
 
-                            <input type="text" name="name" placeholder="Nombre con el que te identificas"
+                            <input id="name" type="text" name="name" placeholder="Nombre"
                                 value="<%= locals.old && old.name %>"/>
                             <% if (locals.errors && errors.name) { %>
                                 <small class="text_error">
