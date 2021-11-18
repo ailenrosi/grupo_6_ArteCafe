@@ -5,7 +5,7 @@
                 <a href="/" class="close_x1">&times;</a>
                 <h1 class="title">Iniciar sesión</h1>
 
-                <form action="/user/login" method="POST" class="form-ad">
+                <form id="form" action="/user/login" method="POST" class="form-ad">
 
                     <div class="user_form">
                         <input 
@@ -39,6 +39,13 @@
                         <span id="passErrors"></span>
                     </div>
 
+                    <% if (locals.errorMsg ) { %>
+                        <small class="text_error">
+                            <%= errorMsg %>
+                        </small>
+                    <% } %>
+                    <span id="submitErrors"></span>
+                    
                     <div class="check">
                         <input 
                             type="checkbox" 
@@ -50,18 +57,9 @@
                         <label for="check">Mantener sesión abierta</label>
                     </div>
 
-                    <% if (locals.errorMsg ) { %>
-                        <small class="text_error">
-                            <%= errorMsg %>
-                        </small>
-                    <% } %>
 
                     <div class="form_submit">
-                        <input 
-                            type="submit" 
-                            name="submit" 
-                            value="Iniciar"
-                        />
+                        <button type="submit">Iniciar</button>
                     </div>
 
                     <div class="form_register">
