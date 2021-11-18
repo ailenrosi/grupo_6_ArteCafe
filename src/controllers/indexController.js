@@ -70,6 +70,7 @@ module.exports = {
                 session: req.session,
             });
     },
+    
     trabajos: (req, res) => {
         res.render('trabajos', {
             session: req.session,
