@@ -1,8 +1,5 @@
-
-<html lang="es">
 <%- include('partials/head.ejs') %>
-
-    <body class="user_body" style="display: flex;">
+<body class="user_body" style="display: flex;">
 
     </div>
    
@@ -76,14 +73,11 @@
                             </small>
                             <% } %>
                     </div>
-<<<<<<< HEAD
                     <div class="imagen-perfil">
                         <div class="img-preview" id="img-preview">
                             
                         </div>
 
-=======
->>>>>>> c0781b59646c0a33163162e5d4d0e60d75845570
 
                     <div class="box-form">
                         <label class="img-perfil" for="imgUser">Imagen De Perfil</label>
@@ -100,14 +94,11 @@
 
                     
                     <div class="check">
-<<<<<<< HEAD
                         <input type="checkbox" name="terms" id="check" style="margin-top: 1.8rem;">
                         <label for="check"><a href="/">Acepto terminos y condiciones</a></label>
-=======
                         <input type="checkbox" name="terms" id="check" style="margin-top: 1.8rem;"
                         value="<%= locals.old && old.terms %>"/>
                         <label for="check">Mantener sesión abierta</label>
->>>>>>> caa85350159fc34d2cb37e6c744d9a3fcfe058c1
                     </div>
 
                     <% if (locals.errorMsg ) { %>
@@ -115,10 +106,7 @@
                             <%= errorMsg %>
                         </small>
                         <% } %>
-<<<<<<< HEAD
                           <a href="#"><input type="submit" value="Iniciar"></a>  
-=======
->>>>>>> caa85350159fc34d2cb37e6c744d9a3fcfe058c1
 
                           <a href="/"><input type="submit" name="submit" value="Registrate<%= locals.old && old.submit %>"></a>  
                             <% if (locals.errors && errors.submit) { %>
