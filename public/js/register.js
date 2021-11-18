@@ -169,8 +169,8 @@ window.addEventListener("load", function () {
     let $imgPreview = qs("#img-preview");
     
     $file.addEventListener('change', function fileValidation(){
-        let filePath = $file.value, 
-            allowefExtensions = /(.jpg|.jpeg|.png|.gif|.web)$/i 
+        let filePath = $file.value;
+        let allowefExtensions = /(.jpg|.jpeg|.png|.gif|.web)$/i;
         if(!allowefExtensions.exec(filePath)){ 
             $fileErrors.innerHTML = 'Carga un archivo de imagen válido, con las extensiones (.jpg - .jpeg - .png - .gif)';
             $file.value = '';
@@ -198,9 +198,10 @@ window.addEventListener("load", function () {
         let error = false;
         event.preventDefault();
         let elementosForm = this.elements;
-        
+        console.log(elementosForm);
+
         for (let index = 0; index < elementosForm.length-1; index++) {
-            if(elementosForm[index].value == "" && elementosForm[index].name !== "archivo"){
+            if(elementosForm[index].value == "" && elementosForm[index].name !== "avatar"){
                 elementosForm[index].classList.add('is-invalid');
                 submitErrors.innerHTML = "Los campos señalados son obligatorios";
                 error = true;
