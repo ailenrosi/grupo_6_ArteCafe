@@ -18,3 +18,35 @@
 .register_button_div {
     width: 33%;
 }
+
+.img-prev{
+    cursor: pointer;
+    margin-top: 3%;
+    width: 120px;
+    height: 120px;
+    border: 1px solid;
+    border-radius: 50%;
+    text-align: center;
+    border-color: #8a83836e;
+    background-image: url("../../img/iconos/camera_plus_icon_138819.png");
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(211, 211, 211);
+}
+
+.img-prev img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.imagen-perfil{
+    display: flex;
+    justify-content: space-around;
+}
+
+.box-form {
+    display: none;
+}

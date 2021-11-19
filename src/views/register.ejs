@@ -6,7 +6,22 @@
                 <h1 class="title">Registrate</h1>
 
                 <form action="/user/register" method="POST" enctype="multipart/form-data" class="form-ad">
+                    
+                    <div class="imagen-perfil">
+                        <div class="img-prev" id="img-preview"></div>
+                    </div>
 
+                        <div class="box-form">
+                            <label class="img-perfil" for="imgUser"></label>
+                            <input class="img-input" type="file" name="avatar" id="formFile" value="<%= locals.old && old.file %>"/>
+                            <span class="errors" id="fileErrors"></span>
+                            <% if (locals.errors && errors.file) { %>
+                                <small class="text_error">
+                            <%= errors.file.msg %>
+                                </small>
+                            <% } %>
+                        </div>
+                     
                     <div class="user_form">
                         <div class="form_user">
                             <input 
@@ -22,8 +37,6 @@
                                 </small>
                             <% } %>
                         </div>
-
-                        
 
                         <div class="form_user">
                             <input 
@@ -100,20 +113,6 @@
                             <% } %>
                         </div>
 
-                        <div class="imagen-perfil">
-                            <div class="img-preview" id="img-preview"></div>
-                        </div>
-                        <div class="box-form">
-                            <label class="img-perfil" for="imgUser">Imagen De Perfil</label>
-                            <input class="img-input" type="file" name="avatar" id="formFile" value="<%= locals.old && old.file %>"/>
-                            <span class="errors" id="fileErrors"></span>
-                            <% if (locals.errors && errors.file) { %>
-                                <small class="text_error">
-                            <%= errors.file.msg %>
-                                </small>
-                            <% } %>
-                        </div>
-
                         <div class="check">
                             <input 
                                 id="check" 
@@ -148,6 +147,10 @@
 
                 </form>
 
+               
+                
+            </div> 
+            
                 <div class="ctn_text">
                     <div class="capa"></div>
                     <a href="/" class="close_x">&times;</a>
@@ -155,10 +158,9 @@
                     <p class="text_bvn" style="text-align: center;">Regristrate para acceder a nuestras promos.
                     </p>
                 </div>
-                
-            </div>
         </div>
     <%- include('partials/wsp.ejs') %>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/js/register.js"></script>
     </body>
 
