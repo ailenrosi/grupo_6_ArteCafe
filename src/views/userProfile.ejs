@@ -8,7 +8,7 @@
 
             <div class="ctn_form">
                 <a href="/" class="close_x1">&times;</a>
-                <h1 class="miPerfil">Mi Perfil</h1>
+                <h1 class="miPerfil">Hola <%= user.name %></h1>
 
                 <div class="profile_user_img">
                     <img class="imagenPerfil" src="/img/users_avatars/<%= user.avatar %>">
@@ -17,13 +17,13 @@
                 <div class="miPerfil">
                         
                     <ul class="listaPerfil">
-                        <li><span class="attrPerfil">Nombre:</span>  <div class="attr"><%= user.name %></div>
+                        <li><span class="attrPerfil">Nombre</span>  <div class="attrMiPerfil"><%= user.name %></div>
                         </li>
-                        <li><span class="attrPerfil">Apellido:</span> <div class="attr"><%= user.last_name %></div> 
+                        <li><span class="attrPerfil">Apellido</span> <div class="attrMiPerfil"><%= user.last_name %></div> 
                         </li>
-                        <li> <span class="attrPerfil">Email:</span> <div class="attr"><%= user.email %></div> 
+                        <li> <span class="attrPerfil">Email</span> <div class="attrMiPerfil"><%= user.email %></div> 
                         </li>
-                        <li><span class="attrPerfil"> Teléfono:</span>  <div class="attr"><%= user.phone %></div> 
+                        <li><span class="attrPerfil"> Teléfono</span>  <div class="attrMiPerfil"><%= user.phone %></div> 
                         </li>
                     </ul>
                 </div>
@@ -36,7 +36,7 @@
                         <div class="editButtonDiv">
                             <a href="/user/userEdit">
                                 <button class="editarPerfil">
-                                    Editar
+                                    Editar perfil
                                 </button>
                             </a>
                         </div>
