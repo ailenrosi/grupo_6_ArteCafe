@@ -12,7 +12,11 @@ module.exports = [
     .notEmpty()
     .withMessage('Debes ingresar un apellido').bail()
     .isLength({ min:2 }).withMessage('El apellido debe tener al menos 2 caracteres'),
-
+    
+    check('phone')
+    .notEmpty()
+    .withMessage('Debes ingresar un teléfono').bail()
+    .isLength({ min:8 }).withMessage('El teléfono debe tener al menos 8 caracteres'),
 
     check('email')
     .isEmail().withMessage('Debes ingresar un email válido').bail()

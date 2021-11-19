@@ -222,7 +222,6 @@ window.addEventListener("load", function () {
 
     $(".imagen-perfil").click(() => {
         $("#formFile").click();
-
     })
 
 });
