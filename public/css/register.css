@@ -50,3 +50,9 @@
 .box-form {
     display: none;
 }
+
+#phone::-webkit-outer-spin-button,
+#phone::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
