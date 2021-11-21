@@ -51,39 +51,6 @@ module.exports = {
   
   },
 
-  userUpdateProfile: (req, res) => {
-    let errors = validationResult(req);
-
-    if (errors.isEmpty()) {
-      let user = users.find((user) => user.id === +req.params.id);
-
-      let { name, last_name, tel, address, pc, province, city } = req.body;
-
-      user.name = name;
-      user.last_name = last_name;
-      user.tel = tel;
-      user.address = address;
-      user.pc = pc;
-      user.province = province;
-      user.city = city;
-      user.avatar = req.file ? req.file.filename : user.avatar;
-
-      writeUsersJSON(user);
-
-      delete user.pass;
-
-      req.session.user = user;
-
-      res.redirect("/user");
-    } else {
-      res.render("ProfileEdit", {
-        errors: errors.mapped(),
-        old: req.body,
-        session: req.session,
-      });
-    }
-  },
-
   processLogin: (req, res) => {
     let errors = validationResult(req);
 
@@ -171,11 +138,11 @@ module.exports = {
 
 
 
-  userUpdate: (req, res) => {
+  userUpdateProfile: async(req, res) => {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
       let { name, last_name, email, phone } = req.body;
-      db.User.update(
+      await db.User.update(
         {
           name,
           last_name,
@@ -188,10 +155,7 @@ module.exports = {
           },
         }
       )
-        .then(() => {
-          res.redirect("userProfile");
-        })
-        .catch((error) => console.log(error));
+      res.redirect("/user/userProfile");
     }
   },
 
@@ -200,7 +164,6 @@ module.exports = {
     if (req.cookies.userarte_cafe) {
       res.cookie("userArte_cafe", "", { maxAge: -1 });
     }
-
     res.redirect("/");
   },
 
