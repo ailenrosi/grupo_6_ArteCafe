@@ -5,7 +5,7 @@
 
     <div class="crearprod">
       <form class="crearProducto" id="form" action="/admin/products/create" method="POST" enctype="multipart/form-data">
-        <p class="titleadmin">Editar Producto</p>
+        <p class="titleadmin">Crear Producto</p>
 
         <label for="name">Nombre del producto</label>
         <input type="text" id="name" name="name"
@@ -48,7 +48,7 @@
           <% }) %>
         </select>
         <% if(locals.errors && errors.category) {%>
-          <small class="text-danger"><%= errors.category.msg %></small>
+          <small class="text_error"><%= errors.category.msg %></small>
         <% } %>
         <span id="categoriasError"></span>
 

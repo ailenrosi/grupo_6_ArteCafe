@@ -87,6 +87,16 @@ module.exports = {
             }
             
             res.redirect("/admin/products");
+        } else {
+
+            let categories = await db.Category.findAll();
+
+            res.render("admin_create", {
+                errors: errors.mapped(),
+                old: req.body,
+                session: req.session,
+                categories: categories,
+            })
         }
     },  
 
