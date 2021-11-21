@@ -45,7 +45,7 @@ module.exports = {
         res.render('admin_create_success');
     },
 
-    productStore: (req, res) => {
+    productStore: async(req, res) => {
         let errors = validationResult(req);
 
         if (req.fileValidatorError) {
@@ -66,28 +66,27 @@ module.exports = {
             
             let { name, description, price, discount, category } = req.body;
 
-            db.Product.create({
+            let product = await db.Product.create({
                 name,
                 description,
                 price,
                 discount,
                 categories_id: category
-            })
-            .then(product => {
-                if(arrayImages.length > 0){
-                    let images = arrayImages.map(image => {
-                        return {
-                            image: image,
-                            Products_id: product.dataValues.id
-                        }
-                    })
-                    db.Image.bulkCreate(images)
-                        .then(() => res.redirect("/admin/products"))
-                        .catch(err => console.log(err))
-                }
-            })
-            .then(() => res.redirect("/admin/products"))
-            .catch(e => console.log(e));
+            });
+            
+            if(arrayImages.length > 0){
+                let images = arrayImages.map(image => {
+                    return {
+                        image: image,
+                        Products_id: product.dataValues.id
+                    }
+                });
+                
+                await db.Image.bulkCreate(images);
+                res.redirect("/admin/products");
+            }
+            
+            res.redirect("/admin/products");
         }
     },  
 
