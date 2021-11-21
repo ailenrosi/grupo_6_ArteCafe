@@ -28,19 +28,20 @@
         <span id="descriptionErrors"></span>
 
         <label for="price">Precio</label>
-        <input type="number" name="price"
+        <input type="number" id="formPrice" name="price"
         value="<%= locals.old && old.price %>"/>
         <% if (locals.errors && errors.price) { %>
           <small class="text_error">
               <%= errors.price.msg %>
           </small>
       <% } %>
+      <span id="priceErrors"></span>
 
         <label for="discount">Descuento</label>
         <input type="number" name="discount"
         value="<%= locals.old && old.discount %>"/>
 
-        <select class="form-select" id="specificSizeSelect" name="category">
+        <select class="form-select" id="categorias" name="category">
           <option selected hidden value="">Categorias</option>
           <% categories.forEach(category => { %>
             <option value="<%- category.id%>" <%= locals.old && old.category == category.name ? "selected" : null %>><%- category.name %></option>
@@ -49,6 +50,7 @@
         <% if(locals.errors && errors.category) {%>
           <small class="text-danger"><%= errors.category.msg %></small>
         <% } %>
+        <span id="categoriasError"></span>
 
         <div class="box-2 mt-3">
           <div class="img-container" id="img-preview">
