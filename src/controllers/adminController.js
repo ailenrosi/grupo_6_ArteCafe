@@ -81,13 +81,13 @@ module.exports = {
                             Products_id: product.dataValues.id
                         }
                     })
-                    res.send(images);
                     db.Image.bulkCreate(images)
                         .then(() => res.redirect("/admin/products"))
                         .catch(err => console.log(err))
                 }
             })
-            .then(() => res.redirect("/admin/products"));
+            .then(() => res.redirect("/admin/products"))
+            .catch(e => console.log(e));
         }
     },  
 
