@@ -85,7 +85,7 @@ module.exports = {
           res.send(error);
         });
     } else {
-      res.render("user", {
+      res.render("loginForm", {
         errors: errors.mapped(),
         session: req.session,
       });
