@@ -41,10 +41,6 @@ module.exports = {
         .catch((err)=> console.log(err));
     },
 
-    productsCreateSuccess: (req,res) => {
-        res.render('admin_create_success');
-    },
-
     productStore: async(req, res) => {
         let errors = validationResult(req);
 
@@ -115,22 +111,23 @@ module.exports = {
             })
         })
     },
+
+    /* PUT de la edicion del producto */
     
-    productUpdate: (req, res) => {
-        let errors = validationResult(req)
+    productUpdate: async(req, res) => {
+
+        let errors = validationResult(req);
         if(errors.isEmpty()){
 
-    
-        
-        let {
-            name, 
-            price, 
-            discount, 
-            category, 
-            description
-        } = req.body;
-        
-            db.Product.update(
+            let {
+                name, 
+                price, 
+                discount, 
+                category, 
+                description
+            } = req.body;
+
+            await db.Product.update(
                 {
                     name,
                     price,
@@ -143,18 +140,12 @@ module.exports = {
                         id:req.params.id,
                     },
                 }
-            )
-            .then(()=>{
-                res.redirect("/admin/products");
-            })
-            .catch((error)=> console.log(error));
+            );
+
+            res.redirect("/admin/products");
+
         }
-    },
-      
-    adminProducts: (req,res) => {
-        res.render('adminProducts',{
-            products
-        });
+
     },
 
     deleteProduct: async(req, res) => {

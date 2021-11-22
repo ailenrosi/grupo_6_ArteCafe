@@ -25,7 +25,7 @@
                 <td> <%= product.categories_id %> </td>
                 <td><a href="/admin/products/edit/<%=product.id%>" ><i class="far fa-edit"></i></a></td>
 
-            <form action="/admin/products/delete/<%=product.id%>?_ method=DELETE" method="POST">
+            <form action="/admin/products/delete/<%=product.id%>?_method=DELETE" method="POST">
                 <td><button type="submit" > <i class="far fa-trash-alt"></i></a></td>
             </form>
             </tr>

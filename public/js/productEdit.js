@@ -93,6 +93,8 @@ window.addEventListener("load",function(){
             }
         })
 
+    /* Manejo del formulario */
+
     let $form = qs("#form");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 
     $form.addEventListener('submit', function(event){
@@ -101,7 +103,7 @@ window.addEventListener("load",function(){
         let elementosForm = this.elements;
         
         for (let index = 0; index < elementosForm.length-1; index++) {
-            if(elementosForm[index].value == "" && elementosForm[index].name !== "images"){
+            if(elementosForm[index].value == "" && elementosForm[index].name !== "image"){
                 elementosForm[index].classList.add('is-invalid');
                 submitErrors.innerHTML = "Los campos señalados son obligatorios";
                 error = true;
