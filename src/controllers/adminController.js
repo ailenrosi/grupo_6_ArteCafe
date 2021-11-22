@@ -147,6 +147,7 @@ module.exports = {
 
             let product = await db.Product.findOne( {where:{id: req.params.id}} );
             let categories = await db.Category.findAll();
+            console.log(errors.mapped());
 
             res.render("admin_edit", {
                 product,

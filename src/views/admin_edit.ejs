@@ -14,10 +14,11 @@
           name="name" 
           value="<%= locals.old ? old.name : product.name %>" 
         />
-        <% if(locals.errors && errors.name) {%>
-          <small class="text_error"><%= errors.name.msg %></small>
-        <% } %>
-        <span id="nameErrors"></span>
+        <span id="nameErrors" class="text_error">
+          <% if(locals.errors && errors.name) { %>
+            <%= errors.name.msg %>
+          <% } %>
+        </span>
       </div>
 
       <!-- Campo Descripcion -->
@@ -31,10 +32,11 @@
           name="description" 
           value="<%= locals.old ? old.description : product.description %>" 
         />
-        <% if (locals.errors && errors.description) { %>
-          <small class="text_error"><%= errors.description.msg %></small>
-        <% } %>
-        <span id="descriptionErrors"></span>
+        <span id="descriptionErrors" class="text_error">
+          <% if(locals.errors && errors.description) { %>
+            <%= errors.description.msg %>
+          <% } %>
+        </span>
       </div>
 
       <!-- Campo Precio -->
@@ -48,7 +50,11 @@
           name="price" 
           value="<%= locals.old ? old.price : product.price %>" 
         />
-        <span id="priceErrors"></span>
+        <span id="priceErrors" class="text_error">
+          <% if(locals.errors && errors.price) { %>
+            <%= errors.price.msg %>
+          <% } %>
+        </span>
       </div>
 
       <!-- Campo Descuento -->
@@ -78,9 +84,11 @@
              </option>
           <% }) %>
         </select>
-        <% if(locals.errors && errors.category) {%>
-          <small class="text_error"><%= errors.category.msg %></small>
-        <% } %>
+        <span id="categoryErrors" class="text_error">
+          <% if(locals.errors && errors.category) { %>
+            <%= errors.category.msg %>
+          <% } %>
+        </span>
       </div>
 
       <!-- Campo Imagen -->
