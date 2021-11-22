@@ -98,7 +98,7 @@ module.exports = {
 
     productEdit: (req, res) => {
         let categories = db.Category.findAll();
-        let product = db.Product.findOne ({
+        let product = db.Product.findOne({
             where:{id: req.params.id},
         }); 
         
@@ -115,7 +115,6 @@ module.exports = {
     /* PUT de la edicion del producto */
     
     productUpdate: async(req, res) => {
-
         let errors = validationResult(req);
         if(errors.isEmpty()){
 
@@ -143,6 +142,19 @@ module.exports = {
             );
 
             res.redirect("/admin/products");
+
+        } else {
+
+            let product = await db.Product.findOne( {where:{id: req.params.id}} );
+            let categories = await db.Category.findAll();
+
+            res.render("admin_edit", {
+                product,
+                errors: errors.mapped(),
+                old: req.body,
+                session: req.session,
+                categories: categories,
+            })
 
         }
 

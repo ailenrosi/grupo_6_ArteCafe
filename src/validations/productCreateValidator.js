@@ -13,7 +13,6 @@ module.exports = [
     .isLength({min: 20 })
     .withMessage('Ingrese más de 20 caracteres'),
 
-
     check("category")
     .notEmpty()
     .withMessage("Debes elegir una categoría"),

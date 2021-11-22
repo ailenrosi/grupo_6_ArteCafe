@@ -13,7 +13,6 @@ let {
     productUpdate } = require('../controllers/adminController');
 
 let uploadProductFile = require('../middlewares/uploadProductsFiles')
-
 let productValidator = require('../validations/productCreateValidator')
 
 router.get('/', adminLogin, admin);
