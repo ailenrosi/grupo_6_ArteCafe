@@ -1,9 +1,17 @@
 <%- include('partials/head')%>
 <body>
-<%- include('partials/header')%>
+    <%- include('partials/header')%>
+    
     <main class="usersForm-container">
-       
-        <h3 class="userTitle">Perfil</h3>
+        
+        <h3 class="userTitle"></h3>
+        <div class="profile_user_img">
+            <img class="imagenPerfil" src="/img/users_avatars/<%= user.avatar %>"
+         class="input-file">
+            <p>Cambiar foto de perfil</p>
+            <input type="file" name="avatar"/>
+        </div>
+        
         <form action="/user/profile/userEdit/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-ad" >
             <div class="form-ad-input">
                 <input type="text" name="name" placeholder="Nombre" value="<%= locals.old ? old.name : user.name %>">
@@ -23,11 +31,11 @@
             <div class="form-ad-input">
                 <input type="number" name="phone" placeholder="Ingresá tu teléfono" value="<%= user.phone %>"/>
             </div>
-            <div class="input-file">
-                <p>Cambiar foto de perfil</p>
-                <input type="file" name="avatar"/>
-            </div>
-          
+
+            <div class="container_user">
+
+            
+    
             <button type="submit" class="btn btn-ad-primary">
                 GUARDAR
             </button>

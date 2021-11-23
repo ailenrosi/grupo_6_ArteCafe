@@ -78,7 +78,7 @@
           <% categories.forEach(category => { %>
             <option
               value="<%- category.id %>"
-              <%- locals.old && old.category == category.id ? "selected" : category.id == product.category ? "selected" : "" %>
+              <%- locals.old && old.category == category.id ? "selected" : category.id == product.categories_id ? "selected" : "" %>
             >
               <%- category.name %>
              </option>

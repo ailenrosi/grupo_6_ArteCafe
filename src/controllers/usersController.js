@@ -142,6 +142,7 @@ module.exports = {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
       let { name, last_name, email, phone } = req.body;
+      console.log(req.body)
       await db.User.update(
         {
           name,
