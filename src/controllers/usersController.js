@@ -69,7 +69,7 @@ module.exports = {
             rol: user.rol,
           };
 
-          if (req.body.remember) {
+          if(req.body.remember) {
             res.cookie("userarte_cafe", req.session.user, {
               expires: new Date(Date.now() + 900000),
               httpOnly: true,

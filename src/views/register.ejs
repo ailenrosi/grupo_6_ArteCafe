@@ -7,22 +7,29 @@
 
                 <form action="/user/register" method="POST" enctype="multipart/form-data" class="form-ad">
                     
-                    <div class="imagen-perfil">
-                        <div class="img-prev" id="img-preview"></div>
-                    </div>
-
+                    
+                    
+                    <div class="user_form">
+                        
+                        <!-- Campo Imagen -->
+                        
+                        <div class="imagen-perfil">
+                            <div class="img-prev" id="img-preview"></div>
+                        </div>
                         <div class="box-form">
                             <label class="img-perfil" for="imgUser"></label>
                             <input class="img-input" type="file" name="avatar" id="formFile" value="<%= locals.old && old.file %>"/>
-                            <span class="errors" id="fileErrors"></span>
-                            <% if (locals.errors && errors.file) { %>
-                                <small class="text_error">
-                            <%= errors.file.msg %>
-                                </small>
-                            <% } %>
                         </div>
-                     
-                    <div class="user_form">
+                        <div>
+                            <span id="fileErrors" class="text_error">
+                                <% if(locals.errors && errors.file) { %>
+                                    <%= errors.file.msg %>
+                                <% } %>
+                            </span>
+                        </div>
+
+                        <!-- Campo Nombre -->
+
                         <div class="form_user">
                             <input 
                                 id="name" 
@@ -30,13 +37,14 @@
                                 name="name" 
                                 placeholder="Nombre"
                                 value="<%= locals.old && old.name %>"/>
-                            <span class="errors" id="nameErrors"></span>
-                            <% if (locals.errors && errors.name) { %>
-                                <small class="text_error">
-                            <%= errors.name.msg %>
-                                </small>
-                            <% } %>
-                        </div>
+                            <span id="nameErrors" class="text_error">
+                                <% if(locals.errors && errors.name) { %>
+                                  <%= errors.name.msg %>
+                                <% } %>
+                            </span>
+                        </div>  
+
+                        <!-- Campo Apellido -->
 
                         <div class="form_user">
                             <input 
@@ -44,29 +52,33 @@
                                 type="text" 
                                 name="last_name" 
                                 placeholder="Apellido"
-                                value="<%= locals.old && old.last_name %>"/>
-                            <span class="errors" id="lastnameErrors"></span>
-                            <% if (locals.errors && errors.last_name) { %>
-                                <small class="text_error">
-                                    <%= errors.last_name.msg %>
-                                </small>
-                            <% } %>
+                                value="<%= locals.old && old.last_name %>"
+                            />
+                            <span id="lastnameErrors" class="text_error">
+                                <% if(locals.errors && errors.last_name) { %>
+                                  <%= errors.last_name.msg %>
+                                <% } %>
+                            </span>
                         </div>
                         
+                        <!-- Campo Telefono -->
+
                         <div class="form_user">
                             <input 
                                 type="number" 
                                 id="phone" 
                                 name="phone" 
                                 placeholder="Telefono"
-                                value="<%= locals.old && old.last_name %>">
-                            <span class="errors" id="phoneErrors"></span>
-                            <% if (locals.errors && errors.phone) { %>
-                                <small class="text_error">
-                            <%= errors.phone.msg %>
-                                </small>
-                            <% } %>
+                                value="<%= locals.old && old.phone %>"
+                            />
+                            <span id="phoneErrors" class="text_error">
+                                <% if(locals.errors && errors.phone) { %>
+                                  <%= errors.phone.msg %>
+                                <% } %>
+                              </span>
                         </div>
+
+                        <!-- Campo Email -->
 
                         <div class="form_user">
                             <input 
@@ -74,14 +86,16 @@
                                 type="email" 
                                 name="email" 
                                 placeholder="Tu email"
-                                value="<%= locals.old && old.email %>"/>
-                            <span class="errors" id="emailErrors"></span>
-                                <% if (locals.errors && errors.email) { %>
-                                    <small class="text_error">
-                                <%= errors.email.msg %>
-                                    </small>
+                                value="<%= locals.old && old.email %>"
+                            />
+                            <span id="emailErrors" class="text_error">
+                                <% if(locals.errors && errors.email) { %>
+                                    <%= errors.email.msg %>
                                 <% } %>
+                            </span>
                         </div>
+
+                        <!-- Campo Password -->
 
                         <div class="form_user">
                             <input 
@@ -89,14 +103,16 @@
                                 type="password" 
                                 name="pass" 
                                 placeholder="Tu contraseña"
-                                value="<%= locals.old && old.pass %>"/>
-                            <span class="errors" id="passErrors"></span>
-                            <% if (locals.errors && errors.pass) { %>
-                                <small class="text_error">
-                            <%= errors.pass.msg %>
-                                </small>
-                            <% } %>
+                                value="<%= locals.old && old.pass %>"
+                            >
+                            <span id="passErrors" class="text_error">
+                                <% if(locals.errors && errors.pass) { %>
+                                  <%= errors.pass.msg %>
+                                <% } %>
+                            </span>
                         </div>
+
+                        <!-- Campo Password 2 -->
 
                         <div class="form_user">
                             <input 
@@ -104,45 +120,54 @@
                                 type="password" 
                                 name="pass2" 
                                 placeholder="Repetir contraseña"
-                                value="<%= locals.old && old.pass2 %>"/>
-                            <span class="errors" id="pass2Errors"></span>
-                            <% if (locals.errors && errors.pass2) { %>
-                                <small class="text_error">
-                            <%= errors.pass2.msg %>
-                                </small>
-                            <% } %>
+                                value="<%= locals.old && old.pass2 %>"
+                            />
+                            <span id="pass2Errors" class="text_error">
+                                <% if(locals.errors && errors.pass2) { %>
+                                  <%= errors.pass2.msg %>
+                                <% } %>
+                            </span>
                         </div>
+
+                        <!-- Campo Check -->
 
                         <div class="check">
                             <input 
                                 id="check" 
                                 type="checkbox" 
                                 name="terms" 
-                                style="margin: 0px 3px;">
+                                style="margin: 0px 3px;"
+                            />
                             <label for="check">Acepto terminos y condiciones</label>
-                            <span class="errors" id="termsErrors"></span>
                         </div>
-
-                        <% if (locals.errorMsg ) { %>
-                            <small class="text_error">
+                        <span class="text_errors" id="termsErrors">
+                            <% if (locals.errorMsg ) { %>
                                 <%= errorMsg %>
-                            </small>
-                        <% } %>
+                            <% } %>
+                        </span>
 
+                        <!-- Boton Registrate -->
+                        
                         <div class="register_buttons_container">
                             <div class="register_button_div">
                                 <button class="btn_register" type="submit">Registrate</button>
                             </div>
                         </div>
-                        <% if (locals.errors && errors.submit) { %>
-                            <small class="text_error">
+                        
+                        <!-- Campo Errores -->
+                        
+                        <span id="submitErrors" class="text_error">
+                            <% if (locals.errors && errors.submit) { %>
                                 <%= errors.submit.msg %>
-                            </small>
-                        <% } %>
-                        <span id="submitErrors"></span>
+                            <% } %>
+                        </span>
+                        
+                        <!-- Campo "Inicia Sesion" -->
+                        
                         <span class="text_end">¿Ya sos miembro?
                             <a href="/user/login">Inicia sesion</a>
                         </span>
+
                     </div>
 
                 </form>
