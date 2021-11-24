@@ -66,7 +66,7 @@
 }
 
 .productSlide .productPrice:hover {
-color: greenyellow;
+color: rgb(156, 214, 69);
 font-size: 3rem;
 }
 .flickity-page-dots { display: none;}
