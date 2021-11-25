@@ -109,6 +109,7 @@ module.exports = {
         .then( products => {
             res.render('cafeteras', {
                 products,
+                session: req.session,
                 toThousand
             })
         })
