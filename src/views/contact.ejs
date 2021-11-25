@@ -6,7 +6,7 @@
     <%- include('partials/header.ejs') %>
     <!----contact formulario-->
     <section class="contact">
-      <h1 class="logo_contact">Mandanos <span>tu mensaje</span></h1>
+      <h1 class="logo_contact">Mandanos <span class="span">tu mensaje</span></h1>
 
       <div class="contact-wrapper animated bounceInUp">
         <div class="contact-form">
@@ -15,7 +15,7 @@
             <p>
               <label for="name">Nombre con el que te identificas <span>*</span></label>
               <input type="text" name="name">
-              value="<%= locals.old && old.name %>"
+              <value="<%= locals.old && old.name %>
                 <% if (locals.errors && errors.name) { %>
                   <small class="text_error">
                     <%= errors.name.msg %>

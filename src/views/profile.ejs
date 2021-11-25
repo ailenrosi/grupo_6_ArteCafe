@@ -3,13 +3,11 @@
 <%- include('partials/head')%>
 <body>
 <%- include('partials/header')%>
-<div class="userMancha">
-    <img src="/images/manchas/pngwing.com (7).png" alt="">
-</div>
+
     <main class="usersForm-container">
        
-        <h3 class="userTitle">Edita tu perfil</h3>
-        <form action="/users/profile/edit/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-ad" >
+        <h3 class="userTitle">Tu perfil</h3>
+        <form action="<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-ad" >
             <div class="form-ad-input">
                 <input type="text" name="name" placeholder="Nombre" value="<%= locals.old ? old.name : user.name %>">
                 <% if (locals.errors && errors.name) { %>
@@ -47,10 +45,7 @@
                     <option value="">Localidad</option>
                 </select>
             </div>
-            <div class="input-file">
-                <p>Cambiar foto de perfil</p>
-                <input type="file" name="avatar">
-            </div>
+            
           
             <button type="submit" class="btn btn-ad-primary">
                 GUARDAR
@@ -59,6 +54,6 @@
         </form>
     </main>
 <%- include('partials/footer')%>
-<script src="/js/profile_edit.js"></script>
+
 </body>
 </html>
