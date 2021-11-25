@@ -2,53 +2,36 @@ let express = require('express');
 let router = express.Router()
 
 const { 
-    user,
+    loginForm,
     register,
     processRegister,
     processLogin,
-    profileEdit,
+    userProfileEdit,
     userProfile,
-    userUpdate,
     userDelete,
-    userEdit,
-    updateProfile,
-    logout,
-    profile } = require('../controllers/usersController');
+    userUpdateProfile,
+    logout
+} = require('../controllers/usersController'); // Traigo los metodos del controller
 
-const loginValidator = require('../validations/loginValidator');
-const registerValidator = require('../validations/registerValidator');
-const upload = require('../middlewares/uploadUserAvatar');
-const userSessionCheck = require('../middlewares/userSessionCheck');
-const userLog = require('../middlewares/userLog');
-const { get } = require('.');
+const loginValidator = require('../validations/loginValidator'); // Traigo el validador del formulario de Login
+const registerValidator = require('../validations/registerValidator'); // Traigo el validador del formulario de Registro
+const userSessionCheck = require('../middlewares/userSessionCheck'); // Traigo el "SessionCheck", middleware para verficiar si hay session iniciada
+const userLog = require('../middlewares/userLog'); // Traigo el "UserLog", verifica si hay una sesion iniciada antes de abrir el formulario de Login
+const upload = require('../middlewares/uploadUserAvatar'); // Traigo el "Multer", middleware para cargar imagen de usuario
 
+// LOGIN Handler
+router.get('/login', userLog, loginForm); //Trae el formulario de Login
+router.post('/login', loginValidator, processLogin); //Acá le pega el formulario para logear (Busca en la base)
+router.get('/logout', userSessionCheck, logout); //Aca le pega el usuario para deslogear (Destrute la session)
 
-router.get('/register', userLog, register);
-router.post('/register', upload.single('avatar'), registerValidator, processRegister);
+// REGISTER Handler
+router.get('/register', userLog, register); //Trae el formulario de registro
+router.post('/register', upload.single('avatar'), registerValidator, processRegister); //Acá le pega el form para crear el usuario
 
-/* GET - Login form */
-router.get('/login', userLog, user);
-router.post('/login', loginValidator, processLogin);
-router.get('/logout', userSessionCheck, logout);
-
-/* GET - User profile */
-/*router.get('/user/edit/:id', userSessionCheck, profileEdit)
-router.put('/profile/edit/:id', uploadUserAvatar.single('avatar'), updateProfile)*/
-
-//profile edit
-router.get('profile/userEdit/:id',userSessionCheck, profileEdit)
-router.put('/profile/userEdit/:id', upload.single('avatar'),updateProfile)
-
-router.get('/userEdit', profileEdit);
-router.post('/userEdit', profileEdit);
-
-router.get('/profile', userSessionCheck, profile)
-
-router.get('/userProfile', userSessionCheck, userProfile)
-router.get('/userEdit', userSessionCheck, userEdit)
-
-router.post('/userUpdate', userSessionCheck, userUpdate);
-
-router.delete('/userDelete/:id',userSessionCheck, userDelete);
+//CRUD Usuario
+router.get('/userProfile', userSessionCheck, userProfile); // Acá el usuario ve su perfil
+router.get('/userEdit', userSessionCheck, userProfileEdit); //Acá el usuario puede editar su perfil
+router.put('/profile/userEdit/:id', upload.single('avatar'), userUpdateProfile); //Acá le pega el form para actualizar los datos de X id
+router.delete('/userDelete/:id',userSessionCheck, userDelete); //Acá se le pega para borrar un usuario de X id
 
 module.exports = router;

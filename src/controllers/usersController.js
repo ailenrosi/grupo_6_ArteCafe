@@ -1,12 +1,19 @@
 
-const { validationResult } = require("express-validator");
-let bcrypt = require("bcryptjs");
-let db = require("../database/models");
+const { validationResult } = require("express-validator"); // Importo el validator para validar las request
+let bcrypt = require("bcryptjs"); // Importo el encriptador para guardar los passwords de manera segura
+let db = require("../database/models"); // Importo la base de datos para poder comunicarme
+
+//req = request: Son los datos que me llegan al entrar al método.
+//res = response: Acciones que puedo ejecutar
+
 module.exports = {
-  user: (req, res) => {
-    res.render("user", {
+
+  loginForm: (req, res) => {
+
+    res.render("loginForm", {
       session: req.session,
-    });
+    }); // Renderiza la vista "loginForm y le pasa la session"
+
   },
 
   register: (req, res) => {
@@ -14,6 +21,7 @@ module.exports = {
       session: req.session,
     });
   },
+
   profile: (req, res) => {
     let user = users.find((user) => user.id === req.session.user.id);
 
@@ -23,67 +31,24 @@ module.exports = {
     });
   },
 
-  profileEdit: (req, res) => {
-    res.render("profileEdit", {
+  userProfileEdit: (req, res) => {
+    
+    res.render("userProfileEdit", {
       session: req.session,
     });
 
-    let errors = validationResult(req);
-
-    if (errors.isEmpty()) {
-      let { name, email, password } = req.body;
-
-      db.User.update(
-        {
-          name,
-          email,
-          password,
-          avatar: req.file ? req.file.filename : User.avatar,
-        },
-        {
-          where: {
-            id: req.session.userLogin.id,
-          },
-        }
-      )
-        .then(() => {
-          res.redirect("/user");
-        })
-        .catch((error) => console.log(error));
-    }
   },
 
-  updateProfile: (req, res) => {
-    let errors = validationResult(req);
+  userEdit: async(req, res) => {
+  
+    let user = await db.User.findOne({ where: { id: req.session.user.id } })
+    
+    console.log(user);
 
-    if (errors.isEmpty()) {
-      let user = users.find((user) => user.id === +req.params.id);
-
-      let { name, last_name, tel, address, pc, province, city } = req.body;
-
-      user.name = name;
-      user.last_name = last_name;
-      user.tel = tel;
-      user.address = address;
-      user.pc = pc;
-      user.province = province;
-      user.city = city;
-      user.avatar = req.file ? req.file.filename : user.avatar;
-
-      writeUsersJSON(user);
-
-      delete user.pass;
-
-      req.session.user = user;
-
-      res.redirect("/user");
-    } else {
-      res.render("ProfileEdit", {
-        errors: errors.mapped(),
-        old: req.body,
-        session: req.session,
-      });
-    }
+    res.render("userProfileEdit", {
+      user: user.dataValues,
+    });
+  
   },
 
   processLogin: (req, res) => {
@@ -98,12 +63,13 @@ module.exports = {
             id: user.id,
             name: user.name,
             last_name: user.last_name,
+            phone: user.phone,
             email: user.email,
             avatar: user.avatar,
             rol: user.rol,
           };
 
-          if (req.body.remember) {
+          if(req.body.remember) {
             res.cookie("userarte_cafe", req.session.user, {
               expires: new Date(Date.now() + 900000),
               httpOnly: true,
@@ -119,7 +85,7 @@ module.exports = {
           res.send(error);
         });
     } else {
-      res.render("user", {
+      res.render("loginForm", {
         errors: errors.mapped(),
         session: req.session,
       });
@@ -160,31 +126,24 @@ module.exports = {
     }
   },
 
-  userProfile: (req, res) => {
-    db.User.findOne({
-      where: { id: req.session.user.id },
-    }).then((user) => {
-      res.render("userProfile", {
-        user: user.dataValues,
-      });
+  userProfile: async(req, res) => {
+    
+    let user = await db.User.findOne({where: { id: req.session.user.id }});
+    
+    res.render("userProfile", {
+      user: user.dataValues,
     });
+  
   },
 
-  userEdit: (req, res) => {
-    db.User.findOne({
-      where: { id: req.session.user.id },
-    }).then((user) => {
-      res.render("userEdit", {
-        user: user.dataValues,
-      });
-    });
-  },
 
-  userUpdate: (req, res) => {
+
+  userUpdateProfile: async(req, res) => {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
       let { name, last_name, email, phone } = req.body;
-      db.User.update(
+      console.log(req.body)
+      await db.User.update(
         {
           name,
           last_name,
@@ -197,10 +156,7 @@ module.exports = {
           },
         }
       )
-        .then(() => {
-          res.redirect("userProfile");
-        })
-        .catch((error) => console.log(error));
+      res.redirect("/user/userProfile");
     }
   },
 
@@ -209,7 +165,6 @@ module.exports = {
     if (req.cookies.userarte_cafe) {
       res.cookie("userArte_cafe", "", { maxAge: -1 });
     }
-
     res.redirect("/");
   },
 

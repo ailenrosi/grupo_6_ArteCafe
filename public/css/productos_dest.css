@@ -92,7 +92,7 @@
 
 .products .box-container .box .content .price{
   font-size: 1.6rem;
-  color:greenyellow;
+  color:rgb(39, 161, 2, 0.486);
   font-weight: bolder;
   padding-top: 1rem;
 }
@@ -104,11 +104,11 @@
  
 }
 .products .box-container .box .content .price h2:hover{
-  color: rgb(78, 238, 45);
+  color: rgb(46, 146, 26);
   font-size: 3rem;
 }
 .products .box-container .box span{
-  color: greenyellow;
+  color: rgb(39, 161, 2, 0.486);
   font-family: "montserrat",sans-serif;
 }
 @media (max-width: 500px){

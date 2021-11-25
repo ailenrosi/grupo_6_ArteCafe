@@ -34,31 +34,46 @@ module.exports = {
         })
     },
 
-    search: (req, res) => {
-        db.Product.findAll({
+    search: async(req, res) => {
+        let products = await db.Product.findAll({
             include: [
                 {
                     association: "images",
                 },
             ],
         })
-            .then(products => {
-                let result = [];
-                products.forEach(product => {
-                    if (product.name.toLowerCase().includes(req.query.keywords.toLowerCase())) {
-                        result.push(product)
-                    }
-                });
-                res.render('results', {
-                    result,
-                    toThousand,
-                    session: req.session,
-                    search: req.query.keywords
-                });
-            })
+        let result = [];
+        products.forEach(product => {
+            if (product.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(req.query.keywords.toLowerCase())) {
+                result.push(product);
+            }
+        });
+        res.render('results', {
+            result,
+            toThousand,
+            session: req.session,
+            search: req.query.keywords
+        });
     },
 
+    laEmpresa: (req, res) => {
+        res.render('laEmpresa', {
+            session: req.session
+        });
+    },
 
+    cursos: (req, res) => {
+        res.render('cursos',
+            {
+                session: req.session,
+            });
+    },
+    
+    trabajos: (req, res) => {
+        res.render('trabajos', {
+            session: req.session,
+        })
+    },
 
     sobreNosotros: (req, res) => {
         res.render('sobre_nosotros', {

@@ -10,5 +10,8 @@ form .crear{
 	border-radius:30px;
 	margin:auto;
 	background-color: ghostwhite;
+}
 
+.img-container img {
+	max-width: 100px;
 }

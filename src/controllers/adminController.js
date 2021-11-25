@@ -41,11 +41,7 @@ module.exports = {
         .catch((err)=> console.log(err));
     },
 
-    productsCreateSuccess: (req,res) => {
-        res.render('admin_create_success');
-    },
-
-    productStore: (req, res) => {
+    productStore: async(req, res) => {
         let errors = validationResult(req);
 
         if (req.fileValidatorError) {
@@ -66,34 +62,43 @@ module.exports = {
             
             let { name, description, price, discount, category } = req.body;
 
-            db.Product.create({
+            let product = await db.Product.create({
                 name,
                 description,
                 price,
                 discount,
                 categories_id: category
+            });
+            
+            if(arrayImages.length > 0){
+                let images = arrayImages.map(image => {
+                    return {
+                        image: image,
+                        Products_id: product.dataValues.id
+                    }
+                });
+                
+                await db.Image.bulkCreate(images);
+                res.redirect("/admin/products");
+            }
+            
+            res.redirect("/admin/products");
+        } else {
+
+            let categories = await db.Category.findAll();
+
+            res.render("admin_create", {
+                errors: errors.mapped(),
+                old: req.body,
+                session: req.session,
+                categories: categories,
             })
-            .then(product => {
-                if(arrayImages.length > 0){
-                    let images = arrayImages.map(image => {
-                        return {
-                            image: image,
-                            Products_id: product.dataValues.id
-                        }
-                    })
-                    res.send(images);
-                    db.Image.bulkCreate(images)
-                        .then(() => res.redirect("/admin/products"))
-                        .catch(err => console.log(err))
-                }
-            })
-            .then(() => res.redirect("/admin/products"));
         }
     },  
 
     productEdit: (req, res) => {
         let categories = db.Category.findAll();
-        let product = db.Product.findOne ({
+        let product = db.Product.findOne({
             where:{id: req.params.id},
         }); 
         
@@ -106,22 +111,22 @@ module.exports = {
             })
         })
     },
+
+    /* PUT de la edicion del producto */
     
-    productUpdate: (req, res) => {
-        let errors = validationResult(req)
+    productUpdate: async(req, res) => {
+        let errors = validationResult(req);
         if(errors.isEmpty()){
 
-    
-        
-        let {
-            name, 
-            price, 
-            discount, 
-            category, 
-            description
-        } = req.body;
-        
-            db.Product.update(
+            let {
+                name, 
+                price, 
+                discount, 
+                category, 
+                description
+            } = req.body;
+
+            await db.Product.update(
                 {
                     name,
                     price,
@@ -134,18 +139,26 @@ module.exports = {
                         id:req.params.id,
                     },
                 }
-            )
-            .then(()=>{
-                res.redirect("/admin/products");
+            );
+
+            res.redirect("/admin/products");
+
+        } else {
+
+            let product = await db.Product.findOne( {where:{id: req.params.id}} );
+            let categories = await db.Category.findAll();
+            console.log(errors.mapped());
+
+            res.render("admin_edit", {
+                product,
+                errors: errors.mapped(),
+                old: req.body,
+                session: req.session,
+                categories: categories,
             })
-            .catch((error)=> console.log(error));
+
         }
-    },
-      
-    adminProducts: (req,res) => {
-        res.render('adminProducts',{
-            products
-        });
+
     },
 
     deleteProduct: async(req, res) => {

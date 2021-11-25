@@ -21,6 +21,11 @@ router.get('/meriendas', controller.meriendas);
 
 router.get('/molemos', controller.molemos); 
 
+router.get('/cursos', controller.cursos);
+
+router.get('/trabajos', controller.trabajos); 
+
+
 module.exports = router;
 
 
