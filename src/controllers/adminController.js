@@ -189,9 +189,104 @@ module.exports = {
 
         res.redirect("/admin/products");
 
+    },
+
+    // Métodos de Categorías
+
+    categoriesList: async(req, res) => {
+        let categories = await db.Category.findAll();
+        res.render("categoriesList", {
+            session: req.session,
+            categories
+        });
+    },
+
+    categoriesCreateForm: async(req, res) => {
+        res.render("categoriesCreateForm", {
+            session: req.session,
+        })
+    },
+
+    categoriesCreate: async(req, res) => {
+        let { name } = req.body;
+
+        await db.Category.create({
+            name
+        });
+
+        res.redirect('/admin/categoriesList')
+       
+    },
+
+    categoriesEditForm: async(req, res) => {
+        let category = await db.Category.findOne({
+            where:{id: req.params.id},
+        });
+
+        res.render('categoryEditForm', {
+            category,
+            session: req.session
+        })
+    },
+
+    categoriesEdit: async(req,res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+
+            let {
+                name
+            } = req.body;
+
+            await db.Category.update(
+                {
+                    name
+                },
+                {
+                    where:{
+                        id:req.params.id,
+                    },
+                }
+            );
+
+            res.redirect("/admin/categoriesList");
+
+        } else {
+
+            let category = await db.Category.findOne( {where:{id: req.params.id}} );
+            console.log(category)
+            console.log(errors.mapped());
+
+            res.render("categoryEditForm", {
+                category,
+                errors: errors.mapped(),
+                old: req.body,
+                session: req.session,
+                
+            })
+
+        }
+
+    },
+
+    deleteCategory:async(req, res) => {
+    
+
+        await db.Category.destroy({
+            where: {
+                id: req.params.id,
+            }
+        });
+
+        res.redirect("/admin/categoriesList");
+
+    },
+
+
     }
 
-}
+
+
+
 
 
 
