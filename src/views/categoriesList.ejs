@@ -19,7 +19,7 @@
                 <td> <%=category.name %> </td>
                 <td><a href="/admin/categories/editForm/<%=category.id%>" ><i class="far fa-edit"></i></a></td>
 
-                <form class="formDelete" action="/admin/categories/delete/<%=category.id%>?_method=DELETE" method="POST">
+                <form class="categoryDelete" action="/admin/categories/delete/<%=category.id%>?_method=DELETE" method="POST">
                     <td><button type="submit"><i class="far fa-trash-alt"></i></td>
                 </form>
             </tr>
@@ -27,6 +27,6 @@
         </table>
     </div>
     <%- include('partials/footer.ejs') %>
-    <script src="/js/adminProducts.js"></script>
+    <script src="/js/categoryDelete.js"></script>
 </body>
 </html>
