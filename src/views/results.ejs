@@ -9,13 +9,11 @@
 
       
       <!-- boton atrás  -->
-      <div class="atras">
-        <a href="/" style="color: teal">Volver</a>
-      </div>
+     
       <h1 class="heading_p" style="font-size: 2.3rem; text-align: center">
-        Productos encontrados para:<span>
+        Productos encontrados para:
           <%= search %>
-        </span>
+        
         <main>
           <% if (result.length> 0) { %>
 
@@ -34,12 +32,16 @@
                         alt="<%= product.name%>">
                       <div class="icons">
                         <a href="/products/productsDetail/<%= product.id%>">Ver</a>
+                     <% if (session.user.rol === 1) { %>
+                      <a href="/admin/products/edit/<%-product.id %> " class="cart-btn">Editar</a>
+                     <% }else{ %>
                         <a href="#" class="cart-btn">Agregar</a>
+                        <% } %> 
                         <a href="#" class="fas fa-share"></a>
                       </div>
                     </div>
                     <div class="content">
-                      <h3 style="color: chartreuse;">
+                      <h3 style="color: rgb(39, 161, 2, 0.486);;">
                         <%= product.name%>
                       </h3>
                       <% if(product.discount > 0) { %>

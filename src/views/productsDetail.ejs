@@ -26,12 +26,20 @@
                         <h3 class="productName">
                             <%= product.name %>
                         </h3>
-                        <span class="discount">-
+                        <span class="discount" style="color: darkcyan; font-size: 1.5rem;">-
                             <%= product.discount %>%
                         </span>
-                        <div class="productPrice"> $<%= toThousand(product.price) %> <span> $<%-
-                                        toThousand(product.price - product.price * product.discount /100) %> </span>
-                        </div>
+                        <div class="price" style="color: darkcyan;" >
+                            <% if( product.discount > 0 ) { %>
+                              <p class="<%= product.discount > 0 ? 'tachado' : '' %>">
+                                $<%=toThousand(product.price)%>
+                              </p>
+                            <% } %>
+                            <h2>
+                              $<%=toThousand(product.price - product.price * product.discount / 100)%>
+                            </h2>
+                            
+                          </div>
                         <div class="productNumber">
                             <label for="cantidad">Cantidad</label>
                             <div class="counter">
