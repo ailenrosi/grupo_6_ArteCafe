@@ -67,7 +67,9 @@
                     <% productsDesc.forEach(product=> { %>
                         <div class="box-container">
                             <div class="box">
-                                <span class="discount">-<%= product.discount %>%</span>
+                                <% if( product.discount > 0 ) { %>
+                                <span class="discount">-<%=`${product.discount}` %>%</span>
+                                <% } %>
                                 <div class="image">
                                     <img class="img_pro" style="max-height: 210px;
                                     min-width: 210px;" src="img/imgProductos/<%= product.images[0]?.image%> "
@@ -86,12 +88,21 @@
                                         <%= product.discount !==0 ? `${product.discount}% OFF` : "" %>
                                     </span>
                                     
-                                    <div class="price">$<%= toThousand(product.price)%>
+                                    <div class="price">
+                                        <% if( product.discount > 0 ) { %>
+                                            <p class="<%= product.discount > 0 ? 'tachado' : '' %>">
+                                              $<%=toThousand(product.price)%>
+                                            </p>
+                                          <% } %>
                                             <h2>
                                                 $<%= toThousand(product.price - product.price * product.discount /
                                                     100)%>
                                             </h2>
-
+                                            <% if( product.discount > 0 ) { %>
+                                                <span>
+                                                  <%=product.discount !==0 ? `${product.discount}% OFF` : "" %>
+                                                </span>
+                                              <% } %>
                                     </div>
                                 </div>
                             </div>
@@ -177,18 +188,7 @@
 
                 </section>
 
-                <!--- newaletter--->
 
-                <section class="newsletter" id="newsletter">
-
-                    <h3>Recibí las mejores ofertas y novedades</h3>
-                <!--- newaletter-->
-
-                    <form action="">
-                        <input style="background-color: #e2dfdff6; border-radius: 1rem;" class="box_news" type="email"
-                            placeholder="Dejanos tu email">
-                        <input type="submit" value="subscribirte">
-                    </form>
 
                 </section>
 

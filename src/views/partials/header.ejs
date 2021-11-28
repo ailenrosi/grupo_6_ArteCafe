@@ -43,6 +43,9 @@
                             <% if (session.user.rol === 1) { %>
                                 <a href="/admin/products" style="background:white;">Productos</a>
                             <% } %>
+                            <% if (session.user.rol === 1) { %>
+                                <a href="/admin/categoriesList" style="background:white;">Categorias</a>
+                            <% } %>
                         </div>
                     <% } else {%>
                       <a href="/user/login" class="fas fa-user"></a> 
