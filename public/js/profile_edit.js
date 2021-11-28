@@ -1,4 +1,4 @@
-function qs ( element){
+function qs (element){
     return document.querySelector(element);
 }
 
@@ -43,22 +43,6 @@ $name.addEventListener("blur", function(event){
     
 });
 
-$description.addEventListener("blur", function(){
-    switch (true){
-        case !regExDescription.test($description.value):
-            $descriptionErrors.innerHTML = 'Debe ingresar al menos 20 caracteres';
-            $description.classList.add('is-invalid');
-            break
-            default:
-            $description.classList.remove('is-invalid');
-                $description.classList.add('is-valid');
-                $descriptionErrors.innerHTML = ''
-                break;
-        
-    }
-
-});
-
 $file.addEventListener('change', 
     function fileValidation(){
         let filePath = $file.value, 
@@ -74,7 +58,7 @@ $file.addEventListener('change',
             if($file.files && $file.files[0]){
                 let reader = new FileReader();
                 reader.onload = function(e){
-                    $imgPreview.innerHTML = '<img src="' + e.target.result +'"/>';
+                    $imgPreview.innerHTML = '<img class="imagenPerfil" src="' + e.target.result +'"/>';
                 };
                 reader.readAsDataURL($file.files[0]);
                 $fileErrors.innerHTML = '';
@@ -96,17 +80,15 @@ $file.addEventListener('change',
             }
         }
     
-        if(!$terms.checked){
-            $terms.classList.add('is-invalid');
-            $termsErrors.innerHTML = "Debes aceptar las bases y condiciones"
-            error = true
-        }
-    
         if(!error){
             console.log('Todo bien');
             $form.submit()
         }
     
+    })
+
+    $("#img-preview").click(() => {
+        $("#formFile").click();
     })
 
 })

@@ -140,23 +140,52 @@ module.exports = {
 
   userUpdateProfile: async(req, res) => {
     let errors = validationResult(req);
+
+    if(req.fileValidatorError) {
+      let image = {
+        param: "image",
+        msg: req.fileValidatorError,
+      }
+      errors.push(image);
+    }
+
     if (errors.isEmpty()) {
       let { name, last_name, email, phone } = req.body;
-      console.log(req.body)
-      await db.User.update(
-        {
-          name,
-          last_name,
-          email,
-          phone,
-        },
-        {
-          where: {
-            id: req.session.user.id,
+      if(req.file){
+        await db.User.update(
+          {
+            name,
+            last_name,
+            email,
+            phone,
+            avatar: req.file.filename,
           },
-        }
-      )
-      res.redirect("/user/userProfile");
+          {
+            where: {
+              id: req.session.user.id,
+            },
+          }
+        );
+      } else {
+        await db.User.update(
+          {
+            name,
+            last_name,
+            email,
+            phone,
+          },
+          {
+            where: {
+              id: req.session.user.id,
+            },
+          }
+        );
+      }
+      req.session.destroy();
+      if (req.cookies.user){
+        res.cookie('user','',{maxAge:-1});
+      }
+      res.redirect("/");
     }
   },
 

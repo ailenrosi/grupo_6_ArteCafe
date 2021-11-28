@@ -14,4 +14,6 @@ form .crear{
 
 .img-container img {
 	max-width: 100px;
+	max-height: 100px;
+	cursor: pointer;
 }
