@@ -129,22 +129,6 @@
                             </span>
                         </div>
 
-<<<<<<< HEAD
-                    
-                    <div class="check">
-                        <input type="checkbox" name="terms" id="check" style="margin-top: 1.8rem;"
-                        value="<%= locals.old && old.terms %>"/>
-                        <label for="check">Mantener sesión abierta</label>
-                    </div>
-
-                    <% if (locals.errorMsg ) { %>
-                        <small class="text_error">
-                            <%= errorMsg %>
-                        </small>
-                        <% } %>
-
-                          <a href="/"><input type="submit" name="submit" value="Registrate<%= locals.old && old.submit %>"></a>  
-=======
                         <!-- Campo Check -->
 
                         <div class="check">
@@ -173,7 +157,6 @@
                         <!-- Campo Errores -->
                         
                         <span id="submitErrors" class="text_error">
->>>>>>> e95fd15250cbf971d7ef8203d8a5b6e4f0eb9422
                             <% if (locals.errors && errors.submit) { %>
                                 <%= errors.submit.msg %>
                             <% } %>
