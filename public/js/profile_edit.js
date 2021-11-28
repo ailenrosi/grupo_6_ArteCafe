@@ -91,4 +91,12 @@ $file.addEventListener('change',
         $("#formFile").click();
     })
 
+    $("#deleteForm").submit(function (event) {
+        event.preventDefault();
+        let confirmacion = confirm("Esta seguro que desea eliminar su perfil?");
+        if(confirmacion){
+            this.submit();
+        }
+    });
+
 })

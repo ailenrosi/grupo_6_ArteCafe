@@ -44,16 +44,23 @@
             <div class="form-ad-input">
                 <input type="number" name="phone" placeholder="Ingresá tu teléfono" value="<%= user.phone %>"/>
             </div>
-
-            <div class="container_user">
-
             
-    
-            <button type="submit" class="btn btn-ad-primary">
-                GUARDAR
-            </button>
+            <div class="button-container">
+                <button type="submit" class="btn btn-ad-primary">
+                    GUARDAR
+                </button>
+            </div>
             
         </form>
+
+        <div class="button-deletePerfil-container">
+            <form id="deleteForm" action="/user/userDelete/<%= user.id %>?_method=DELETE" method="POST">
+                <button id="elminarPerfil-button" type="submit" class="btn btn-ad-primary">
+                    ELIMINAR PERFIL
+                </button>
+            </form>
+        </div>
+        
     </main>
 <%- include('partials/footer')%>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
