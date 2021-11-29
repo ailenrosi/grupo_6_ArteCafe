@@ -1,6 +1,7 @@
   <%- include('partials/head_admin.ejs')%>
-  <%- include('partials/header_admi.ejs')%>
+
   <body>
+    <%- include('partials/header_admi.ejs')%>
     <main class="mainadmin">
       <div class="crearprod">
         <form class="crearProducto" id="form" action="/admin/products/create" method="POST" enctype="multipart/form-data">
@@ -22,7 +23,7 @@
 
           <!-- Campo descripcion -->
           
-          <label for="description">Descripción</label>
+          <label for="description" id="">Descripción</label>
           <input 
             type="textarea" 
             id="description" 

@@ -16,3 +16,23 @@ margin-top: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif
 
 };
+#description{
+    background-color: #e2fbd9;
+   
+}
+.form-select, .Crear {
+        margin-top: 1rem;
+        display: inline-block;
+        font-size: 1rem;
+        color: #fff;
+        background: linear-gradient(90deg, #038166, #22e2a9);
+        border-radius: 0.5rem;
+        cursor: pointer;
+        padding: 0.8rem 3rem;
+      }
+      .form-select:hover, .Crear:hover {
+        background: var(--green);
+        letter-spacing: 0.1rem;
+        text-align: center;
+      }
+     
