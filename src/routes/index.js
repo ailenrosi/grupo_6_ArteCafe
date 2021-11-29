@@ -10,6 +10,7 @@ router.get('/contact', controller.contact);
 
 router.get('/', cookieCheck,controller.index);
 
+router.get('/search_admin', controller.searchadmin); 
 
 router.get('/search', controller.search); 
 

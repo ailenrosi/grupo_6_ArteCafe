@@ -55,7 +55,27 @@ module.exports = {
             search: req.query.keywords
         });
     },
-
+    searchadmin: async(req, res) => {
+        let products = await db.Product.findAll({
+            include: [
+                {
+                    association: "images",
+                },
+            ],
+        })
+        let result = [];
+        products.forEach(product => {
+            if (product.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(req.query.keywords.toLowerCase())) {
+                result.push(product);
+            }
+        });
+        res.render('results', {
+            result,
+            toThousand,
+            session: req.session,
+            search: req.query.keywords
+        });
+    },
     laEmpresa: (req, res) => {
         res.render('laEmpresa', {
             session: req.session
