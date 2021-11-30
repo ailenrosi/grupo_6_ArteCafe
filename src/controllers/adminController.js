@@ -115,8 +115,60 @@ module.exports = {
     /* PUT de la edicion del producto */
     
     productUpdate: async(req, res) => {
+
         let errors = validationResult(req);
+        
+        if(req.fileValidatorError) {
+            let image = {
+                param: "image",
+                msg: req.fileValidatorError,
+            };
+            errors.push(image);
+        }
+        
         if(errors.isEmpty()){
+
+            /* Borro Imagenes existentes */
+
+            let imagesOld = await db.Image.findAll({
+                where: {
+                    Products_id : req.params.id
+                }
+            });
+
+            imagesOld.forEach( image => {
+                fs.existsSync("/img/imgProductos/" + image.image) 
+                    ? fs.unlinkSync("/img/imgProductos/" + image.image)
+                    : console.log("--No se encontró");
+            });
+
+            await db.Image.destroy({
+                where: {
+                    Products_id : req.params.id,
+                }
+            });
+
+            /* Agrego imagenes nuevas */
+
+            let arrayImages = [];
+            if(req.files) {
+                req.files.forEach( image => {
+                    arrayImages.push(image.filename);
+                });
+            }
+
+            if(arrayImages.length > 0){
+                let images = arrayImages.map(image => {
+                    return {
+                        image: image,
+                        Products_id: req.params.id,
+                    }
+                });
+                
+                await db.Image.bulkCreate(images);
+            }
+
+            /* Edito el producto */
 
             let {
                 name, 
