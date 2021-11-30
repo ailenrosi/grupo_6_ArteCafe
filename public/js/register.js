@@ -221,7 +221,7 @@ window.addEventListener("load", function () {
     });
 
     $(".imagen-perfil").click(() => {
-        $("#img-input").click();
+        $("#formFile").click();
     })
 
 });
