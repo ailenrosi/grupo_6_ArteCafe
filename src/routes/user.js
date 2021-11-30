@@ -10,11 +10,14 @@ const {
     userProfile,
     userDelete,
     userUpdateProfile,
-    logout
+    logout,
+    userChangePasswordForm,
+    userChangePassword,
 } = require('../controllers/usersController'); // Traigo los metodos del controller
 
 const loginValidator = require('../validations/loginValidator'); // Traigo el validador del formulario de Login
 const registerValidator = require('../validations/registerValidator'); // Traigo el validador del formulario de Registro
+const updatePasswordValidator = require('../validations/updatePasswordValidator');
 const userSessionCheck = require('../middlewares/userSessionCheck'); // Traigo el "SessionCheck", middleware para verficiar si hay session iniciada
 const userLog = require('../middlewares/userLog'); // Traigo el "UserLog", verifica si hay una sesion iniciada antes de abrir el formulario de Login
 const upload = require('../middlewares/uploadUserAvatar'); // Traigo el "Multer", middleware para cargar imagen de usuario
@@ -34,4 +37,7 @@ router.get('/userEdit', userSessionCheck, userProfileEdit); //Acá el usuario pu
 router.put('/profile/userEdit/:id', upload.single('avatar'), userUpdateProfile); //Acá le pega el form para actualizar los datos de X id
 router.delete('/userDelete/:id',userSessionCheck, userDelete); //Acá se le pega para borrar un usuario de X id
 
+//Cambiar Contraseña
+router.get('/cambiarContrasenia', userSessionCheck, userChangePasswordForm);
+router.put('/cambiarContrasenia/:id', userSessionCheck, updatePasswordValidator, userChangePassword);
 module.exports = router;

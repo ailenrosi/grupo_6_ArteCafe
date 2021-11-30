@@ -39,18 +39,6 @@ module.exports = {
 
   },
 
-  userEdit: async(req, res) => {
-  
-    let user = await db.User.findOne({ where: { id: req.session.user.id } })
-    
-    console.log(user);
-
-    res.render("userProfileEdit", {
-      user: user.dataValues,
-    });
-  
-  },
-
   processLogin: (req, res) => {
     let errors = validationResult(req);
 
@@ -197,16 +185,60 @@ module.exports = {
     res.redirect("/");
   },
 
-userDelete: (req,res) => {
-  req.session.destroy();
-  if (req.cookies.user){
-    res.cookie('user','',{maxAge:-1});
-  } 
-  db.User.destroy({
-    where:{
-      id : req.params.id
+  userDelete: (req,res) => {
+    req.session.destroy();
+    if (req.cookies.user){
+      res.cookie('user','',{maxAge:-1});
+    } 
+    db.User.destroy({
+      where:{
+        id : req.params.id
+      }
+    })
+    res.redirect('/') 
+  },
+
+  userChangePasswordForm: async(req, res) => {
+    
+    res.render("userChagePassword", {
+      session: req.session,
+    });
+  },
+
+  userChangePassword: async(req, res) => {
+
+    let errors = validationResult(req);
+    
+    if(errors.isEmpty()){
+      
+      let { pass } = req.body;
+
+      await db.User.update(
+        {
+          pass: bcrypt.hashSync(pass, 12),
+        },
+        {
+          where: {
+            id: req.session.user.id,
+          }
+        }
+      )
+
+      req.session.destroy();
+      if (req.cookies.userarte_cafe) {
+        res.cookie("userArte_cafe", "", { maxAge: -1 });
+      }
+      res.redirect("/");
+
+    } else {
+
+      res.render("userChagePassword", {
+        errors: errors.mapped(),
+        session: req.session,
+      });
+
     }
-  })
-  res.redirect('/') 
-}
+
+  }
+
 }

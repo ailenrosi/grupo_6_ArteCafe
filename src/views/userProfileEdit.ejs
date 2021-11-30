@@ -54,6 +54,11 @@
         </form>
 
         <div class="button-deletePerfil-container">
+            <a href="/user/cambiarContrasenia">
+                <button id="elminarPerfil-button" type="button" class="btn btn-ad-primary">
+                    CAMBIAR CONTRASEÑA
+                </button>
+            </a>
             <form id="deleteForm" action="/user/userDelete/<%= user.id %>?_method=DELETE" method="POST">
                 <button id="elminarPerfil-button" type="submit" class="btn btn-ad-primary">
                     ELIMINAR PERFIL
