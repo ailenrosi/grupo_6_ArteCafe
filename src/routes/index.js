@@ -24,6 +24,8 @@ router.get('/molemos', controller.molemos);
 
 router.get('/cursos', controller.cursos);
 
+router.get('/sabores', controller.sabores);
+
 router.get('/trabajos', controller.trabajos); 
 
 

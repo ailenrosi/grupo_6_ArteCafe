@@ -33,7 +33,11 @@ module.exports = {
             session: req.session,
         })
     },
-
+    sabores: (req, res) => {
+        res.render('sabores', {
+            session: req.session,
+        })
+    },
     search: async(req, res) => {
         let products = await db.Product.findAll({
             include: [
