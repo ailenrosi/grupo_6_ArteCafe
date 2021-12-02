@@ -26,24 +26,78 @@
                 </span>
             </div>
             
+
+            <!-- Campo Nombre -->
             <div class="form-ad-input">
-                <input id="name" type="text" name="name" placeholder="Nombre" value="<%= locals.old ? old.name : user.name %>">
-                <% if (locals.errors && errors.name) { %>
-                    <small class="text-danger"><%= errors.name.msg %> </small>
+                <input 
+                    id="name" 
+                    type="text" 
+                    name="name" 
+                    placeholder="Nombre" 
+                    value="<%= locals.old ? old.name : user.name %>"
+                />
+                <span id="nameErrors" class="text_error">
+                    <% if(locals.errors && errors.name) { %>
+                        <%= errors.name.msg %>
+                    <% } %>
+                </span>
+            </div>
+
+
+            <!-- Campo Apellido -->
+            <div class="form-ad-input">
+                <input 
+                    id="lastname" 
+                    type="text" 
+                    name="last_name"
+                    placeholder="Apellido" 
+                    value="<%= locals.old ? old.last_name : user.last_name %>"
+                />
+                <span id="lastnameErrors" class="text_error">
+                    <% if(locals.errors && errors.last_name) { %>
+                        <%= errors.last_name.msg %>
+                    <% } %>
+                </span>
+            </div>
+
+            <!-- Campo Telefono -->
+            <div class="form-ad-input">
+                <input 
+                    id="phone"
+                    type="number" 
+                    name="phone" 
+                    placeholder="Ingresá tu teléfono" 
+                    value="<%= user.phone %>"
+                />
+                <span id="phoneErrors" class="text_error">
+                    <% if(locals.errors && errors.phone) { %>
+                        <%= errors.phone.msg %>
+                    <% } %>
+                </span>
+            </div>
+
+            <!-- Campo Email-->
+            <div class="form-ad-input">
+                <input
+                    id="email" 
+                    type="email" 
+                    name="email" 
+                    placeholder="Ingresá tu email" 
+                    value="<%= user.email %>"
+                />
+                <span id="emailErrors" class="text_error">
+                    <% if(locals.errors && errors.email) { %>
+                        <%= errors.email.msg %>
+                    <% } %>
+                </span>
+            </div>
+
+            <!-- Campo Errores -->
+            <span id="submitErrors" class="text_error">
+                <% if (locals.errors && errors.submit) { %>
+                    <%= errors.submit.msg %>
                 <% } %>
-            </div>
-            <div class="form-ad-input">
-                <input type="text" name="last_name" placeholder="Apellido" value="<%= locals.old ? old.last_name : user.last_name %>">
-                <% if (locals.errors && errors.last_name) { %>
-                    <small class="text-danger"><%= errors.last_name.msg %> </small>
-                <% } %>
-            </div>
-            <div class="form-ad-input">
-                <input type="email" name="email" placeholder="Ingresá tu email" value="<%= user.email %>"/>
-            </div>
-            <div class="form-ad-input">
-                <input type="number" name="phone" placeholder="Ingresá tu teléfono" value="<%= user.phone %>"/>
-            </div>
+            </span>
             
             <div class="button-container">
                 <button type="submit" class="btn btn-ad-primary">
