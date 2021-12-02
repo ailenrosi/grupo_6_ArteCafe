@@ -206,11 +206,7 @@ input[type="text"] {
   padding: 20px;
 }
 
-.campo-edit {
-  color: blue;
-}
-
-.btn_guardar {
+.btn-ad-primary {
   width: 100%;
   height: 50 px;
   color: white;
@@ -218,8 +214,9 @@ input[type="text"] {
   background: linear-gradient(90deg, #419e02, #11580b);
   font-weight: 300;
   cursor: pointer;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   font-size: 18px;
+  max-width: 54%;
 }
 
 /*********************USER PROFILE**********************************/
@@ -335,17 +332,20 @@ input[type="text"] {
   text-transform: uppercase;
 }
 
-#formDel {
-  width: 100%;
-  height: 50 px;
-  color: white;
-  border: 0 px;
-  background: linear-gradient(90deg, #419e02, #11580b);
-  font-weight: 300;
+#elminarPerfil-button {
+  margin-top: 1rem;
+  display: inline-block;
+  /* font-size: 1rem; */
+  color: #fff;
+  background: linear-gradient(90deg, #038166, #22e2a9);
+  border-radius: 0.5rem;
   cursor: pointer;
-  font-size: 18px;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
 }
-#formDel:hover {
+
+#elminarPerfil-button:hover {
   background: linear-gradient(90deg, #a34747, #f30000);
 }
 /************REGISTRO*********************/
