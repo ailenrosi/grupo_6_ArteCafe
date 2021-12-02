@@ -33,7 +33,7 @@ router.post('/register', upload.single('avatar'), registerValidator, processRegi
 
 //CRUD Usuario
 router.get('/userProfile', userSessionCheck, userProfile); // Acá el usuario ve su perfil
-router.get('/userEdit', userSessionCheck, userProfileEdit); //Acá el usuario puede editar su perfil
+router.get('/userProfileEdit', userSessionCheck, userProfileEdit); //Acá el usuario puede editar su perfil
 router.put('/profile/userEdit/:id', upload.single('avatar'), userUpdateProfile); //Acá le pega el form para actualizar los datos de X id
 router.delete('/userDelete/:id',userSessionCheck, userDelete); //Acá se le pega para borrar un usuario de X id
 
