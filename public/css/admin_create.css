@@ -1,4 +1,9 @@
 
+.titleadmin{
+    text-align: center;
+    font-weight: 300;
+    color: #7a7a7a;
+}
 .crearprod{
   
     display: flex;
@@ -36,6 +41,16 @@
         background: var(--green);
         letter-spacing: 0.1rem;
         text-align: center;
+      }
+
+      .textarea_input{
+        width: 100%;
+        padding: 0.7em;
+        border: none;
+        background: none;
+        outline: 0;
+        color: #fff;
+        border-bottom: 1px solid #03a554;
       }
      
      

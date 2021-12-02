@@ -8,19 +8,19 @@
           <p class="titleadmin">Crear Producto</p>
 
           <!-- Campo Nombre -->
-
-          <label for="name">Nombre del producto</label>
-          <input 
-            type="text" 
-            id="name" 
-            name="name"
-          />
-          <span id="nameErrors" class="text_error">
-            <% if(locals.errors && errors.name) { %>
-              <%= errors.name.msg %>
-            <% } %>
-          </span>
-
+          <div class="nameDiv">
+            <label for="name">Nombre del producto</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name"
+            />
+            <span id="nameErrors" class="text_error">
+              <% if(locals.errors && errors.name) { %>
+                <%= errors.name.msg %>
+              <% } %>
+            </span>
+          </div>
           <!-- Campo descripcion -->
           
           <label for="description" id="">Descripción</label>
