@@ -1,0 +1,106 @@
+<%- include('partials/head.ejs')%>
+
+    <body>
+        <%- include('partials/header.ejs') %>
+        <section class="curso" id="cursos">
+            <h3 class="sub-heading"></h3>
+            <h1 class="heading"> Encontrá el sabor de tu vida.</h1>
+
+            <div class="box-container">
+                <div class="box">
+                    <img src="/img/imgVarios/indonesia.jpg" alt="">
+                    <h3>Café Indonesia</h3>
+                    <div class="stars">       
+                    </div>
+                    <div id="baristaCompleto_info">
+                        <p>
+                            Se trata de un café muy apreciado, que tiene un método de recolección un tanto singular: se recoge de los excrementos de un animal, la civeta o Luwak, cuya digestión parece dar un aroma muy especial a los granos de café. Es un café muy intenso y de acidez media, que llega a alcanzar cotizaciones muy altas. No a todo el mundo le gusta el café más caro del mundo. Por eso el número 2 de los cafés también podría considerarse el primero. Vamos a verlo.
+                        </p>
+                    </div>
+                    <button id="baristaCompleto_btn" class="btn">+ Info</button> 
+                </div>
+
+                <div class="box">
+                    <img src="/img/imgVarios/jamaica.jpg" alt="">
+                    <h3>Café Jamaica</h3>
+                    <div class="stars">
+                    </div>
+                    <div id="cafeFiltrado_info">
+                        <p>
+                            El café de las montañas azules de Jamaica se disputa el podio de los mejores cafés del mundo con el anterior. Su principal peculiaridad es que se cultiva a 2.000 metros, en medio de una bruma eterna que produce el contraste térmico entre el calor del suelo propio de las latitudes tropicales y el viento de la montaña.
+                            El café Jamaica Blue Mountain se envasa de un modo único en el mundo, en barriles de madera, y tiene una producción prolongada a lo largo del año, si bien escasa, de ahí que tenga un precio elevado. Con estos granos se prepara una bebida suave y con un matiz dulce y ligeramente achocolatado..
+                        </p>
+                    </div>
+                    <button id="cafeFiltrado_btn" class="btn">+ Info</button>    
+                </div>
+
+                <div class="box">
+                    <img src="/img/imgVarios/colomabia.jpg" alt="">
+                    <h3>Café Colombia</h3>
+                    <div class="stars">
+                    </div>
+                    <div id="espressoPerfecto_info">
+                        <p>
+                            No por conocido el café de Colombia deja de ser uno de los mejores cafés del mundo. Es un café de altura de extraordinario y suave sabor, muy balanceado en acidez y dulzor, que da varias cosechas de Arábica al año.
+
+La figura de Juan Valdez y su mula Conchita, que representa a los agricultores dedicados al café, es producto de la Federación Nacional de Cafeteros de Colombia. Esta entidad sin ánimo de lucro nació en 1927 para defender a los productores, luchar por el progreso del sector y dar a conocer el café de Colombia en todo el mundo.
+                        </p>
+                    </div>
+                    <button id="espressoPerfecto_btn" class="btn">+ Info</button>  
+                </div>
+
+                <div class="box">       
+                    <img src="/img/imgVarios/ethiopia.png" alt="">
+                    <h3>Café Ethiopia</h3>
+                    <div class="stars">
+                    </div>
+                    <div id="arteLatte_info">
+                        <p>
+                            Etiopía produce uno de los mejores cafés, de los más auténticos. Al igual que otros, el café de Etiopía tiene diferentes clasificaciones, en función de su grano, tipo de cultivo, ó si se utiliza un proceso seco o no.
+
+                            A rasgos generales existen tres grandes variedades de café: variedad robusta, variedad arábica y robusta, y variedad arábica. La principal variedad en producida en Etiopía es la variedad arábica. Se considera que el mejor café se produce en las tierras altas del país. Un tipo de café arábico procedente de Yirgacheffe, éste café se cultiva en tierras a una altitud de 2000 metros, con un grado de humedad apropiado tanto en su cultivo como en su proceso de tratamiento.
+                        </p>
+                    </div>
+                    <button id="arteLatte_btn" class="btn">+ Info</button>
+                </div>
+
+                <div class="box">
+                    <img src="/img/imgVarios/brasil.jpg" alt="">
+                    <h3>Café Brasil</h3>
+                    <div class="stars">
+                    </div>
+                    <div id="cafeFrio_info">
+                        <p>
+                            Por las características de la cosecha, el café brasileño también posee un aroma y un cuerpo únicos. Un aroma dulce y suave, mientras que el cuerpo es más fino que el resto de cafés latinoamericanos y del caribeños.
+                        </p>
+                    </div>
+                    <button id="cafeFrio_btn" class="btn">+ Info</button>
+                </div>
+
+                <div class="box">
+                    <img src="/img/imgVarios/guatemala.jpg" alt="">
+                    <h3>Guatemala antigua </h3>
+                    <div class="stars">
+                    </div>
+                    <div id="tostador_info">
+                        <p>
+                            También del género arábica, es la aparición americana en la lista. Es un café cultivado a gran altura (1.400 metros sobre el nivel del mar). Tiene un cuerpo absolutamente inmenso, como si se pudiera morder. Los aromas que ofrece son completamente únicos (podemos encontrar en él notas picantes, como si nos bebiésemos la mismísima jungla). A pesar de su cuerpo, es suave, como si estuviéramos bebiendo seda. Su tipo de tostado ideal es el medio (natural, por supuesto). De todos modos, sus notas picantes cobran especial encanto con tostados oscuros, pues le confieren al café notas a humo, que encajan a la perfección con esta característica.
+                        </p>
+                    </div>
+                    <button id="tostador_btn" class="btn">+ Info</button>
+                </div>
+
+
+            </div>
+        </section>
+
+        
+        <%- include('partials/banner.ejs') %>
+        
+        <!--   Comieza footer     -->
+        <%- include('partials/footer.ejs') %>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="/js/curso.js"></script>
+    </body>
+</html>

@@ -64,6 +64,7 @@
 }
 .header_container div .icons {
   right: 0;
+  z-index: 2;
 }
 
 .header_container {

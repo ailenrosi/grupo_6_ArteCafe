@@ -10,7 +10,6 @@
   margin: 10vw;
   overflow: hidden;
   justify-content: center;
-  
 }
 
 .ctn_form {
@@ -211,9 +210,18 @@ input[type="text"] {
   color: blue;
 }
 
-.guardar-edit {
-  background-color: blue;
+.btn_guardar {
+  width: 100%;
+  height: 50 px;
+  color: white;
+  border: 0 px;
+  background: linear-gradient(90deg, #419e02, #11580b);
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: .5rem;
+  font-size: 18px;
 }
+
 /*********************USER PROFILE**********************************/
 
 .listaPerfil {
@@ -338,7 +346,7 @@ input[type="text"] {
   font-size: 18px;
 }
 #formDel:hover {
-background: linear-gradient(90deg, #a34747, #f30000);
+  background: linear-gradient(90deg, #a34747, #f30000);
 }
 /************REGISTRO*********************/
 .registerArt {
@@ -494,20 +502,20 @@ background: linear-gradient(90deg, #a34747, #f30000);
   font-weight: 500;
 }
 
-.form_register{
+.form_register {
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.form_submit{
+.form_submit {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
 
-.form_submit input{
+.form_submit input {
   border-radius: 15px;
   width: 30%;
 }

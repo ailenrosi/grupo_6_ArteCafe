@@ -1,74 +1,81 @@
-<%- include('partials/head')%>
-<body>
-    <%- include('partials/header')%>
-    
-    <main class="usersForm-container">
-        
-        <h3 class="userTitle"></h3>
-        
-        <form id="form" action="/user/profile/userEdit/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-ad" >
-            
-            <!-- Campo de imagen de perfil -->
-            <div class="img-container">
-                <div id="img-preview" class="profile_user_img">
-                    <img class="imagenPerfil" src="/img/users_avatars/<%= user.avatar %>" class="input-file">
-                </div>
-            </div>
-            <div class="box-form">
-                <label class="img-perfil" for="imgUser"></label>
-                <input class="img-input" type="file" name="avatar" id="formFile" value="<%= locals.old && old.file %>"/>
-            </div>
-            <div>
-                <span id="fileErrors" class="text_error">
-                    <% if(locals.errors && errors.file) { %>
-                        <%= errors.file.msg %>
-                    <% } %>
-                </span>
-            </div>
-            
-            <div class="form-ad-input">
-                <input id="name" type="text" name="name" placeholder="Nombre" value="<%= locals.old ? old.name : user.name %>">
-                <% if (locals.errors && errors.name) { %>
-                    <small class="text-danger"><%= errors.name.msg %> </small>
-                <% } %>
-            </div>
-            <div class="form-ad-input">
-                <input type="text" name="last_name" placeholder="Apellido" value="<%= locals.old ? old.last_name : user.last_name %>">
-                <% if (locals.errors && errors.last_name) { %>
-                    <small class="text-danger"><%= errors.last_name.msg %> </small>
-                <% } %>
-            </div>
-            <div class="form-ad-input">
-                <input type="email" name="email" placeholder="Ingresá tu email" value="<%= user.email %>"/>
-            </div>
-            <div class="form-ad-input">
-                <input type="number" name="phone" placeholder="Ingresá tu teléfono" value="<%= user.phone %>"/>
-            </div>
-            
-            <div class="button-container">
-                <button type="submit" class="btn btn-ad-primary">
-                    GUARDAR
-                </button>
-            </div>
-            
-        </form>
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head.ejs') %>
 
-        <div class="button-deletePerfil-container">
-            <a href="/user/cambiarContrasenia">
-                <button id="elminarPerfil-button" type="button" class="btn btn-ad-primary">
-                    CAMBIAR CONTRASEÑA
-                </button>
-            </a>
-            <form id="deleteForm" action="/user/userDelete/<%= user.id %>?_method=DELETE" method="POST">
-                <button id="elminarPerfil-button" type="submit" class="btn btn-ad-primary">
-                    ELIMINAR PERFIL
-                </button>
-            </form>
-        </div>
+    <body class="user_body" style="display: flex;">
         
-    </main>
-<%- include('partials/footer')%>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="/js/profile_edit.js"></script>
-</body>
+        <div class="container_user">
+            
+            <div class="ctn_form">
+                <a href="/" class="close_x1">&times;</a>
+                <div class="atras">
+                    <a href="/" style="color: teal">Volver</a>
+                  </div>
+                <h1 class="title-perfil">Editar Perfil</h1>
+                
+                <div class="profile_user_img">
+                    <img class="imagenPerfil" src="/img/users_avatars/<%= user.avatar %>">
+                </div>
+
+                <form action="/user/userUpdate" method="POST" class="form-ad">
+                    <div class="campo-edit">
+                        <label>Nombre</label>
+                        <input type="text" name="name" value=<%=user.name%>>
+                        <% if (locals.errors && errors.name) { %>
+                            <small class="text_error">
+                                <%= errors.name.msg %>
+                            </small>
+                            <% } %>
+                    </div>
+                    <div class="campo-edit">
+                        <label> Apellido </label>
+                        <input type="text" name="last_name" value=<%=user.last_name%>>
+                        <% if (locals.errors && errors.last_name) { %>
+                            <small class="text_error">
+                                <%= errors.last_name.msg %>
+                            </small>
+                            <% } %>
+                    </div>
+                    <div class="campo-edit">
+                      <label>Email</label>
+                        <input type="text" name="email" value=<%=user.email%>>
+                        <% if (locals.errors && errors.email) { %>
+                            <small class="text_error">
+                                <%= errors.email.msg %>
+                            </small>
+                            <% } %>
+                    </div>
+                    <div class="campo-edit">
+                        <label> Teléfono </label>
+                        <input type="text" name="phone" value=<%=user.phone%>>
+                        <% if (locals.errors && errors.phone) { %>
+                            <small class="text_error">
+                                <%= errors.phone.msg %>
+                            </small>
+                            <% } %>
+                    </div>
+                    
+
+                    <% if (locals.errorMsg ) { %>
+                        <small class="text_error">
+                            <%= errorMsg %>
+                        </small>
+                        <% } %>
+                        <div>
+                            <input class="btn_guardar" type="submit" value="Guardar">
+                        </div>
+            </form>
+            <form id="delete-user" action="/user/userDelete/<%= user.id%>?_method=DELETE" method="POST">
+                <button type="submit" id="formDel" class="btn">Eliminar Cuenta</button>
+            </form>
+            
+
+
+        <%- include('partials/wsp.ejs') %>
+    </body>
+    <script src="/js/profile_edit.js"></script>
+    <script src="/js/register"></script>
+    <script src="/js/user.js"></script>
+    <script src="/js/userDelete.js"></script>
+
 </html>
