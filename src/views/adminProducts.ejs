@@ -9,7 +9,7 @@
     <%- include('partials/header_admi.ejs') %>
     <div class="tabla_productos">
         <table>
-            <tr>
+            <tr class="productist">
                 <th> ID </th>
                 <th> Nombre </th>
                 <th> Precio </th>
@@ -18,12 +18,12 @@
                 <th> Eliminar </th>
             </tr>
         <% products.forEach( product => { %>
-            <tr>
+            <tr class="productist">
                 <td> <%= product.id %></td>               
                 <td> <%= product.name %> </td>
-                <td> <%= product.price %> </td>
+                <td> $ <%= product.price %> </td>
                 <td> <%= product.categories_id %> </td>
-                <td><a href="/admin/products/edit/<%=product.id%>" ><i class="far fa-edit"></i></a></td>
+                <td><a class="linkEditProduct" href="/admin/products/edit/<%=product.id%>" ><i class="far fa-edit"></i></a></td>
 
                 <form class="formDelete" action="/admin/products/delete/<%=product.id%>?_method=DELETE" method="POST">
                     <td><button type="submit"><i class="far fa-trash-alt"></i></td>

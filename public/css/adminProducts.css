@@ -4,3 +4,16 @@ flex-direction: column;
 margin: 20px;
 text-align: center;
 }
+
+.linkEditProduct:link{
+    color: #11580b
+    
+}
+
+.linkEditProduct:visited{
+    color: #7dde3c
+ }
+
+ .productList{
+     
+ }
