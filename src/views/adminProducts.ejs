@@ -9,7 +9,7 @@
     <%- include('partials/header_admi.ejs') %>
     <div class="tabla_productos">
         <table>
-            <tr class="productist">
+            <tr class="productList">
                 <th> ID </th>
                 <th> Nombre </th>
                 <th> Precio </th>
@@ -18,7 +18,7 @@
                 <th> Eliminar </th>
             </tr>
         <% products.forEach( product => { %>
-            <tr class="productist">
+            <tr class="productList">
                 <td> <%= product.id %></td>               
                 <td> <%= product.name %> </td>
                 <td> $ <%= product.price %> </td>
