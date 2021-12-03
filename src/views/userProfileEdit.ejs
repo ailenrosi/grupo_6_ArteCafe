@@ -79,13 +79,13 @@
                     </div>
 
                     <!-- Campo Errores -->
-                    <span id="submitErrors" class="text_error">
+                    <span id="submitErrors" class="text_error" >
                         <% if (locals.errors && errors.submit) { %>
                             <%= errors.submit.msg %>
                                 <% } %>
                     </span>
 
-                    <div class="button-container">
+                    <div class="button-container" style="text-align: center;">
                         <button type="submit" class=" btn-ad-primary">
                             GUARDAR
                         </button>
@@ -93,14 +93,14 @@
 
                 </form>
 
-                <div class="button_container">
+                <div class="button_container" style="text-align: center;">
                     <a href="/user/cambiarContrasenia">
                         <button id="elminarPerfil-button" type="button" class="btn-ad-primary">
                             CAMBIAR CONTRASEÑA
                         </button>
                     </a>
                 </div>
-                <div class="button-container">
+                <div class="button-container" style="text-align: center; max-width: 100%">
                     <form id="deleteForm" action="/user/userDelete/<%= user.id %>?_method=DELETE" method="POST">
                         <button id="elminarPerfil-button" type="submit" class="btn-ad-primary">
                             ELIMINAR PERFIL

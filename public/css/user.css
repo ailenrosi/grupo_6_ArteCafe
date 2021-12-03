@@ -525,3 +525,47 @@ input[type="text"] {
     padding-top: 13rem;
   }
 }
+
+
+.img-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+.btn-ad-primary{
+  margin-top: 1rem;
+  display: inline-block;
+  /* font-size: 1rem; */
+  color: #fff;
+  background: linear-gradient(90deg,#038166, #22e2a9 );
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  max-width: 50%;
+}
+
+.form-ad-input{
+  width: 50%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0);
+  border: 0px;
+  outline: 0px;
+  font-size: 16px;
+}
+
+.form-add-input{
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
