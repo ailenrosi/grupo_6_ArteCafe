@@ -173,8 +173,6 @@ font-size: .7rem;
 input[type='text']{
   width:85%;
   height:60px;
-  margin-top:20px;
-  margin-bottom:20px;
   padding-bottom:-80px;
   border:none;
   border-bottom:3px solid #ffc107;

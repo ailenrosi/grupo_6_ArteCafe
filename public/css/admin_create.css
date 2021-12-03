@@ -1,12 +1,18 @@
+.cajas {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+}
 
 .titleadmin{
     text-align: center;
-    font-weight: 300;
+    font-size: 30px;
     color: #7a7a7a;
 }
 .crearprod{
-  
-    display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
     justify-content: space-around;
 };
 
@@ -44,13 +50,14 @@
       }
 
       .textarea_input{
+        height: 65px;
         width: 100%;
         padding: 0.7em;
         border: none;
         background: none;
         outline: 0;
         color: #fff;
-        border-bottom: 1px solid #03a554;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
       }
      
      

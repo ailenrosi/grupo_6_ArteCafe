@@ -8,6 +8,7 @@
           <p class="titleadmin">Crear Producto</p>
 
           <!-- Campo Nombre -->
+          <section class="cajas">
           <div class="nameDiv">
             <label for="name">Nombre del producto</label>
             <input 
@@ -23,6 +24,7 @@
           </div>
           <!-- Campo descripcion -->
           
+          <div class="desdiv">
           <label for="description" id="">Descripción</label>
           <input 
             type="textarea" 
@@ -36,7 +38,10 @@
             <% } %>
           </span>
 
+          </div>
           <!-- Campo Precio -->
+
+          <div class="prediv">
 
           <label for="price">Precio</label>
           <input 
@@ -50,13 +55,19 @@
             <% } %>
           </span>
 
+          </div>
+
           <!-- Campo Descuento -->
 
+          <div class="descdiv">
           <label for="discount">Descuento</label>
           <input 
             type="number" 
             name="discount"
           />
+
+          </div>
+          </section>
 
           <!-- Campo Categorias-->
           <select class="form-select" id="categorias" name="category">
