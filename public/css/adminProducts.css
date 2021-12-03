@@ -14,6 +14,6 @@ text-align: center;
     color: #7dde3c
  }
 
- .productList{
-     
+ .productList th, .productList td{
+     padding: 9px;
  }
