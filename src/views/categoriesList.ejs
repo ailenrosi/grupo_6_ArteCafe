@@ -6,8 +6,8 @@
 <body> 
     <%- include('partials/header_admi.ejs') %>
     <div class="tabla_categorias">
-        <table>
-            <tr>
+        <table class="filas">
+            <tr class="filas2">
                 <th> ID </th>
                 <th> Categoria </th>
                 <th> Editar  </th>
@@ -17,7 +17,7 @@
             <tr>
                 <td> <%=category.id %></td>               
                 <td> <%=category.name %> </td>
-                <td><a href="/admin/categories/editForm/<%=category.id%>" ><i class="far fa-edit"></i></a></td>
+                <td><a class="linkEditProduct" href="/admin/categories/editForm/<%=category.id%>" ><i class="far fa-edit"></i></a></td>
 
                 <form class="categoryDelete" action="/admin/categories/delete/<%=category.id%>?_method=DELETE" method="POST">
                     <td><button type="submit"><i class="far fa-trash-alt"></i></td>

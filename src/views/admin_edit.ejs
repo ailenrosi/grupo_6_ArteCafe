@@ -11,7 +11,7 @@
           <p class="titleadmin">Editar producto</p>
           <!-- Campo Nombre -->
 
-          <label for="name">Nombre</label>
+          <label id="name" for="name">Nombre</label>
           <input type="text" id="name" name="name" value="<%= locals.old ? old.name : product.name %>" />
           <span id="nameErrors" class="text_error">
             <% if(locals.errors && errors.name) { %>
@@ -22,7 +22,7 @@
 
           <!-- Campo Descripcion -->
 
-          <label for="description" id="">Descripción</label>
+          <label for="description" id="descript">Descripción</label>
           <input style="color: black;" type="textarea" id="description" name="description" class="textarea_input"
             value="<%= locals.old ? old.description : product.description %>" />
           <span id="descriptionErrors" class="text_error">
@@ -35,7 +35,7 @@
           <!-- Campo Precio -->
 
           <div class="Precio1">
-            <label for="inputprice" class="form-label">Precio</label>
+            <label for="inputprice" id="precioid" class="form-label">Precio</label>
             <input type="number" class="form-control" id="formPrice" name="price"
               value="<%= locals.old ? old.price : product.price %>" />
             <span id="priceErrors" class="text_error">
@@ -48,7 +48,7 @@
           <!-- Campo Descuento -->
 
           <div class="Descuento1">
-            <label for="inputdiscont" class="form-label">Descuento</label>
+            <label for="inputdiscont" id="descid" class="form-label">Descuento</label>
             <input type="number" class="form-control" id="inputdiscont" name="discount"
               value="<%= locals.old ? old.discount : product.discount %>" />
           </div>

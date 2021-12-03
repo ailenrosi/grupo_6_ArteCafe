@@ -1,0 +1,23 @@
+.linkEditProduct:link{
+    color: #11580b
+    
+}
+
+.linkEditProduct:visited{
+    color: #7dde3c
+ }
+
+ .tabla_categorias{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    text-align: center;
+}
+
+.filas {
+    margin: 20px;
+}
+
+.filas2 th {
+    margin: 20px;
+}
