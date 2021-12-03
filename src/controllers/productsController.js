@@ -27,7 +27,7 @@ module.exports = {
                 ],
             })
             .then( products => {
-                let productsSlider = products.filter( product => product.categories_id === 3 );
+                let productsSlider = products.filter( product => product.categories_id === 1 );
                 res.render("productsDetail", {
                     titleSlider: "No te lo pierdas.",
                     productsSlider,
