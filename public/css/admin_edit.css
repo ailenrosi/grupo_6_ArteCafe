@@ -1,19 +1,34 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-
-form .crear{
-	width: 400px;
-	padding:20px;
-	border-radius:30px;
-	margin:auto;
-	background-color: ghostwhite;
+form .crear {
+  width: 400px;
+  padding: 20px;
+  border-radius: 30px;
+  margin: auto;
+  background-color: ghostwhite;
 }
 
 .img-container img {
-	max-width: 100px;
-	max-height: 100px;
-	cursor: pointer;
+  max-width: 100px;
+  max-height: 100px;
+  cursor: pointer;
+}
+
+/* input[type="file"]#formfile{
+width: 0px;
+
+  
+} */
+.adminedit{
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(90deg, #038166, #22e2a9);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.8rem 3rem;
 }
