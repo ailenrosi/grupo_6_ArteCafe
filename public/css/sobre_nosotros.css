@@ -95,6 +95,7 @@
 .about .row .content {
   flex: 1 1 42rem;
   margin:1.2rem;
+  text-align: center;
 }
 
 .about .row .content .title {
